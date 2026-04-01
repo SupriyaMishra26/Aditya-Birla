@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biometric Verification - MicroHub Software Products</title>
+  <meta name="description" content="MicroHub Biometric Verification connects face enrollment, liveness checks, identity matching, and attendance sync in one secure workflow.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/animations.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+  <link rel="stylesheet" href="../../assets/css/biometric-verification.css">
+</head>
+<body data-site-root="../../" class="bio-workflow-page">
+<div id="navbar-root" data-include="components/navbar.html"></div>
+
+<!-- HERO â€” stays dark -->
+<section class="bio-hero">
+  <div class="bio-grid-bg"></div>
+  <div class="container">
+    <div class="bio-hero-inner">
+      <div class="bio-hero-copy-wrap">
+        <span class="bio-kicker bio-load-in" style="--delay:0.08s"><i class="bi bi-person-bounding-box"></i> Software Product / Biometric Verification</span>
+        <h1 class="bio-title bio-load-in" style="--delay:0.18s">
+          <span>Face Recognition</span>
+          <span>Attendance Intelligence</span>
+        </h1>
+        <p class="bio-copy bio-load-in" style="--delay:0.28s">One product for face enrollment, liveness detection, identity matching, and HRMS-linked attendance â€” without stitching together separate tools.</p>
+        <div class="bio-actions bio-load-in" style="--delay:0.38s">
+          <a href="https://repair.microhub.in/register" class="btn-primary-custom">Book a Demo <i class="bi bi-arrow-right"></i></a>
+          <a href="#bio-video" class="btn-outline-custom">Watch It Work <i class="bi bi-play-circle"></i></a>
+        </div>
+        <div class="bio-jump-links bio-load-in" style="--delay:0.48s">
+          <a href="#bio-enroll" class="bio-link-pill"><i class="bi bi-grid-3x3-gap"></i> Enrollment</a>
+          <a href="#bio-liveness" class="bio-link-pill"><i class="bi bi-shield-check"></i> Liveness</a>
+          <a href="#bio-matching" class="bio-link-pill"><i class="bi bi-bounding-box-circles"></i> Matching</a>
+          <a href="#bio-sync" class="bio-link-pill"><i class="bi bi-hdd-network"></i> Attendance Sync</a>
+        </div>
+      </div>
+      <div class="bio-hero-stage-wrap bio-load-in" style="--delay:0.58s">
+        <div class="bio-stage">
+          <div class="bio-stage-screen">
+            <div class="bio-scan-line"></div>
+            <div class="bio-face-panel" aria-hidden="true">
+              <img src="../../assets/images/face2.png" alt="Face" class="bio-face-image" />
+              <svg viewBox="0 0 260 310" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                <!-- Face outline / jaw -->
+                
+                <!-- â€”â€”â€” BIOMETRIC LANDMARK DOTS â€”â€”â€” -->
+               
+                <!-- Landmark mesh lines -->
+                <line x1="70" y1="118" x2="74" y2="98" stroke="rgba(255,255,255,0.09)" stroke-width="0.8"/>
+                <line x1="114" y1="118" x2="118" y2="90" stroke="rgba(255,255,255,0.09)" stroke-width="0.8"/>
+                <line x1="146" y1="118" x2="142" y2="90" stroke="rgba(255,255,255,0.09)" stroke-width="0.8"/>
+                <line x1="190" y1="118" x2="186" y2="98" stroke="rgba(255,255,255,0.09)" stroke-width="0.8"/>
+                <line x1="70" y1="118" x2="64" y2="148" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+                <line x1="190" y1="118" x2="196" y2="148" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+                <line x1="104" y1="208" x2="112" y2="174" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+                <line x1="156" y1="208" x2="148" y2="174" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+                <line x1="104" y1="208" x2="96" y2="245" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+                <line x1="156" y1="208" x2="164" y2="245" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+                <line x1="96" y1="245" x2="130" y2="256" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+                <line x1="164" y1="245" x2="130" y2="256" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+
+              </svg>
+            </div>
+            <!-- <div class="bio-stage-note bottom">
+              <span><i class="bi bi-journal-check"></i> Workflow</span>
+              <strong>Live verification and attendance sync in one product flow</strong>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS STRIP â€” stays dark -->
+<section class="bio-stats-wrap">
+  <div class="container">
+    <div class="bio-stats-grid">
+      <div class="bio-stat-card bio-reveal"><strong>128</strong><span>Facial landmark points mapped per template</span></div>
+      <div class="bio-stat-card bio-reveal" style="transition-delay:.08s"><strong>&lt;1s</strong><span>Typical live capture and match response time</span></div>
+      <div class="bio-stat-card bio-reveal" style="transition-delay:.16s"><strong>1:1 / 1:N</strong><span>Direct verification and enrolled-database search</span></div>
+      <div class="bio-stat-card bio-reveal" style="transition-delay:.24s"><strong>HRMS</strong><span>Attendance events flow into your HR system automatically</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS â€” PIPELINE (light bg) -->
+<section id="bio-process" class="bio-section bio-section-light bio-section-anchor">
+  <div class="container">
+    <div class="bio-head center bio-reveal">
+      <span class="bio-eyebrow"><i class="bi bi-diagram-3"></i> How It Works</span>
+      <h2>From face capture to attendance record - one guided flow.</h2>
+      <p>MicroHub keeps enrollment, liveness, identity matching, and attendance sync connected inside one biometric journey so every step stays readable before the final attendance record is written.</p>
+    </div>
+    <div class="bio-flow-shell bio-reveal" data-bio-flow>
+      <div class="bio-flow-track" data-bio-flow-track>
+        <article class="bio-flow-slide is-active" data-flow-step data-step-index="1" id="bio-flow-step-1">
+          <div class="bio-flow-stage">
+            <div class="bio-flow-media bio-flow-media--enroll">
+              <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=1400&q=80" alt="Face capture and enrollment process">
+              <span class="bio-flow-chip">Step 01</span>
+              <div class="bio-flow-badge">
+                <strong>86%</strong>
+                <span>Image quality cleared</span>
+              </div>
+              <div class="bio-flow-note">
+                <small>Enrollment layer</small>
+                <strong>Template prepared for live verification</strong>
+                <span>Identity data, quality checks, and a reusable biometric profile are linked before live use begins.</span>
+              </div>
+            </div>
+            <div class="bio-flow-content">
+              <div class="bio-flow-copy">
+                <span class="bio-step-number">Step 01</span>
+                <h3 class="bio-step-title">Capture and Enroll</h3>
+                <p class="bio-step-desc">Employee face is captured with quality validation, and a reusable biometric template is stored securely with identity metadata. Blur, angle, brightness, and obstruction checks help the system avoid weak enrollments so downstream matching stays dependable once rollout begins across devices or branches.</p>
+              </div>
+              <div class="bio-flow-points">
+                <article class="bio-flow-point"><strong>Quality validation first</strong><span>Low light, blur, and framing issues are checked before the profile is accepted into the biometric system.</span></article>
+                <article class="bio-flow-point"><strong>Secure profile creation</strong><span>The face template is stored as a reusable biometric identity record instead of depending on the original image every time.</span></article>
+                <article class="bio-flow-point"><strong>Ready for branch use</strong><span>Enrollment prepares the employee record for attendance, controlled access, and re-verification moments later in the workflow.</span></article>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="bio-flow-slide" data-flow-step data-step-index="2" id="bio-flow-step-2">
+          <div class="bio-flow-stage">
+            <div class="bio-flow-media bio-flow-media--liveness">
+              <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1400&q=80" alt="Live liveness check process">
+              <span class="bio-flow-chip">Step 02</span>
+              <div class="bio-flow-badge">
+                <strong>Live</strong>
+                <span>Session continuity active</span>
+              </div>
+              <div class="bio-flow-note">
+                <small>Liveness checks</small>
+                <strong>Confirm a real person is present</strong>
+                <span>Prompt response, movement, and stable session review help stop photo and replay attempts before matching.</span>
+              </div>
+            </div>
+            <div class="bio-flow-content">
+              <div class="bio-flow-copy">
+                <span class="bio-step-number">Step 02</span>
+                <h3 class="bio-step-title">Live Liveness Check</h3>
+                <p class="bio-step-desc">System confirms a real human is present before proceeding. Blink detection, head movement, and frame continuity checks reduce spoofing risks. Failed attempts are logged and flagged so suspicious sessions never move blindly into attendance or access decisions.</p>
+              </div>
+              <div class="bio-flow-points">
+                <article class="bio-flow-point"><strong>Movement and prompt response</strong><span>Directional cues and natural facial activity help distinguish a live user from static images or replay tricks.</span></article>
+                <article class="bio-flow-point"><strong>Capture confidence control</strong><span>Weak, unstable, or unclear sessions can be stopped early before they create low-trust match outcomes.</span></article>
+                <article class="bio-flow-point"><strong>Suspicious attempt logging</strong><span>Rejected sessions stay visible in the operational trail so admins can review where trust failed and why.</span></article>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="bio-flow-slide" data-flow-step data-step-index="3" id="bio-flow-step-3">
+          <div class="bio-flow-stage">
+            <div class="bio-flow-media bio-flow-media--match">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=80" alt="Identity match process">
+              <span class="bio-flow-chip">Step 03</span>
+              <div class="bio-flow-badge">
+                <strong>98.7%</strong>
+                <span>Top match confidence</span>
+              </div>
+              <div class="bio-flow-note">
+                <small>Match logic</small>
+                <strong>Run 1:1 verification or 1:N search</strong>
+                <span>Policy thresholds decide whether the scan is accepted, reviewed, or rejected before it moves downstream.</span>
+              </div>
+            </div>
+            <div class="bio-flow-content">
+              <div class="bio-flow-copy">
+                <span class="bio-step-number">Step 03</span>
+                <h3 class="bio-step-title">Identity Match</h3>
+                <p class="bio-step-desc">Run 1:1 direct verification against a claimed identity, or 1:N search across your full enrolled database. Confidence scores drive accept, review, and reject bands based on your policy thresholds so matching stays operationally understandable instead of becoming a black box.</p>
+              </div>
+              <div class="bio-flow-points">
+                <article class="bio-flow-point"><strong>1:1 known-user verification</strong><span>Use a direct comparison when the person already has a claimed identity, access token, or employee context.</span></article>
+                <article class="bio-flow-point"><strong>1:N database search</strong><span>Let the system identify who just scanned when the workflow depends on the enrolled population rather than a claimed profile.</span></article>
+                <article class="bio-flow-point"><strong>Threshold-based decisions</strong><span>Confidence bands keep auto-accept, manual review, and rejection logic aligned with your policy rules.</span></article>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="bio-flow-slide" data-flow-step data-step-index="4" id="bio-flow-step-4">
+          <div class="bio-flow-stage">
+            <div class="bio-flow-media bio-flow-media--sync">
+              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80" alt="Attendance sync process">
+              <span class="bio-flow-chip">Step 04</span>
+              <div class="bio-flow-badge">
+                <strong>47 / 52</strong>
+                <span>Today resolved</span>
+              </div>
+              <div class="bio-flow-note">
+                <small>Attendance output</small>
+                <strong>Post verified events into HRMS records</strong>
+                <span>Timestamp, device source, and audit context stay attached when attendance is written back into operations.</span>
+              </div>
+            </div>
+            <div class="bio-flow-content">
+              <div class="bio-flow-copy">
+                <span class="bio-step-number">Step 04</span>
+                <h3 class="bio-step-title">Attendance Sync</h3>
+                <p class="bio-step-desc">Verified biometric match is posted directly to your HRMS attendance records with timestamp, device location, and full audit context. First scan marks check-in, final scan logs check-out, and the operational trail remains readable without manual cleanup after the biometric decision is made.</p>
+              </div>
+              <div class="bio-flow-points">
+                <article class="bio-flow-point"><strong>Automatic attendance writeback</strong><span>Verified scans move directly into check-in or check-out workflows without exporting data into disconnected tools.</span></article>
+                <article class="bio-flow-point"><strong>Device and branch context</strong><span>The final record can keep the originating device, time, and branch information visible for HR and admin teams.</span></article>
+                <article class="bio-flow-point"><strong>Audit trail by default</strong><span>Every accepted biometric event stays easier to review when the identity, timing, and policy result remain attached.</span></article>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="bio-flow-footer">
+        <div class="bio-flow-progress"><span data-bio-flow-progress></span></div>
+        <div class="bio-flow-nav">
+          <button type="button" class="bio-flow-arrow" data-flow-prev aria-label="Previous step"><i class="bi bi-arrow-left"></i></button>
+          <div class="bio-flow-dots">
+            <button type="button" class="bio-flow-dot is-active" data-flow-dot="0">01</button>
+            <button type="button" class="bio-flow-dot" data-flow-dot="1">02</button>
+            <button type="button" class="bio-flow-dot" data-flow-dot="2">03</button>
+            <button type="button" class="bio-flow-dot" data-flow-dot="3">04</button>
+          </div>
+          <button type="button" class="bio-flow-arrow" data-flow-next aria-label="Next step"><i class="bi bi-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN DEMO VIDEO SECTION -->
+<section id="bio-video" class="bio-section bio-section-light bio-section-anchor">
+  <div class="container">
+    <div class="bio-head center bio-reveal">
+      <span class="bio-eyebrow"><i class="bi bi-play-circle"></i> See It In Action</span>
+      <h2>Watch how biometric attendance works end to end.</h2>
+      <p>A quick walkthrough of face enrollment, liveness detection, identity matching, and automatic attendance sync.</p>
+    </div>
+    <div class="bio-video-frame bio-reveal">
+      <div class="bio-video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/Sa2YeSQlZAA?rel=0&modestbranding=1"
+          title="Biometric Attendance System Demo"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="bio-video-chips">
+        <span class="bio-chip-lg"><i class="bi bi-camera"></i> Face Enrollment</span>
+        <span class="bio-chip-lg"><i class="bi bi-shield-check"></i> Liveness Detection</span>
+        <span class="bio-chip-lg"><i class="bi bi-bounding-box-circles"></i> Identity Match</span>
+        <span class="bio-chip-lg"><i class="bi bi-hdd-network"></i> HRMS Sync</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENROLLMENT SECTION -->
+<section id="bio-enroll" class="bio-section bio-section-dark bio-section-anchor">
+  <div class="container">
+    <div class="bio-grid-2">
+      <div class="bio-video-side bio-reveal">
+        <span class="bio-visual-kicker"><i class="bi bi-grid-3x3-gap"></i> Face template registration</span>
+        <div class="bio-video-card-wrap">
+          <div class="bio-video-wrap bio-video-wrap--sm">
+            <iframe
+              src="https://www.youtube.com/embed/wnVkfK8_OFQ?rel=0&modestbranding=1"
+              title="Face Enrollment Demo"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <div class="bio-chip-row">
+          <span class="bio-chip"><i class="bi bi-grid-1x2"></i> Landmark map ready</span>
+          <span class="bio-chip"><i class="bi bi-shield-lock"></i> Encrypted template</span>
+          <span class="bio-chip"><i class="bi bi-person-vcard"></i> HRMS-linked identity</span>
+        </div>
+      </div>
+      <div class="bio-content bio-reveal" style="transition-delay:.1s">
+        <span class="bio-eyebrow"><i class="bi bi-person-check"></i> Enrollment</span>
+        <h2>Register a reliable face template before live use.</h2>
+        <p>MicroHub validates image quality, creates a reusable template, and links the result to the right employee profile before any live scan is trusted.</p>
+        <div class="bio-icon-grid">
+          <div class="bio-icon-item">
+            <span class="bio-icon-box"><i class="bi bi-camera"></i></span>
+            <div><strong>Image quality check</strong><small>Blur, angle, brightness validated before storing</small></div>
+          </div>
+          <div class="bio-icon-item">
+            <span class="bio-icon-box"><i class="bi bi-bounding-box-circles"></i></span>
+            <div><strong>Template generation</strong><small>Structured face map created for fast matching</small></div>
+          </div>
+          <div class="bio-icon-item">
+            <span class="bio-icon-box"><i class="bi bi-file-earmark-lock"></i></span>
+            <div><strong>Secure profile linking</strong><small>Template stored against the right employee record</small></div>
+          </div>
+          <div class="bio-icon-item">
+            <span class="bio-icon-box"><i class="bi bi-arrow-repeat"></i></span>
+            <div><strong>Re-enrollment support</strong><small>Refresh templates when appearance changes matter</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIVENESS SECTION â€” VISUAL REDESIGN -->
+<section id="bio-liveness" class="bio-section bio-section-light bio-section-anchor">
+  <div class="container">
+    <div class="bio-head center bio-reveal">
+      <span class="bio-eyebrow"><i class="bi bi-shield-check"></i> Liveness Detection</span>
+      <h2>Confirm a real person is present â€” before the match runs.</h2>
+    </div>
+    <div class="bio-liveness-layout bio-reveal">
+      <div class="bio-liveness-video-side">
+        <div class="bio-video-wrap bio-video-wrap--sm">
+          <iframe
+            src="https://www.youtube.com/embed/c_5OcAI4hKI?rel=0&modestbranding=1"
+            title="Liveness Detection Demo"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+      <div class="bio-liveness-checks">
+        <div class="bio-check-badge">
+          <span class="bio-check-icon"><i class="bi bi-person-check"></i></span>
+          <div>
+            <strong>Face Detected</strong>
+            <small>Alignment and frame quality confirmed</small>
+          </div>
+          <span class="bio-check-status bio-check-done"><i class="bi bi-check-lg"></i></span>
+        </div>
+        <div class="bio-check-badge">
+          <span class="bio-check-icon"><i class="bi bi-eye"></i></span>
+          <div>
+            <strong>Blink Confirmed</strong>
+            <small>Natural eye activity verified</small>
+          </div>
+          <span class="bio-check-status bio-check-done"><i class="bi bi-check-lg"></i></span>
+        </div>
+        <div class="bio-check-badge bio-check-badge--active">
+          <span class="bio-check-icon"><i class="bi bi-arrow-left-right"></i></span>
+          <div>
+            <strong>Head Movement</strong>
+            <small>Directional prompt in progress</small>
+          </div>
+          <span class="bio-check-status bio-check-active">Live</span>
+        </div>
+        <div class="bio-check-badge bio-check-badge--waiting">
+          <span class="bio-check-icon"><i class="bi bi-camera-video"></i></span>
+          <div>
+            <strong>Session Continuity</strong>
+            <small>Awaiting stable live frame</small>
+          </div>
+          <span class="bio-check-status bio-check-wait"><i class="bi bi-hourglass-split"></i></span>
+        </div>
+        <div class="bio-check-badge bio-check-badge--waiting">
+          <span class="bio-check-icon"><i class="bi bi-check2-circle"></i></span>
+          <div>
+            <strong>Live User Accepted</strong>
+            <small>Cleared to proceed to match</small>
+          </div>
+          <span class="bio-check-status bio-check-wait"><i class="bi bi-hourglass-split"></i></span>
+        </div>
+        <div class="bio-liveness-alert">
+          <i class="bi bi-exclamation-triangle"></i>
+          <span>Failed attempts are logged and flagged for admin review â€” no blind attendance writes.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MATCHING SECTION -->
+<section id="bio-matching" class="bio-section bio-section-dark bio-section-anchor">
+  <div class="container">
+    <div class="bio-grid-2">
+      <div class="bio-visual-card bio-reveal">
+        <span class="bio-visual-kicker"><i class="bi bi-bounding-box-circles"></i> Matching modes</span>
+        <div class="bio-match-stack">
+          <div class="bio-match-panel">
+            <h3>1:N database search</h3>
+            <svg viewBox="0 0 480 160" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="28" width="94" height="108" rx="18" fill="rgba(238,243,248,0.08)" stroke="rgba(238,243,248,0.12)"/><rect x="22" y="40" width="74" height="58" rx="16" fill="rgba(238,243,248,0.12)"/><circle cx="59" cy="67" r="11" fill="rgba(238,243,248,0.28)"/><path d="M42 92C46 82 56 77 66 77C76 77 86 82 90 92" stroke="rgba(238,243,248,0.42)" stroke-width="3" stroke-linecap="round"/><path d="M116 81H252" stroke="rgba(238,243,248,0.3)" stroke-width="4" stroke-linecap="round"/><path d="M204 71L252 81L204 91" stroke="rgba(238,243,248,0.3)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="278" y="16" width="70" height="40" rx="14" fill="rgba(238,243,248,0.18)"/><rect x="278" y="63" width="86" height="40" rx="14" fill="rgba(238,243,248,0.12)"/><rect x="278" y="110" width="76" height="34" rx="14" fill="rgba(238,243,248,0.08)"/><text x="299" y="42" font-size="15" fill="rgba(255,255,255,0.96)" font-family="Inter, sans-serif">98.7%</text><text x="300" y="88" font-size="15" fill="rgba(238,243,248,0.72)" font-family="Inter, sans-serif">12.1%</text><text x="300" y="131" font-size="15" fill="rgba(238,243,248,0.72)" font-family="Inter, sans-serif">8.4%</text></svg>
+            <div class="bio-match-result"><strong>Highest confidence result returned</strong><span>Auto-resolve above threshold</span></div>
+          </div>
+          <div class="bio-match-panel">
+            <h3>1:1 identity verification</h3>
+            <svg viewBox="0 0 480 160" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="18" y="28" width="94" height="108" rx="18" fill="rgba(238,243,248,0.08)" stroke="rgba(238,243,248,0.12)"/><rect x="368" y="28" width="94" height="108" rx="18" fill="rgba(238,243,248,0.1)" stroke="rgba(238,243,248,0.18)"/><rect x="30" y="40" width="70" height="56" rx="16" fill="rgba(238,243,248,0.12)"/><rect x="380" y="40" width="70" height="56" rx="16" fill="rgba(238,243,248,0.14)"/><circle cx="65" cy="66" r="11" fill="rgba(238,243,248,0.28)"/><circle cx="415" cy="66" r="11" fill="rgba(238,243,248,0.28)"/><path d="M48 91C52 82 62 77 72 77C82 77 92 82 96 91" stroke="rgba(238,243,248,0.42)" stroke-width="3" stroke-linecap="round"/><path d="M398 91C402 82 412 77 422 77C432 77 442 82 446 91" stroke="rgba(238,243,248,0.42)" stroke-width="3" stroke-linecap="round"/><path d="M130 81H350" stroke="rgba(238,243,248,0.34)" stroke-width="4" stroke-linecap="round"/><path d="M302 71L350 81L302 91" stroke="rgba(238,243,248,0.34)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="196" y="61" width="88" height="40" rx="14" fill="rgba(238,243,248,0.12)"/><text x="213" y="87" font-size="15" fill="rgba(255,255,255,0.96)" font-family="Inter, sans-serif">Verified</text></svg>
+            <div class="bio-match-result"><strong>Claimed identity compared directly</strong><span>For access points and controlled approvals</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="bio-content bio-reveal" style="transition-delay:.1s">
+        <span class="bio-eyebrow"><i class="bi bi-bounding-box-circles"></i> Matching</span>
+        <h2>One product for direct verification and broader search.</h2>
+        <p>MicroHub supports both 1:1 and 1:N matching so the biometric layer fits different operational flows without forcing a single pattern.</p>
+        <div class="bio-icon-grid">
+          <div class="bio-icon-item">
+            <span class="bio-icon-box"><i class="bi bi-search"></i></span>
+            <div><strong>1:N Search</strong><small>Live scan vs. full enrolled database</small></div>
+          </div>
+          <div class="bio-icon-item">
+            <span class="bio-icon-box"><i class="bi bi-patch-check"></i></span>
+            <div><strong>1:1 Verification</strong><small>Match against a single known identity</small></div>
+          </div>
+          <div class="bio-icon-item">
+            <span class="bio-icon-box"><i class="bi bi-sliders"></i></span>
+            <div><strong>Threshold Control</strong><small>Accept, review, or reject based on confidence</small></div>
+          </div>
+          <div class="bio-icon-item">
+            <span class="bio-icon-box"><i class="bi bi-display"></i></span>
+            <div><strong>Instant Feedback</strong><small>Match status shown at the device immediately</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ATTENDANCE SYNC SECTION -->
+<section id="bio-sync" class="bio-section bio-section-light bio-section-anchor">
+  <div class="container">
+    <div class="bio-grid-2 reverse">
+      <div class="bio-content bio-reveal">
+        <span class="bio-eyebrow"><i class="bi bi-hdd-network"></i> Attendance Sync</span>
+        <h2>Verified scan â†’ attendance record. No manual steps.</h2>
+        <p>Once a live user is matched, MicroHub writes the event into attendance workflows, preserves device context, and keeps the audit trail clean for HR.</p>
+        <div class="bio-icon-grid">
+          <div class="bio-icon-item">
+            <span class="bio-icon-box"><i class="bi bi-clock-history"></i></span>
+            <div><strong>Check-in / Check-out</strong><small>First and final scans map to shift events</small></div>
+          </div>
+          <div class="bio-icon-item">
+            <span class="bio-icon-box"><i class="bi bi-diagram-2"></i></span>
+            <div><strong>HRMS Integration</strong><small>Biometric events flow into your people system</small></div>
+          </div>
+          <div class="bio-icon-item">
+            <span class="bio-icon-box"><i class="bi bi-pc-display"></i></span>
+            <div><strong>Device-aware Logs</strong><small>Branch, kiosk, and timestamp retained per event</small></div>
+          </div>
+          <div class="bio-icon-item">
+            <span class="bio-icon-box"><i class="bi bi-journal-text"></i></span>
+            <div><strong>Full Audit Trail</strong><small>Every biometric event is reviewable by policy</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="bio-visual-card bio-reveal" style="transition-delay:.1s">
+        <span class="bio-visual-kicker"><i class="bi bi-journal-check"></i> Live attendance feed</span>
+        <div class="bio-sync-feed">
+          <div class="bio-sync-row"><span class="bio-sync-time">Now</span><div><strong>Rahul Sharma</strong><small>Face matched Â· Kiosk 02 Â· Writing check-in</small></div><span class="bio-sync-badge bio-sync-scanning">Scanning</span></div>
+          <div class="bio-sync-row"><span class="bio-sync-time">09:02</span><div><strong>Priya Mehta</strong><small>Verified Â· Synced to HRMS</small></div><span class="bio-sync-badge bio-sync-in">Check-in</span></div>
+          <div class="bio-sync-row"><span class="bio-sync-time">09:00</span><div><strong>Amit Singh</strong><small>Live verification passed Â· Branch logged</small></div><span class="bio-sync-badge bio-sync-in">Check-in</span></div>
+          <div class="bio-sync-row"><span class="bio-sync-time">18:31</span><div><strong>Neha Joshi</strong><small>Final scan registered as end-of-day event</small></div><span class="bio-sync-badge bio-sync-out">Check-out</span></div>
+        </div>
+        <div class="bio-sync-summary"><span>Today's verified output</span><strong>47 of 52 records resolved</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPLOYMENT READINESS -->
+<section class="bio-section bio-section-light">
+  <div class="container">
+    <div class="bio-head center bio-reveal">
+      <span class="bio-eyebrow"><i class="bi bi-code-square"></i> Deployment Readiness</span>
+      <h2>Built to roll out across devices, branches, and workflows.</h2>
+    </div>
+    <div class="bio-tool-grid">
+      <article class="bio-tool-card bio-reveal">
+        <span class="bio-feature-icon"><i class="bi bi-phone"></i></span>
+        <h3>Mobile-ready capture</h3>
+        <p>Enrollment and attendance capture work outside fixed terminals.</p>
+      </article>
+      <article class="bio-tool-card bio-reveal" style="transition-delay:.08s">
+        <span class="bio-feature-icon"><i class="bi bi-window"></i></span>
+        <h3>Cross-platform fit</h3>
+        <p>Works across kiosks, dashboards, and web-based operations.</p>
+      </article>
+      <article class="bio-tool-card bio-reveal" style="transition-delay:.16s">
+        <span class="bio-feature-icon"><i class="bi bi-braces"></i></span>
+        <h3>API-led orchestration</h3>
+        <p>Connect matching results and attendance events into broader rules.</p>
+      </article>
+      <article class="bio-tool-card bio-reveal" style="transition-delay:.24s">
+        <span class="bio-feature-icon"><i class="bi bi-hdd-network"></i></span>
+        <h3>Low-friction rollout</h3>
+        <p>Practical across branches and attendance points without heavy hardware requirements.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- RULES & POLICIES -->
+<section id="bio-rules" class="bio-section bio-rule-band bio-section-anchor">
+  <div class="container">
+    <div class="bio-head center bio-reveal">
+      <span class="bio-eyebrow"><i class="bi bi-sliders"></i> Rules and Policies</span>
+      <h2>Configuration that keeps biometric decisions transparent.</h2>
+    </div>
+    <div class="bio-rule-grid">
+      <article class="bio-rule-card bio-reveal"><span class="bio-rule-tag">Enrollment</span><h3>Minimum capture quality</h3><p>Blurred or obstructed images are rejected before a weak template is stored.</p></article>
+      <article class="bio-rule-card bio-reveal" style="transition-delay:.06s"><span class="bio-rule-tag">Enrollment</span><h3>Multi-angle profiles</h3><p>Additional face positions can be required for stronger match resilience.</p></article>
+      <article class="bio-rule-card bio-reveal" style="transition-delay:.12s"><span class="bio-rule-tag">Liveness</span><h3>Retry limits</h3><p>Repeated failures stop the session and escalate instead of looping.</p></article>
+      <article class="bio-rule-card bio-reveal" style="transition-delay:.18s"><span class="bio-rule-tag">Liveness</span><h3>Challenge rotation</h3><p>Response prompts rotate so fixed patterns can't be exploited over time.</p></article>
+      <article class="bio-rule-card bio-reveal" style="transition-delay:.04s"><span class="bio-rule-tag">Matching</span><h3>Confidence thresholds</h3><p>Accept, review, and reject bands translate match scores into real actions.</p></article>
+      <article class="bio-rule-card bio-reveal" style="transition-delay:.1s"><span class="bio-rule-tag">Matching</span><h3>Duplicate identity control</h3><p>Enrollment logic catches the same face being stored across multiple records.</p></article>
+      <article class="bio-rule-card bio-reveal" style="transition-delay:.16s"><span class="bio-rule-tag">Attendance</span><h3>Shift and grace logic</h3><p>Late windows, policy exceptions, and shift handling visible before payroll.</p></article>
+      <article class="bio-rule-card bio-reveal" style="transition-delay:.22s"><span class="bio-rule-tag">Security</span><h3>Template protection</h3><p>Encryption, access rules, and auditability built in from enrollment.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bio-cta">
+  <div class="container">
+    <div class="bio-cta-inner bio-reveal is-visible">
+      <h2>Plan your biometric rollout with one product team.</h2>
+      <p>MicroHub covers enrollment policy, device fit, attendance logic, and branch rollout so your biometric layer works cleanly inside the rest of your operations.</p>
+      <div class="bio-cta-actions">
+        <a href="https://repair.microhub.in/register" class="btn-primary-custom">Book a Demo <i class="bi bi-arrow-right"></i></a>
+        <a href="#bio-video" class="btn-outline-custom">Watch Demo Video <i class="bi bi-play-circle"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-root" data-include="components/footer.html"></div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/component-loader.js"></script>
+<script src="../../assets/js/navigation.js"></script>
+<script src="../../assets/js/animations.js"></script>
+<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/biometric-verification.js"></script>
+</body>
+</html>

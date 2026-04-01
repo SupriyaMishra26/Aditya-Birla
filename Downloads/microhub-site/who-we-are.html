@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Who We Are - MicroHub</title>
+  <meta name="description" content="Learn about MicroHub, our mission, vision, and how we deliver unified business systems through Microhub CMS since 2002.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <style>
+    .who-page-hero {
+      padding: 108px 0 54px;
+    }
+
+    .who-hero-shell {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .who-hero-copy {
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .who-hero-copy .section-label {
+      margin: 0 auto;
+      background: rgba(46,75,101,0.2);
+      color: var(--primary-light);
+    }
+
+    .who-hero-copy h1 {
+      color: var(--white);
+      max-width: 16ch;
+      margin: 1rem auto 0;
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+    }
+
+    .who-hero-copy p {
+      color: rgba(255,255,255,0.7);
+      font-size: 1rem;
+      margin: 1rem auto 0;
+      max-width: 62ch;
+      line-height: 1.7;
+    }
+
+    .who-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .who-stat-card {
+      height: 100%;
+      padding: 1.4rem;
+      border-radius: 18px;
+      border: 1px solid rgba(15,23,42,0.08);
+      background: linear-gradient(180deg, #ffffff 0%, #F4F7FB 100%);
+      box-shadow: 0 18px 40px rgba(15,23,42,0.06);
+    }
+
+    .who-stat-value {
+      margin-bottom: 0.3rem;
+      color: var(--primary);
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .who-stat-label {
+      color: var(--dark);
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    .who-stat-copy {
+      margin: 0.65rem 0 0;
+      color: var(--text-light);
+      font-size: 0.86rem;
+      line-height: 1.6;
+    }
+
+    .partnership-values-section {
+      background:
+        radial-gradient(circle at top left, rgba(46,75,101,0.08) 0%, transparent 22%),
+        linear-gradient(180deg, #F4F7FB 0%, #ffffff 100%);
+    }
+
+    .partnership-values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+
+    .partnership-value-card {
+      height: 100%;
+      padding: 1.45rem;
+      border-radius: 24px;
+      border: 1px solid rgba(46,75,101,0.12);
+      background: rgba(255,255,255,0.96);
+      box-shadow: 0 20px 42px rgba(15,23,42,0.07);
+    }
+
+    .partnership-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 58px;
+      height: 58px;
+      margin-bottom: 1rem;
+      border-radius: 18px;
+      border: 1px solid rgba(46,75,101,0.14);
+      background: rgba(46,75,101,0.08);
+    }
+
+    .partnership-icon img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+    }
+
+    .partnership-value-card h3 {
+      margin: 0 0 0.55rem;
+      color: var(--dark);
+      font-size: 1.08rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .partnership-value-card p {
+      margin: 0;
+      color: var(--text-light);
+      font-size: 0.9rem;
+      line-height: 1.68;
+    }
+
+    .partner-network-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+
+    .partner-network-card {
+      height: 100%;
+      padding: 1.4rem;
+      border-radius: 22px;
+      border: 1px solid rgba(15,23,42,0.08);
+      background: linear-gradient(180deg, #ffffff 0%, #F6F9FC 100%);
+      box-shadow: 0 18px 38px rgba(15,23,42,0.06);
+    }
+
+    .partner-network-kicker {
+      display: inline-block;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .partner-network-card h3 {
+      margin: 0 0 0.45rem;
+      color: var(--dark);
+      font-size: 1.02rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .partner-network-card p {
+      margin: 0;
+      color: var(--text-light);
+      font-size: 0.84rem;
+      line-height: 1.58;
+    }
+
+    .partner-brand-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .partner-brand-grid--wide {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .partner-brand-tile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 74px;
+      padding: 0.9rem;
+      border-radius: 16px;
+      border: 1px solid rgba(46,75,101,0.1);
+      background: rgba(255,255,255,0.94);
+    }
+
+    .partner-brand-tile img {
+      max-width: 100%;
+      max-height: 34px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 991.98px) {
+      .who-page-hero {
+        padding: 100px 0 50px;
+      }
+
+      .partnership-values-grid,
+      .partner-network-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .who-page-hero {
+        padding: 96px 0 42px;
+      }
+
+      .who-stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .who-hero-copy h1 {
+        max-width: none;
+      }
+
+      .who-hero-copy p {
+        font-size: 0.96rem;
+      }
+
+      .partnership-values-grid,
+      .partner-network-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .partner-brand-grid--wide {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  </style>
+</head>
+<body data-site-root="">
+
+<!-- Navbar (same as homepage) -->
+<div id="navbar-root" data-include="components/navbar.html"></div>
+
+<section class="page-hero who-page-hero">
+  <div class="container position-relative" style="z-index:1">
+    <!-- <div class="breadcrumb-custom">
+      <a href="index.html">Home</a><span>/</span><span>Who We Are</span>
+    </div> -->
+    <div class="who-hero-shell">
+      <div class="who-hero-copy fade-in-up-1">
+       
+        <h1>Built to Simplify Business Operations</h1>
+        <p>Microhub is a technology solutions company focused on building intelligent, scalable, and secure business systems through our in-house developed Microhub CMS.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mission & Vision -->
+<section class="section-pad" style="background:var(--white)">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6 reveal">
+        <div class="section-label"><i class="bi bi-compass"></i> Our Purpose</div>
+        <h2 class="section-title">Mission, Vision & <span>Values</span></h2>
+        <div class="divider"></div>
+        <div style="display:flex;flex-direction:column;gap:1.5rem">
+          <div style="padding:1.5rem;background:var(--accent);border-radius:12px;border-left:4px solid var(--primary)">
+            <div style="font-weight:700;color:var(--dark);margin-bottom:0.5rem"><i class="bi bi-bullseye me-2" style="color:var(--primary)"></i>Mission</div>
+            <p class="mb-0">Simplify business operations through one unified platform powered by Microhub CMS.</p>
+          </div>
+          <div style="padding:1.5rem;background:var(--accent);border-radius:12px;border-left:4px solid var(--primary-light)">
+            <div style="font-weight:700;color:var(--dark);margin-bottom:0.5rem"><i class="bi bi-eye me-2" style="color:var(--primary)"></i>Vision</div>
+            <p class="mb-0">To be a trusted technology partner delivering scalable, integrated business systems.</p>
+          </div>
+          <div style="padding:1.5rem;background:var(--accent);border-radius:12px;border-left:4px solid var(--primary)">
+            <div style="font-weight:700;color:var(--dark);margin-bottom:0.5rem"><i class="bi bi-heart me-2" style="color:var(--primary)"></i>Goal</div>
+            <p class="mb-0">Help businesses grow faster by replacing multiple tools with one intelligent CMS.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 reveal reveal-delay-2">
+        <!-- Timeline -->
+        <div class="section-label"><i class="bi bi-clock-history"></i> Our Journey</div>
+        <h3 class="mb-4">Built Through Long-Term Execution</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">2002 - Foundation</div>
+            <h5 style="font-weight:700">Microhub began operations</h5>
+            <p class="text-muted small">Started with a mission to simplify business technology delivery for growing organizations.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Platform Evolution</div>
+            <h5 style="font-weight:700">Microhub CMS developed in-house</h5>
+            <p class="text-muted small">Built a unified CMS integrating inventory, custom ERP, finance, ticketing, HR &amp; payroll, biometric, and IT workflows.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Service Expansion</div>
+            <h5 style="font-weight:700">Beyond software into full-stack delivery</h5>
+            <p class="text-muted small">Expanded into IT infrastructure, cybersecurity, enterprise hardware, and managed operations support.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Today</div>
+            <h5 style="font-weight:700">One trusted technology partner</h5>
+            <p class="text-muted small">We help businesses replace complexity with one integrated platform and reliable 24/7 execution support.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Values Grid -->
+<section class="section-pad" style="background:var(--accent)">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <div class="section-label mx-auto"><i class="bi bi-people"></i> Our Team Culture</div>
+      <h2 class="section-title">What Drives <span>Every Decision</span></h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6 reveal reveal-delay-1">
+        <div class="card-custom text-center">
+          <div class="card-icon mx-auto mb-3"><i class="bi bi-shield-check"></i></div>
+          <h4>Trust & Transparency</h4>
+          <p class="text-muted small">We communicate openly with clients and hold ourselves accountable to every commitment we make.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 reveal reveal-delay-2">
+        <div class="card-custom text-center">
+          <div class="card-icon mx-auto mb-3"><i class="bi bi-lightbulb"></i></div>
+          <h4>Innovation First</h4>
+          <p class="text-muted small">We continuously invest in R&D to keep our products ahead of the curve and ahead of our clients' needs.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 reveal reveal-delay-3">
+        <div class="card-custom text-center">
+          <div class="card-icon mx-auto mb-3"><i class="bi bi-people"></i></div>
+          <h4>Client Success</h4>
+          <p class="text-muted small">Our success is measured exclusively by our clients' success. Every metric we track is tied to client outcomes.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 reveal reveal-delay-4">
+        <div class="card-custom text-center">
+          <div class="card-icon mx-auto mb-3"><i class="bi bi-globe"></i></div>
+          <h4>India at Scale</h4>
+          <p class="text-muted small">Products built for Indian regulatory, language, and infrastructure requirements from day one.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad partnership-values-section">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <h2 class="section-title">Building Stronger <span>Futures Together</span></h2>
+      <p class="section-desc mx-auto">Great partnerships grow through shared goals, open communication, and dependable execution. That is how Microhub works with clients, teams, and channel partners alike.</p>
+    </div>
+    <div class="partnership-values-grid">
+      <div class="partnership-value-card reveal reveal-delay-1">
+        <div class="partnership-icon"><img src="assets/images/icons/growth-report-graph-svgrepo-com.svg" alt="Mutual growth icon"></div>
+        <h3>Mutual Growth</h3>
+        <p>We build strategies that create measurable value on both sides, so every engagement supports long-term business growth.</p>
+      </div>
+      <div class="partnership-value-card reveal reveal-delay-2">
+        <div class="partnership-icon"><img src="assets/images/icons/phone-pc-computer-data-transfer-svgrepo-com.svg" alt="Transparency icon"></div>
+        <h3>Transparency</h3>
+        <p>Clear communication, visible timelines, and practical reporting keep every stakeholder informed and confident.</p>
+      </div>
+      <div class="partnership-value-card reveal reveal-delay-3">
+        <div class="partnership-icon"><img src="assets/images/icons/disruption-global-innovation-svgrepo-com.svg" alt="Innovation support icon"></div>
+        <h3>Innovation Support</h3>
+        <p>We bring new ideas, process improvements, and technical depth that help partners stay ahead of changing market demands.</p>
+      </div>
+      <div class="partnership-value-card reveal reveal-delay-1">
+        <div class="partnership-icon"><img src="assets/images/icons/timeline.png" alt="Reliability icon"></div>
+        <h3>Reliability</h3>
+        <p>Consistent delivery, dependable timelines, and ownership at every step make Microhub a partner teams can rely on.</p>
+      </div>
+      <div class="partnership-value-card reveal reveal-delay-2">
+        <div class="partnership-icon"><img src="assets/images/icons/goal.png" alt="Shared success icon"></div>
+        <h3>Shared Success</h3>
+        <p>Your milestones guide our work. We measure our success by the business outcomes we help create together.</p>
+      </div>
+      <div class="partnership-value-card reveal reveal-delay-3">
+        <div class="partnership-icon"><i class="bi bi-globe2" style="font-size:1.25rem;color:var(--primary)"></i></div>
+        <h3>Partner Network</h3>
+        <p>Our ecosystem spans cloud, networking, security, end-user computing, and business software so we can solve holistically.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" style="background:var(--white)">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <h2 class="section-title">Our Partner <span>Network</span></h2>
+      <p class="section-desc mx-auto">We collaborate with trusted technology brands across cloud, security, networking, devices, and business applications to deliver reliable enterprise outcomes.</p>
+    </div>
+    <div class="partner-network-grid">
+      <div class="partner-network-card reveal reveal-delay-1">
+        <span class="partner-network-kicker">Cloud</span>
+        <h3>Cloud Platforms</h3>
+        <p>Scalable cloud foundations and identity-ready infrastructure for modern businesses.</p>
+        <div class="partner-brand-grid">
+          <div class="partner-brand-tile"><img src="assets/images/partners/microsoft.png" alt="Microsoft"></div>
+          <div class="partner-brand-tile"><img src="assets/images/partners/google.png" alt="Google"></div>
+          <div class="partner-brand-tile"><img src="assets/images/partners/aws.png" alt="AWS"></div>
+          <div class="partner-brand-tile"><img src="assets/images/partners/protean.png" alt="Protean"></div>
+        </div>
+      </div>
+      <div class="partner-network-card reveal reveal-delay-2">
+        <span class="partner-network-kicker">Network</span>
+        <h3>Network Infrastructure</h3>
+        <p>Connectivity, wireless, and branch networking partnerships that support secure rollout.</p>
+        <div class="partner-brand-grid">
+          <div class="partner-brand-tile"><img src="assets/images/partners/syrotech.png" alt="Syrotech"></div>
+          <div class="partner-brand-tile"><img src="assets/images/partners/cisco.png" alt="Cisco"></div>
+          <div class="partner-brand-tile"><img src="assets/images/partners/ruijie.png" alt="Ruijie"></div>
+          <div class="partner-brand-tile"><img src="assets/images/partners/aruba.png" alt="HPE Aruba"></div>
+        </div>
+      </div>
+      <div class="partner-network-card reveal reveal-delay-3">
+        <span class="partner-network-kicker">Security</span>
+        <h3>Security Stack</h3>
+        <p>Protection layers spanning endpoint security, threat response, and perimeter defence.</p>
+        <div class="partner-brand-grid">
+          <div class="partner-brand-tile"><img src="assets/images/partners/kaspersky.png" alt="Kaspersky"></div>
+          <div class="partner-brand-tile"><img src="assets/images/partners/sophos.png" alt="Sophos"></div>
+          <div class="partner-brand-tile"><img src="assets/images/partners/crowdstrike.png" alt="CrowdStrike"></div>
+          <div class="partner-brand-tile"><img src="assets/images/partners/fortinet.png" alt="Fortinet"></div>
+        </div>
+      </div>
+      <div class="partner-network-card reveal reveal-delay-4">
+        <span class="partner-network-kicker">Devices</span>
+        <h3>End-User Devices</h3>
+        <p>Laptops, desktops, mobiles, and work devices sourced through leading OEM partners.</p>
+        <div class="partner-brand-grid partner-brand-grid--wide">
+          <div class="partner-brand-tile"><img src="assets/images/partners/lenovo.png" alt="Lenovo"></div>
+          <div class="partner-brand-tile"><img src="assets/images/partners/apple.png" alt="Apple"></div>
+          <div class="partner-brand-tile"><img src="assets/images/partners/samsung.png" alt="Samsung"></div>
+          <div class="partner-brand-tile"><img src="assets/images/partners/hp.png" alt="HP"></div>
+          <div class="partner-brand-tile"><img src="assets/images/partners/dell.png" alt="Dell"></div>
+        </div>
+      </div>
+      <div class="partner-network-card reveal reveal-delay-1">
+        <span class="partner-network-kicker">MDM</span>
+        <h3>Mobility &amp; Device Control</h3>
+        <p>Mobile device management and operations tooling for distributed teams and field deployments.</p>
+        <div class="partner-brand-grid">
+          <div class="partner-brand-tile"><img src="assets/images/partners/42gears.png" alt="42Gears"></div>
+          <div class="partner-brand-tile"><img src="assets/images/partners/manageEngine.png" alt="ManageEngine"></div>
+        </div>
+      </div>
+      <div class="partner-network-card reveal reveal-delay-2">
+        <span class="partner-network-kicker">Telecom</span>
+        <h3>Connectivity Partners</h3>
+        <p>Telecom partnerships that support branch communication, last-mile reach, and service continuity.</p>
+        <div class="partner-brand-grid">
+          <div class="partner-brand-tile"><img src="assets/images/partners/telecom.png" alt="Tata Tele Business Services"></div>
+        </div>
+      </div>
+      <div class="partner-network-card reveal reveal-delay-3">
+        <span class="partner-network-kicker">Surveillance</span>
+        <h3>Surveillance &amp; Monitoring</h3>
+        <p>Security observation and monitoring brands that strengthen site visibility and access control.</p>
+        <div class="partner-brand-grid">
+          <div class="partner-brand-tile"><img src="assets/images/partners/bosch.png" alt="Bosch"></div>
+          <div class="partner-brand-tile"><img src="assets/images/partners/hikvision.png" alt="Hikvision"></div>
+        </div>
+      </div>
+      <div class="partner-network-card reveal reveal-delay-4">
+        <span class="partner-network-kicker">Licenses</span>
+        <h3>Business Applications</h3>
+        <p>Productivity, communication, and licensed software partnerships for daily business operations.</p>
+        <div class="partner-brand-grid">
+          <div class="partner-brand-tile"><img src="assets/images/partners/zoho.png" alt="Zoho"></div>
+          <div class="partner-brand-tile"><img src="assets/images/partners/adobe.png" alt="Adobe"></div>
+          <div class="partner-brand-tile"><img src="assets/images/partners/microsoft.png" alt="Microsoft 365"></div>
+          <div class="partner-brand-tile"><img src="assets/images/partners/zoom.png" alt="Zoom"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" style="background:var(--white)">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-5 reveal">
+        <div class="section-label"><i class="bi bi-graph-up-arrow"></i> By The Numbers</div>
+        <h2 class="section-title">Built With <span>Consistency</span></h2>
+        <div class="divider"></div>
+        <p class="text-muted mb-0" style="max-width:54ch;line-height:1.75">From our foundation year to platform capabilities, these milestones reflect how Microhub delivers connected systems across software, infrastructure, and hardware.</p>
+      </div>
+      <div class="col-lg-7 reveal reveal-delay-2">
+        <div class="who-stats-grid">
+          <div class="who-stat-card">
+            <div class="who-stat-value">2002</div>
+            <div class="who-stat-label">Founded</div>
+            <p class="who-stat-copy">Established to simplify business technology and operations.</p>
+          </div>
+          <div class="who-stat-card">
+            <div class="who-stat-value">6+</div>
+            <div class="who-stat-label">Core Software Products</div>
+            <p class="who-stat-copy">Inventory, custom ERP, finance, ticketing, HR &amp; payroll, and biometric workflows in one stack.</p>
+          </div>
+          <div class="who-stat-card">
+            <div class="who-stat-value">3</div>
+            <div class="who-stat-label">Core Verticals</div>
+            <p class="who-stat-copy">Software platforms, IT infrastructure, and enterprise hardware delivery.</p>
+          </div>
+          <div class="who-stat-card">
+            <div class="who-stat-value">24/7</div>
+            <div class="who-stat-label">Support Model</div>
+            <p class="who-stat-copy">Continuous support to keep operations reliable and secure.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container position-relative" style="z-index:1;text-align:center">
+    <h2 style="color:var(--white);margin-bottom:1.25rem">Simplify Your Business with Microhub</h2>
+    <p style="color:rgba(255,255,255,0.8);font-size:1.05rem;margin-bottom:2rem;max-width:560px;margin-left:auto;margin-right:auto">Let's discuss how Microhub CMS and our technology services can help you scale securely and efficiently.</p>
+    <div class="d-flex gap-3 justify-content-center flex-wrap">
+      <a href="https://repair.microhub.in/register" class="btn-white-custom">Start Free Trial <i class="bi bi-arrow-right"></i></a>
+      <a href="insights/case-studies.html" class="btn-outline-custom" style="border-color:rgba(255,255,255,0.4);color:var(--white)"><i class="bi bi-briefcase"></i> See Case Studies</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer (abbreviated) -->
+<div id="footer-root" data-include="components/footer.html"></div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/component-loader.js"></script>
+<script src="assets/js/navigation.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
