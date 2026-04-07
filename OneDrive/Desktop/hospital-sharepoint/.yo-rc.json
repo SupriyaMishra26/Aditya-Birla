@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.20.8",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "hospital-website",
+    "libraryId": "9c0bcb2d-1d69-4980-b040-14b9015e7a23",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "hospital-website",
+    "solutionShortDescription": "hospital-website description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
