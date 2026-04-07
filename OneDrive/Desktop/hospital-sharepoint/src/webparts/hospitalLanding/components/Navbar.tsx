@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styles from './Navbar.module.scss';
+import styles from '../common/Navbar.module.scss';
 
 interface NavbarProps {
   currentPage: string;

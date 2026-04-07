@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Navbar from './common/Navbar';
+import Navbar from './Navbar';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = React.useState('home');
