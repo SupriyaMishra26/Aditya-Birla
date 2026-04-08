@@ -1,0 +1,162 @@
+@import './global';
+
+.button {
+  --button-fill: #{$color-brand-red};
+  --button-fill-hover: #{$color-brand-deep-red};
+  --button-contrast: #{$color-surface};
+  --button-outline-bg: rgba($color-brand-red, 0.06);
+  --button-ghost-bg: rgba($color-brand-red, 0.1);
+  --button-border-width: 1.5px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 50px;
+  padding: 0 28px;
+  border: var(--button-border-width) solid transparent;
+  border-radius: 999px;
+  box-sizing: border-box;
+  background: transparent;
+  color: $color-ink-strong;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    transform $transition-standard,
+    background-color $transition-standard,
+    border-color $transition-standard,
+    color $transition-standard,
+    box-shadow $transition-standard;
+
+  &:hover:not(:disabled) {
+    transform: translateY(-1px);
+  }
+
+  &:focus-visible {
+    outline: 3px solid rgba($color-brand-gold, 0.55);
+    outline-offset: 3px;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+.noLift {
+  &:hover:not(:disabled) {
+    transform: none;
+  }
+}
+
+.label {
+  @include button-label;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.iconLeading {
+  order: -1;
+}
+
+.solid {
+  background: var(--button-fill);
+  border-color: var(--button-fill);
+  color: var(--button-contrast);
+  box-shadow: 0 16px 28px rgba($color-brand-deep-red, 0.16);
+
+  &:hover:not(:disabled) {
+    background: var(--button-fill-hover);
+    border-color: var(--button-fill-hover);
+    color: var(--button-contrast);
+    box-shadow: 0 18px 30px rgba($color-brand-deep-red, 0.2);
+  }
+}
+
+.outline {
+  background: transparent;
+  border-color: var(--button-fill);
+  color: var(--button-fill);
+  box-shadow: none;
+
+  &:hover:not(:disabled) {
+    background: var(--button-outline-bg);
+    border-color: var(--button-fill-hover);
+    color: var(--button-fill-hover);
+  }
+}
+
+.ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--button-fill);
+  box-shadow: none;
+
+  &:hover:not(:disabled) {
+    background: var(--button-ghost-bg);
+    color: var(--button-fill-hover);
+  }
+}
+
+.toneBrand {
+  --button-fill: #{$color-brand-red};
+  --button-fill-hover: #{$color-brand-crimson};
+  --button-contrast: #{$color-surface};
+  --button-outline-bg: rgba($color-brand-red, 0.08);
+  --button-ghost-bg: rgba($color-brand-red, 0.1);
+}
+
+.toneWarm {
+  --button-fill: #{$color-brand-orange};
+  --button-fill-hover: #{$color-brand-red};
+  --button-contrast: #{$color-surface};
+  --button-outline-bg: rgba($color-brand-orange, 0.1);
+  --button-ghost-bg: rgba($color-brand-orange, 0.12);
+}
+
+.toneGold {
+  --button-fill: #{$color-brand-gold};
+  --button-fill-hover: #{$color-brand-orange};
+  --button-contrast: #{$color-brand-deep-red};
+  --button-outline-bg: rgba($color-brand-gold, 0.18);
+  --button-ghost-bg: rgba($color-brand-gold, 0.2);
+}
+
+.toneDeep {
+  --button-fill: #{$color-brand-deep-red};
+  --button-fill-hover: #{$color-brand-crimson};
+  --button-contrast: #{$color-surface};
+  --button-outline-bg: rgba($color-brand-deep-red, 0.12);
+  --button-ghost-bg: rgba($color-brand-deep-red, 0.16);
+}
+
+.sm {
+  min-height: 44px;
+  padding: 0 22px;
+
+  .label {
+    font-size: 14px;
+  }
+}
+
+.md {
+  min-height: 50px;
+  padding: 0 28px;
+}
+
+.lg {
+  min-height: 62px;
+  padding: 0 34px;
+
+  .label {
+    font-size: 17px;
+  }
+}

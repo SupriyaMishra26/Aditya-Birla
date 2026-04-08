@@ -1,0 +1,43 @@
+$color-brand-orange: #ef6d26;
+$color-brand-red: #d61f26;
+$color-brand-gold: #edca50;
+$color-brand-deep-red: #a51b17;
+$color-brand-crimson: #b01f24;
+
+$color-surface: #ffffff;
+$color-ink-strong: #1e1f1f;
+$color-ink-muted: #555555;
+$color-border-soft: #e5e7eb;
+$color-overlay-dark: rgba(82, 88, 91, 0.58);
+
+$font-family-base: 'Segoe UI', sans-serif;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-heavy: 800;
+
+$transition-standard: 0.18s ease;
+
+@mixin button-label {
+  font-family: $font-family-base;
+  font-size: 15px;
+  font-weight: $font-weight-semibold;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+}
+
+@mixin nav-link-text {
+  font-family: $font-family-base;
+  font-size: 14px;
+  font-weight: $font-weight-medium;
+  line-height: 1.2;
+}
+
+@mixin section-heading {
+  margin: 0;
+  font-family: $font-family-base;
+  font-weight: $font-weight-bold;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}

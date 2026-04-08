@@ -1,5 +1,7 @@
 import * as React from 'react';
-import styles from '../common/Navbar.module.scss';
+import logo from '../assets/logo.jpg';
+import Button from '../ui/Button';
+import styles from './Navbar.module.scss';
 
 interface NavbarProps {
   currentPage: string;
@@ -7,27 +9,24 @@ interface NavbarProps {
 }
 
 const navLinks = [
-  { id: 'home',              label: 'Home'              },
-  { id: 'specialities',      label: 'Specialities'      },
+  { id: 'home', label: 'Home' },
+  { id: 'specialities', label: 'Specialities' },
   { id: 'wellness-packages', label: 'Wellness Packages' },
-  { id: 'testimonials',      label: 'Testimonials'      },
-  { id: 'contact',           label: 'Contact'           },
+  { id: 'testimonials', label: 'Testimonials' },
+  { id: 'contact', label: 'Contact' }
 ];
+
+const diagonalArrow = String.fromCharCode(8599);
 
 const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
   return (
     <nav className={styles.navbar}>
-
-      {/* Logo */}
       <div className={styles.logo}>
-       
         <div className={styles.logoText}>
-          <img src="/path/to/logo.png" alt="Logo" className={styles.logoTop} />
-          ADITYA BIRLA
+          <img src={logo} alt="Hospital logo" className={styles.logoTop} />
         </div>
       </div>
 
-      {/* Nav Links */}
       <ul className={styles.menu}>
         {navLinks.map(link => (
           <li key={link.id}>
@@ -41,14 +40,15 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
         ))}
       </ul>
 
-      {/* CTA Button */}
-      <button
-        className={styles.cta}
+      <Button
+        className={styles.ctaButton}
         onClick={() => onNavigate('appointments')}
+        variant="outline"
+        tone="brand"
+        icon={diagonalArrow}
       >
-        Book An Appointment ↗
-      </button>
-
+        Book An Appointment
+      </Button>
     </nav>
   );
 };

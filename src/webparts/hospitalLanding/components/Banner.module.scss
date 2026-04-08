@@ -1,0 +1,412 @@
+@import '../ui/global';
+
+.banner {
+  width: 100%;
+  background: $color-surface;
+  container-type: inline-size;
+}
+
+.viewport {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-height: 656px;
+  overflow: hidden;
+  background: #efece6;
+}
+
+.track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.75s ease;
+}
+
+.slide {
+  position: relative;
+  flex: 0 0 100%;
+  min-height: 656px;
+  overflow: hidden;
+}
+
+.visual {
+  position: absolute;
+  inset: 0;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.98) contrast(1.01);
+}
+
+.imageGlow {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.18) 30%, rgba(255, 255, 255, 0.04) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(0, 0, 0, 0.14) 100%);
+}
+
+.contentCard {
+  position: absolute;
+  top: 50%;
+  right: clamp(80px, 6vw, 112px);
+  transform: translateY(-50%);
+  width: min(46vw, 694px);
+  max-width: calc(100% - 48px);
+  padding: clamp(32px, 3.1vw, 52px);
+  box-sizing: border-box;
+  border-radius: 28px;
+  background: $color-overlay-dark;
+  box-shadow: 0 18px 42px rgba(28, 34, 37, 0.12);
+  backdrop-filter: blur(6px);
+}
+
+.copyStack {
+  max-width: 560px;
+  min-width: 0;
+}
+
+.eyebrow {
+  @include section-heading;
+  margin-bottom: 8px;
+  color: $color-brand-red;
+  font-size: clamp(52px, 4.2vw, 78px);
+  font-weight: $font-weight-heavy;
+}
+
+.heading {
+  @include section-heading;
+  color: $color-surface;
+  font-size: clamp(48px, 4vw, 64px);
+}
+
+.description {
+  max-width: 540px;
+  margin: 24px 0 0;
+  color: rgba(255, 255, 255, 0.95);
+  font-family: $font-family-base;
+  font-size: clamp(20px, 1.75vw, 28px);
+  font-weight: $font-weight-medium;
+  line-height: 1.34;
+  letter-spacing: -0.01em;
+}
+
+.primaryAction {
+  min-width: 252px;
+  margin-top: 34px;
+  justify-content: center;
+  --button-fill: #{$color-brand-crimson};
+  --button-fill-hover: #{$color-brand-deep-red};
+  --button-border-width: 2px;
+  box-shadow: 0 20px 32px rgba($color-brand-deep-red, 0.26);
+}
+
+.control {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 64px;
+  height: 64px;
+  border: none;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.12);
+  color: $color-surface;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition:
+    background-color $transition-standard,
+    transform $transition-standard;
+  backdrop-filter: blur(3px);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  &:focus-visible {
+    outline: 3px solid rgba($color-brand-gold, 0.75);
+    outline-offset: 3px;
+  }
+}
+
+.prevControl {
+  left: 22px;
+}
+
+.nextControl {
+  right: 22px;
+}
+
+.controlGlyph {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-right: 4px solid currentColor;
+  border-bottom: 4px solid currentColor;
+}
+
+.controlGlyphPrev {
+  transform: rotate(135deg);
+  margin-left: 8px;
+}
+
+.controlGlyphNext {
+  transform: rotate(-45deg);
+  margin-right: 8px;
+}
+
+.sideBadge {
+  position: absolute;
+  top: 146px;
+  right: 16px;
+  z-index: 2;
+  padding: 24px 18px;
+  border-radius: 16px;
+  background: #ffd968;
+  color: $color-brand-deep-red;
+  font-family: $font-family-base;
+  font-size: 20px;
+  font-weight: $font-weight-semibold;
+  line-height: 1;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  box-shadow: 0 12px 24px rgba(98, 66, 2, 0.18);
+}
+
+.pagination {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transform: translateX(-50%);
+}
+
+.dot {
+  width: 14px;
+  height: 10px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(30, 31, 31, 0.26);
+  cursor: pointer;
+  transition:
+    width $transition-standard,
+    background-color $transition-standard;
+}
+
+.dotActive {
+  width: 56px;
+  background: $color-brand-red;
+}
+
+@container (max-width: 1120px) {
+  .viewport,
+  .slide {
+    min-height: 760px;
+  }
+
+  .contentCard {
+    top: auto;
+    right: 32px;
+    bottom: 96px;
+    left: 32px;
+    width: auto;
+    max-width: none;
+    transform: none;
+  }
+
+  .sideBadge {
+    top: 24px;
+    right: 24px;
+    padding: 14px 18px;
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
+}
+
+@container (max-width: 860px) {
+  .viewport,
+  .slide {
+    min-height: 700px;
+  }
+
+  .contentCard {
+    right: 20px;
+    bottom: 86px;
+    left: 20px;
+    padding: 24px;
+    border-radius: 24px;
+  }
+
+  .eyebrow {
+    font-size: 46px;
+  }
+
+  .heading {
+    font-size: 40px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .primaryAction {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .control {
+    top: auto;
+    bottom: 28px;
+    width: 48px;
+    height: 48px;
+    transform: none;
+    background: rgba(36, 38, 41, 0.38);
+  }
+
+  .prevControl {
+    left: 20px;
+  }
+
+  .nextControl {
+    right: 20px;
+  }
+
+  .controlGlyph {
+    width: 14px;
+    height: 14px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+  }
+
+  .pagination {
+    bottom: 42px;
+  }
+}
+
+@container (max-width: 640px) {
+  .contentCard {
+    padding: 20px;
+  }
+
+  .eyebrow {
+    font-size: 36px;
+  }
+
+  .heading {
+    font-size: 32px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .sideBadge {
+    top: 16px;
+    right: 16px;
+    padding: 12px 14px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .contentCard {
+    right: 72px;
+    width: min(50vw, 650px);
+  }
+
+  .sideBadge {
+    top: 132px;
+  }
+}
+
+@media (max-width: 1120px) {
+  .viewport,
+  .slide {
+    min-height: 760px;
+  }
+
+  .contentCard {
+    top: auto;
+    right: 32px;
+    bottom: 96px;
+    left: 32px;
+    width: auto;
+    transform: none;
+  }
+
+  .sideBadge {
+    top: 24px;
+    right: 24px;
+    padding: 14px 18px;
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .viewport,
+  .slide {
+    min-height: 700px;
+  }
+
+  .contentCard {
+    right: 20px;
+    bottom: 86px;
+    left: 20px;
+    padding: 24px;
+    border-radius: 24px;
+  }
+
+  .eyebrow {
+    font-size: clamp(36px, 10vw, 52px);
+  }
+
+  .heading {
+    font-size: clamp(34px, 9vw, 46px);
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .primaryAction {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .control {
+    top: auto;
+    bottom: 28px;
+    width: 48px;
+    height: 48px;
+    transform: none;
+    background: rgba(36, 38, 41, 0.38);
+  }
+
+  .prevControl {
+    left: 20px;
+  }
+
+  .nextControl {
+    right: 20px;
+  }
+
+  .controlGlyph {
+    width: 14px;
+    height: 14px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+  }
+
+  .pagination {
+    bottom: 42px;
+  }
+}
