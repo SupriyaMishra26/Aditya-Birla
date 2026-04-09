@@ -1,7 +1,8 @@
-@import '../ui/global';
+﻿@import '../ui/tokens';
 
 .banner {
   width: 100%;
+  min-width: 0;
   background: $color-surface;
   container-type: inline-size;
 }
@@ -13,6 +14,7 @@
   min-height: 656px;
   overflow: hidden;
   background: #efece6;
+  isolation: isolate;
 }
 
 .track {
@@ -25,6 +27,7 @@
 .slide {
   position: relative;
   flex: 0 0 100%;
+  width: 100%;
   min-height: 656px;
   overflow: hidden;
 }
@@ -52,11 +55,12 @@
 .contentCard {
   position: absolute;
   top: 50%;
-  right: clamp(80px, 6vw, 112px);
+  right: clamp(24px, 5%, 112px);
   transform: translateY(-50%);
-  width: min(46vw, 694px);
+  // Size against the slide itself so SharePoint's editor column does not inherit browser-wide `vw` values.
+  width: min(48%, 694px);
   max-width: calc(100% - 48px);
-  padding: clamp(32px, 3.1vw, 52px);
+  padding: clamp(32px, 4.2%, 52px);
   box-sizing: border-box;
   border-radius: 28px;
   background: $color-overlay-dark;
@@ -73,14 +77,14 @@
   @include section-heading;
   margin-bottom: 8px;
   color: $color-brand-red;
-  font-size: clamp(52px, 4.2vw, 78px);
+  font-size: 78px;
   font-weight: $font-weight-heavy;
 }
 
 .heading {
   @include section-heading;
   color: $color-surface;
-  font-size: clamp(48px, 4vw, 64px);
+  font-size: 64px;
 }
 
 .description {
@@ -88,7 +92,7 @@
   margin: 24px 0 0;
   color: rgba(255, 255, 255, 0.95);
   font-family: $font-family-base;
-  font-size: clamp(20px, 1.75vw, 28px);
+  font-size: 28px;
   font-weight: $font-weight-medium;
   line-height: 1.34;
   letter-spacing: -0.01em;
@@ -160,24 +164,6 @@
   margin-right: 8px;
 }
 
-.sideBadge {
-  position: absolute;
-  top: 146px;
-  right: 16px;
-  z-index: 2;
-  padding: 24px 18px;
-  border-radius: 16px;
-  background: #ffd968;
-  color: $color-brand-deep-red;
-  font-family: $font-family-base;
-  font-size: 20px;
-  font-weight: $font-weight-semibold;
-  line-height: 1;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  box-shadow: 0 12px 24px rgba(98, 66, 2, 0.18);
-}
-
 .pagination {
   position: absolute;
   left: 50%;
@@ -206,6 +192,31 @@
   background: $color-brand-red;
 }
 
+@container (max-width: 1440px) {
+  .viewport,
+  .slide {
+    min-height: 620px;
+  }
+
+  .contentCard {
+    right: 40px;
+    width: min(50%, 620px);
+    padding: 38px;
+  }
+
+  .eyebrow {
+    font-size: 68px;
+  }
+
+  .heading {
+    font-size: 56px;
+  }
+
+  .description {
+    font-size: 24px;
+  }
+}
+
 @container (max-width: 1120px) {
   .viewport,
   .slide {
@@ -222,12 +233,16 @@
     transform: none;
   }
 
-  .sideBadge {
-    top: 24px;
-    right: 24px;
-    padding: 14px 18px;
-    writing-mode: horizontal-tb;
-    transform: none;
+  .eyebrow {
+    font-size: 56px;
+  }
+
+  .heading {
+    font-size: 48px;
+  }
+
+  .description {
+    font-size: 22px;
   }
 }
 
@@ -239,7 +254,7 @@
 
   .contentCard {
     right: 20px;
-    bottom: 86px;
+    bottom: 92px;
     left: 20px;
     padding: 24px;
     border-radius: 24px;
@@ -254,6 +269,7 @@
   }
 
   .description {
+    margin-top: 18px;
     font-size: 18px;
   }
 
@@ -291,13 +307,19 @@
   }
 }
 
-@container (max-width: 640px) {
+@container (max-width: 620px) {
+  .viewport,
+  .slide {
+    min-height: 640px;
+  }
+
   .contentCard {
+    bottom: 88px;
     padding: 20px;
   }
 
   .eyebrow {
-    font-size: 36px;
+    font-size: 38px;
   }
 
   .heading {
@@ -306,107 +328,6 @@
 
   .description {
     font-size: 16px;
-  }
-
-  .sideBadge {
-    top: 16px;
-    right: 16px;
-    padding: 12px 14px;
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 1400px) {
-  .contentCard {
-    right: 72px;
-    width: min(50vw, 650px);
-  }
-
-  .sideBadge {
-    top: 132px;
-  }
-}
-
-@media (max-width: 1120px) {
-  .viewport,
-  .slide {
-    min-height: 760px;
-  }
-
-  .contentCard {
-    top: auto;
-    right: 32px;
-    bottom: 96px;
-    left: 32px;
-    width: auto;
-    transform: none;
-  }
-
-  .sideBadge {
-    top: 24px;
-    right: 24px;
-    padding: 14px 18px;
-    writing-mode: horizontal-tb;
-    transform: none;
-  }
-}
-
-@media (max-width: 767px) {
-  .viewport,
-  .slide {
-    min-height: 700px;
-  }
-
-  .contentCard {
-    right: 20px;
-    bottom: 86px;
-    left: 20px;
-    padding: 24px;
-    border-radius: 24px;
-  }
-
-  .eyebrow {
-    font-size: clamp(36px, 10vw, 52px);
-  }
-
-  .heading {
-    font-size: clamp(34px, 9vw, 46px);
-  }
-
-  .description {
-    font-size: 18px;
-  }
-
-  .primaryAction {
-    width: 100%;
-    min-width: 0;
-  }
-
-  .control {
-    top: auto;
-    bottom: 28px;
-    width: 48px;
-    height: 48px;
-    transform: none;
-    background: rgba(36, 38, 41, 0.38);
-  }
-
-  .prevControl {
-    left: 20px;
-  }
-
-  .nextControl {
-    right: 20px;
-  }
-
-  .controlGlyph {
-    width: 14px;
-    height: 14px;
-    border-right-width: 3px;
-    border-bottom-width: 3px;
-  }
-
-  .pagination {
-    bottom: 42px;
+    line-height: 1.38;
   }
 }

@@ -1,4 +1,4 @@
-@import './global';
+﻿@import './tokens';
 
 .button {
   --button-fill: #{$color-brand-red};
@@ -12,6 +12,7 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
+  max-width: 100%;
   min-height: 50px;
   padding: 0 28px;
   border: var(--button-border-width) solid transparent;
@@ -53,6 +54,7 @@
 
 .label {
   @include button-label;
+  white-space: nowrap;
 }
 
 .icon {
@@ -139,11 +141,11 @@
 }
 
 .sm {
-  min-height: 44px;
-  padding: 0 22px;
+  min-height: 42px;
+  padding: 0 20px;
 
   .label {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 

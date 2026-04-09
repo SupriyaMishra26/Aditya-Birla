@@ -1,43 +1,82 @@
-$color-brand-orange: #ef6d26;
-$color-brand-red: #d61f26;
-$color-brand-gold: #edca50;
-$color-brand-deep-red: #a51b17;
-$color-brand-crimson: #b01f24;
+﻿@import './tokens';
 
-$color-surface: #ffffff;
-$color-ink-strong: #1e1f1f;
-$color-ink-muted: #555555;
-$color-border-soft: #e5e7eb;
-$color-overlay-dark: rgba(82, 88, 91, 0.58);
+.hospitalLandingAppShell {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: linear-gradient(180deg, #ffffff 0%, #fff9f4 100%);
+}
 
-$font-family-base: 'Segoe UI', sans-serif;
-$font-weight-medium: 500;
-$font-weight-semibold: 600;
-$font-weight-bold: 700;
-$font-weight-heavy: 800;
 
-$transition-standard: 0.18s ease;
+.hospitalLandingPageStack {
+  position: relative;
+  width: min(100%, 1920px);
+  max-width: 100%;
+  margin: 0 auto;
+  background: $color-surface;
+  box-sizing: border-box;
+  container-type: inline-size;
+}
 
-@mixin button-label {
+.hospitalLandingMain {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+
+.hospitalLandingStickyRail {
+  position: fixed;
+  top: 50%;
+  right: max(12px, calc((100vw - min(100vw, 1920px)) / 2 + 16px));
+  transform: translateY(-50%);
+  z-index: 24;
+  pointer-events: none;
+}
+
+.hospitalLandingStickyRailLabel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 262px;
+  padding: 24px 18px;
+  border-radius: 18px;
+  background: #ffd968;
+  color: $color-brand-deep-red;
+  box-shadow: 0 12px 24px rgba(98, 66, 2, 0.18);
   font-family: $font-family-base;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: $font-weight-semibold;
-  line-height: 1.15;
-  letter-spacing: 0.01em;
+  line-height: 1;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
 }
 
-@mixin nav-link-text {
-  font-family: $font-family-base;
-  font-size: 14px;
-  font-weight: $font-weight-medium;
-  line-height: 1.2;
+@media (max-width: 900px) {
+  .hospitalLandingStickyRail {
+    top: 132px;
+    right: 16px;
+    transform: none;
+  }
+
+  .hospitalLandingStickyRailLabel {
+    min-height: auto;
+    padding: 14px 18px;
+    font-size: 18px;
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
 }
 
-@mixin section-heading {
-  margin: 0;
-  font-family: $font-family-base;
-  font-weight: $font-weight-bold;
-  line-height: 1.02;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
+@media (max-width: 640px) {
+  .hospitalLandingStickyRail {
+    top: 118px;
+    right: 12px;
+  }
+
+  .hospitalLandingStickyRailLabel {
+    padding: 12px 16px;
+    font-size: 16px;
+  }
 }

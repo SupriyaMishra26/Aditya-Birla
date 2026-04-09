@@ -1,0 +1,544 @@
+@import '../ui/tokens';
+
+.aboutSection {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  container-type: inline-size;
+  isolation: isolate;
+}
+
+.quickActions {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: 100%;
+  margin-bottom: clamp(14px, 1.6vw, 24px);
+  box-shadow: 0 18px 34px rgba(129, 49, 34, 0.14);
+}
+
+.quickAction {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+  min-height: 130px;
+  padding: 24px 28px;
+  box-sizing: border-box;
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.quickAction:last-child {
+  border-right: none;
+}
+
+.quickAction:nth-child(1) {
+  background: #b11d17;
+  color: #ffffff;
+}
+
+.quickAction:nth-child(2) {
+  background: #ef6d26;
+  color: #ffffff;
+}
+
+.quickAction:nth-child(3) {
+  background: #f5d34b;
+  color: #a51b17;
+}
+
+.quickAction:nth-child(4) {
+  background: #ffe9a3;
+  color: #a51b17;
+}
+
+.quickActionIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  flex: 0 0 auto;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.quickAction:nth-child(3) .quickActionIcon,
+.quickAction:nth-child(4) .quickActionIcon {
+  background: rgba(165, 27, 23, 0.08);
+}
+
+.quickActionGlyph {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.quickActionLabel {
+  font-family: $font-family-base;
+  font-size: clamp(18px, 1.8vw, 26px);
+  font-weight: $font-weight-bold;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.aboutSection::after {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: linear-gradient(90deg, #a51b17 0%, #ef6d26 18%, #f5d34b 55%, #d61f26 100%);
+  z-index: 3;
+}
+
+.canvas {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 1920px);
+  min-height: clamp(760px, 58vw, 884px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr);
+  align-items: stretch;
+}
+
+.copyPanel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: clamp(56px, 5.8vw, 108px) clamp(24px, 4.4vw, 74px) clamp(56px, 6vw, 104px);
+  background: #ffffff;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.copyPanel::before {
+  content: '';
+  position: absolute;
+  inset: -8% 0 0 0;
+  opacity: 0.35;
+  background-image:
+    linear-gradient(90deg, transparent 46%, rgba(165, 27, 23, 0.04) 46%, rgba(165, 27, 23, 0.04) 54%, transparent 54%),
+    linear-gradient(transparent 46%, rgba(165, 27, 23, 0.04) 46%, rgba(165, 27, 23, 0.04) 54%, transparent 54%);
+  background-size: 180px 180px;
+  background-position: 30px 34px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.copyPanel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(255, 255, 255, 0.96) 62%,
+    rgba(255, 255, 255, 0.86) 86%,
+    rgba(255, 255, 255, 0.94) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.copyContent {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+}
+
+.title {
+  @include section-heading;
+  margin-bottom: 18px;
+  color: $color-brand-deep-red;
+  font-size: clamp(44px, 4.4vw, 66px);
+  text-transform: none;
+}
+
+.description {
+  max-width: 780px;
+  margin: 0;
+  color: #435469;
+  font-family: $font-family-base;
+  font-size: clamp(17px, 1.35vw, 21px);
+  font-weight: $font-weight-medium;
+  line-height: 1.8;
+  letter-spacing: -0.01em;
+}
+
+.readMore {
+  min-width: 190px;
+  margin-top: 34px;
+  --button-border-width: 1.5px;
+}
+
+.visualPanel {
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.visualPanel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #f26d62 0%, #db3a34 44%, #b91b1f 100%);
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+  z-index: 0;
+}
+
+.visualPanel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 74% 64%, rgba(255, 205, 92, 0.28) 0 16%, rgba(255, 205, 92, 0.12) 24%, transparent 42%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 44%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.visualGlow {
+  position: absolute;
+  inset: auto 0 0 auto;
+  width: 44%;
+  height: 42%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 214, 128, 0.18) 0%, rgba(255, 214, 128, 0.08) 34%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.doctorImage {
+  position: absolute;
+  right: clamp(-6px, 1.2vw, 18px);
+  bottom: 0;
+  z-index: 2;
+  width: min(84%, 748px);
+  max-width: none;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 26px rgba(53, 13, 9, 0.14));
+  transform: translateX(4%);
+}
+
+.badgeCluster {
+  position: absolute;
+  right: clamp(22px, 4.8vw, 72px);
+  bottom: clamp(24px, 4.4vw, 62px);
+  z-index: 3;
+  width: clamp(176px, 17vw, 298px);
+  aspect-ratio: 1;
+  pointer-events: none;
+  animation: badgeFloat 7.2s ease-in-out infinite;
+}
+
+.badgeHalo {
+  position: absolute;
+  inset: 8% 8% 8% 8%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 190, 86, 0.32) 0 38%, rgba(255, 190, 86, 0.14) 52%, transparent 72%);
+  filter: blur(1px);
+}
+
+.badgeRing {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: ringPulse 5.6s ease-in-out infinite;
+}
+
+.badgeFrame {
+  position: absolute;
+  inset: 11% 14% 11% 14%;
+  display: grid;
+  place-items: center;
+}
+
+.badgeImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transform: scale(0.92) translate3d(0, 8px, 0);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease,
+    filter 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.badgeImageActive {
+  z-index: 1;
+  opacity: 1;
+  transform: scale(1) translate3d(0, 0, 0);
+  filter: drop-shadow(0 16px 24px rgba(72, 19, 12, 0.16));
+}
+
+.badgeImageInactive {
+  z-index: 0;
+}
+
+.statsSection {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 1920px);
+  margin: 0 auto;
+  padding: clamp(12px, 1.8vw, 24px) clamp(12px, 2vw, 20px) clamp(48px, 4.8vw, 72px);
+ 
+}
+
+.statsCard {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+ 
+  background: #ffffff;
+ 
+ 
+}
+
+.statsCard::-webkit-scrollbar {
+  display: none;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 0;
+  min-width: clamp(160px, 20vw, 280px);
+  min-height: 222px;
+  padding: 24px 16px 22px;
+  text-align: center;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+}
+
+.statIcon {
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 12px;
+
+
+  color: #ffd65f;
+ 
+}
+
+.statGlyph {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.statValue {
+  font-family: $font-family-base;
+  font-size: clamp(28px, 3vw, 44px);
+  font-weight: $font-weight-bold;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #f16923;
+}
+
+.statLabel {
+  margin-top: 10px;
+  color: $color-brand-deep-red;
+  font-family: $font-family-base;
+  font-size: clamp(13px, 1.1vw, 18px);
+  font-weight: $font-weight-medium;
+  line-height: 1.28;
+}
+
+@keyframes badgeFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -10px, 0);
+  }
+}
+
+@keyframes ringPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .badgeCluster,
+  .badgeRing {
+    animation: none;
+  }
+
+  .badgeImage {
+    transition: none;
+  }
+}
+
+@container (max-width: 1280px) {
+  .quickActions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .quickAction {
+    min-height: 108px;
+  }
+
+  .canvas {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .copyPanel {
+    padding: 48px 24px 30px;
+  }
+
+  .visualPanel {
+    min-height: clamp(480px, 72vw, 760px);
+  }
+
+  .visualPanel::before {
+    clip-path: polygon(16% 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .doctorImage {
+    left: 50%;
+    right: auto;
+    width: min(82%, 620px);
+    transform: translateX(-50%);
+  }
+
+  .badgeCluster {
+    right: 28px;
+    bottom: 28px;
+    width: clamp(150px, 24vw, 240px);
+  }
+
+  .statItem {
+    min-height: 196px;
+    min-width: clamp(150px, 26vw, 220px);
+    padding: 20px 14px 18px;
+  }
+
+  .statIcon {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 10px;
+    border-radius: 16px;
+  }
+
+  .statGlyph {
+    font-size: 24px;
+  }
+
+  .statValue {
+    font-size: clamp(26px, 3.6vw, 38px);
+  }
+
+  .statLabel {
+    font-size: 12px;
+  }
+}
+
+@container (max-width: 760px) {
+  .quickActions {
+    grid-template-columns: 1fr;
+  }
+
+  .quickAction {
+    min-height: 92px;
+    padding: 18px 20px;
+  }
+
+  .quickActionLabel {
+    font-size: 20px;
+  }
+
+  .copyPanel {
+    padding: 40px 16px 20px;
+  }
+
+  .title {
+    font-size: clamp(36px, 10vw, 46px);
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 1.72;
+  }
+
+  .readMore {
+    min-width: 170px;
+    margin-top: 28px;
+  }
+
+  .visualPanel {
+    min-height: 420px;
+  }
+
+  .visualPanel::before {
+    clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .doctorImage {
+    width: min(88%, 470px);
+  }
+
+  .badgeCluster {
+    right: 14px;
+    bottom: 14px;
+    width: 150px;
+  }
+
+  .badgeFrame {
+    inset: 13% 15% 13% 15%;
+  }
+
+  .statsSection {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 72px;
+  }
+
+  .statItem {
+    min-height: 178px;
+    min-width: clamp(140px, 62vw, 200px);
+    padding: 18px 12px 16px;
+  }
+
+  .statIcon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 8px;
+    border-radius: 14px;
+  }
+
+  .statGlyph {
+    font-size: 21px;
+  }
+
+  .statValue {
+    font-size: clamp(24px, 8vw, 32px);
+  }
+
+  .statLabel {
+    font-size: 11px;
+    line-height: 1.2;
+  }
+}

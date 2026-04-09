@@ -43,6 +43,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
       <Button
         className={styles.ctaButton}
         onClick={() => onNavigate('appointments')}
+        size="sm"
         variant="outline"
         tone="brand"
         icon={diagonalArrow}
