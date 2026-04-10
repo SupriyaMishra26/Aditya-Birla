@@ -1,86 +1,558 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Business Laptops ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â MicroHub</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../assets/css/main.css">
-  <link rel="stylesheet" href="../../assets/css/layout.css">
-  <link rel="stylesheet" href="../../assets/css/components.css">
-  <link rel="stylesheet" href="../../assets/css/animations.css">
-  <link rel="stylesheet" href="../../assets/css/responsive.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Laptops — Microhub</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;1,14..32,400&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<link rel="stylesheet" href="../../assets/css/main.css">
+<!-- Shared Microhub product stylesheet -->
+<link rel="stylesheet" href="product.css">
+<link rel="stylesheet" href="../../assets/css/layout.css">
+
+<!-- Page-specific overrides -->
+ <style>
+  :root {
+    --card-rgb: 99, 102, 241;
+    --spotlight-img: url('https://images.unsplash.com/photo-1529336953128-a85760f58cb5?w=900&auto=format&fit=crop');
+  }
+</style>
 </head>
 <body data-site-root="../../">
-<div id="navbar-root" data-include="components/navbar.html"></div>
 
-<section class="page-hero">
-  <div class="container position-relative" style="z-index:1">
-    <div class="breadcrumb-custom"><a href="../../index.html">Home</a><span>/</span><span>Laptops</span></div>
-    <div class="col-lg-8 fade-in-up-1">
-      <div class="section-label" style="background:rgba(46,75,101,0.2);color:var(--primary-light)"><i class="bi bi-laptop"></i> Hardware Procurement</div>
-      <h1 style="color:var(--white)">Premium Laptops, Configured & Ready to Deploy</h1>
-      <p style="color:rgba(255,255,255,0.7);font-size:1.1rem;margin-top:1.25rem;max-width:600px">Enterprise-grade laptops from Dell, HP, Lenovo, Apple ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â pre-configured and delivered.</p>
-      <div class="d-flex gap-3 mt-4 flex-wrap">
-        <a href="../../get-started/signup.html" class="btn-primary-custom">Get Started <i class="bi bi-arrow-right"></i></a>
-        <a href="../../insights/pricing.html" class="btn-outline-custom" style="border-color:rgba(255,255,255,0.3);color:var(--white)">View Pricing</a>
+<!-- NAVBAR -->
+
+<div id="navbar-root" data-include="components/navbar.html"></div>
+<!-- HERO -->
+<section class="hero-section">
+  <div class="hero-bg-orb hero-bg-orb--one"></div>
+  <div class="hero-bg-orb hero-bg-orb--two"></div>
+  <div class="hero-grid-lines" aria-hidden="true"></div>
+
+  <div class="container hero-content-shell">
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-6">
+        <h1 class="hero-title fade-in-up-2">
+          Powerful Business Laptops<br>
+          <span class="hero-title-accent">Built for Modern Teams</span>
+        </h1>
+        <p class="hero-lead fade-in-up-3">
+          Dell, HP, Lenovo, Apple &amp; more — enterprise-grade laptops configured, secured, and deployed to your team within hours of ordering.
+        </p>
+        <div class="d-flex gap-3 flex-wrap hero-btns fade-in-up-4">
+          <a href="#products" class="btn-primary-custom">Explore Range <i class="bi bi-arrow-right"></i></a>
+          <a href="#pricing" class="btn-outline-custom hero-secondary-btn">
+            <i class="bi bi-currency-rupee"></i> View Pricing
+          </a>
+        </div>
+        <div class="hero-proof-list fade-in-up-4">
+          <div class="hero-proof-item"><i class="bi bi-check-circle-fill"></i> Same-day dispatch</div>
+          <div class="hero-proof-item"><i class="bi bi-check-circle-fill"></i> Pre-configured devices</div>
+          <div class="hero-proof-item"><i class="bi bi-check-circle-fill"></i> Official warranty</div>
+        </div>
+        <div class="hero-mini-grid fade-in-up-4">
+          <div class="hero-mini-card"><strong>6+</strong><span>Premium brands</span></div>
+          <div class="hero-mini-card"><strong>&lt;24h</strong><span>Deployment time</span></div>
+          <div class="hero-mini-card"><strong>500+</strong><span>Teams equipped</span></div>
+        </div>
       </div>
+
+      <div class="col-lg-6">
+        <div class="hero-laptop-visual fade-in-up-4">
+          <div class="hero-main-img">
+            <img src="https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?q=80&w=900&auto=format&fit=crop" alt="Business laptop">
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
-<section class="section-pad" style="background:var(--white)">
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span class="marquee-item"><i class="bi bi-laptop"></i> Dell Latitude</span>
+    <span class="marquee-item"><i class="bi bi-laptop"></i> HP EliteBook</span>
+    <span class="marquee-item"><i class="bi bi-laptop"></i> Lenovo ThinkPad</span>
+    <span class="marquee-item"><i class="bi bi-apple"></i> MacBook Pro</span>
+    <span class="marquee-item"><i class="bi bi-laptop"></i> Asus ExpertBook</span>
+    <span class="marquee-item"><i class="bi bi-laptop"></i> Acer TravelMate</span>
+    <span class="marquee-item"><i class="bi bi-shield-check"></i> Enterprise Security</span>
+    <span class="marquee-item"><i class="bi bi-lightning-charge"></i> Fast Deployment</span>
+    <span class="marquee-item"><i class="bi bi-headset"></i> 24/7 Support</span>
+    <span class="marquee-item"><i class="bi bi-patch-check"></i> Authorized Reseller</span>
+    <!-- duplicate for seamless loop -->
+    <span class="marquee-item"><i class="bi bi-laptop"></i> Dell Latitude</span>
+    <span class="marquee-item"><i class="bi bi-laptop"></i> HP EliteBook</span>
+    <span class="marquee-item"><i class="bi bi-laptop"></i> Lenovo ThinkPad</span>
+    <span class="marquee-item"><i class="bi bi-apple"></i> MacBook Pro</span>
+    <span class="marquee-item"><i class="bi bi-laptop"></i> Asus ExpertBook</span>
+    <span class="marquee-item"><i class="bi bi-laptop"></i> Acer TravelMate</span>
+    <span class="marquee-item"><i class="bi bi-shield-check"></i> Enterprise Security</span>
+    <span class="marquee-item"><i class="bi bi-lightning-charge"></i> Fast Deployment</span>
+    <span class="marquee-item"><i class="bi bi-headset"></i> 24/7 Support</span>
+    <span class="marquee-item"><i class="bi bi-patch-check"></i> Authorized Reseller</span>
+  </div>
+</div>
+
+<!-- PRODUCT SPOTLIGHT -->
+<section class="section-pad" id="products" style="background:linear-gradient(180deg,rgba(99,102,241,0.05) 0%,#f8fbff 44%,#ffffff 100%);">
   <div class="container">
-    <div class="row g-4">
-      <div class="col-lg-6 reveal">
-        <div class="section-label"><i class="bi bi-stars"></i> Key Capabilities</div>
-        <h2 class="section-title">What You <span>Get</span></h2>
-        <div class="divider"></div>
-        <ul class="feature-list">
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Enterprise-grade security and compliance built in</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Real-time dashboards and actionable analytics</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Seamless integrations with your existing tools</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Dedicated onboarding and customer success manager</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Mobile-first design for on-the-go access</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">99.9% uptime SLA with 24/7 technical support</span></li>
-        </ul>
+    <div class="laptops-spotlight reveal">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-5">
+          <h2 class="laptops-spotlight-title">Enterprise laptops. Ready to deploy. Day one.</h2>
+          <p class="laptops-spotlight-desc">Every device is sourced from authorized channels, pre-configured to your specs, and shipped with full warranty — so your team hits the ground running.</p>
+          <div class="spotlight-points">
+            <span><i class="bi bi-check2-circle"></i> Bulk procurement with volume discounts</span>
+            <span><i class="bi bi-check2-circle"></i> MDM enrollment and security pre-applied</span>
+            <span><i class="bi bi-check2-circle"></i> GST invoicing and warranty documentation included</span>
+          </div>
+          <div class="spotlight-metrics">
+            <div class="spotlight-metric"><strong>6+</strong><span>Brand options</span></div>
+            <div class="spotlight-metric"><strong>PAN India</strong><span>Delivery coverage</span></div>
+            <div class="spotlight-metric"><strong>3-yr</strong><span>Warranty support</span></div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="spotlight-visual reveal reveal-delay-2">
+            <div class="spotlight-visual-img"></div>
+            <div class="spotlight-float-chip"><i class="bi bi-shield-lock"></i> Pre-configured &amp; secured</div>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-6 reveal reveal-delay-2">
-        <div class="row g-3">
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-lightning-charge"></i></div><h5>Fast Setup</h5><p class="text-muted small">Live in hours, not weeks</p></div></div>
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-shield-check"></i></div><h5>Secure</h5><p class="text-muted small">End-to-end encrypted</p></div></div>
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-graph-up"></i></div><h5>Analytics</h5><p class="text-muted small">Real-time insights</p></div></div>
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-headset"></i></div><h5>24/7 Support</h5><p class="text-muted small">Always there for you</p></div></div>
+    </div>
+
+    <!-- PRODUCT CARDS -->
+    <div class="row g-4 mt-2" id="products-grid">
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-laptop"></i></span>
+            <span class="product-highlight-pill">Dell</span>
+          </div>
+          <h3>Latitude 5540</h3>
+          <p>A reliable workhorse for office and hybrid teams — built for longevity with Intel vPro security and spill-resistant chassis.</p>
+          <div class="product-highlight-list">
+            <span>Core i5</span><span>16GB RAM</span><span>512GB SSD</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹65,000</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-laptop"></i></span>
+            <span class="product-highlight-pill">HP · Most Popular</span>
+          </div>
+          <h3>EliteBook 840 G11</h3>
+          <p>Security-focused powerhouse with Sure View privacy screen, HP Wolf Security, and all-day battery for demanding professionals.</p>
+          <div class="product-highlight-list">
+            <span>Core i7</span><span>16GB RAM</span><span>1TB SSD</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹85,000</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-apple"></i></span>
+            <span class="product-highlight-pill">Apple</span>
+          </div>
+          <h3>MacBook Pro M4</h3>
+          <p>Apple M4 chip delivers unmatched performance per watt — the top choice for design, development, and executive teams.</p>
+          <div class="product-highlight-list">
+            <span>M4 Chip</span><span>32GB RAM</span><span>1TB SSD</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹1,20,000</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-laptop"></i></span>
+            <span class="product-highlight-pill">Lenovo</span>
+          </div>
+          <h3>ThinkPad T16</h3>
+          <p>The gold standard in business durability — MIL-SPEC tested, exceptional keyboard, and enterprise manageability built in.</p>
+          <div class="product-highlight-list">
+            <span>Core i5</span><span>8GB RAM</span><span>512GB SSD</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹55,000</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-laptop"></i></span>
+            <span class="product-highlight-pill">Asus</span>
+          </div>
+          <h3>ExpertBook B9</h3>
+          <p>Ultra-light yet powerful — sub-1kg chassis with enterprise-grade security, ideal for frequent travellers and field teams.</p>
+          <div class="product-highlight-list">
+            <span>Core i7</span><span>16GB RAM</span><span>512GB SSD</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹75,000</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-laptop"></i></span>
+            <span class="product-highlight-pill">Acer</span>
+          </div>
+          <h3>TravelMate P4</h3>
+          <p>Built for the Indian SME market — affordable, reliable, and comes with enterprise-grade management and security options.</p>
+          <div class="product-highlight-list">
+            <span>Core i5</span><span>16GB RAM</span><span>512GB SSD</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹60,000</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+  <div class="container">
+    <h3 class="stats-heading reveal">Trusted by hundreds of Indian business teams.</h3>
+    <p class="stats-subtext reveal">From 5-person startups to 500-seat enterprises — Microhub handles procurement at every scale.</p>
+    <div class="stats-grid reveal">
+      <div class="stat-item"><div class="stat-number">500+</div><div class="stat-label">Teams Equipped</div><div class="stat-note">Across software, hardware, and managed services.</div></div>
+      <div class="stat-item"><div class="stat-number">6+</div><div class="stat-label">Premium Brands</div><div class="stat-note">Authorized partner for all major OEMs.</div></div>
+      <div class="stat-item"><div class="stat-number">&lt;24h</div><div class="stat-label">Deployment SLA</div><div class="stat-note">Pre-configured and shipped same day.</div></div>
+      <div class="stat-item"><div class="stat-number">3yr</div><div class="stat-label">Warranty Coverage</div><div class="stat-note">Full OEM warranty on every device.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY Microhub -->
+<section class="section-pad why-laptops-section">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <h2 class="section-title">One Partner for <span>Every Device</span></h2>
+      <p class="section-desc mx-auto">Hardware procurement shouldn't be a headache. Microhub handles sourcing, configuration, delivery, and support so your IT team doesn't have to chase vendors.</p>
+    </div>
+    <div class="row g-4 align-items-stretch">
+      <div class="col-lg-5 d-flex">
+        <figure class="why-story-media reveal reveal-delay-1" style="flex:1 1 auto;margin:0;">
+          <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&auto=format&fit=crop" alt="Microhub hardware team">
+        </figure>
+      </div>
+      <div class="col-lg-7 d-flex">
+        <div class="why-story-copy reveal reveal-delay-2">
+          <h3 class="why-story-title">One team that handles every step of hardware procurement.</h3>
+          <p class="why-story-lead">From selecting the right spec to delivery, setup, and long-term support — Microhub is your end-to-end hardware partner so you never need to manage multiple vendors.</p>
+          <div class="why-story-list">
+            <article class="why-story-item">
+              <span class="why-story-index">01</span>
+              <div class="why-story-body"><h4>Spec consulting included</h4><p>Not sure which laptop is right for your role? Our team helps you choose the ideal spec for developers, finance, sales, and field teams.</p></div>
+            </article>
+            <article class="why-story-item">
+              <span class="why-story-index">02</span>
+              <div class="why-story-body"><h4>Pre-configured out of the box</h4><p>OS setup, MDM enrollment, security policies, and company apps — all applied before the device reaches your desk.</p></div>
+            </article>
+            <article class="why-story-item">
+              <span class="why-story-index">03</span>
+              <div class="why-story-body"><h4>Volume pricing advantage</h4><p>Buy 10 or 1,000 — Microhub leverages authorized partner pricing to get you better rates than open-market procurement.</p></div>
+            </article>
+            <article class="why-story-item">
+              <span class="why-story-index">04</span>
+              <div class="why-story-body"><h4>One support relationship</h4><p>Warranty claims, replacements, and repairs all go through Microhub — your team never needs to call an OEM directly.</p></div>
+            </article>
+          </div>
+          <div class="why-story-meta">
+            <span>500+ businesses served</span>
+            <span>PAN India delivery</span>
+            <span>24/7 hardware support</span>
+          </div>
+          <div class="why-story-actions">
+            <a href="../../get-started/signup.html" class="btn-primary-custom">Get a Quote <i class="bi bi-arrow-right"></i></a>
+            <p>Trusted by Indian teams from 5 to 5,000 employees for end-to-end device procurement.</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<section class="stats-section">
-  <div class="container position-relative">
-    <div class="row g-4 text-center">
-      <div class="col-6 col-lg-3 reveal"><div class="stat-number"><span class="counter-num" data-target="500" data-suffix="+">500+</span></div><div class="stat-label">Businesses Served</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-1"><div class="stat-number"><span class="counter-num" data-target="99" data-suffix="%">99%</span></div><div class="stat-label">Uptime SLA</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-2"><div class="stat-number"><span class="counter-num" data-target="4" data-suffix="hr">4hr</span></div><div class="stat-label">Avg Setup Time</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-3"><div class="stat-number"><span class="counter-num" data-target="4.8" data-suffix="/5">4.8/5</span></div><div class="stat-label">Customer Rating</div></div>
+
+<!-- PRICING -->
+<section class="section-pad pricing-section" id="pricing">
+  <div class="container">
+    <div class="text-center mb-2 reveal">
+      <h2 class="section-title">Clear Plans, <span>No Hidden Costs</span></h2>
+      <p class="section-desc mx-auto">Choose a hardware plan that fits your team size and budget. All plans include GST invoicing and official OEM warranty.</p>
+    </div>
+    <div class="pricing-grid reveal">
+      <div class="pricing-card">
+        <div class="pricing-tier">Basic</div>
+        <div class="pricing-price">₹40K</div>
+        <div class="pricing-sub">per device</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> Intel Core i3 processor</li>
+          <li><i class="bi bi-check-circle-fill"></i> 8GB RAM</li>
+          <li><i class="bi bi-check-circle-fill"></i> 256GB NVMe SSD</li>
+          <li><i class="bi bi-check-circle-fill"></i> Windows 11 Pro</li>
+          <li><i class="bi bi-check-circle-fill"></i> 1-year OEM warranty</li>
+          <li><i class="bi bi-check-circle-fill"></i> Email support</li>
+        </ul>
+        <a href="#" class="btn-outline-custom w-100 justify-content-center">Choose Basic</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-tier">Standard</div>
+        <div class="pricing-price">₹55K</div>
+        <div class="pricing-sub">per device</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> Intel Core i5 processor</li>
+          <li><i class="bi bi-check-circle-fill"></i> 8GB RAM</li>
+          <li><i class="bi bi-check-circle-fill"></i> 512GB NVMe SSD</li>
+          <li><i class="bi bi-check-circle-fill"></i> Windows 11 Pro</li>
+          <li><i class="bi bi-check-circle-fill"></i> 1-year OEM warranty</li>
+          <li><i class="bi bi-check-circle-fill"></i> Basic phone support</li>
+        </ul>
+        <a href="#" class="btn-outline-custom w-100 justify-content-center">Choose Standard</a>
+      </div>
+      <div class="pricing-card featured">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-tier">Business</div>
+        <div class="pricing-price">₹65K</div>
+        <div class="pricing-sub">per device</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> Intel Core i5 processor</li>
+          <li><i class="bi bi-check-circle-fill"></i> 16GB RAM</li>
+          <li><i class="bi bi-check-circle-fill"></i> 512GB NVMe SSD</li>
+          <li><i class="bi bi-check-circle-fill"></i> Windows 11 Pro + MDM</li>
+          <li><i class="bi bi-check-circle-fill"></i> 3-year OEM warranty</li>
+          <li><i class="bi bi-check-circle-fill"></i> Priority support</li>
+        </ul>
+        <a href="#" class="btn-primary-custom w-100 justify-content-center">Choose Business</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-tier">Pro</div>
+        <div class="pricing-price">₹1L+</div>
+        <div class="pricing-sub">per device</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> Core i7 or Apple M Chip</li>
+          <li><i class="bi bi-check-circle-fill"></i> 32GB RAM</li>
+          <li><i class="bi bi-check-circle-fill"></i> 1TB NVMe SSD</li>
+          <li><i class="bi bi-check-circle-fill"></i> Full security suite</li>
+          <li><i class="bi bi-check-circle-fill"></i> 3-year OEM warranty</li>
+          <li><i class="bi bi-check-circle-fill"></i> 24/7 dedicated support</li>
+        </ul>
+        <a href="#" class="btn-outline-custom w-100 justify-content-center">Choose Pro</a>
+      </div>
     </div>
   </div>
 </section>
-<section class="cta-section">
-  <div class="container position-relative" style="z-index:1;text-align:center">
-    <h2 style="color:var(--white);margin-bottom:1rem">Ready to Get Started?</h2>
-    <p style="color:rgba(255,255,255,0.8);margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto">Join hundreds of businesses using MicroHub to grow faster and work smarter.</p>
-    <a href="../../get-started/signup.html" class="btn-white-custom">Start Free Trial <i class="bi bi-arrow-right"></i></a>
+
+<!-- TESTIMONIALS -->
+<section class="section-pad testimonials-section">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <h2 class="section-title">Trusted by <span>India's Best Teams</span></h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"We procured 200 laptops through Microhub at better pricing than any direct vendor. Delivery was on time, all configured exactly to spec. Highly recommended."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AK</div>
+            <div><div class="testimonial-name">Anil Kumar</div><div class="testimonial-role">Head of IT, Growfast Logistics</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Amazing service and super fast delivery. The entire hardware setup for our new office was handled professionally — couldn't ask for more from a partner."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">RS</div>
+            <div><div class="testimonial-name">Rahul Sharma</div><div class="testimonial-role">VP Sales, TechVenture India</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Perfect solution for our remote team setup. Every device arrived pre-configured and ready to use from day one — onboarding dropped from 3 days to 2 hours."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">NG</div>
+            <div><div class="testimonial-name">Neha Gupta</div><div class="testimonial-role">Head of Operations, FlowBridge</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
-<div id="footer-root" data-include="components/footer.html"></div>
 
+<!-- PARTNERS -->
+<section class="section-pad" style="background:var(--white)">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <h2 class="section-title">Authorized Partner of <span>World's Leading Brands</span></h2>
+      <p class="section-desc mx-auto">We work directly with global OEMs — genuine products, official pricing, and full warranty support on every device.</p>
+    </div>
+    <div class="partner-logos-row reveal reveal-delay-1">
+      <div class="partner-logo-item"><i class="bi bi-laptop" style="font-size:1.4rem;color:#0076CE"></i><span style="font-weight:800;font-size:1.1rem;color:#0076CE;letter-spacing:-0.03em">Dell</span></div>
+      <div class="partner-logo-sep"></div>
+      <div class="partner-logo-item"><i class="bi bi-pc-display-horizontal" style="font-size:1.4rem;color:#0096D6"></i><span style="font-weight:800;font-size:1.1rem;color:#0096D6;letter-spacing:-0.03em">HP</span></div>
+      <div class="partner-logo-sep"></div>
+      <div class="partner-logo-item"><i class="bi bi-laptop" style="font-size:1.4rem;color:#E2231A"></i><span style="font-weight:800;font-size:1.1rem;color:#E2231A;letter-spacing:-0.02em">Lenovo</span></div>
+      <div class="partner-logo-sep"></div>
+      <div class="partner-logo-item"><i class="bi bi-apple" style="font-size:1.5rem;color:#1d1d1f"></i><span style="font-weight:700;font-size:1.05rem;color:#1d1d1f;letter-spacing:-0.04em">Apple</span></div>
+      <div class="partner-logo-sep"></div>
+      <div class="partner-logo-item"><i class="bi bi-laptop" style="font-size:1.4rem;color:#00B140"></i><span style="font-weight:800;font-size:1rem;color:#00B140;letter-spacing:-0.02em">Asus</span></div>
+      <div class="partner-logo-sep"></div>
+      <div class="partner-logo-item"><i class="bi bi-laptop" style="font-size:1.4rem;color:#83B81A"></i><span style="font-weight:800;font-size:1rem;color:#83B81A;letter-spacing:-0.02em">Acer</span></div>
+    </div>
+    <div class="d-flex justify-content-center gap-3 flex-wrap mt-4 reveal reveal-delay-2">
+      <div style="display:flex;align-items:center;gap:0.5rem;background:var(--accent);border:1px solid rgba(13,148,136,0.2);padding:0.5rem 1.1rem;border-radius:100px;font-size:0.82rem;font-weight:600;color:var(--primary-dark)"><i class="bi bi-patch-check-fill" style="color:var(--primary)"></i> Authorized Reseller</div>
+      <div style="display:flex;align-items:center;gap:0.5rem;background:var(--accent);border:1px solid rgba(13,148,136,0.2);padding:0.5rem 1.1rem;border-radius:100px;font-size:0.82rem;font-weight:600;color:var(--primary-dark)"><i class="bi bi-shield-fill-check" style="color:var(--primary)"></i> Official Warranty</div>
+      <div style="display:flex;align-items:center;gap:0.5rem;background:var(--accent);border:1px solid rgba(13,148,136,0.2);padding:0.5rem 1.1rem;border-radius:100px;font-size:0.82rem;font-weight:600;color:var(--primary-dark)"><i class="bi bi-award-fill" style="color:var(--primary)"></i> Certified Service</div>
+      <div style="display:flex;align-items:center;gap:0.5rem;background:var(--accent);border:1px solid rgba(13,148,136,0.2);padding:0.5rem 1.1rem;border-radius:100px;font-size:0.82rem;font-weight:600;color:var(--primary-dark)"><i class="bi bi-tags-fill" style="color:var(--primary)"></i> Best-Price Guarantee</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-pad" style="background:var(--accent)">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="text-center mb-5 reveal">
+          <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+          <p class="section-desc mx-auto">Everything you need to know about ordering laptops and hardware through Microhub.</p>
+        </div>
+        <div class="accordion accordion-custom" id="laptops-faq">
+          <div class="accordion-item reveal">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-l1" aria-expanded="true">
+                <i class="bi bi-question-circle me-3" style="color:var(--primary);flex-shrink:0"></i>
+                Do you supply to businesses outside Mumbai?
+              </button>
+            </h2>
+            <div id="faq-l1" class="accordion-collapse collapse show" data-bs-parent="#laptops-faq">
+              <div class="accordion-body">Yes. Microhub delivers hardware <strong>PAN India</strong>. Same-day dispatch is available within Mumbai, Pune, and Navi Mumbai. For other locations, standard delivery is typically 2–4 business days via trusted courier partners with full tracking.</div>
+            </div>
+          </div>
+          <div class="accordion-item reveal reveal-delay-1">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-l2">
+                <i class="bi bi-shield-check me-3" style="color:var(--primary);flex-shrink:0"></i>
+                Are the laptops pre-configured before delivery?
+              </button>
+            </h2>
+            <div id="faq-l2" class="accordion-collapse collapse" data-bs-parent="#laptops-faq">
+              <div class="accordion-body">Yes. All devices are set up per your specifications before shipping — including OS installation, MDM enrollment, security policy application, and corporate apps. Your team can start working immediately without any IT overhead.</div>
+            </div>
+          </div>
+          <div class="accordion-item reveal reveal-delay-2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-l3">
+                <i class="bi bi-currency-rupee me-3" style="color:var(--primary);flex-shrink:0"></i>
+                Do you offer volume discounts for bulk orders?
+              </button>
+            </h2>
+            <div id="faq-l3" class="accordion-collapse collapse" data-bs-parent="#laptops-faq">
+              <div class="accordion-body">Yes. For orders of <strong>10+ devices</strong>, Microhub offers volume pricing that typically beats open-market rates. For 50+ units, we provide dedicated procurement support, custom configuration specs, and phased delivery scheduling.</div>
+            </div>
+          </div>
+          <div class="accordion-item reveal reveal-delay-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-l4">
+                <i class="bi bi-receipt me-3" style="color:var(--primary);flex-shrink:0"></i>
+                Is GST invoicing available?
+              </button>
+            </h2>
+            <div id="faq-l4" class="accordion-collapse collapse" data-bs-parent="#laptops-faq">
+              <div class="accordion-body">Absolutely. All hardware purchases come with <strong>proper GST invoicing</strong> for input tax credit claims. We also provide manufacturer warranty cards, serial number documentation, and AMC paperwork with every order.</div>
+            </div>
+          </div>
+          <div class="accordion-item reveal reveal-delay-1">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-l5">
+                <i class="bi bi-tools me-3" style="color:var(--primary);flex-shrink:0"></i>
+                What happens if a device needs repair or replacement?
+              </button>
+            </h2>
+            <div id="faq-l5" class="accordion-collapse collapse" data-bs-parent="#laptops-faq">
+              <div class="accordion-body">Microhub handles warranty claims on your behalf. For business-plan customers, we offer <strong>advance replacement</strong> — a replacement device is shipped before you send the faulty one back, minimizing downtime. All OEM warranty documentation is managed by our support team.</div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5 reveal">
+          <p class="text-muted mb-3">Still have questions? Our hardware team is happy to help.</p>
+          <a href="../../get-started/signup.html" class="btn-primary-custom me-3">Talk to Sales <i class="bi bi-arrow-right"></i></a>
+          <a href="../../insights/blog.html" class="btn-outline-custom">Browse Knowledge Base</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="laptops-cta">
+  <div class="container">
+    <div class="reveal text-center" style="max-width:720px;margin:0 auto;">
+      <div class="cta-eyebrow">Ready to equip your team?</div>
+      <h2 class="cta-title">Upgrade Your Team's Hardware Today</h2>
+      <p class="cta-text mx-auto">Get enterprise-grade laptops delivered, configured, and ready to use — with a single GST invoice, official warranty, and one point of support.</p>
+      <div class="cta-actions justify-content-center">
+        <a href="../../get-started/signup.html" class="btn-white-custom">Get a Quote <i class="bi bi-arrow-right"></i></a>
+        <a href="#products" class="btn-outline-custom home-cta-outline">Browse All Laptops</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div id="footer-root" data-include="components/footer.html"></div>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../../assets/js/component-loader.js"></script>
 <script src="../../assets/js/navigation.js"></script>
-<script src="../../assets/js/animations.js"></script>
 <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/enhancements.js"></script>
+<!-- Shared Microhub product script -->
+<script src="product.js"></script>
 </body>
 </html>

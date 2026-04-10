@@ -1,86 +1,559 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enterprise Printers ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â MicroHub</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../assets/css/main.css">
-  <link rel="stylesheet" href="../../assets/css/layout.css">
-  <link rel="stylesheet" href="../../assets/css/components.css">
-  <link rel="stylesheet" href="../../assets/css/animations.css">
-  <link rel="stylesheet" href="../../assets/css/responsive.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Printers Scanners — Microhub</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<!-- Shared Microhub product stylesheet -->
+<link rel="stylesheet" href="product.css">
+<link rel="stylesheet" href="../../assets/css/layout.css">
+
+<!-- Page-specific overrides -->
+<style>
+  :root {
+    --card-rgb: 99, 102, 241;
+    --spotlight-img: url('https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=900&auto=format&fit=crop');
+  }
+</style>
 </head>
 <body data-site-root="../../">
-<div id="navbar-root" data-include="components/navbar.html"></div>
 
-<section class="page-hero">
-  <div class="container position-relative" style="z-index:1">
-    <div class="breadcrumb-custom"><a href="../../index.html">Home</a><span>/</span><span>Printers</span></div>
-    <div class="col-lg-8 fade-in-up-1">
-      <div class="section-label" style="background:rgba(46,75,101,0.2);color:var(--primary-light)"><i class="bi bi-printer"></i> Hardware Procurement</div>
-      <h1 style="color:var(--white)">The Right Printer for Every Business Environment</h1>
-      <p style="color:rgba(255,255,255,0.7);font-size:1.1rem;margin-top:1.25rem;max-width:600px">Laser printers to high-volume MFPs ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â networked, configured, and delivered by our team.</p>
-      <div class="d-flex gap-3 mt-4 flex-wrap">
-        <a href="../../get-started/signup.html" class="btn-primary-custom">Get Started <i class="bi bi-arrow-right"></i></a>
-        <a href="../../insights/pricing.html" class="btn-outline-custom" style="border-color:rgba(255,255,255,0.3);color:var(--white)">View Pricing</a>
+<!-- NAVBAR -->
+
+<div id="navbar-root" data-include="components/navbar.html"></div>
+<!-- HERO -->
+<section class="hero-section">
+  <div class="hero-bg-orb hero-bg-orb--one"></div>
+  <div class="hero-bg-orb hero-bg-orb--two"></div>
+  <div class="hero-grid-lines" aria-hidden="true"></div>
+
+  <div class="container hero-content-shell">
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-6">
+        <h1 class="hero-title fade-in-up-2">
+          Printers &amp; Scanners for<br>
+          <span class="hero-title-accent">Business Teams</span>
+        </h1>
+        <p class="hero-lead fade-in-up-3">
+          HP, Canon, Epson &amp; Brother — laser, inkjet, and multifunction printers for offices of every size, delivered and configured across India.
+        </p>
+        <div class="d-flex gap-3 flex-wrap hero-btns fade-in-up-4">
+          <a href="#products" class="btn-primary-custom">Explore Printer Range <i class="bi bi-arrow-right"></i></a>
+          <a href="#pricing" class="btn-outline-custom hero-secondary-btn">
+            <i class="bi bi-currency-rupee"></i> View Pricing
+          </a>
+        </div>
+        <div class="hero-proof-list fade-in-up-4">
+          <div class="hero-proof-item"><i class="bi bi-check-circle-fill"></i> Authorized HP, Canon &amp; Epson Reseller</div>
+          <div class="hero-proof-item"><i class="bi bi-check-circle-fill"></i> On-site AMC &amp; warranty support</div>
+          <div class="hero-proof-item"><i class="bi bi-check-circle-fill"></i> Network &amp; cloud print setup included</div>
+        </div>
+        <div class="hero-mini-grid fade-in-up-4">
+          <div class="hero-mini-card"><strong>4+</strong><span>Top brands</span></div>
+          <div class="hero-mini-card"><strong>50+</strong><span>Models in stock</span></div>
+          <div class="hero-mini-card"><strong>PAN India</strong><span>Delivery</span></div>
+        </div>
       </div>
+
+      <div class="col-lg-6">
+        <div class="hero-laptop-visual fade-in-up-4">
+          <div class="hero-main-img">
+            <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?q=80&w=900&auto=format&fit=crop" alt="Office Printer">
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
-<section class="section-pad" style="background:var(--white)">
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span class="marquee-item"><i class="bi bi-printer"></i> HP LaserJet Pro</span>
+    <span class="marquee-item"><i class="bi bi-printer"></i> Canon imageCLASS</span>
+    <span class="marquee-item"><i class="bi bi-printer"></i> Epson EcoTank</span>
+    <span class="marquee-item"><i class="bi bi-printer"></i> Brother MFC Series</span>
+    <span class="marquee-item"><i class="bi bi-printer-fill"></i> HP OfficeJet Pro</span>
+    <span class="marquee-item"><i class="bi bi-shield-check"></i> On-site AMC</span>
+    <span class="marquee-item"><i class="bi bi-wifi"></i> Cloud Print Ready</span>
+    <span class="marquee-item"><i class="bi bi-patch-check"></i> Authorized Reseller</span>
+    <span class="marquee-item"><i class="bi bi-headset"></i> Toner &amp; Ink Supply</span>
+    <span class="marquee-item"><i class="bi bi-lightning-charge"></i> Same-Day Dispatch</span>
+    <!-- duplicate for seamless loop -->
+    <span class="marquee-item"><i class="bi bi-printer"></i> HP LaserJet Pro</span>
+    <span class="marquee-item"><i class="bi bi-printer"></i> Canon imageCLASS</span>
+    <span class="marquee-item"><i class="bi bi-printer"></i> Epson EcoTank</span>
+    <span class="marquee-item"><i class="bi bi-printer"></i> Brother MFC Series</span>
+    <span class="marquee-item"><i class="bi bi-printer-fill"></i> HP OfficeJet Pro</span>
+    <span class="marquee-item"><i class="bi bi-shield-check"></i> On-site AMC</span>
+    <span class="marquee-item"><i class="bi bi-wifi"></i> Cloud Print Ready</span>
+    <span class="marquee-item"><i class="bi bi-patch-check"></i> Authorized Reseller</span>
+    <span class="marquee-item"><i class="bi bi-headset"></i> Toner &amp; Ink Supply</span>
+    <span class="marquee-item"><i class="bi bi-lightning-charge"></i> Same-Day Dispatch</span>
+  </div>
+</div>
+
+<!-- PRODUCT SPOTLIGHT -->
+<section class="section-pad" id="products" style="background:linear-gradient(180deg,rgba(99,102,241,0.05) 0%,#f8fbff 44%,#ffffff 100%);">
   <div class="container">
-    <div class="row g-4">
-      <div class="col-lg-6 reveal">
-        <div class="section-label"><i class="bi bi-stars"></i> Key Capabilities</div>
-        <h2 class="section-title">What You <span>Get</span></h2>
-        <div class="divider"></div>
-        <ul class="feature-list">
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Enterprise-grade security and compliance built in</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Real-time dashboards and actionable analytics</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Seamless integrations with your existing tools</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Dedicated onboarding and customer success manager</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Mobile-first design for on-the-go access</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">99.9% uptime SLA with 24/7 technical support</span></li>
-        </ul>
+    <div class="laptops-spotlight reveal">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-5">
+          <h2 class="laptops-spotlight-title">The right printer for every office — configured, connected, and ready to print.</h2>
+          <p class="laptops-spotlight-desc">Every printer is sourced through authorized channels, network-configured, and set up for cloud or wireless printing before delivery — so your office prints from day one.</p>
+          <div class="spotlight-points">
+            <span><i class="bi bi-check2-circle"></i> Network &amp; Wi-Fi setup included on every unit</span>
+            <span><i class="bi bi-check2-circle"></i> Annual Maintenance Contracts (AMC) available</span>
+            <span><i class="bi bi-check2-circle"></i> GST invoicing, starter toner/ink kits included</span>
+          </div>
+          <div class="spotlight-metrics">
+            <div class="spotlight-metric"><strong>4+</strong><span>Top brands</span></div>
+            <div class="spotlight-metric"><strong>PAN India</strong><span>Delivery coverage</span></div>
+            <div class="spotlight-metric"><strong>AMC</strong><span>Support option</span></div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="spotlight-visual reveal reveal-delay-2">
+            <div class="spotlight-visual-img"></div>
+            <div class="spotlight-float-chip"><i class="bi bi-wifi"></i> Cloud &amp; network print ready</div>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-6 reveal reveal-delay-2">
-        <div class="row g-3">
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-lightning-charge"></i></div><h5>Fast Setup</h5><p class="text-muted small">Live in hours, not weeks</p></div></div>
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-shield-check"></i></div><h5>Secure</h5><p class="text-muted small">End-to-end encrypted</p></div></div>
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-graph-up"></i></div><h5>Analytics</h5><p class="text-muted small">Real-time insights</p></div></div>
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-headset"></i></div><h5>24/7 Support</h5><p class="text-muted small">Always there for you</p></div></div>
+    </div>
+
+    <!-- PRODUCT CARDS -->
+    <div class="row g-4 mt-2" id="products-grid">
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-printer"></i></span>
+            <span class="product-highlight-pill">HP LaserJet · Most Popular</span>
+          </div>
+          <h3>HP LaserJet Pro MFP M236dw</h3>
+          <p>The go-to monochrome multifunction laser for small and mid-size offices — print, copy, scan, and duplex without breaking the budget.</p>
+          <div class="product-highlight-list">
+            <span>30 ppm</span><span>Wi-Fi + USB</span><span>Auto Duplex</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹18,500</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-printer"></i></span>
+            <span class="product-highlight-pill">Canon · Office Workhorse</span>
+          </div>
+          <h3>Canon imageCLASS MF465dw</h3>
+          <p>A4 colour laser multifunction for busy teams — crisp colour prints, ADF scanning, and mobile print via Canon PRINT app.</p>
+          <div class="product-highlight-list">
+            <span>22 ppm</span><span>Colour Laser</span><span>ADF + Duplex</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹32,000</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-printer"></i></span>
+            <span class="product-highlight-pill">Epson · Low Running Cost</span>
+          </div>
+          <h3>Epson EcoTank L15160</h3>
+          <p>A3+ colour inkjet with ultra-low per-page cost — massive ink tanks, fast print speeds, and perfect for marketing &amp; design teams.</p>
+          <div class="product-highlight-list">
+            <span>A3+ Colour</span><span>EcoTank</span><span>Wi-Fi + LAN</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹45,000</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-printer-fill"></i></span>
+            <span class="product-highlight-pill">HP · High Volume</span>
+          </div>
+          <h3>HP LaserJet Enterprise MFP M635h</h3>
+          <p>High-volume enterprise laser for large offices — 1200-sheet capacity, advanced security features, and fleet management ready.</p>
+          <div class="product-highlight-list">
+            <span>56 ppm</span><span>1200 Sheets</span><span>Fleet-ready</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹1,10,000</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-printer"></i></span>
+            <span class="product-highlight-pill">Brother · Compact MFC</span>
+          </div>
+          <h3>Brother MFC-L8900CDW</h3>
+          <p>Colour laser MFP for mid-size offices — fast print, scan, copy, and fax with secure NFC printing and PIN release.</p>
+          <div class="product-highlight-list">
+            <span>33 ppm Colour</span><span>NFC Print</span><span>Duplex ADF</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹58,000</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-upc-scan"></i></span>
+            <span class="product-highlight-pill">Canon · Document Scanner</span>
+          </div>
+          <h3>Canon imageFORMULA DR-C230</h3>
+          <p>High-speed document scanner for digitising large volumes — 30 ppm duplex scanning, intelligent paper path, and compact footprint.</p>
+          <div class="product-highlight-list">
+            <span>30 ppm Duplex</span><span>ADF 60-sheet</span><span>USB 3.1</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹28,000</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+  <div class="container">
+    <h3 class="stats-heading reveal">India's leading brands, delivered by Microhub.</h3>
+    <p class="stats-subtext reveal">From a single office printer to a 200-unit enterprise fleet — Microhub handles every step of business printing procurement.</p>
+    <div class="stats-grid reveal">
+      <div class="stat-item"><div class="stat-number">300+</div><div class="stat-label">Offices Equipped</div><div class="stat-note">Across SMBs, corporates, and government.</div></div>
+      <div class="stat-item"><div class="stat-number">50+</div><div class="stat-label">Models in Stock</div><div class="stat-note">Laser, inkjet, MFP &amp; wide-format.</div></div>
+      <div class="stat-item"><div class="stat-number">&lt;24h</div><div class="stat-label">Dispatch SLA</div><div class="stat-note">Network-configured and shipped same day.</div></div>
+      <div class="stat-item"><div class="stat-number">AMC</div><div class="stat-label">Annual Cover</div><div class="stat-note">On-site service &amp; toner supply plans.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY Microhub -->
+<section class="section-pad why-laptops-section">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <h2 class="section-title">The Smartest Way to <span>Buy Printers for Business</span></h2>
+      <p class="section-desc mx-auto">Microhub is an authorized reseller for HP, Canon, Epson, and Brother — we handle procurement, setup, and long-term AMC so your office never stops printing.</p>
+    </div>
+    <div class="row g-4 align-items-stretch">
+      <div class="col-lg-5 d-flex">
+        <figure class="why-story-media reveal reveal-delay-1" style="flex:1 1 auto;margin:0;">
+          <img src="https://images.unsplash.com/photo-1568952433726-3896e3881c65?w=800&auto=format&fit=crop" alt="Office printing setup">
+        </figure>
+      </div>
+      <div class="col-lg-7 d-flex">
+        <div class="why-story-copy reveal reveal-delay-2">
+          <h3 class="why-story-title">From selection to setup — we handle the entire print environment.</h3>
+          <p class="why-story-lead">Choosing the right printer for your office is more than specs. Microhub matches your print volumes, paper formats, and network requirements to the right device — and handles everything from delivery to driver installation.</p>
+          <div class="why-story-list">
+            <article class="why-story-item">
+              <span class="why-story-index">01</span>
+              <div class="why-story-body"><h4>Network &amp; wireless configuration</h4><p>Every printer arrives configured for your office network — wired LAN, Wi-Fi, or cloud print. No IT effort needed from your team on delivery day.</p></div>
+            </article>
+            <article class="why-story-item">
+              <span class="why-story-index">02</span>
+              <div class="why-story-body"><h4>Right-sizing for your print volume</h4><p>Laser for high volumes, inkjet for colour-critical work, EcoTank for low running costs — our team maps your monthly page counts to the most economical device.</p></div>
+            </article>
+            <article class="why-story-item">
+              <span class="why-story-index">03</span>
+              <div class="why-story-body"><h4>AMC &amp; toner supply contracts</h4><p>Microhub offers annual maintenance contracts with on-site engineer visits, preventive servicing, and bundled toner/ink supply — so you never chase consumables.</p></div>
+            </article>
+            <article class="why-story-item">
+              <span class="why-story-index">04</span>
+              <div class="why-story-body"><h4>Fleet management for large offices</h4><p>Multi-location deployments, print tracking, and user access controls — we configure and monitor your entire printer fleet from a single dashboard.</p></div>
+            </article>
+          </div>
+          <div class="why-story-meta">
+            <span>Authorized Reseller</span>
+            <span>PAN India delivery</span>
+            <span>AMC available</span>
+          </div>
+          <div class="why-story-actions">
+            <a href="../../get-started/signup.html" class="btn-primary-custom">Get a Quote <i class="bi bi-arrow-right"></i></a>
+            <p>Trusted by Indian offices for end-to-end print procurement and support.</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<section class="stats-section">
-  <div class="container position-relative">
-    <div class="row g-4 text-center">
-      <div class="col-6 col-lg-3 reveal"><div class="stat-number"><span class="counter-num" data-target="500" data-suffix="+">500+</span></div><div class="stat-label">Businesses Served</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-1"><div class="stat-number"><span class="counter-num" data-target="99" data-suffix="%">99%</span></div><div class="stat-label">Uptime SLA</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-2"><div class="stat-number"><span class="counter-num" data-target="4" data-suffix="hr">4hr</span></div><div class="stat-label">Avg Setup Time</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-3"><div class="stat-number"><span class="counter-num" data-target="4.8" data-suffix="/5">4.8/5</span></div><div class="stat-label">Customer Rating</div></div>
+
+<!-- PRICING -->
+<section class="section-pad pricing-section" id="pricing">
+  <div class="container">
+    <div class="text-center mb-2 reveal">
+      <h2 class="section-title">Printer Plans, <span>No Hidden Costs</span></h2>
+      <p class="section-desc mx-auto">All plans include GST invoicing, manufacturer warranty, and network configuration. AMC available on every tier.</p>
+    </div>
+    <div class="pricing-grid reveal">
+
+      <div class="pricing-card">
+        <div class="pricing-tier">Starter</div>
+        <div class="pricing-price">₹18K</div>
+        <div class="pricing-sub">per device</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> HP LaserJet Pro MFP</li>
+          <li><i class="bi bi-check-circle-fill"></i> Mono Laser, 30 ppm</li>
+          <li><i class="bi bi-check-circle-fill"></i> Wi-Fi + USB</li>
+          <li><i class="bi bi-check-circle-fill"></i> Auto duplex</li>
+          <li><i class="bi bi-check-circle-fill"></i> 1-year manufacturer warranty</li>
+          <li><i class="bi bi-check-circle-fill"></i> Network setup included</li>
+        </ul>
+        <a href="#" class="btn-outline-custom w-100 justify-content-center">Choose Starter</a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-tier">Office</div>
+        <div class="pricing-price">₹35K</div>
+        <div class="pricing-sub">per device</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> Canon imageCLASS MFP</li>
+          <li><i class="bi bi-check-circle-fill"></i> Colour Laser, 22 ppm</li>
+          <li><i class="bi bi-check-circle-fill"></i> ADF + duplex scan</li>
+          <li><i class="bi bi-check-circle-fill"></i> Mobile print ready</li>
+          <li><i class="bi bi-check-circle-fill"></i> 1-year warranty</li>
+          <li><i class="bi bi-check-circle-fill"></i> Network + driver setup</li>
+        </ul>
+        <a href="#" class="btn-outline-custom w-100 justify-content-center">Choose Office</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-tier">Pro</div>
+        <div class="pricing-price">₹58K</div>
+        <div class="pricing-sub">per device</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> Brother MFC Colour Laser</li>
+          <li><i class="bi bi-check-circle-fill"></i> 33 ppm Colour</li>
+          <li><i class="bi bi-check-circle-fill"></i> NFC &amp; secure print</li>
+          <li><i class="bi bi-check-circle-fill"></i> Fleet management ready</li>
+          <li><i class="bi bi-check-circle-fill"></i> AMC option included</li>
+          <li><i class="bi bi-check-circle-fill"></i> Priority support</li>
+        </ul>
+        <a href="#" class="btn-primary-custom w-100 justify-content-center">Choose Pro</a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-tier">Enterprise</div>
+        <div class="pricing-price">₹1.1L+</div>
+        <div class="pricing-sub">per device</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> HP LaserJet Enterprise MFP</li>
+          <li><i class="bi bi-check-circle-fill"></i> 56 ppm, 1200-sheet capacity</li>
+          <li><i class="bi bi-check-circle-fill"></i> Advanced security features</li>
+          <li><i class="bi bi-check-circle-fill"></i> Fleet &amp; usage tracking</li>
+          <li><i class="bi bi-check-circle-fill"></i> Multi-year AMC</li>
+          <li><i class="bi bi-check-circle-fill"></i> 24/7 dedicated support</li>
+        </ul>
+        <a href="#" class="btn-outline-custom w-100 justify-content-center">Choose Enterprise</a>
+      </div>
+
     </div>
   </div>
 </section>
-<section class="cta-section">
-  <div class="container position-relative" style="z-index:1;text-align:center">
-    <h2 style="color:var(--white);margin-bottom:1rem">Ready to Get Started?</h2>
-    <p style="color:rgba(255,255,255,0.8);margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto">Join hundreds of businesses using MicroHub to grow faster and work smarter.</p>
-    <a href="../../get-started/signup.html" class="btn-white-custom">Start Free Trial <i class="bi bi-arrow-right"></i></a>
+
+<!-- TESTIMONIALS -->
+<section class="section-pad testimonials-section">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <h2 class="section-title">Trusted by <span>India's Best Offices</span></h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Microhub deployed 40 HP LaserJets across our three offices in a week. Network configuration and driver setup were done before delivery — our team just plugged in and printed."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AK</div>
+            <div><div class="testimonial-name">Amit Khanna</div><div class="testimonial-role">IT Manager, Nexora Consulting</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The AMC plan from Microhub has saved us so much time — monthly service visits, toner delivery, and a single call for any issue. Our print downtime is near zero now."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">DS</div>
+            <div><div class="testimonial-name">Divya Sharma</div><div class="testimonial-role">Operations Head, LegalEdge India</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Switched our entire studio to Epson EcoTank through Microhub. Running costs dropped by 60% and print quality for our marketing materials is outstanding."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">NK</div>
+            <div><div class="testimonial-name">Nikhil Kapoor</div><div class="testimonial-role">Studio Director, Brandcraft</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
+<!-- BRAND PARTNER BADGE -->
+<section class="section-pad" style="background:var(--white)">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <h2 class="section-title">Official Authorized <span>Reseller</span></h2>
+      <p class="section-desc mx-auto">Every printer sold by Microhub is genuine, covered by full manufacturer warranty, and sourced through authorized channels.</p>
+    </div>
+    <div class="partner-logos-row reveal reveal-delay-1">
+      <div class="partner-logo-item"><i class="bi bi-printer" style="font-size:1.8rem;color:#0066cc"></i><span style="font-weight:700;font-size:1.1rem;color:#1d1d1f;letter-spacing:-0.04em">HP</span></div>
+      <div class="partner-logo-sep"></div>
+      <div class="partner-logo-item"><i class="bi bi-printer" style="font-size:1.8rem;color:#cc0000"></i><span style="font-weight:700;font-size:1.1rem;color:#1d1d1f;letter-spacing:-0.04em">Canon</span></div>
+      <div class="partner-logo-sep"></div>
+      <div class="partner-logo-item"><i class="bi bi-printer" style="font-size:1.8rem;color:#003087"></i><span style="font-weight:700;font-size:1.1rem;color:#1d1d1f;letter-spacing:-0.04em">Epson</span></div>
+      <div class="partner-logo-sep"></div>
+      <div class="partner-logo-item"><i class="bi bi-printer" style="font-size:1.8rem;color:#0099cc"></i><span style="font-weight:700;font-size:1.1rem;color:#1d1d1f;letter-spacing:-0.04em">Brother</span></div>
+      <div class="partner-logo-sep"></div>
+      <div class="partner-logo-item"><i class="bi bi-printer" style="font-size:1.8rem;color:#333"></i><span style="font-weight:700;font-size:1.1rem;color:#1d1d1f;letter-spacing:-0.04em">Xerox</span></div>
+    </div>
+    <div class="d-flex justify-content-center gap-3 flex-wrap mt-4 reveal reveal-delay-2">
+      <div style="display:flex;align-items:center;gap:0.5rem;background:var(--accent);border:1px solid rgba(13,148,136,0.2);padding:0.5rem 1.1rem;border-radius:100px;font-size:0.82rem;font-weight:600;color:var(--primary-dark)"><i class="bi bi-patch-check-fill" style="color:var(--primary)"></i> Authorized Reseller</div>
+      <div style="display:flex;align-items:center;gap:0.5rem;background:var(--accent);border:1px solid rgba(13,148,136,0.2);padding:0.5rem 1.1rem;border-radius:100px;font-size:0.82rem;font-weight:600;color:var(--primary-dark)"><i class="bi bi-shield-fill-check" style="color:var(--primary)"></i> Full Warranty</div>
+      <div style="display:flex;align-items:center;gap:0.5rem;background:var(--accent);border:1px solid rgba(13,148,136,0.2);padding:0.5rem 1.1rem;border-radius:100px;font-size:0.82rem;font-weight:600;color:var(--primary-dark)"><i class="bi bi-tools" style="color:var(--primary)"></i> AMC Available</div>
+      <div style="display:flex;align-items:center;gap:0.5rem;background:var(--accent);border:1px solid rgba(13,148,136,0.2);padding:0.5rem 1.1rem;border-radius:100px;font-size:0.82rem;font-weight:600;color:var(--primary-dark)"><i class="bi bi-wifi" style="color:var(--primary)"></i> Network Setup Included</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-pad" style="background:var(--accent)">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="text-center mb-5 reveal">
+          <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+          <p class="section-desc mx-auto">Everything you need to know about buying printers through Microhub for your business.</p>
+        </div>
+        <div class="accordion accordion-custom" id="printer-faq">
+          <div class="accordion-item reveal">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-p1" aria-expanded="true">
+                <i class="bi bi-printer me-3" style="color:var(--primary);flex-shrink:0"></i>
+                Which printer brands does Microhub supply?
+              </button>
+            </h2>
+            <div id="faq-p1" class="accordion-collapse collapse show" data-bs-parent="#printer-faq">
+              <div class="accordion-body">Microhub is an authorized reseller for <strong>HP, Canon, Epson, Brother, and Xerox</strong>. Every printer is genuine, sourced through the authorized channel, and comes with a valid GST invoice and full manufacturer warranty.</div>
+            </div>
+          </div>
+          <div class="accordion-item reveal reveal-delay-1">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-p2">
+                <i class="bi bi-wifi me-3" style="color:var(--primary);flex-shrink:0"></i>
+                Does Microhub configure network printing before delivery?
+              </button>
+            </h2>
+            <div id="faq-p2" class="accordion-collapse collapse" data-bs-parent="#printer-faq">
+              <div class="accordion-body">Yes. Every printer is configured for your office network — wired LAN, Wi-Fi, or cloud print — before it ships. We also pre-install drivers on a shared server if required, so your team starts printing the moment the device arrives.</div>
+            </div>
+          </div>
+          <div class="accordion-item reveal reveal-delay-2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-p3">
+                <i class="bi bi-tools me-3" style="color:var(--primary);flex-shrink:0"></i>
+                What does the Annual Maintenance Contract (AMC) include?
+              </button>
+            </h2>
+            <div id="faq-p3" class="accordion-collapse collapse" data-bs-parent="#printer-faq">
+              <div class="accordion-body">AMC covers scheduled on-site preventive maintenance, breakdown service calls, labour charges, and consumable tracking. We offer <strong>comprehensive AMC</strong> (includes parts &amp; toner) and <strong>non-comprehensive AMC</strong> (labour-only). Choose based on your print volume and budget.</div>
+            </div>
+          </div>
+          <div class="accordion-item reveal reveal-delay-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-p4">
+                <i class="bi bi-currency-rupee me-3" style="color:var(--primary);flex-shrink:0"></i>
+                Do you offer volume discounts for bulk printer orders?
+              </button>
+            </h2>
+            <div id="faq-p4" class="accordion-collapse collapse" data-bs-parent="#printer-faq">
+              <div class="accordion-body">Yes. For orders of <strong>5+ units</strong> we offer volume pricing and can negotiate extended warranty terms with the manufacturer. For 20+ units we provide a dedicated account manager, phased delivery, and site-wise installation scheduling.</div>
+            </div>
+          </div>
+          <div class="accordion-item reveal reveal-delay-1">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-p5">
+                <i class="bi bi-droplet me-3" style="color:var(--primary);flex-shrink:0"></i>
+                Can Microhub supply toner and ink on an ongoing basis?
+              </button>
+            </h2>
+            <div id="faq-p5" class="accordion-collapse collapse" data-bs-parent="#printer-faq">
+              <div class="accordion-body">Yes. Microhub offers <strong>consumable supply contracts</strong> — original toner cartridges and ink delivered to your office on a scheduled or on-demand basis. We track your fleet usage and alert you before devices run low so printing is never interrupted.</div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5 reveal">
+          <p class="text-muted mb-3">Still have questions? Our printer team is happy to help.</p>
+          <a href="../../get-started/signup.html" class="btn-primary-custom me-3">Talk to Sales <i class="bi bi-arrow-right"></i></a>
+          <a href="../../insights/blog.html" class="btn-outline-custom">Browse Knowledge Base</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="laptops-cta">
+  <div class="container">
+    <div class="reveal text-center" style="max-width:720px;margin:0 auto;">
+      <div class="cta-eyebrow">Ready to streamline your office printing?</div>
+      <h2 class="cta-title">Equip Your Office with the Right Printers Today</h2>
+      <p class="cta-text mx-auto">Get genuine hardware delivered, network-configured, and AMC-covered — with a single GST invoice and one dedicated support relationship.</p>
+      <div class="cta-actions justify-content-center">
+        <a href="../../get-started/signup.html" class="btn-white-custom">Get a Quote <i class="bi bi-arrow-right"></i></a>
+        <a href="#products" class="btn-outline-custom home-cta-outline">Browse All Printers</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
 <div id="footer-root" data-include="components/footer.html"></div>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../../assets/js/component-loader.js"></script>
 <script src="../../assets/js/navigation.js"></script>
-<script src="../../assets/js/animations.js"></script>
 <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/enhancements.js"></script>
+<script src="product.js"></script>
 </body>
 </html>

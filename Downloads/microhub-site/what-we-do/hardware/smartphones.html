@@ -1,86 +1,560 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Business Smartphones ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â MicroHub</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../assets/css/main.css">
-  <link rel="stylesheet" href="../../assets/css/layout.css">
-  <link rel="stylesheet" href="../../assets/css/components.css">
-  <link rel="stylesheet" href="../../assets/css/animations.css">
-  <link rel="stylesheet" href="../../assets/css/responsive.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Smartphones — Microhub</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;1,14..32,400&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Shared Microhub product stylesheet -->
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="product.css">
+<link rel="stylesheet" href="../../assets/css/layout.css">
+
+<!-- Page-specific overrides -->
+<style>
+  :root {
+    --card-rgb: 99, 102, 241;
+    --spotlight-img: url('https://images.unsplash.com/photo-1480694313141-fce5e697ee25?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  }
+</style>
 </head>
 <body data-site-root="../../">
-<div id="navbar-root" data-include="components/navbar.html"></div>
 
-<section class="page-hero">
-  <div class="container position-relative" style="z-index:1">
-    <div class="breadcrumb-custom"><a href="../../index.html">Home</a><span>/</span><span>Smartphones</span></div>
-    <div class="col-lg-8 fade-in-up-1">
-      <div class="section-label" style="background:rgba(46,75,101,0.2);color:var(--primary-light)"><i class="bi bi-phone"></i> Hardware Procurement</div>
-      <h1 style="color:var(--white)">Enterprise Smartphones, Secured & Enrolled</h1>
-      <p style="color:rgba(255,255,255,0.7);font-size:1.1rem;margin-top:1.25rem;max-width:600px">Corporate smartphones with MDM enrollment, email setup, and security policies applied.</p>
-      <div class="d-flex gap-3 mt-4 flex-wrap">
-        <a href="../../get-started/signup.html" class="btn-primary-custom">Get Started <i class="bi bi-arrow-right"></i></a>
-        <a href="../../insights/pricing.html" class="btn-outline-custom" style="border-color:rgba(255,255,255,0.3);color:var(--white)">View Pricing</a>
+<!-- NAVBAR -->
+<div id="navbar-root" data-include="components/navbar.html"></div>
+<!-- HERO -->
+<section class="hero-section">
+  <div class="hero-bg-orb hero-bg-orb--one"></div>
+  <div class="hero-bg-orb hero-bg-orb--two"></div>
+  <div class="hero-grid-lines" aria-hidden="true"></div>
+
+  <div class="container hero-content-shell">
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-6">
+        <h1 class="hero-title fade-in-up-2">
+          Business Smartphones for<br>
+          <span class="hero-title-accent">Enterprise Teams</span>
+        </h1>
+        <p class="hero-lead fade-in-up-3">
+          Samsung Galaxy, Apple iPhone &amp; Google Pixel — authorized business smartphone procurement, MDM-enrolled and deployed across India for mobile workforces of any size.
+        </p>
+        <div class="d-flex gap-3 flex-wrap hero-btns fade-in-up-4">
+          <a href="#products" class="btn-primary-custom">Explore Smartphone Range <i class="bi bi-arrow-right"></i></a>
+          <a href="#pricing" class="btn-outline-custom hero-secondary-btn">
+            <i class="bi bi-currency-rupee"></i> View Pricing
+          </a>
+        </div>
+        <div class="hero-proof-list fade-in-up-4">
+          <div class="hero-proof-item"><i class="bi bi-check-circle-fill"></i> Authorized Samsung &amp; Apple Reseller</div>
+          <div class="hero-proof-item"><i class="bi bi-check-circle-fill"></i> MDM enrolment &amp; Knox / DEP setup</div>
+          <div class="hero-proof-item"><i class="bi bi-check-circle-fill"></i> Corporate SIM provisioning support</div>
+        </div>
+        <div class="hero-mini-grid fade-in-up-4">
+          <div class="hero-mini-card"><strong>3</strong><span>Top brands</span></div>
+          <div class="hero-mini-card"><strong>5G</strong><span>Ready devices</span></div>
+          <div class="hero-mini-card"><strong>PAN India</strong><span>Delivery</span></div>
+        </div>
       </div>
+
+      <div class="col-lg-6">
+        <div class="hero-laptop-visual fade-in-up-4">
+          <div class="hero-main-img">
+            <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=900&auto=format&fit=crop" alt="Business Smartphones">
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
-<section class="section-pad" style="background:var(--white)">
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span class="marquee-item"><i class="bi bi-phone"></i> Samsung Galaxy S25 Ultra</span>
+    <span class="marquee-item"><i class="bi bi-phone"></i> iPhone 16 Pro Max</span>
+    <span class="marquee-item"><i class="bi bi-phone"></i> Google Pixel 9 Pro</span>
+    <span class="marquee-item"><i class="bi bi-phone"></i> Samsung Galaxy A55</span>
+    <span class="marquee-item"><i class="bi bi-phone-fill"></i> Samsung Knox Enrolled</span>
+    <span class="marquee-item"><i class="bi bi-shield-check"></i> MDM Pre-enrolled</span>
+    <span class="marquee-item"><i class="bi bi-sim"></i> Corporate SIM Ready</span>
+    <span class="marquee-item"><i class="bi bi-patch-check"></i> Authorized Reseller</span>
+    <span class="marquee-item"><i class="bi bi-headset"></i> Warranty Support</span>
+    <span class="marquee-item"><i class="bi bi-lightning-charge"></i> Same-Day Dispatch</span>
+    <!-- duplicate for seamless loop -->
+    <span class="marquee-item"><i class="bi bi-phone"></i> Samsung Galaxy S25 Ultra</span>
+    <span class="marquee-item"><i class="bi bi-phone"></i> iPhone 16 Pro Max</span>
+    <span class="marquee-item"><i class="bi bi-phone"></i> Google Pixel 9 Pro</span>
+    <span class="marquee-item"><i class="bi bi-phone"></i> Samsung Galaxy A55</span>
+    <span class="marquee-item"><i class="bi bi-phone-fill"></i> Samsung Knox Enrolled</span>
+    <span class="marquee-item"><i class="bi bi-shield-check"></i> MDM Pre-enrolled</span>
+    <span class="marquee-item"><i class="bi bi-sim"></i> Corporate SIM Ready</span>
+    <span class="marquee-item"><i class="bi bi-patch-check"></i> Authorized Reseller</span>
+    <span class="marquee-item"><i class="bi bi-headset"></i> Warranty Support</span>
+    <span class="marquee-item"><i class="bi bi-lightning-charge"></i> Same-Day Dispatch</span>
+  </div>
+</div>
+
+<!-- PRODUCT SPOTLIGHT -->
+<section class="section-pad" id="products" style="background:linear-gradient(180deg,rgba(99,102,241,0.05) 0%,#f8fbff 44%,#ffffff 100%);">
   <div class="container">
-    <div class="row g-4">
-      <div class="col-lg-6 reveal">
-        <div class="section-label"><i class="bi bi-stars"></i> Key Capabilities</div>
-        <h2 class="section-title">What You <span>Get</span></h2>
-        <div class="divider"></div>
-        <ul class="feature-list">
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Enterprise-grade security and compliance built in</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Real-time dashboards and actionable analytics</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Seamless integrations with your existing tools</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Dedicated onboarding and customer success manager</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Mobile-first design for on-the-go access</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">99.9% uptime SLA with 24/7 technical support</span></li>
-        </ul>
+    <div class="laptops-spotlight reveal">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-5">
+          <h2 class="laptops-spotlight-title">Enterprise smartphones. MDM-enrolled. Secure from day one.</h2>
+          <p class="laptops-spotlight-desc">Every smartphone is sourced through authorized channels, enrolled in your MDM via Samsung Knox, Apple DEP, or Android Zero-Touch, and secured with corporate policies before shipping — so your team powers on and gets to work.</p>
+          <div class="spotlight-points">
+            <span><i class="bi bi-check2-circle"></i> Knox / DEP / Zero-Touch MDM enrolment included</span>
+            <span><i class="bi bi-check2-circle"></i> Extended warranty &amp; accidental damage cover available</span>
+            <span><i class="bi bi-check2-circle"></i> GST invoicing and full manufacturer documentation</span>
+          </div>
+          <div class="spotlight-metrics">
+            <div class="spotlight-metric"><strong>3</strong><span>Top brands</span></div>
+            <div class="spotlight-metric"><strong>PAN India</strong><span>Delivery coverage</span></div>
+            <div class="spotlight-metric"><strong>MDM</strong><span>Pre-enrolled</span></div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="spotlight-visual reveal reveal-delay-2">
+            <div class="spotlight-visual-img"></div>
+            <div class="spotlight-float-chip"><i class="bi bi-shield-lock"></i> MDM enrolled &amp; policies applied</div>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-6 reveal reveal-delay-2">
-        <div class="row g-3">
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-lightning-charge"></i></div><h5>Fast Setup</h5><p class="text-muted small">Live in hours, not weeks</p></div></div>
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-shield-check"></i></div><h5>Secure</h5><p class="text-muted small">End-to-end encrypted</p></div></div>
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-graph-up"></i></div><h5>Analytics</h5><p class="text-muted small">Real-time insights</p></div></div>
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-headset"></i></div><h5>24/7 Support</h5><p class="text-muted small">Always there for you</p></div></div>
+    </div>
+
+    <!-- PRODUCT CARDS -->
+    <div class="row g-4 mt-2" id="products-grid">
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-phone"></i></span>
+            <span class="product-highlight-pill">Samsung · Flagship</span>
+          </div>
+          <h3>Samsung Galaxy S25 Ultra</h3>
+          <p>The ultimate business smartphone — S Pen, Galaxy AI, 200MP camera, and Samsung Knox security for the most demanding executive and field users.</p>
+          <div class="product-highlight-list">
+            <span>Snapdragon 8 Elite</span><span>12GB RAM</span><span>256GB</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹1,29,999</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-phone"></i></span>
+            <span class="product-highlight-pill">Apple · iOS Enterprise</span>
+          </div>
+          <h3>iPhone 16 Pro Max</h3>
+          <p>Apple's most powerful iPhone for enterprise — A18 Pro chip, Apple Intelligence, the best camera system in any iPhone, and seamless DEP enrolment.</p>
+          <div class="product-highlight-list">
+            <span>A18 Pro</span><span>8GB RAM</span><span>256GB</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹1,34,900</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-phone"></i></span>
+            <span class="product-highlight-pill">Google Pixel · AI-first</span>
+          </div>
+          <h3>Google Pixel 9 Pro</h3>
+          <p>Google's flagship with 7 years of OS and security updates, Gemini AI built-in, and Android Zero-Touch enrolment for enterprise deployment at scale.</p>
+          <div class="product-highlight-list">
+            <span>Google Tensor G4</span><span>16GB RAM</span><span>256GB</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹1,06,999</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-phone"></i></span>
+            <span class="product-highlight-pill">Samsung · Mid-range</span>
+          </div>
+          <h3>Samsung Galaxy A55 5G</h3>
+          <p>The smart mid-range choice for large field-force deployments — 5G-ready, IP67 rated, Samsung Knox, and excellent battery life at a compelling business price.</p>
+          <div class="product-highlight-list">
+            <span>Exynos 1480</span><span>8GB RAM</span><span>128GB</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹36,999</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-phone-fill"></i></span>
+            <span class="product-highlight-pill">Samsung · Rugged</span>
+          </div>
+          <h3>Samsung Galaxy XCover7 Pro</h3>
+          <p>Military-grade rugged smartphone for field teams — MIL-STD-810H rated, IP68 waterproof, programmable PTT button, and replaceable battery.</p>
+          <div class="product-highlight-list">
+            <span>Dimensity 6100+</span><span>6GB RAM</span><span>128GB</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹48,999</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-phone"></i></span>
+            <span class="product-highlight-pill">Apple · Mid-range iOS</span>
+          </div>
+          <h3>iPhone 16</h3>
+          <p>Full Apple ecosystem access at a more accessible price point — A18 chip, Apple Intelligence features, DEP enrolment, and Apple's best-in-class security.</p>
+          <div class="product-highlight-list">
+            <span>A18 Chip</span><span>8GB RAM</span><span>128GB</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹79,900</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+  <div class="container">
+    <h3 class="stats-heading reveal">Mobile enterprise ecosystem, delivered by Microhub.</h3>
+    <p class="stats-subtext reveal">From a single executive device to a 2,000-unit field-force rollout — Microhub handles every step of business smartphone procurement in India.</p>
+    <div class="stats-grid reveal">
+      <div class="stat-item"><div class="stat-number">800+</div><div class="stat-label">Teams Mobilised</div><div class="stat-note">Across field sales, executives &amp; enterprises.</div></div>
+      <div class="stat-item"><div class="stat-number">5G</div><div class="stat-label">Ready Devices</div><div class="stat-note">All current-gen 5G smartphones in stock.</div></div>
+      <div class="stat-item"><div class="stat-number">&lt;24h</div><div class="stat-label">Dispatch SLA</div><div class="stat-note">MDM-enrolled and shipped same day.</div></div>
+      <div class="stat-item"><div class="stat-number">7yr</div><div class="stat-label">OS Updates</div><div class="stat-note">Pixel &amp; Samsung enterprise update promise.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY Microhub -->
+<section class="section-pad why-laptops-section">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <h2 class="section-title">The Smartest Way to <span>Buy Smartphones for Business</span></h2>
+      <p class="section-desc mx-auto">Microhub is an authorized reseller for Samsung and Apple — we handle procurement, MDM enrolment, and lifecycle support so your mobile fleet is always secure and managed.</p>
+    </div>
+    <div class="row g-4 align-items-stretch">
+      <div class="col-lg-5 d-flex">
+        <figure class="why-story-media reveal reveal-delay-1" style="flex:1 1 auto;margin:0;">
+          <img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=800&auto=format&fit=crop" alt="Business smartphone deployment">
+        </figure>
+      </div>
+      <div class="col-lg-7 d-flex">
+        <div class="why-story-copy reveal reveal-delay-2">
+          <h3 class="why-story-title">From procurement to policy — we handle the entire mobile deployment.</h3>
+          <p class="why-story-lead">Business smartphone procurement is more than buying handsets. Microhub links devices to your MDM via Samsung Knox, Apple DEP, or Android Zero-Touch, applies your corporate policies, and delivers ready-to-activate phones — so your team skips the setup entirely.</p>
+          <div class="why-story-list">
+            <article class="why-story-item">
+              <span class="why-story-index">01</span>
+              <div class="why-story-body"><h4>Knox, DEP &amp; Zero-Touch enrolment</h4><p>Every device is linked to your MDM — Microsoft Intune, Jamf, VMware Workspace ONE, or SOTI — via Samsung Knox, Apple DEP, or Android Zero-Touch before it ships, enabling instant corporate enrolment on first boot.</p></div>
+            </article>
+            <article class="why-story-item">
+              <span class="why-story-index">02</span>
+              <div class="why-story-body"><h4>Platform guidance for every team</h4><p>iOS for executives and creative teams, Samsung Knox for enterprise Android deployments, rugged Galaxys for field operations — we match the right platform to every use case and budget.</p></div>
+            </article>
+            <article class="why-story-item">
+              <span class="why-story-index">03</span>
+              <div class="why-story-body"><h4>Volume pricing &amp; accidental damage cover</h4><p>Microhub unlocks Samsung and Apple business pricing for bulk orders and can bundle accidental damage protection plans to keep your mobile fleet covered through everyday knocks and drops.</p></div>
+            </article>
+            <article class="why-story-item">
+              <span class="why-story-index">04</span>
+              <div class="why-story-body"><h4>Mobile lifecycle management</h4><p>Device refresh cycles, swap-and-replace logistics, lost device remote wipe, and end-of-life trade-in — Microhub manages the full smartphone lifecycle so your IT team stays in control.</p></div>
+            </article>
+          </div>
+          <div class="why-story-meta">
+            <span>Authorized Reseller</span>
+            <span>PAN India delivery</span>
+            <span>MDM pre-enrolled</span>
+          </div>
+          <div class="why-story-actions">
+            <a href="../../get-started/signup.html" class="btn-primary-custom">Get a Quote <i class="bi bi-arrow-right"></i></a>
+            <p>Trusted by Indian enterprises for end-to-end mobile fleet procurement and management.</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<section class="stats-section">
-  <div class="container position-relative">
-    <div class="row g-4 text-center">
-      <div class="col-6 col-lg-3 reveal"><div class="stat-number"><span class="counter-num" data-target="500" data-suffix="+">500+</span></div><div class="stat-label">Businesses Served</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-1"><div class="stat-number"><span class="counter-num" data-target="99" data-suffix="%">99%</span></div><div class="stat-label">Uptime SLA</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-2"><div class="stat-number"><span class="counter-num" data-target="4" data-suffix="hr">4hr</span></div><div class="stat-label">Avg Setup Time</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-3"><div class="stat-number"><span class="counter-num" data-target="4.8" data-suffix="/5">4.8/5</span></div><div class="stat-label">Customer Rating</div></div>
+
+<!-- PRICING -->
+<section class="section-pad pricing-section" id="pricing">
+  <div class="container">
+    <div class="text-center mb-2 reveal">
+      <h2 class="section-title">Smartphone Plans, <span>No Hidden Costs</span></h2>
+      <p class="section-desc mx-auto">All plans include GST invoicing, manufacturer warranty, and MDM enrolment. Accidental damage cover available on every tier.</p>
+    </div>
+    <div class="pricing-grid reveal">
+
+      <div class="pricing-card">
+        <div class="pricing-tier">Field</div>
+        <div class="pricing-price">₹37K</div>
+        <div class="pricing-sub">per device</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> Samsung Galaxy A55 5G</li>
+          <li><i class="bi bi-check-circle-fill"></i> 8GB RAM, 128GB</li>
+          <li><i class="bi bi-check-circle-fill"></i> IP67 rated</li>
+          <li><i class="bi bi-check-circle-fill"></i> Samsung Knox enrolled</li>
+          <li><i class="bi bi-check-circle-fill"></i> 1-year warranty</li>
+          <li><i class="bi bi-check-circle-fill"></i> MDM enrolment included</li>
+        </ul>
+        <a href="#" class="btn-outline-custom w-100 justify-content-center">Choose Field</a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-tier">Business</div>
+        <div class="pricing-price">₹80K</div>
+        <div class="pricing-sub">per device</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> iPhone 16</li>
+          <li><i class="bi bi-check-circle-fill"></i> A18 Chip, 8GB RAM, 128GB</li>
+          <li><i class="bi bi-check-circle-fill"></i> Apple DEP enrolment</li>
+          <li><i class="bi bi-check-circle-fill"></i> Apple Intelligence features</li>
+          <li><i class="bi bi-check-circle-fill"></i> 1-year Apple warranty</li>
+          <li><i class="bi bi-check-circle-fill"></i> MDM + DEP enrolment</li>
+        </ul>
+        <a href="#" class="btn-outline-custom w-100 justify-content-center">Choose Business</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-tier">Executive</div>
+        <div class="pricing-price">₹1.07L</div>
+        <div class="pricing-sub">per device</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> Google Pixel 9 Pro</li>
+          <li><i class="bi bi-check-circle-fill"></i> Tensor G4, 16GB RAM, 256GB</li>
+          <li><i class="bi bi-check-circle-fill"></i> 7 years OS + security updates</li>
+          <li><i class="bi bi-check-circle-fill"></i> Zero-Touch MDM enrolment</li>
+          <li><i class="bi bi-check-circle-fill"></i> Accidental damage cover</li>
+          <li><i class="bi bi-check-circle-fill"></i> Priority support</li>
+        </ul>
+        <a href="#" class="btn-primary-custom w-100 justify-content-center">Choose Executive</a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-tier">Flagship</div>
+        <div class="pricing-price">₹1.3L+</div>
+        <div class="pricing-sub">per device</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> Samsung S25 Ultra / iPhone 16 Pro Max</li>
+          <li><i class="bi bi-check-circle-fill"></i> 12–16GB RAM, 256GB+</li>
+          <li><i class="bi bi-check-circle-fill"></i> S Pen / ProRes Video</li>
+          <li><i class="bi bi-check-circle-fill"></i> Advanced Knox / DEP</li>
+          <li><i class="bi bi-check-circle-fill"></i> Accidental damage cover</li>
+          <li><i class="bi bi-check-circle-fill"></i> 24/7 dedicated support</li>
+        </ul>
+        <a href="#" class="btn-outline-custom w-100 justify-content-center">Choose Flagship</a>
+      </div>
+
     </div>
   </div>
 </section>
-<section class="cta-section">
-  <div class="container position-relative" style="z-index:1;text-align:center">
-    <h2 style="color:var(--white);margin-bottom:1rem">Ready to Get Started?</h2>
-    <p style="color:rgba(255,255,255,0.8);margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto">Join hundreds of businesses using MicroHub to grow faster and work smarter.</p>
-    <a href="../../get-started/signup.html" class="btn-white-custom">Start Free Trial <i class="bi bi-arrow-right"></i></a>
+
+<!-- TESTIMONIALS -->
+<section class="section-pad testimonials-section">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <h2 class="section-title">Trusted by <span>India's Best Teams</span></h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Microhub deployed 500 Samsung Galaxy A55s for our field sales team in two weeks. Knox enrolment and Intune policies were applied before delivery — our sales reps opened the box and were logged into CRM within minutes."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">KR</div>
+            <div><div class="testimonial-name">Karan Rao</div><div class="testimonial-role">VP Sales Operations, SwiftRetail</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"We standardised on iPhone 16 Pro through Microhub for our entire leadership team. DEP enrolment and Jamf policies were seamless — IT had zero manual setup to do. The volume pricing was also significantly better than retail."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">TM</div>
+            <div><div class="testimonial-name">Tanvi Mishra</div><div class="testimonial-role">CIO, HeliosGroup</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"1,200 Pixel 9 Pros for our logistics network — Microhub coordinated delivery across 14 cities, handled Zero-Touch enrolment, and gave us a single invoice. The 7-year update commitment on Pixel gives us confidence in the fleet lifecycle."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AS</div>
+            <div><div class="testimonial-name">Arjun Singh</div><div class="testimonial-role">Head of IT, FastMove Logistics</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
+<!-- BRAND PARTNER BADGE -->
+<section class="section-pad" style="background:var(--white)">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <h2 class="section-title">Official Authorized <span>Reseller</span></h2>
+      <p class="section-desc mx-auto">Every smartphone sold by Microhub is genuine, covered by full manufacturer warranty, and sourced through authorized channels.</p>
+    </div>
+    <div class="partner-logos-row reveal reveal-delay-1">
+      <div class="partner-logo-item"><i class="bi bi-phone" style="font-size:1.8rem;color:#1428A0"></i><span style="font-weight:700;font-size:1.1rem;color:#1d1d1f;letter-spacing:-0.04em">Samsung</span></div>
+      <div class="partner-logo-sep"></div>
+      <div class="partner-logo-item"><i class="bi bi-apple" style="font-size:1.8rem;color:#1d1d1f"></i><span style="font-weight:700;font-size:1.1rem;color:#1d1d1f;letter-spacing:-0.04em">iPhone</span></div>
+      <div class="partner-logo-sep"></div>
+      <div class="partner-logo-item"><i class="bi bi-phone" style="font-size:1.8rem;color:#4285F4"></i><span style="font-weight:700;font-size:1.1rem;color:#1d1d1f;letter-spacing:-0.04em">Google Pixel</span></div>
+      <div class="partner-logo-sep"></div>
+      <div class="partner-logo-item"><i class="bi bi-shield-lock" style="font-size:1.8rem;color:#1428A0"></i><span style="font-weight:700;font-size:1.1rem;color:#1d1d1f;letter-spacing:-0.04em">Samsung Knox</span></div>
+      <div class="partner-logo-sep"></div>
+      <div class="partner-logo-item"><i class="bi bi-phone-fill" style="font-size:1.8rem;color:#34A853"></i><span style="font-weight:700;font-size:1.1rem;color:#1d1d1f;letter-spacing:-0.04em">Zero-Touch</span></div>
+    </div>
+    <div class="d-flex justify-content-center gap-3 flex-wrap mt-4 reveal reveal-delay-2">
+      <div style="display:flex;align-items:center;gap:0.5rem;background:var(--accent);border:1px solid rgba(13,148,136,0.2);padding:0.5rem 1.1rem;border-radius:100px;font-size:0.82rem;font-weight:600;color:var(--primary-dark)"><i class="bi bi-patch-check-fill" style="color:var(--primary)"></i> Authorized Reseller</div>
+      <div style="display:flex;align-items:center;gap:0.5rem;background:var(--accent);border:1px solid rgba(13,148,136,0.2);padding:0.5rem 1.1rem;border-radius:100px;font-size:0.82rem;font-weight:600;color:var(--primary-dark)"><i class="bi bi-shield-fill-check" style="color:var(--primary)"></i> Full Manufacturer Warranty</div>
+      <div style="display:flex;align-items:center;gap:0.5rem;background:var(--accent);border:1px solid rgba(13,148,136,0.2);padding:0.5rem 1.1rem;border-radius:100px;font-size:0.82rem;font-weight:600;color:var(--primary-dark)"><i class="bi bi-phone" style="color:var(--primary)"></i> MDM Pre-enrolled</div>
+      <div style="display:flex;align-items:center;gap:0.5rem;background:var(--accent);border:1px solid rgba(13,148,136,0.2);padding:0.5rem 1.1rem;border-radius:100px;font-size:0.82rem;font-weight:600;color:var(--primary-dark)"><i class="bi bi-5g" style="color:var(--primary)"></i> 5G Ready</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-pad" style="background:var(--accent)">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="text-center mb-5 reveal">
+          <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+          <p class="section-desc mx-auto">Everything you need to know about buying smartphones through Microhub for your business.</p>
+        </div>
+        <div class="accordion accordion-custom" id="phone-faq">
+          <div class="accordion-item reveal">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-s1" aria-expanded="true">
+                <i class="bi bi-phone me-3" style="color:var(--primary);flex-shrink:0"></i>
+                Which smartphone brands does Microhub supply?
+              </button>
+            </h2>
+            <div id="faq-s1" class="accordion-collapse collapse show" data-bs-parent="#phone-faq">
+              <div class="accordion-body">Microhub is an authorized reseller for <strong>Samsung, Apple, and Google Pixel</strong> business devices. Every unit is genuine, sourced through the authorized channel, and comes with a valid GST invoice and full manufacturer warranty.</div>
+            </div>
+          </div>
+          <div class="accordion-item reveal reveal-delay-1">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-s2">
+                <i class="bi bi-shield-check me-3" style="color:var(--primary);flex-shrink:0"></i>
+                What is Samsung Knox and how does MDM enrolment work?
+              </button>
+            </h2>
+            <div id="faq-s2" class="accordion-collapse collapse" data-bs-parent="#phone-faq">
+              <div class="accordion-body">Samsung Knox is Samsung's enterprise security platform — it creates a hardware-backed secure environment on the device. Microhub registers devices to your Knox Mobile Enrolment account so that when an employee switches on their phone for the first time, it automatically enrols in your MDM (Intune, Workspace ONE, etc.) and applies corporate policies — <strong>zero manual setup</strong>.</div>
+            </div>
+          </div>
+          <div class="accordion-item reveal reveal-delay-2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-s3">
+                <i class="bi bi-apple me-3" style="color:var(--primary);flex-shrink:0"></i>
+                Can Microhub enrol iPhones in Apple DEP before delivery?
+              </button>
+            </h2>
+            <div id="faq-s3" class="accordion-collapse collapse" data-bs-parent="#phone-faq">
+              <div class="accordion-body">Yes. Microhub links iPhones to your Apple Business Manager account via the Device Enrolment Program (DEP). When an employee activates the iPhone, it automatically enrols in your MDM — Jamf, Mosyle, Kandji, or Intune — and your corporate configuration profile is applied instantly. No IT intervention required at the employee's end.</div>
+            </div>
+          </div>
+          <div class="accordion-item reveal reveal-delay-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-s4">
+                <i class="bi bi-currency-rupee me-3" style="color:var(--primary);flex-shrink:0"></i>
+                Do you offer volume discounts for bulk smartphone orders?
+              </button>
+            </h2>
+            <div id="faq-s4" class="accordion-collapse collapse" data-bs-parent="#phone-faq">
+              <div class="accordion-body">Yes. For orders of <strong>20+ units</strong> we unlock Samsung and Apple business pricing, which is typically better than retail. For 100+ units we offer a dedicated account manager, phased delivery scheduling across multiple locations, and custom MDM configuration support.</div>
+            </div>
+          </div>
+          <div class="accordion-item reveal reveal-delay-1">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-s5">
+                <i class="bi bi-recycle me-3" style="color:var(--primary);flex-shrink:0"></i>
+                Does Microhub handle end-of-life device management and trade-ins?
+              </button>
+            </h2>
+            <div id="faq-s5" class="accordion-collapse collapse" data-bs-parent="#phone-faq">
+              <div class="accordion-body">Yes. Microhub offers <strong>device refresh and trade-in programmes</strong> for enterprise customers — we remotely wipe retired devices, arrange collection, assess residual value, and offset the cost against your next refresh order. We also provide certified data destruction certificates for compliance.</div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5 reveal">
+          <p class="text-muted mb-3">Still have questions? Our mobile team is happy to help.</p>
+          <a href="../../get-started/signup.html" class="btn-primary-custom me-3">Talk to Sales <i class="bi bi-arrow-right"></i></a>
+          <a href="../../insights/blog.html" class="btn-outline-custom">Browse Knowledge Base</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="laptops-cta">
+  <div class="container">
+    <div class="reveal text-center" style="max-width:720px;margin:0 auto;">
+      <div class="cta-eyebrow">Ready to mobilise your workforce?</div>
+      <h2 class="cta-title">Equip Your Team with Business Smartphones Today</h2>
+      <p class="cta-text mx-auto">Get genuine devices delivered, MDM-enrolled, and policy-ready — with a single GST invoice, accidental damage cover option, and one dedicated support relationship.</p>
+      <div class="cta-actions justify-content-center">
+        <a href="../../get-started/signup.html" class="btn-white-custom">Get a Quote <i class="bi bi-arrow-right"></i></a>
+        <a href="#products" class="btn-outline-custom home-cta-outline">Browse All Smartphones</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <div id="footer-root" data-include="components/footer.html"></div>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../../assets/js/component-loader.js"></script>
 <script src="../../assets/js/navigation.js"></script>
-<script src="../../assets/js/animations.js"></script>
 <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/enhancements.js"></script>
+<script src="product.js"></script>
 </body>
 </html>

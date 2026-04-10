@@ -148,27 +148,21 @@
 <script src="../assets/js/navigation.js"></script>
 <script src="../assets/js/animations.js"></script>
 <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/enhancements.js"></script>
 <script>
   const billingToggle = document.getElementById('billing-toggle');
-  const starterPrice = document.querySelector('.pricing-card .pricing-price sup + strong, .pricing-card .pricing-price sup + span');
-  const pricePriceValues = document.querySelectorAll('.pricing-card .pricing-price');
-
-  const starter = document.querySelector('.pricing-card:nth-of-type(1) .pricing-price');
-  const professional = document.querySelector('.pricing-card:nth-of-type(2) .pricing-price');
-
   const monthly = ['999', '2499'];
   const annual = ['799', '1999'];
 
   if (billingToggle) {
     billingToggle.addEventListener('change', () => {
       const isAnnual = billingToggle.checked;
-
       const priceEls = document.querySelectorAll('.pricing-card .pricing-price');
       priceEls.forEach((el, idx) => {
         if (idx === 0) {
-          el.innerHTML = `<sup>&#8377;</sup>${isAnnual ? annual[0] : monthly[0]}<sub>/${isAnnual ? 'year' : 'month'}</sub>`;
+          el.innerHTML = `<sup>&#8377;</sup>${isAnnual ? annual[0] : monthly[0]}<sub>/month</sub>`;
         } else if (idx === 1) {
-          el.innerHTML = `<sup>&#8377;</sup>${isAnnual ? annual[1] : monthly[1]}<sub>/${isAnnual ? 'year' : 'month'}</sub>`;
+          el.innerHTML = `<sup>&#8377;</sup>${isAnnual ? annual[1] : monthly[1]}<sub>/month</sub>`;
         } else {
           el.innerHTML = 'Custom';
           el.style.fontSize = '2.2rem';

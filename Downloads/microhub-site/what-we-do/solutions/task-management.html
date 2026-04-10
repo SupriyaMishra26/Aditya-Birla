@@ -1,86 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Task Management ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â MicroHub</title>
+  <title>Task Management | Microhub</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/css/main.css">
   <link rel="stylesheet" href="../../assets/css/layout.css">
   <link rel="stylesheet" href="../../assets/css/components.css">
   <link rel="stylesheet" href="../../assets/css/animations.css">
   <link rel="stylesheet" href="../../assets/css/responsive.css">
+  <link rel="stylesheet" href="solutions.css">
+  <link rel="stylesheet" href="./css/financial.css">
+  <link rel="stylesheet" href="solution-overrides.css">
+  <style>
+    /* additional task-specific micro-tweaks to keep consistency but ensure work module flavor */
+    .fin-chip-row .fin-chip i {
+      margin-right: 0.4rem;
+    }
+    .fin-process-card h3, .fin-feature-list h3 {
+      font-weight: 600;
+      letter-spacing: -0.2px;
+    }
+  </style>
 </head>
-<body data-site-root="../../">
-<div id="navbar-root" data-include="components/navbar.html"></div>
 
-<section class="page-hero">
-  <div class="container position-relative" style="z-index:1">
-    <div class="breadcrumb-custom"><a href="../../index.html">Home</a><span>/</span><span>Task Management</span></div>
-    <div class="col-lg-8 fade-in-up-1">
-      <div class="section-label" style="background:rgba(46,75,101,0.2);color:var(--primary-light)"><i class="bi bi-kanban"></i> Productivity</div>
-      <h1 style="color:var(--white)">Project Management That Moves as Fast as Your Team</h1>
-      <p style="color:rgba(255,255,255,0.7);font-size:1.1rem;margin-top:1.25rem;max-width:600px">Kanban boards, Gantt charts, and real-time team collaboration for high-performance teams.</p>
-      <div class="d-flex gap-3 mt-4 flex-wrap">
-        <a href="../../get-started/signup.html" class="btn-primary-custom">Get Started <i class="bi bi-arrow-right"></i></a>
-        <a href="../../insights/pricing.html" class="btn-outline-custom" style="border-color:rgba(255,255,255,0.3);color:var(--white)">View Pricing</a>
-      </div>
-    </div>
+<body class="page-task" data-site-root="../../">
+  <div id="navbar-root" data-include="../../components/navbar.html"></div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../../index.html" class="mob-link">Home</a>
+    <a href="../../insights/blog.html" class="mob-link">Blog</a>
+    <a href="../../get-started/signup.html" class="mob-link" style="color:var(--primary-light)">Sign Up</a>
   </div>
-</section>
-<section class="section-pad" style="background:var(--white)">
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-lg-6 reveal">
-        <div class="section-label"><i class="bi bi-stars"></i> Key Capabilities</div>
-        <h2 class="section-title">What You <span>Get</span></h2>
-        <div class="divider"></div>
-        <ul class="feature-list">
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Enterprise-grade security and compliance built in</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Real-time dashboards and actionable analytics</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Seamless integrations with your existing tools</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Dedicated onboarding and customer success manager</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Mobile-first design for on-the-go access</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">99.9% uptime SLA with 24/7 technical support</span></li>
-        </ul>
-      </div>
-      <div class="col-lg-6 reveal reveal-delay-2">
-        <div class="row g-3">
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-lightning-charge"></i></div><h5>Fast Setup</h5><p class="text-muted small">Live in hours, not weeks</p></div></div>
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-shield-check"></i></div><h5>Secure</h5><p class="text-muted small">End-to-end encrypted</p></div></div>
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-graph-up"></i></div><h5>Analytics</h5><p class="text-muted small">Real-time insights</p></div></div>
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-headset"></i></div><h5>24/7 Support</h5><p class="text-muted small">Always there for you</p></div></div>
+
+  <!-- Hero Section with Parallax (Work Module Theme) -->
+  <section class="page-hero" id="hero">
+    <div class="hero-bg-image parallax-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container position-relative" style="z-index:2">
+      <div class="breadcrumb-custom" data-aos="fade-down" data-aos-duration="800"><a href="../../index.html">Home</a><span>/</span><span>Work Module</span></div>
+      <div class="col-lg-8">
+        <div class="section-label" style="background:rgba(53,81,106,0.2);color:#35516A" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100"><i class="bi bi-kanban"></i> Task Management</div>
+        <h1 style="color:var(--white)" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">Board, List, Gantt & Calendar — All in One Work Hub</h1>
+        <p style="color:rgba(255,255,255,0.7);font-size:1.1rem;margin-top:1.25rem;max-width:680px" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">Visualize your workflow across Board, List, My Tasks, Gantt, and Calendar views. Plan, track, and collaborate seamlessly.</p>
+        <div class="d-flex gap-3 mt-4 flex-wrap" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+          <a href="../../get-started/signup.html" class="btn-primary-custom">Start Organizing <i class="bi bi-arrow-right"></i></a>
+          <a href="../../insights/pricing.html" class="btn-outline-custom" style="border-color:rgba(255,255,255,0.3);color:var(--white)">View Plans</a>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<section class="stats-section">
-  <div class="container position-relative">
-    <div class="row g-4 text-center">
-      <div class="col-6 col-lg-3 reveal"><div class="stat-number"><span class="counter-num" data-target="500" data-suffix="+">500+</span></div><div class="stat-label">Businesses Served</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-1"><div class="stat-number"><span class="counter-num" data-target="99" data-suffix="%">99%</span></div><div class="stat-label">Uptime SLA</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-2"><div class="stat-number"><span class="counter-num" data-target="4" data-suffix="hr">4hr</span></div><div class="stat-label">Avg Setup Time</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-3"><div class="stat-number"><span class="counter-num" data-target="4.8" data-suffix="/5">4.8/5</span></div><div class="stat-label">Customer Rating</div></div>
+  </section>
+
+  <!-- Stats Section with Work Module metrics -->
+  <div class="fin-stats-wrap">
+    <div class="container">
+      <div class="fin-stats-grid">
+        <div class="fin-stat-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0"><strong style="color: #cfe6ff;">5+ Views</strong><span>Board, List, My Tasks, Gantt, Calendar</span></div>
+        <div class="fin-stat-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"><strong style="color: #cfe6ff;">Real-time</strong><span>Drag‑drop & instant sync</span></div>
+        <div class="fin-stat-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200"><strong style="color: #cfe6ff;">100%</strong><span>Task visibility across teams</span></div>
+        <div class="fin-stat-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300"><strong style="color: #cfe6ff;">Gantt / Timeline</strong><span>Dependency & milestone tracking</span></div>
+      </div>
     </div>
   </div>
-</section>
-<section class="cta-section">
-  <div class="container position-relative" style="z-index:1;text-align:center">
-    <h2 style="color:var(--white);margin-bottom:1rem">Ready to Get Started?</h2>
-    <p style="color:rgba(255,255,255,0.8);margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto">Join hundreds of businesses using MicroHub to grow faster and work smarter.</p>
-    <a href="../../get-started/signup.html" class="btn-white-custom">Start Free Trial <i class="bi bi-arrow-right"></i></a>
-  </div>
-</section>
-<div id="footer-root" data-include="components/footer.html"></div>
 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../../assets/js/component-loader.js"></script>
-<script src="../../assets/js/navigation.js"></script>
-<script src="../../assets/js/animations.js"></script>
-<script src="../../assets/js/main.js"></script>
+  <!-- Workflow Process Section (Work Module Core: Board, List, My Tasks, Gantt, Calendar) -->
+  <section id="fin-process" class="fin-section fin-section-anchor">
+    <div class="container">
+      <div class="fin-head center">
+        <span class="fin-eyebrow" data-aos="fade-up" data-aos-duration="600"><i class="bi bi-grid-3x3-gap-fill"></i> Five Powerful Views — One Workspace</span>
+        <h2 data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">From daily to‑dos to complex project timelines.</h2>
+        <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">Board, List View, My Tasks, Gantt Chart and Calendar – each tailored to how you work. Manage tasks, set due dates, assign owners and track progress from one central hub.</p>
+      </div>
+      <div class="fin-grid-3">
+        <article class="fin-process-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
+          <span class="fin-process-index">01</span>
+          <h3 style="color: #cfe6ff;">Board (Kanban)</h3>
+          <p>Drag & drop tasks across To Do, In Progress, and Done columns. Visual workflow that adapts to your team's process — ideal for agile sprints.</p>
+          <div class="process-hover-line"></div>
+        </article>
+        <article class="fin-process-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+          <span class="fin-process-index">02</span>
+          <h3 style="color: #cfe6ff;">List View & My Tasks</h3>
+          <p>Sortable table view with filters, bulk actions, and custom fields. "My Tasks" dashboard shows only what's assigned to you, with priority flags.</p>
+          <div class="process-hover-line"></div>
+        </article>
+        <article class="fin-process-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+          <span class="fin-process-index">03</span>
+          <h3 style="color: #cfe6ff;">Gantt Chart + Calendar</h3>
+          <p>Interactive timeline with task dependencies and milestones. Calendar view gives daily/weekly/monthly overview with color‑coded events.</p>
+          <div class="process-hover-line"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Board Deep Dive (Kanban workflow) -->
+  <section id="fin-accounting" class="fin-section fin-section-anchor">
+    <div class="container">
+      <div class="fin-grid-2-equal">
+        <div class="fin-visual-card-equal" data-aos="fade-right" data-aos-duration="800">
+          <span class="fin-visual-kicker"><i class="bi bi-kanban"></i> Board View – Agile at your fingertips</span>
+          <div class="fin-media-container">
+            <img src="https://static.vecteezy.com/system/resources/previews/015/939/308/non_2x/financial-management-planning-and-control-financial-resources-to-maximize-profit-and-revenue-capital-credit-and-cash-management-concept-businessman-analyze-financial-resource-with-growth-profit-vector.jpg" alt="Task Board Kanban" class="fin-media-image">
+          </div>
+          <div class="fin-chip-row">
+            <span class="fin-chip"><i class="bi bi-plus-square"></i> Create Task</span>
+            <span class="fin-chip"><i class="bi bi-arrow-left-right"></i> Drag columns</span>
+            <span class="fin-chip"><i class="bi bi-tags"></i> Labels & priority</span>
+            <span class="fin-chip"><i class="bi bi-people"></i> Assign members</span>
+          </div>
+        </div>
+        <div class="fin-content-equal" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <span class="fin-eyebrow"><i class="bi bi-columns-gap"></i> Board – Visual task tracking</span>
+          <h2>Customizable columns, real‑time updates</h2>
+          <p>Organize work using fully customizable columns (To Do, In Progress, Review, Done). Move tasks with intuitive drag-and-drop, add due dates, attachments, and subtasks.</p>
+          <div class="fin-feature-list">
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-columns"></i></span><div><h3 style="color: #cfe6ff;">Flexible columns</h3><p>Create, rename, reorder columns (Backlog, Sprint, Testing, Completed). Limit work in progress per column.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-card-checklist"></i></span><div><h3 style="color: #cfe6ff;">Task cards rich data</h3><p>Display assignees, due date, priority, checklists, comments, and file attachments directly on cards.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-funnel"></i></span><div><h3 style="color: #cfe6ff;">Smart filtering</h3><p>Filter by assignee, labels, due date range, or task status. Save custom board views for teams.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-arrow-repeat"></i></span><div><h3 style="color: #cfe6ff;">Activity log</h3><p>See every move, edit, and status change — full audit trail for each task.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: List View + My Tasks (reverse layout) -->
+  <section id="fin-validation" class="fin-section fin-section-anchor">
+    <div class="container">
+      <div class="fin-grid-2-equal reverse">
+        <div class="fin-content-equal" data-aos="fade-right" data-aos-duration="800">
+          <span class="fin-eyebrow"><i class="bi bi-list-ul"></i> List View & My Tasks – Data‑driven efficiency</span>
+          <h2>Sort, filter, bulk edit & personal dashboard</h2>
+          <p>List View gives you a spreadsheet-like experience with all tasks and customizable columns. "My Tasks" automatically surfaces items assigned to you, with quick status updates and due date alerts.</p>
+          <div class="fin-feature-list">
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-sort-numeric-down"></i></span><div><h3 style="color: #cfe6ff;">Advanced sorting & grouping</h3><p>Group by project, priority, assignee, or due date. Sort by any column: title, status, deadline, progress %.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-person-check"></i></span><div><h3 style="color: #cfe6ff;">My Tasks dashboard</h3><p>Personalized view: overdue tasks highlighted, completion slider, quick-add from anywhere. See tasks assigned to me across all projects.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-file-spreadsheet"></i></span><div><h3 style="color: #cfe6ff;">Bulk actions & export</h3><p>Select multiple tasks, change status, reassign, delete, or export to CSV/PDF for reporting.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-chat-left-text"></i></span><div><h3 style="color: #cfe6ff;">Inline edit & comments</h3><p>Edit task details without leaving list view. Add comments, tag teammates, and receive notifications.</p></div></div>
+          </div>
+        </div>
+        <div class="fin-visual-card-equal" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <span class="fin-visual-kicker"><i class="bi bi-person-bounding-box"></i> My Tasks: personal command center</span>
+          <div class="fin-media-container">
+            <div class="fin-compliance-animation">
+              <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="30" y="50" width="70" height="40" rx="8" fill="rgba(53,81,106,0.2)" stroke="#35516A" stroke-width="1.5"/>
+                <text x="65" y="73" font-size="8" fill="#cfe6ff" text-anchor="middle">To Do</text>
+                <path d="M100 70 L130 70" stroke="#35516A" stroke-width="2" marker-end="url(#arrow)"/>
+                <rect x="130" y="50" width="70" height="40" rx="8" fill="rgba(53,81,106,0.3)" stroke="#35516A" stroke-width="1.5"/>
+                <text x="165" y="73" font-size="8" fill="#cfe6ff" text-anchor="middle">In Progress</text>
+                <path d="M200 70 L230 70" stroke="#35516A" stroke-width="2"/>
+                <rect x="230" y="50" width="60" height="40" rx="8" fill="rgba(53,81,106,0.2)" stroke="#35516A" stroke-width="1.5"/>
+                <text x="260" y="73" font-size="8" fill="#cfe6ff" text-anchor="middle">Done</text>
+                <text x="160" y="160" font-size="10" fill="rgba(255,255,255,0.6)" text-anchor="middle">Drag tasks across columns</text>
+                <rect x="60" y="180" width="200" height="4" rx="2" fill="rgba(53,81,106,0.2)"/>
+                <rect x="60" y="180" width="192" height="4" rx="2" fill="#35516A"/>
+              </svg>
+            </div>
+          </div>
+          <div class="fin-chip-row">
+            <span class="fin-chip"><i class="bi bi-check2-circle"></i> Quick status toggle</span>
+            <span class="fin-chip"><i class="bi bi-calendar-week"></i> Due this week</span>
+            <span class="fin-chip"><i class="bi bi-flag"></i> Priority markers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Gantt Chart + Calendar Deep Dive (Reconciliation style) -->
+  <!-- <section id="fin-reconciliation" class="fin-section fin-section-anchor">
+    <div class="container">
+      <div class="fin-grid-2-equal">
+        <div class="fin-visual-card-equal" data-aos="fade-right" data-aos-duration="800">
+          <span class="fin-visual-kicker"><i class="bi bi-calendar-range"></i> Gantt Chart & Timeline</span>
+          <div class="fin-media-container">
+            <div class="fin-reconcile-animation">
+              <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="30" y="40" width="100" height="10" rx="4" fill="#35516A" opacity="0.7"/>
+                <rect x="80" y="65" width="80" height="10" rx="4" fill="#4a6d8a"/>
+                <rect x="30" y="90" width="120" height="10" rx="4" fill="#35516A" opacity="0.8"/>
+                <rect x="160" y="115" width="70" height="10" rx="4" fill="#2a4054"/>
+                <text x="30" y="30" font-size="9" fill="#cfe6ff">Task A</text>
+                <text x="30" y="55" font-size="9" fill="#cfe6ff">Task B</text>
+                <text x="30" y="80" font-size="9" fill="#cfe6ff">Task C</text>
+                <text x="30" y="105" font-size="9" fill="#cfe6ff">Task D</text>
+                <path d="M180 45 L180 125" stroke="#35516A" stroke-width="1" stroke-dasharray="2 2"/>
+                <text x="185" y="130" font-size="8" fill="rgba(255,255,255,0.5)">Today</text>
+                <text x="160" y="170" font-size="10" fill="rgba(255,255,255,0.6)" text-anchor="middle">Task dependencies & milestones</text>
+                <rect x="60" y="185" width="200" height="4" rx="2" fill="rgba(53,81,106,0.2)"/>
+                <rect x="60" y="185" width="192" height="4" rx="2" fill="#35516A"/>
+              </svg>
+            </div>
+          </div>
+          <div class="fin-chip-row">
+            <span class="fin-chip"><i class="bi bi-link-45deg"></i> Dependency lines</span>
+            <span class="fin-chip"><i class="bi bi-calendar-event"></i> Milestone markers</span>
+            <span class="fin-chip"><i class="bi bi-sliders2"></i> Drag to reschedule</span>
+            <span class="fin-chip"><i class="bi bi-eye"></i> Critical path</span>
+          </div>
+        </div>
+        <div class="fin-content-equal" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <span class="fin-eyebrow"><i class="bi bi-graph-up"></i> Gantt Chart + Calendar</span>
+          <h2>Plan, schedule, and visualize project timelines</h2>
+          <p>Gantt chart shows task durations, dependencies, and resource allocation. Calendar view (Day/Week/Month) provides deadline clarity and drag‑to‑reschedule capabilities.</p>
+          <div class="fin-feature-list">
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-diagram-3"></i></span><div><h3 style="color: #cfe6ff;">Interactive Gantt</h3><p>Set start/end dates, link tasks (FS, SS, FF), identify critical path, and adjust timelines with intuitive dragging.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-calendar2-week"></i></span><div><h3 style="color: #cfe6ff;">Calendar views</h3><p>Daily, weekly, monthly layouts. Color‑coded by project or priority. Sync with external iCal/Google Calendar.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-bell"></i></span><div><h3 style="color: #cfe6ff;">Smart reminders</h3><p>Email and in-app notifications for due dates, task assignments, and upcoming milestones.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-arrow-repeat"></i></span><div><h3 style="color: #cfe6ff;">Recurring tasks</h3><p>Set daily, weekly, monthly recurring tasks on calendar — automatically populate new instances.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Section 4: Navigation & Testing Insights (reverse layout) -->
+  <!-- <section id="fin-sync" class="fin-section fin-section-anchor">
+    <div class="container">
+      <div class="fin-grid-2-equal reverse">
+        <div class="fin-content-equal" data-aos="fade-right" data-aos-duration="800">
+          <span class="fin-eyebrow"><i class="bi bi-signpost-2"></i> Navigation & Quality Assurance</span>
+          <h2>Intuitive paths + functional test coverage</h2>
+          <p>Every view is one click away: Dashboard → Work → Board / List View / My Tasks / Gantt Chart / Calendar. Our functional testing suite ensures seamless experience.</p>
+          <div class="fin-feature-list">
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-diagram-2"></i></span><div><h3 style="color: #cfe6ff;">Clear navigation hierarchy</h3><p>Login → Dashboard → Work Module → pick your view. Sidebar shows active state, breadcrumbs, and quick shortcuts.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-check2-all"></i></span><div><h3 style="color: #cfe6ff;">Functional test cases</h3><p>TC_01 to TC_06 validated: Work Module opens, Board view, List View, My Tasks, Gantt Chart, Calendar — all pass with 100% success.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-ui-radios"></i></span><div><h3 style="color: #cfe6ff;">UI/UX strengths</h3><p>Clean minimalistic interface, well‑organized modules, proper spacing, readable typography, and side navigation.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-lightbulb"></i></span><div><h3 style="color: #cfe6ff;">Improvements implemented</h3><p>Empty state messages, "Create Task" CTA, current date highlight on calendar, color coding, and hover effects.</p></div></div>
+          </div>
+        </div>
+        <div class="fin-visual-card-equal" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <span class="fin-visual-kicker"><i class="bi bi-check-circle"></i> Test status & enhancements</span>
+          <div class="fin-media-container">
+            <div class="fin-report-animation">
+              <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="40" y="50" width="240" height="100" rx="12" fill="rgba(53,81,106,0.1)" stroke="rgba(53,81,106,0.3)" stroke-width="1"/>
+                <text x="60" y="75" font-size="10" fill="#cfe6ff">✅ TC_01 Open Work Module → Pass</text>
+                <text x="60" y="95" font-size="10" fill="#cfe6ff">✅ TC_02 Open Board → Pass</text>
+                <text x="60" y="115" font-size="10" fill="#cfe6ff">✅ TC_03 List View → Pass</text>
+                <text x="60" y="135" font-size="10" fill="#cfe6ff">✅ TC_04 My Tasks → Pass</text>
+                <text x="180" y="75" font-size="10" fill="#cfe6ff">✅ TC_05 Gantt → Pass</text>
+                <text x="180" y="95" font-size="10" fill="#cfe6ff">✅ TC_06 Calendar → Pass</text>
+                <text x="180" y="115" font-size="10" fill="#cfe6ff">✨ UI improvements</text>
+                <text x="180" y="135" font-size="10" fill="#cfe6ff">🎯 "Create Task" added</text>
+                <rect x="80" y="185" width="160" height="4" rx="2" fill="rgba(53,81,106,0.2)"/>
+                <rect x="80" y="185" width="160" height="4" rx="2" fill="#35516A">
+                  <animate attributeName="width" values="0;160;160" dur="3s" repeatCount="indefinite"/>
+                </rect>
+              </svg>
+            </div>
+          </div>
+          <div class="fin-chip-row">
+            <span class="fin-chip"><i class="bi bi-check-lg"></i> 100% test pass</span>
+            <span class="fin-chip"><i class="bi bi-brush"></i> UI/UX enhanced</span>
+            <span class="fin-chip"><i class="bi bi-plus-circle-dotted"></i> Empty states added</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Deployment Readiness / Work Module capabilities -->
+  <section class="fin-section">
+    <div class="container">
+      <div class="fin-head center">
+        <span class="fin-eyebrow" data-aos="fade-up" data-aos-duration="600"><i class="bi bi-layers"></i> Deployment & Collaboration</span>
+        <h2 data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">Ready for teams of any size — remote or in‑office.</h2>
+        <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">From solo freelancers to enterprise portfolios, the Work Module adapts to agile, waterfall, or hybrid project management styles.</p>
+      </div>
+      <div class="fin-tool-grid">
+        <article class="fin-tool-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0"><span class="fin-feature-icon mx-auto mb-3" style="width:48px; margin:0 auto 1rem auto;"><i class="bi bi-phone"></i></span><h3 style="color: #cfe6ff;">Mobile task updates</h3><p>Create, edit, or comment on tasks from any device — syncs instantly.</p><div class="tool-hover-effect"></div></article>
+        <article class="fin-tool-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"><span class="fin-feature-icon mx-auto mb-3" style="width:48px; margin:0 auto 1rem auto;"><i class="bi bi-person-badge"></i></span><h3 style="color: #cfe6ff;">Role‑based permissions</h3><p>Admins, project managers, and members each see relevant views and actions.</p><div class="tool-hover-effect"></div></article>
+        <article class="fin-tool-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200"><span class="fin-feature-icon mx-auto mb-3" style="width:48px; margin:0 auto 1rem auto;"><i class="bi bi-bell-fill"></i></span><h3 style="color: #cfe6ff;">Real‑time notifications</h3><p>In-app, email, and browser alerts for mentions, due dates, and status changes.</p><div class="tool-hover-effect"></div></article>
+        <article class="fin-tool-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300"><span class="fin-feature-icon mx-auto mb-3" style="width:48px; margin:0 auto 1rem auto;"><i class="bi bi-cloud-upload"></i></span><h3 style="color: #cfe6ff;">Export & reports</h3><p>Generate workload reports, progress charts, and export data for stakeholders.</p><div class="tool-hover-effect"></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rules and Policies (Task rules / Work policies) -->
+  <section id="fin-rules" class="fin-section fin-rule-band" style="background-color: #35516A;">
+    <div class="container">
+      <div class="fin-head center">
+        <span class="fin-eyebrow" data-aos="fade-up" data-aos-duration="600"><i class="bi bi-sliders2"></i> Workflow Rules & Policies</span>
+        <h2 data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">Fine‑tune how your team moves work forward.</h2>
+        <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">Set automation rules, approval gates, and visibility policies to match your internal processes.</p>
+      </div>
+      <div class="fin-rule-grid">
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"><span class="fin-rule-tag">Automation</span><h3 style="color: #cfe6ff;">Auto‑move tasks</h3><p>When subtasks complete → move parent task to next column.</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="50"><span class="fin-rule-tag">Approvals</span><h3 style="color: #cfe6ff;">Task review gates</h3><p>Require approval before moving from "Review" to "Done".</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"><span class="fin-rule-tag">Visibility</span><h3 style="color: #cfe6ff;">Private / public tasks</h3><p>Restrict task visibility to specific roles or project groups.</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="150"><span class="fin-rule-tag">SLA</span><h3 style="color: #cfe6ff;">Due date escalation</h3><p>Escalate overdue tasks to manager after 48h without update.</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"><span class="fin-rule-tag">Checklist</span><h3 style="color: #cfe6ff;">Required fields</h3><p>Block status change unless checklist or custom fields completed.</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="250"><span class="fin-rule-tag">Logging</span><h3 style="color: #cfe6ff;">Immutable history</h3><p>Full change log: edits, reassignments, column moves, comments.</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300"><span class="fin-rule-tag">Integration</span><h3 style="color: #cfe6ff;">Slack / Teams sync</h3><p>Post task updates to channels when status changes.</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="350"><span class="fin-rule-tag">Recurring</span><h3 style="color: #cfe6ff;">Sprint templates</h3><p>Automatically create sprint tasks from saved templates.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section (work module success) -->
+  <section class="stats-section">
+    <div class="container position-relative">
+      <div class="row g-4 text-center">
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0"><div class="stat-number"><span class="counter-num" style="color: #cfe6ff;" data-target="3000" data-suffix="+">3000+</span></div><div class="stat-label">Teams using Work Module</div></div>
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"><div class="stat-number"><span class="counter-num" style="color: #cfe6ff;" data-target="45" data-suffix="%">45%</span></div><div class="stat-label">Faster project delivery</div></div>
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200"><div class="stat-number"><span class="counter-num" style="color: #cfe6ff;" data-target="100" data-suffix="%">100%</span></div><div class="stat-label">Task accountability</div></div>
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300"><div class="stat-number"><span class="counter-num" style="color: #cfe6ff;" data-target="24" data-suffix="/7">24/7</span></div><div class="stat-label">Real‑time sync</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (Work Module specific) -->
+  <section class="premium-single-faq" style="background: var(--white); padding: 60px 0;">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="premium-single-title" data-aos="fade-up" data-aos-duration="600">Everything about <span>Task Management</span>
+        <div class="premium-single-line" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="100"></div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="premium-single-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+            <div class="premium-single-card-inner">
+              <div class="card-deco-left"></div>
+              <div class="card-deco-right"></div>
+              <div class="card-glow-effect"></div>
+              <div class="premium-single-icon-box"><i class="bi bi-kanban"></i><div class="icon-glow"></div><div class="icon-ring"></div></div>
+              <div class="premium-faq-grid">
+                <div class="premium-faq-col">
+                  <div class="premium-faq-item"><div class="premium-faq-header" onclick="toggleSingleFAQ(this)"><div class="premium-faq-title-group"><span class="premium-faq-number">01</span><h4>What views are included in the Work Module?</h4></div><div class="premium-faq-toggle-box"><i class="bi bi-plus-lg"></i></div></div><div class="premium-faq-content"><p>Board (Kanban), List View, My Tasks, Gantt Chart, and Calendar. Each view helps you plan and track work differently.</p></div></div>
+                  <div class="premium-faq-item"><div class="premium-faq-header" onclick="toggleSingleFAQ(this)"><div class="premium-faq-title-group"><span class="premium-faq-number">02</span><h4>How does "My Tasks" differ from List View?</h4></div><div class="premium-faq-toggle-box"><i class="bi bi-plus-lg"></i></div></div><div class="premium-faq-content"><p>My Tasks shows only tasks assigned to you across projects, while List View displays all tasks with global filters & sorting.</p></div></div>
+                  <div class="premium-faq-item"><div class="premium-faq-header" onclick="toggleSingleFAQ(this)"><div class="premium-faq-title-group"><span class="premium-faq-number">03</span><h4>Can I set dependencies in Gantt chart?</h4></div><div class="premium-faq-toggle-box"><i class="bi bi-plus-lg"></i></div></div><div class="premium-faq-content"><p>Yes. Link tasks (Finish-to-Start, Start-to-Start, etc.) and automatically adjust timeline when predecessors shift.</p></div></div>
+                </div>
+                <div class="premium-faq-col">
+                  <div class="premium-faq-item"><div class="premium-faq-header" onclick="toggleSingleFAQ(this)"><div class="premium-faq-title-group"><span class="premium-faq-number">04</span><h4>Is there a way to import existing tasks?</h4></div><div class="premium-faq-toggle-box"><i class="bi bi-plus-lg"></i></div></div><div class="premium-faq-content"><p>Absolutely. Import CSV/XLS files with columns: title, assignee, due date, priority, status — bulk create tasks.</p></div></div>
+                  <div class="premium-faq-item"><div class="premium-faq-header" onclick="toggleSingleFAQ(this)"><div class="premium-faq-title-group"><span class="premium-faq-number">05</span><h4>Can I get reminders for upcoming tasks?</h4></div><div class="premium-faq-toggle-box"><i class="bi bi-plus-lg"></i></div></div><div class="premium-faq-content"><p>Yes. Email and in-app reminders before due date, daily digests, and overdue alerts.</p></div></div>
+                  <div class="premium-faq-item"><div class="premium-faq-header" onclick="toggleSingleFAQ(this)"><div class="premium-faq-title-group"><span class="premium-faq-number">06</span><h4>Does the module support subtasks & checklists?</h4></div><div class="premium-faq-toggle-box"><i class="bi bi-plus-lg"></i></div></div><div class="premium-faq-content"><p>Yes. Create subtasks, checklists, attachments, comments, and time estimates for each task card.</p></div></div>
+                </div>
+              </div>
+              <div class="premium-faq-decoration"><div class="deco-dot"></div><div class="deco-line"></div><div class="deco-dot"></div></div>
+            </div>
+            <div class="premium-single-footer text-center mt-5"><div class="premium-help-single"><i class="bi bi-chat-dots"></i><p>Still have questions? <a href="../../get-started/contact.html">Talk to our product team <i class="bi bi-arrow-right"></i></a></p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section with Enhanced Animation (identical design) -->
+  <section class="cta-section-enhanced">
+    <div class="cta-bg-image"></div>
+    <div class="cta-particles">
+      <div class="particle" style="width: 40px; height: 40px; top: 70%; left: 15%; --duration: 10s; --delay: 2s;"></div>
+      <div class="particle" style="width: 30px; height: 30px; top: 30%; left: 85%; --duration: 14s; --delay: 1s;"></div>
+      <div class="particle" style="width: 25px; height: 25px; top: 20%; left: 20%; --duration: 9s; --delay: 0.5s;"></div>
+      <div class="particle" style="width: 35px; height: 35px; top: 60%; left: 45%; --duration: 13s; --delay: 2.5s;"></div>
+      <div class="particle" style="width: 45px; height: 45px; top: 40%; left: 70%; --duration: 15s; --delay: 1.5s;"></div>
+      <div class="particle" style="width: 20px; height: 20px; top: 85%; left: 55%; --duration: 8s; --delay: 4s;"></div>
+    </div>
+    <div class="cta-glow-border"></div>
+    <div class="container position-relative" style="z-index: 2; text-align: center">
+      <div class="cta-content">
+        <div class="reveal">
+          <h2 class="cta-heading">Visualize, Track, and Complete Tasks Faster</h2>
+          <p class="cta-description">Join thousands of teams using Board, Gantt, and Calendar to stay ahead of deadlines.</p>
+          <div class="d-flex gap-4 justify-content-center flex-wrap">
+            <a href="../../get-started/signup.html" class="cta-btn-primary hover-lift"><i class="bi bi-kanban"></i> Start Free Trial <i class="bi bi-arrow-right-short"></i></a>
+            <a href="../../insights/case-studies.html" class="cta-btn-secondary hover-lift"><i class="bi bi-bar-chart-line"></i> See Workflows <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-root" data-include="../../components/footer.html"></div>
+  <button id="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="../../assets/js/navigation.js"></script>
+  <script src="../../assets/js/animations.js"></script>
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/component-loader.js"></script>
+  <script src="solutions.js"></script>
+  <script src="./js/financial.js"></script>
+  <script>function toggleSingleFAQ(header){const item=header.closest('.premium-faq-item');const content=item.querySelector('.premium-faq-content');const icon=header.querySelector('.premium-faq-toggle-box i');if(item.classList.contains('active')){item.classList.remove('active');content.style.maxHeight=null;icon.classList.remove('bi-dash-lg');icon.classList.add('bi-plus-lg');}else{item.classList.add('active');content.style.maxHeight=content.scrollHeight+"px";icon.classList.remove('bi-plus-lg');icon.classList.add('bi-dash-lg');}}</script>
 </body>
+
 </html>

@@ -1,0 +1,339 @@
+/* MicroHub - Legal Pages */
+
+.legal-hero.page-hero {
+  padding: 116px 0 72px !important;
+}
+
+.legal-hero.page-hero h1 {
+  max-width: 18ch;
+    color: #ffffff !important; 
+    align-items: center;
+    justify-content: center;
+}
+
+.legal-hero-lead {
+  max-width: 64ch;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 1.08rem;
+  line-height: 1.7;
+  margin-top: 1rem;
+}
+
+.legal-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.35rem;
+}
+
+.legal-meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.legal-page-shell {
+  background:
+    linear-gradient(180deg, #f8fafc 0%, #ffffff 42%, #f8fafc 100%);
+}
+
+.legal-action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.4rem;
+}
+
+.legal-action-note {
+  color: var(--text-light);
+  font-size: 0.94rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.legal-action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.legal-mobile-toggle i {
+  transition: transform 0.25s ease;
+}
+
+.legal-mobile-toggle.is-open i {
+  transform: rotate(180deg);
+}
+
+.legal-mobile-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.legal-mobile-panel.open {
+  max-height: 620px;
+}
+
+.legal-toc-card,
+.legal-support-card,
+.legal-section-card,
+.legal-summary-card,
+.legal-accordion-shell {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+}
+
+.legal-toc-card {
+  position: sticky;
+  top: 120px;
+  padding: 1.25rem;
+}
+
+.legal-toc-title {
+  color: var(--text-light);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.legal-toc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.legal-toc-link {
+  display: block;
+  padding: 0.8rem 0.95rem;
+  border-radius: 12px;
+  color: var(--text);
+  font-size: 0.92rem;
+  line-height: 1.45;
+  transition: var(--transition);
+}
+
+.legal-toc-link:hover {
+  background: var(--accent);
+  color: var(--primary-dark);
+}
+
+.legal-toc-link.active {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(99, 102, 241, 0.05));
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+.legal-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.legal-summary-card {
+  padding: 1rem 1.1rem;
+}
+
+.legal-summary-icon {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: var(--accent);
+  color: var(--primary);
+  margin-bottom: 0.9rem;
+}
+
+.legal-summary-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.legal-summary-card p {
+  margin: 0;
+  color: var(--text-light);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.legal-section-card {
+  padding: 1.5rem;
+  scroll-margin-top: 120px;
+}
+
+.legal-content-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.legal-section-card h2 {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  letter-spacing: -0.03em;
+  margin-bottom: 0.75rem;
+}
+
+.legal-section-body {
+  color: var(--text);
+  line-height: 1.8;
+}
+
+.legal-section-body p {
+  margin: 0 0 0.9rem;
+}
+
+.legal-section-body p:last-child {
+  margin-bottom: 0;
+}
+
+.legal-list {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.legal-list li {
+  color: var(--text);
+}
+
+.legal-callout {
+  margin-top: 1.25rem;
+  padding: 1.25rem 1.35rem;
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(46, 75, 101, 0.06));
+  border: 1px solid rgba(99, 102, 241, 0.12);
+  color: var(--text);
+}
+
+.legal-callout strong {
+  color: var(--dark);
+}
+
+.legal-support-card {
+  padding: 1.4rem;
+}
+
+.legal-support-card.sticky-top {
+  top: 120px;
+}
+
+.legal-support-card .section-label {
+  margin-bottom: 0.85rem;
+}
+
+.legal-support-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.65rem;
+}
+
+.legal-support-card p {
+  color: var(--text-light);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.legal-support-list {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.legal-support-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  font-size: 0.88rem;
+  color: var(--text);
+}
+
+.legal-support-item i {
+  color: var(--primary);
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+
+.legal-faq-shell {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 1rem;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+}
+
+.legal-faq-shell .accordion-custom .accordion-button {
+  padding: 1rem 1.15rem;
+}
+
+.legal-faq-shell .accordion-custom .accordion-body {
+  padding: 0 1.15rem 1rem;
+}
+
+@media (max-width: 991.98px) {
+  .legal-hero.page-hero {
+    padding: 108px 0 64px !important;
+  }
+
+  .legal-toc-card {
+    position: static;
+  }
+
+  .legal-support-card.sticky-top {
+    position: static;
+    top: auto;
+  }
+
+  .legal-summary-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .legal-hero-lead {
+    font-size: 1rem;
+  }
+
+  .legal-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .legal-action-buttons {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .legal-action-buttons .btn-outline-custom {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .legal-action-buttons .btn-primary-custom {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .legal-section-card,
+  .legal-support-card,
+  .legal-faq-shell {
+    padding: 1.15rem;
+  }
+}

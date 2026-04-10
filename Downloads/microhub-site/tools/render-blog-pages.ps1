@@ -40,8 +40,72 @@ function Get-PostUrl($Post) {
   return "posts/$($Post.slug).html"
 }
 
-function Get-MediaSource($Post) {
-  if ($Post.media -and $Post.media.src) { return [string]$Post.media.src }
+function Resolve-AssetPath([string]$Path, [string]$BasePath = '') {
+  if ([string]::IsNullOrWhiteSpace($Path)) { return '' }
+  if ($Path -match '^(?:https?:|data:|/)') { return $Path }
+  if ([string]::IsNullOrWhiteSpace($BasePath)) { return $Path }
+  return "$BasePath$Path"
+}
+
+function Get-VisualSourcePool($Post) {
+  $tone = if ($Post.visualTone) { [string]$Post.visualTone } else { '' }
+
+  switch ($tone) {
+    'remote' {
+      return @(
+        'assets/images/Blog images/remote_team.jpg',
+        'assets/images/Blog images/remote_staffing.jpg',
+        'assets/images/Blog images/productivity.jpg'
+      )
+    }
+    'staffing' {
+      return @(
+        'assets/images/Blog images/virtual_staffing.jpg',
+        'assets/images/Blog images/remote_staffing.jpg',
+        'assets/images/Blog images/hiring.jpg'
+      )
+    }
+    'productivity' {
+      return @(
+        'assets/images/Blog images/productivity.jpg',
+        'assets/images/Blog images/remote_team.jpg',
+        'assets/images/Blog images/automation.jpg'
+      )
+    }
+    'marketing' {
+      return @(
+        'assets/images/Blog images/marketing .jpg',
+        'assets/images/Blog images/productivity.jpg',
+        'assets/images/Blog images/remote_team.jpg'
+      )
+    }
+    default {
+      return @(
+        'assets/images/Blog images/remote_team.jpg',
+        'assets/images/Blog images/automation.jpg',
+        'assets/images/Blog images/productivity.jpg'
+      )
+    }
+  }
+}
+
+function Get-MediaSource($Post, [string]$BasePath = '', [int]$Index = 0) {
+  if ($Post.media -and $Post.media.src) { return Resolve-AssetPath ([string]$Post.media.src) $BasePath }
+  $defaultSource = Get-DefaultImageSource $Post
+  if ($defaultSource) { return Resolve-AssetPath $defaultSource $BasePath }
+  $pool = @(Get-VisualSourcePool $Post)
+  if ($pool.Count -gt 0) {
+    $seed = 0
+    if ($Post.slug) {
+      foreach ($char in ([string]$Post.slug).ToCharArray()) {
+        $seed += [int][char]$char
+      }
+    } else {
+      $seed = $Index
+    }
+
+    return Resolve-AssetPath $pool[$seed % $pool.Count] $BasePath
+  }
   return ''
 }
 
@@ -55,10 +119,43 @@ function Get-MediaPosition($Post) {
   return 'center center'
 }
 
-function Render-Visual($Post, [string]$Variant) {
+function Get-SectionMediaSource($Post, [int]$Index, [string]$BasePath = '') {
+  $pool = @(Get-VisualSourcePool $Post)
+  if ($pool.Count -eq 0) { return '' }
+  return Resolve-AssetPath $pool[$Index % $pool.Count] $BasePath
+}
+
+function Get-DefaultImageSource($Post) {
+  $slug = if ($Post.slug) { [string]$Post.slug } else { '' }
+
+  switch ($slug) {
+    'manage-remote-employees-effectively-2026' { return 'assets/images/Blog images/remote_team.jpg' }
+    'ai-vs-human-virtual-assistants' { return 'assets/images/Blog images/automation.jpg' }
+    'top-monitoring-tools-for-remote-teams' { return 'assets/images/Blog images/productivity.jpg' }
+    'on-site-hiring-vs-virtual-hiring' { return 'assets/images/Blog images/hiring.jpg' }
+    'why-remote-administrative-assistants-are-the-future' { return 'assets/images/Blog images/remote_staffing.jpg' }
+    'why-hiring-a-virtual-employee-is-a-smart-business-move' { return 'assets/images/Blog images/virtual_staffing.jpg' }
+    'seo-and-marketing-in-2026' { return 'assets/images/Blog images/marketing .jpg' }
+    default { return '' }
+  }
+}
+
+function ConvertTo-Anchor([string]$Text) {
+  if ([string]::IsNullOrWhiteSpace($Text)) { return 'section' }
+
+  $anchor = [string]$Text
+  $anchor = $anchor.ToLowerInvariant()
+  $anchor = [regex]::Replace($anchor, '[^a-z0-9]+', '-')
+  $anchor = $anchor.Trim('-')
+
+  if ([string]::IsNullOrWhiteSpace($anchor)) { return 'section' }
+  return $anchor
+}
+
+function Render-Visual($Post, [string]$Variant, [string]$BasePath = '', [int]$Index = 0) {
   $tone = Get-ToneClass $Post
   $icon = if ($Post.icon) { [string]$Post.icon } else { 'bi-journal-text' }
-  $imageSrc = Get-MediaSource $Post
+  $imageSrc = Get-MediaSource $Post $BasePath $Index
 
   if ($imageSrc) {
     return @"
@@ -78,15 +175,15 @@ function Render-Visual($Post, [string]$Variant) {
 "@
 }
 
-function Render-Card($Post, [int]$Delay, [string]$BasePath = '') {
+function Render-Card($Post, [int]$Delay, [string]$AssetBasePath = '', [string]$PostBasePath = '') {
   $cardLines = [System.Collections.Generic.List[string]]::new()
   $filters = @($Post.filters) -join ' '
-  $url = "$BasePath$(Get-PostUrl $Post)"
+  $url = "$PostBasePath$(Get-PostUrl $Post)"
   $dateLabel = Get-DisplayDateLabel $Post
 
   $cardLines.Add("      <article class=`"col-lg-4 col-md-6 reveal reveal-delay-$Delay blog-render-item`" data-category=`"$(Encode-Html($filters))`">")
   $cardLines.Add("        <a href=`"$url`" class=`"blog-card blog-card-link`">")
-  $cardLines.Add((Render-Visual $Post 'card').TrimEnd())
+  $cardLines.Add((Render-Visual $Post 'card' $AssetBasePath).TrimEnd())
   $cardLines.Add('          <div class="blog-card-body">')
   $cardLines.Add("            <span class=`"blog-tag`">$(Encode-Html($Post.categoryLabel))</span>")
   $cardLines.Add("            <h3 class=`"blog-card-title`">$(Encode-Html($Post.title))</h3>")
@@ -101,11 +198,15 @@ function Render-Card($Post, [int]$Delay, [string]$BasePath = '') {
   return Join-Lines $cardLines
 }
 
-function Render-Sections($Post) {
+function Render-Sections($Post, [string]$BasePath = '') {
   $sectionLines = [System.Collections.Generic.List[string]]::new()
+  $sections = @($Post.sections)
 
-  foreach ($section in @($Post.sections)) {
-    $sectionLines.Add('        <section class="article-section reveal">')
+  for ($index = 0; $index -lt $sections.Count; $index++) {
+    $section = $sections[$index]
+    $sectionId = ConvertTo-Anchor $section.heading
+
+    $sectionLines.Add("        <section class=`"article-section reveal`" id=`"$sectionId`">")
     $sectionLines.Add("          <h2>$(Encode-Html($section.heading))</h2>")
 
     foreach ($paragraph in @($section.paragraphs)) {
@@ -129,6 +230,33 @@ function Render-Sections($Post) {
   }
 
   return Join-Lines $sectionLines
+}
+
+function Render-SectionLinks($Post) {
+  $sectionLines = [System.Collections.Generic.List[string]]::new()
+  $sections = @($Post.sections)
+
+  foreach ($section in $sections) {
+    $sectionId = ConvertTo-Anchor $section.heading
+    $sectionLines.Add("            <li><a href=`"#$sectionId`" class=`"article-rail-link`"><span class=`"article-rail-link__label`">$(Encode-Html($section.heading))</span><i class=`"bi bi-arrow-right-short`" aria-hidden=`"true`"></i></a></li>")
+  }
+
+  return Join-Lines $sectionLines
+}
+
+function Render-RelatedSidebarItems($Posts, [string]$BasePath = '') {
+  $relatedLines = [System.Collections.Generic.List[string]]::new()
+
+  foreach ($post in @($Posts)) {
+    $dateLabel = Get-DisplayDateLabel $post
+    $url = "$BasePath$(Get-PostUrl $post)"
+    $relatedLines.Add("          <a href=`"$url`" class=`"article-rail-related-item`">")
+    $relatedLines.Add("            <span class=`"article-rail-related-title`">$(Encode-Html($post.title))</span>")
+    $relatedLines.Add("            <span class=`"article-rail-related-meta`">$(Encode-Html($post.categoryLabel)) &middot; $(Encode-Html($dateLabel)) &middot; $(Encode-Html($post.readTime))</span>")
+    $relatedLines.Add('          </a>')
+  }
+
+  return Join-Lines $relatedLines
 }
 
 function Render-Filters($PageConfig) {
@@ -187,18 +315,12 @@ function Merge-PageConfig($Source) {
 }
 
 function Write-BlogListingPage($OutputPath, $PageConfig, $Posts) {
-  $featured = @($Posts | Where-Object { $_.featured } | Select-Object -First 1)
-  if (-not $featured) {
-    $featured = @($Posts | Select-Object -First 1)
-  }
-  $featured = $featured[0]
-
-  $gridPosts = @($Posts | Where-Object { $_.slug -ne $featured.slug })
+  $gridPosts = @($Posts)
   $gridLines = [System.Collections.Generic.List[string]]::new()
 
   for ($i = 0; $i -lt $gridPosts.Count; $i++) {
     $delay = ($i % 3) + 1
-    $gridLines.Add((Render-Card $gridPosts[$i] $delay))
+    $gridLines.Add((Render-Card $gridPosts[$i] $delay '../' ''))
     $gridLines.Add('')
   }
 
@@ -206,9 +328,6 @@ function Write-BlogListingPage($OutputPath, $PageConfig, $Posts) {
     $null = $gridLines.RemoveAt($gridLines.Count - 1)
   }
 
-  $featuredVisual = (Render-Visual $featured 'feature').TrimEnd()
-  $featuredUrl = Get-PostUrl $featured
-  $featuredDate = Get-DisplayDateLabel $featured
   $filters = Render-Filters $PageConfig
 
   $html = @"
@@ -234,7 +353,7 @@ function Write-BlogListingPage($OutputPath, $PageConfig, $Posts) {
 
 <section class="page-hero">
   <div class="container position-relative" style="z-index:1">
-    <div class="col-lg-8 fade-in-up-1">
+    <div class="blog-hero-copy fade-in-up-1">
       <div class="section-label" style="background:rgba(13,148,136,0.2);color:var(--primary-light)"><i class="bi bi-journal-text"></i> $(Encode-Html($PageConfig.eyebrow))</div>
       <h1 style="color:var(--white)">$(Encode-Html($PageConfig.heroTitle))</h1>
       <p style="color:rgba(255,255,255,0.72);margin-top:1.15rem;max-width:640px">$(Encode-Html($PageConfig.heroDescription))</p>
@@ -253,27 +372,7 @@ function Write-BlogListingPage($OutputPath, $PageConfig, $Posts) {
         <div class="blog-filter-group">
 $filters
         </div>
-        <span class="blog-results-count" id="blog-result-count">$($gridPosts.Count) articles</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="blog-shell-section" style="background:var(--accent)">
-  <div class="container">
-    <div class="blog-feature-shell reveal">
-      <div class="blog-feature-media">
-$featuredVisual
-      </div>
-      <div class="blog-feature-copy">
-        <span class="blog-tag">$(Encode-Html($PageConfig.featuredLabel)) / $(Encode-Html($featured.categoryLabel))</span>
-        <h2><a href="$featuredUrl">$(Encode-Html($featured.title))</a></h2>
-        <p>$(Encode-Html($featured.excerpt))</p>
-        <div class="blog-feature-meta">
-          <span><i class="bi bi-calendar3"></i> $(Encode-Html($featuredDate))</span>
-          <span><i class="bi bi-clock"></i> $(Encode-Html($featured.readTime))</span>
-        </div>
-        <a href="$featuredUrl" class="link-arrow mt-3 d-inline-flex">Read Full Article <i class="bi bi-arrow-right"></i></a>
+        <span class="blog-results-count" id="blog-result-count">$($Posts.Count) articles</span>
       </div>
     </div>
   </div>
@@ -281,7 +380,7 @@ $featuredVisual
 
 <section class="blog-shell-section">
   <div class="container">
-    <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-4 reveal">
+    <div class="blog-listing-intro reveal mb-4">
       <div>
         <p class="section-subtitle mb-2" style="margin:0">$(Encode-Html($PageConfig.listEyebrow))</p>
         <h2 class="section-title mb-0" style="margin:0;font-size:clamp(1.45rem,2.4vw,2rem)">$(Encode-Html($PageConfig.listTitle))</h2>
@@ -290,14 +389,6 @@ $featuredVisual
     <div class="row g-4" id="blog-grid">
 $(Join-Lines $gridLines)
     </div>
-  </div>
-</section>
-
-<section class="cta-section">
-  <div class="container position-relative" style="z-index:1;text-align:center">
-    <h2 style="color:var(--white);margin-bottom:1rem">$(Encode-Html($PageConfig.ctaTitle))</h2>
-    <p style="color:rgba(255,255,255,0.8);margin-bottom:2rem">$(Encode-Html($PageConfig.ctaDescription))</p>
-    <a href="$(Encode-Html($PageConfig.ctaButtonHref))" class="btn-white-custom">$(Encode-Html($PageConfig.ctaButtonText)) <i class="bi bi-arrow-right"></i></a>
   </div>
 </section>
 
@@ -318,8 +409,11 @@ $(Join-Lines $gridLines)
 }
 
 function Write-BlogPostPage($OutputPath, $PageConfig, $Post, $AllPosts) {
-  $sectionHtml = Render-Sections $Post
+  $sectionHtml = Render-Sections $Post '../../'
   $postDate = Get-DisplayDateLabel $Post
+  $sectionLinks = Render-SectionLinks $Post
+  $seoTitle = if ($Post.PSObject.Properties['seoTitle'] -and -not [string]::IsNullOrWhiteSpace([string]$Post.seoTitle)) { [string]$Post.seoTitle } else { [string]$Post.title }
+  $heroVisual = (Render-Visual $Post 'article' '../../').TrimEnd()
 
   $relatedPosts = @(
     $AllPosts |
@@ -328,15 +422,7 @@ function Write-BlogPostPage($OutputPath, $PageConfig, $Post, $AllPosts) {
       Select-Object -First 3
   )
 
-  $relatedLines = [System.Collections.Generic.List[string]]::new()
-  for ($i = 0; $i -lt $relatedPosts.Count; $i++) {
-    $delay = ($i % 3) + 1
-    $relatedLines.Add((Render-Card $relatedPosts[$i] $delay '../'))
-    $relatedLines.Add('')
-  }
-  if ($relatedLines.Count -gt 0) {
-    $null = $relatedLines.RemoveAt($relatedLines.Count - 1)
-  }
+  $relatedSidebarItems = Render-RelatedSidebarItems $relatedPosts '../'
 
   $highlightHtml = [System.Collections.Generic.List[string]]::new()
   foreach ($highlight in @($Post.highlights)) {
@@ -349,7 +435,7 @@ function Write-BlogPostPage($OutputPath, $PageConfig, $Post, $AllPosts) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>$(Encode-Html($Post.title)) - MicroHub Insights</title>
+  <title>$(Encode-Html($seoTitle)) - MicroHub Insights</title>
   <meta name="description" content="$(Encode-Html($Post.metaDescription))">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
@@ -361,22 +447,27 @@ function Write-BlogPostPage($OutputPath, $PageConfig, $Post, $AllPosts) {
   <link rel="stylesheet" href="../../assets/css/responsive.css">
   <link rel="stylesheet" href="../../assets/css/blog.css">
 </head>
-<body data-site-root="../../">
+<body data-site-root="../../" data-blog-page="article">
 <div id="navbar-root" data-include="components/navbar.html"></div>
 
 <section class="page-hero article-hero-shell">
   <div class="container position-relative" style="z-index:1">
-    <div class="article-hero-simple fade-in-up-1">
-      <a href="../blog.html" class="article-back-link"><i class="bi bi-arrow-left"></i> Back to blog</a>
-      <span class="blog-tag">$(Encode-Html($Post.categoryLabel))</span>
-      <h1>$(Encode-Html($Post.title))</h1>
-      <p>$(Encode-Html($Post.excerpt))</p>
-      <div class="article-meta-row article-meta-row--center">
-        <span><i class="bi bi-calendar3"></i> $(Encode-Html($postDate))</span>
-        <span><i class="bi bi-clock"></i> $(Encode-Html($Post.readTime))</span>
+    <div class="article-hero-grid fade-in-up-1">
+      <div class="article-hero-copy">
+        <a href="../blog.html" class="article-back-link"><i class="bi bi-arrow-left"></i> Back to blog</a>
+        <span class="blog-tag">$(Encode-Html($Post.categoryLabel))</span>
+        <h1>$(Encode-Html($Post.title))</h1>
+        <p>$(Encode-Html($Post.excerpt))</p>
+        <div class="article-meta-row">
+          <span><i class="bi bi-calendar3"></i> $(Encode-Html($postDate))</span>
+          <span><i class="bi bi-clock"></i> $(Encode-Html($Post.readTime))</span>
+        </div>
+          <div class="article-highlight-row">
+            $(Join-Lines $highlightHtml)
+          </div>
       </div>
-      <div class="article-highlight-row article-highlight-row--center">
-        $(Join-Lines $highlightHtml)
+      <div class="article-hero-media reveal reveal-delay-2">
+$heroVisual
       </div>
     </div>
   </div>
@@ -401,31 +492,20 @@ $sectionHtml
             <li><strong>Read time</strong><span>$(Encode-Html($Post.readTime))</span></li>
           </ul>
         </div>
+        <div class="article-rail-card">
+          <span class="blog-tag">Related Reads</span>
+          <div class="article-rail-related-list">
+$relatedSidebarItems
+          </div>
+        </div>
+        <div class="article-rail-card">
+          <span class="blog-tag">On this page</span>
+          <ul class="article-rail-links">
+$sectionLinks
+          </ul>
+        </div>
       </aside>
     </div>
-  </div>
-</section>
-
-<section class="related-posts-section">
-  <div class="container">
-    <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-4 reveal">
-      <div>
-        <p class="section-subtitle mb-2" style="margin:0">Related Reads</p>
-        <h2 class="section-title mb-0" style="margin:0;font-size:clamp(1.4rem,2.3vw,1.95rem)">Keep exploring the same content system.</h2>
-      </div>
-      <a href="../blog.html" class="btn-outline-custom">Back to Blog <i class="bi bi-arrow-right"></i></a>
-    </div>
-    <div class="row g-4">
-$(Join-Lines $relatedLines)
-    </div>
-  </div>
-</section>
-
-<section class="cta-section">
-  <div class="container position-relative" style="z-index:1;text-align:center">
-    <h2 style="color:var(--white);margin-bottom:1rem">$(Encode-Html($PageConfig.ctaTitle))</h2>
-    <p style="color:rgba(255,255,255,0.8);margin-bottom:2rem">$(Encode-Html($PageConfig.ctaDescription))</p>
-    <a href="$(Encode-Html($PageConfig.ctaButtonHref))" class="btn-white-custom">$(Encode-Html($PageConfig.ctaButtonText)) <i class="bi bi-arrow-right"></i></a>
   </div>
 </section>
 

@@ -1,86 +1,567 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Networking Hardware ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â MicroHub</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../assets/css/main.css">
-  <link rel="stylesheet" href="../../assets/css/layout.css">
-  <link rel="stylesheet" href="../../assets/css/components.css">
-  <link rel="stylesheet" href="../../assets/css/animations.css">
-  <link rel="stylesheet" href="../../assets/css/responsive.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Networking Hardware — Microhub</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;1,14..32,400&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Shared Microhub product stylesheet -->
+<link rel="stylesheet" href="../../assets/css/main.css">
+<link rel="stylesheet" href="product.css">
+<link rel="stylesheet" href="../../assets/css/layout.css">
+
+<!-- Page-specific overrides -->
+<style>
+  :root {
+    --card-rgb: 99, 102, 241;
+    --spotlight-img: url('https://plus.unsplash.com/premium_photo-1764705656869-0f7ec3a19043?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  }
+</style>
 </head>
 <body data-site-root="../../">
-<div id="navbar-root" data-include="components/navbar.html"></div>
 
-<section class="page-hero">
-  <div class="container position-relative" style="z-index:1">
-    <div class="breadcrumb-custom"><a href="../../index.html">Home</a><span>/</span><span>Networking Hardware</span></div>
-    <div class="col-lg-8 fade-in-up-1">
-      <div class="section-label" style="background:rgba(46,75,101,0.2);color:var(--primary-light)"><i class="bi bi-router"></i> Network Hardware</div>
-      <h1 style="color:var(--white)">Enterprise Networking Hardware, Configured & Installed</h1>
-      <p style="color:rgba(255,255,255,0.7);font-size:1.1rem;margin-top:1.25rem;max-width:600px">Cisco, Fortinet, Ubiquiti networking hardware deployed by certified network engineers.</p>
-      <div class="d-flex gap-3 mt-4 flex-wrap">
-        <a href="../../get-started/signup.html" class="btn-primary-custom">Get Started <i class="bi bi-arrow-right"></i></a>
-        <a href="../../insights/pricing.html" class="btn-outline-custom" style="border-color:rgba(255,255,255,0.3);color:var(--white)">View Pricing</a>
+<!-- NAVBAR -->
+
+<div id="navbar-root" data-include="components/navbar.html"></div>
+<!-- HERO -->
+<section class="hero-section">
+  <div class="hero-bg-orb hero-bg-orb--one"></div>
+  <div class="hero-bg-orb hero-bg-orb--two"></div>
+  <div class="hero-grid-lines" aria-hidden="true"></div>
+
+  <div class="container hero-content-shell">
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-6">
+        <h1 class="hero-title fade-in-up-2">
+          Enterprise Networking<br>
+          <span class="hero-title-accent">Hardware for Teams</span>
+        </h1>
+        <p class="hero-lead fade-in-up-3">
+          Cisco, Ubiquiti, Fortinet, Aruba &amp; more — authorized enterprise networking procurement, configured and deployed across India for businesses of any size.
+        </p>
+        <div class="d-flex gap-3 flex-wrap hero-btns fade-in-up-4">
+          <a href="#products" class="btn-primary-custom">Explore Hardware <i class="bi bi-arrow-right"></i></a>
+          <a href="#pricing" class="btn-outline-custom hero-secondary-btn">
+            <i class="bi bi-currency-rupee"></i> View Pricing
+          </a>
+        </div>
+        <div class="hero-proof-list fade-in-up-4">
+          <div class="hero-proof-item"><i class="bi bi-check-circle-fill"></i> Authorized Partner — Cisco, Fortinet, Ubiquiti</div>
+          <div class="hero-proof-item"><i class="bi bi-check-circle-fill"></i> On-site installation available</div>
+          <div class="hero-proof-item"><i class="bi bi-check-circle-fill"></i> Pre-configured &amp; rack-ready</div>
+        </div>
+        <div class="hero-mini-grid fade-in-up-4">
+          <div class="hero-mini-card"><strong>5+</strong><span>Top brands</span></div>
+          <div class="hero-mini-card"><strong>10Gbps</strong><span>Up to core speeds</span></div>
+          <div class="hero-mini-card"><strong>PAN India</strong><span>Delivery</span></div>
+        </div>
       </div>
+
+      <div class="col-lg-6">
+        <div class="hero-laptop-visual fade-in-up-4">
+          <div class="hero-main-img">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=900&auto=format&fit=crop" alt="Enterprise networking hardware">
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
-<section class="section-pad" style="background:var(--white)">
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span class="marquee-item"><i class="bi bi-router"></i> Cisco Catalyst Switches</span>
+    <span class="marquee-item"><i class="bi bi-wifi"></i> Ubiquiti UniFi APs</span>
+    <span class="marquee-item"><i class="bi bi-shield-lock"></i> Fortinet FortiGate Firewall</span>
+    <span class="marquee-item"><i class="bi bi-router"></i> Aruba Core Switches</span>
+    <span class="marquee-item"><i class="bi bi-hdd-network"></i> TP-Link Omada Series</span>
+    <span class="marquee-item"><i class="bi bi-shield-check"></i> SD-WAN Ready</span>
+    <span class="marquee-item"><i class="bi bi-reception-4"></i> Wi-Fi 6 / 6E</span>
+    <span class="marquee-item"><i class="bi bi-patch-check"></i> Authorized Reseller</span>
+    <span class="marquee-item"><i class="bi bi-headset"></i> On-site Support</span>
+    <span class="marquee-item"><i class="bi bi-lightning-charge"></i> Pre-configured Dispatch</span>
+    <!-- duplicate for seamless loop -->
+    <span class="marquee-item"><i class="bi bi-router"></i> Cisco Catalyst Switches</span>
+    <span class="marquee-item"><i class="bi bi-wifi"></i> Ubiquiti UniFi APs</span>
+    <span class="marquee-item"><i class="bi bi-shield-lock"></i> Fortinet FortiGate Firewall</span>
+    <span class="marquee-item"><i class="bi bi-router"></i> Aruba Core Switches</span>
+    <span class="marquee-item"><i class="bi bi-hdd-network"></i> TP-Link Omada Series</span>
+    <span class="marquee-item"><i class="bi bi-shield-check"></i> SD-WAN Ready</span>
+    <span class="marquee-item"><i class="bi bi-reception-4"></i> Wi-Fi 6 / 6E</span>
+    <span class="marquee-item"><i class="bi bi-patch-check"></i> Authorized Reseller</span>
+    <span class="marquee-item"><i class="bi bi-headset"></i> On-site Support</span>
+    <span class="marquee-item"><i class="bi bi-lightning-charge"></i> Pre-configured Dispatch</span>
+  </div>
+</div>
+
+<!-- PRODUCT SPOTLIGHT -->
+<section class="section-pad" id="products" style="background:linear-gradient(180deg,rgba(99,102,241,0.05) 0%,#f8fbff 44%,#ffffff 100%);">
   <div class="container">
-    <div class="row g-4">
-      <div class="col-lg-6 reveal">
-        <div class="section-label"><i class="bi bi-stars"></i> Key Capabilities</div>
-        <h2 class="section-title">What You <span>Get</span></h2>
-        <div class="divider"></div>
-        <ul class="feature-list">
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Enterprise-grade security and compliance built in</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Real-time dashboards and actionable analytics</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Seamless integrations with your existing tools</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Dedicated onboarding and customer success manager</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Mobile-first design for on-the-go access</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">99.9% uptime SLA with 24/7 technical support</span></li>
-        </ul>
+    <div class="laptops-spotlight reveal">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-5">
+          <h2 class="laptops-spotlight-title">Enterprise-grade networking. Deployed, not just delivered.</h2>
+          <p class="laptops-spotlight-desc">Every device is sourced through authorized channels, pre-configured to your network topology, and tested before shipping — so your team plugs in and goes live on day one.</p>
+          <div class="spotlight-points">
+            <span><i class="bi bi-check2-circle"></i> Pre-configured VLANs, SSIDs &amp; firewall policies included</span>
+            <span><i class="bi bi-check2-circle"></i> On-site rack installation &amp; cabling available</span>
+            <span><i class="bi bi-check2-circle"></i> GST invoicing and full OEM warranty documentation</span>
+          </div>
+          <div class="spotlight-metrics">
+            <div class="spotlight-metric"><strong>5+</strong><span>OEM brands stocked</span></div>
+            <div class="spotlight-metric"><strong>PAN India</strong><span>Delivery coverage</span></div>
+            <div class="spotlight-metric"><strong>3-yr</strong><span>Warranty options</span></div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="spotlight-visual reveal reveal-delay-2">
+            <div class="spotlight-visual-img" style="background-image:url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=900&auto=format&fit=crop')"></div>
+            <div class="spotlight-float-chip"><i class="bi bi-shield-lock"></i> Pre-configured &amp; secured</div>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-6 reveal reveal-delay-2">
-        <div class="row g-3">
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-lightning-charge"></i></div><h5>Fast Setup</h5><p class="text-muted small">Live in hours, not weeks</p></div></div>
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-shield-check"></i></div><h5>Secure</h5><p class="text-muted small">End-to-end encrypted</p></div></div>
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-graph-up"></i></div><h5>Analytics</h5><p class="text-muted small">Real-time insights</p></div></div>
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-headset"></i></div><h5>24/7 Support</h5><p class="text-muted small">Always there for you</p></div></div>
+    </div>
+
+    <!-- PRODUCT CARDS -->
+    <div class="row g-4 mt-2" id="products-grid">
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-router"></i></span>
+            <span class="product-highlight-pill">Switches · Most Popular</span>
+          </div>
+          <h3>Cisco Catalyst 9200</h3>
+          <p>The gold standard for enterprise access switching — intelligent, secure, and built for modern campus networks and hybrid work environments.</p>
+          <div class="product-highlight-list">
+            <span>24/48 Ports</span><span>PoE+</span><span>Stacking Ready</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹55,000</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-wifi"></i></span>
+            <span class="product-highlight-pill">Access Points</span>
+          </div>
+          <h3>Ubiquiti UniFi U6 Pro</h3>
+          <p>Wi-Fi 6 access points with centralized cloud management — blanket coverage for offices, warehouses, and multi-floor deployments.</p>
+          <div class="product-highlight-list">
+            <span>Wi-Fi 6</span><span>4x4 MU-MIMO</span><span>Cloud Managed</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹18,500</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-shield-lock"></i></span>
+            <span class="product-highlight-pill">Firewalls</span>
+          </div>
+          <h3>Fortinet FortiGate 60F</h3>
+          <p>Next-generation firewall with AI-powered threat intelligence — unified SD-WAN, IPS, and web filtering in a single appliance for SMBs and branches.</p>
+          <div class="product-highlight-list">
+            <span>NGFW</span><span>SD-WAN</span><span>10Gbps Throughput</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹42,000</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-hdd-network"></i></span>
+            <span class="product-highlight-pill">Core Switches</span>
+          </div>
+          <h3>Aruba CX 6300 Series</h3>
+          <p>High-performance core and distribution switching — modular, resilient, and built for data centres and large enterprise floors.</p>
+          <div class="product-highlight-list">
+            <span>10/25GbE</span><span>VSX Redundancy</span><span>AOS-CX OS</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹1,80,000</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-reception-4"></i></span>
+            <span class="product-highlight-pill">Wi-Fi 6E APs</span>
+          </div>
+          <h3>Cisco Catalyst 9166</h3>
+          <p>Tri-band Wi-Fi 6E access points for high-density environments — built for auditoriums, trading floors, and next-gen campus deployments.</p>
+          <div class="product-highlight-list">
+            <span>Wi-Fi 6E</span><span>Tri-band</span><span>DNA Center</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹65,000</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-diagram-3"></i></span>
+            <span class="product-highlight-pill">SMB Bundle</span>
+          </div>
+          <h3>TP-Link Omada Stack</h3>
+          <p>Cost-effective Omada SDN solution for growing businesses — cloud-managed switches, APs, and gateway in a single unified dashboard.</p>
+          <div class="product-highlight-list">
+            <span>SDN Controller</span><span>PoE Switches</span><span>EAP APs</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹25,000</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+  <div class="container">
+    <h3 class="stats-heading reveal">Enterprise networking, delivered and deployed by Microhub.</h3>
+    <p class="stats-subtext reveal">From a single access point to a full-campus network rollout — Microhub handles every step of networking hardware procurement and deployment in India.</p>
+    <div class="stats-grid reveal">
+      <div class="stat-item"><div class="stat-number">300+</div><div class="stat-label">Networks Deployed</div><div class="stat-note">Across offices, campuses, and data centres.</div></div>
+      <div class="stat-item"><div class="stat-number">Wi-Fi 6E</div><div class="stat-label">Latest Standard</div><div class="stat-note">All current-gen APs and switches in stock.</div></div>
+      <div class="stat-item"><div class="stat-number">&lt;48h</div><div class="stat-label">Dispatch SLA</div><div class="stat-note">Pre-configured and shipped fast.</div></div>
+      <div class="stat-item"><div class="stat-number">3yr</div><div class="stat-label">Warranty Options</div><div class="stat-note">OEM-backed cover on every device.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY Microhub FOR NETWORKING -->
+<section class="section-pad why-laptops-section">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <h2 class="section-title">The Smartest Way to <span>Buy Networking Hardware</span></h2>
+      <p class="section-desc mx-auto">Microhub is an authorized partner for Cisco, Fortinet, Ubiquiti, and Aruba — we handle procurement, pre-configuration, installation, and long-term support so your IT team focuses on strategy, not logistics.</p>
+    </div>
+    <div class="row g-4 align-items-stretch">
+      <div class="col-lg-5 d-flex">
+        <figure class="why-story-media reveal reveal-delay-1" style="flex:1 1 auto;margin:0;">
+          <img src="https://images.unsplash.com/photo-1551703599-6b3e8379aa8c?w=800&auto=format&fit=crop" alt="Network rack installation">
+        </figure>
+      </div>
+      <div class="col-lg-7 d-flex">
+        <div class="why-story-copy reveal reveal-delay-2">
+          <h3 class="why-story-title">From order to online — we handle the entire network deployment.</h3>
+          <p class="why-story-lead">Enterprise networking is more than boxes in a rack. Microhub bridges the gap with pre-configuration, on-site installation, and ongoing support — all in one relationship.</p>
+          <div class="why-story-list">
+            <article class="why-story-item">
+              <span class="why-story-index">01</span>
+              <div class="why-story-body"><h4>Network design &amp; hardware sizing</h4><p>Our certified engineers map your floor plan, user count, and bandwidth needs to the right hardware — switches, APs, and firewalls specced for today and scaled for growth.</p></div>
+            </article>
+            <article class="why-story-item">
+              <span class="why-story-index">02</span>
+              <div class="why-story-body"><h4>Pre-configuration before dispatch</h4><p>VLANs, SSIDs, firewall rules, and management credentials are configured in our lab — your team unpacks the device, mounts it, and plugs in. No CLI required on-site.</p></div>
+            </article>
+            <article class="why-story-item">
+              <span class="why-story-index">03</span>
+              <div class="why-story-body"><h4>Volume pricing &amp; OEM warranty</h4><p>Microhub unlocks partner pricing on bulk orders and ensures every device ships with complete OEM warranty documentation and a valid GST invoice for ITC claims.</p></div>
+            </article>
+            <article class="why-story-item">
+              <span class="why-story-index">04</span>
+              <div class="why-story-body"><h4>Ongoing support &amp; AMC</h4><p>Hardware failures, firmware updates, and capacity expansions — all handled by Microhub's network team. One call, one relationship, zero vendor runaround.</p></div>
+            </article>
+          </div>
+          <div class="why-story-meta">
+            <span>Authorized OEM Partner</span>
+            <span>PAN India delivery</span>
+            <span>On-site installation</span>
+          </div>
+          <div class="why-story-actions">
+            <a href="../../get-started/signup.html" class="btn-primary-custom">Get a Quote <i class="bi bi-arrow-right"></i></a>
+            <p>Trusted by Indian startups, enterprises, and institutions for end-to-end networking procurement.</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<section class="stats-section">
-  <div class="container position-relative">
-    <div class="row g-4 text-center">
-      <div class="col-6 col-lg-3 reveal"><div class="stat-number"><span class="counter-num" data-target="500" data-suffix="+">500+</span></div><div class="stat-label">Businesses Served</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-1"><div class="stat-number"><span class="counter-num" data-target="99" data-suffix="%">99%</span></div><div class="stat-label">Uptime SLA</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-2"><div class="stat-number"><span class="counter-num" data-target="4" data-suffix="hr">4hr</span></div><div class="stat-label">Avg Setup Time</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-3"><div class="stat-number"><span class="counter-num" data-target="4.8" data-suffix="/5">4.8/5</span></div><div class="stat-label">Customer Rating</div></div>
+
+<!-- PRICING -->
+<section class="section-pad pricing-section" id="pricing">
+  <div class="container">
+    <div class="text-center mb-2 reveal">
+      <h2 class="section-title">Network Plans, <span>No Hidden Costs</span></h2>
+      <p class="section-desc mx-auto">All plans include GST invoicing, OEM warranty, and pre-configuration. On-site installation available on every tier.</p>
+    </div>
+    <div class="pricing-grid reveal">
+
+      <div class="pricing-card">
+        <div class="pricing-tier">Starter</div>
+        <div class="pricing-price">₹25K</div>
+        <div class="pricing-sub">per location</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> TP-Link Omada Gateway</li>
+          <li><i class="bi bi-check-circle-fill"></i> 8-port PoE Switch</li>
+          <li><i class="bi bi-check-circle-fill"></i> 2× EAP Wi-Fi 6 APs</li>
+          <li><i class="bi bi-check-circle-fill"></i> Cloud SDN controller</li>
+          <li><i class="bi bi-check-circle-fill"></i> 1-year OEM warranty</li>
+          <li><i class="bi bi-check-circle-fill"></i> Pre-configured</li>
+        </ul>
+        <a href="#" class="btn-outline-custom w-100 justify-content-center">Choose Starter</a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-tier">Business</div>
+        <div class="pricing-price">₹75K</div>
+        <div class="pricing-sub">per location</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> Fortinet FortiGate 40F</li>
+          <li><i class="bi bi-check-circle-fill"></i> Cisco 24-port PoE+ Switch</li>
+          <li><i class="bi bi-check-circle-fill"></i> 4× Ubiquiti U6 Pro APs</li>
+          <li><i class="bi bi-check-circle-fill"></i> VLAN &amp; SSID config</li>
+          <li><i class="bi bi-check-circle-fill"></i> 1-year OEM warranty</li>
+          <li><i class="bi bi-check-circle-fill"></i> Remote monitoring</li>
+        </ul>
+        <a href="#" class="btn-outline-custom w-100 justify-content-center">Choose Business</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-tier">Enterprise</div>
+        <div class="pricing-price">₹2L+</div>
+        <div class="pricing-sub">per location</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> Fortinet FortiGate 60F NGFW</li>
+          <li><i class="bi bi-check-circle-fill"></i> Cisco Catalyst 9200 Stack</li>
+          <li><i class="bi bi-check-circle-fill"></i> Cisco Catalyst 9166 Wi-Fi 6E</li>
+          <li><i class="bi bi-check-circle-fill"></i> SD-WAN &amp; IPS enabled</li>
+          <li><i class="bi bi-check-circle-fill"></i> On-site installation</li>
+          <li><i class="bi bi-check-circle-fill"></i> Priority support &amp; AMC</li>
+        </ul>
+        <a href="#" class="btn-primary-custom w-100 justify-content-center">Choose Enterprise</a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-tier">Data Centre</div>
+        <div class="pricing-price">Custom</div>
+        <div class="pricing-sub">scoped per project</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> Aruba CX 6300 Core Switching</li>
+          <li><i class="bi bi-check-circle-fill"></i> 10/25GbE spine-leaf fabric</li>
+          <li><i class="bi bi-check-circle-fill"></i> Fortinet FortiGate 200F</li>
+          <li><i class="bi bi-check-circle-fill"></i> Full rack &amp; cable management</li>
+          <li><i class="bi bi-check-circle-fill"></i> 3-year OEM warranty</li>
+          <li><i class="bi bi-check-circle-fill"></i> 24/7 dedicated NOC support</li>
+        </ul>
+        <a href="#" class="btn-outline-custom w-100 justify-content-center">Get a Quote</a>
+      </div>
+
     </div>
   </div>
 </section>
-<section class="cta-section">
-  <div class="container position-relative" style="z-index:1;text-align:center">
-    <h2 style="color:var(--white);margin-bottom:1rem">Ready to Get Started?</h2>
-    <p style="color:rgba(255,255,255,0.8);margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto">Join hundreds of businesses using MicroHub to grow faster and work smarter.</p>
-    <a href="../../get-started/signup.html" class="btn-white-custom">Start Free Trial <i class="bi bi-arrow-right"></i></a>
+
+<!-- TESTIMONIALS -->
+<section class="section-pad testimonials-section">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <h2 class="section-title">Trusted by <span>India's Best Teams</span></h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Microhub deployed Cisco switching and Ubiquiti APs across our 5-floor HQ in 3 days. Pre-configuration meant zero downtime during the migration. Phenomenal execution."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AK</div>
+            <div><div class="testimonial-name">Arjun Kapoor</div><div class="testimonial-role">IT Head, Nexora Technologies</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"We needed FortiGate firewalls across 12 branch offices. Microhub standardized the config, shipped to each branch, and our team just racked and powered on. Incredible process."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">NS</div>
+            <div><div class="testimonial-name">Neha Sharma</div><div class="testimonial-role">Network Manager, BrightEdge Finance</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Microhub designed our entire campus network from scratch — spine-leaf switching, Wi-Fi 6E coverage, and SD-WAN. On time, on budget, and our NOC team was trained on day one."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">VR</div>
+            <div><div class="testimonial-name">Vikram Rao</div><div class="testimonial-role">CTO, CloudVerse Systems</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
-<div id="footer-root" data-include="components/footer.html"></div>
 
+<!-- OEM PARTNER BADGE -->
+<section class="section-pad" style="background:var(--white)">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <h2 class="section-title">Official <span>Authorized Partner</span></h2>
+      <p class="section-desc mx-auto">Every device sold by Microhub is genuine, covered by full OEM warranty, and sourced directly through authorized distribution channels in India.</p>
+    </div>
+    <div class="partner-logos-row reveal reveal-delay-1">
+      <div class="partner-logo-item"><i class="bi bi-router" style="font-size:1.8rem;color:#049fd9"></i><span style="font-weight:700;font-size:1.1rem;color:#1d1d1f;letter-spacing:-0.04em">Cisco</span></div>
+      <div class="partner-logo-sep"></div>
+      <div class="partner-logo-item"><i class="bi bi-shield-lock" style="font-size:1.8rem;color:#ee3124"></i><span style="font-weight:700;font-size:1.1rem;color:#1d1d1f;letter-spacing:-0.04em">Fortinet</span></div>
+      <div class="partner-logo-sep"></div>
+      <div class="partner-logo-item"><i class="bi bi-wifi" style="font-size:1.8rem;color:#0559c9"></i><span style="font-weight:700;font-size:1.1rem;color:#1d1d1f;letter-spacing:-0.04em">Ubiquiti</span></div>
+      <div class="partner-logo-sep"></div>
+      <div class="partner-logo-item"><i class="bi bi-hdd-network" style="font-size:1.8rem;color:#00a1de"></i><span style="font-weight:700;font-size:1.1rem;color:#1d1d1f;letter-spacing:-0.04em">Aruba</span></div>
+      <div class="partner-logo-sep"></div>
+      <div class="partner-logo-item"><i class="bi bi-diagram-3" style="font-size:1.8rem;color:#4caf50"></i><span style="font-weight:700;font-size:1.1rem;color:#1d1d1f;letter-spacing:-0.04em">TP-Link</span></div>
+    </div>
+    <div class="d-flex justify-content-center gap-3 flex-wrap mt-4 reveal reveal-delay-2">
+      <div style="display:flex;align-items:center;gap:0.5rem;background:var(--accent);border:1px solid rgba(13,148,136,0.2);padding:0.5rem 1.1rem;border-radius:100px;font-size:0.82rem;font-weight:600;color:var(--primary-dark)"><i class="bi bi-patch-check-fill" style="color:var(--primary)"></i> Authorized Reseller</div>
+      <div style="display:flex;align-items:center;gap:0.5rem;background:var(--accent);border:1px solid rgba(13,148,136,0.2);padding:0.5rem 1.1rem;border-radius:100px;font-size:0.82rem;font-weight:600;color:var(--primary-dark)"><i class="bi bi-shield-fill-check" style="color:var(--primary)"></i> Full OEM Warranty</div>
+      <div style="display:flex;align-items:center;gap:0.5rem;background:var(--accent);border:1px solid rgba(13,148,136,0.2);padding:0.5rem 1.1rem;border-radius:100px;font-size:0.82rem;font-weight:600;color:var(--primary-dark)"><i class="bi bi-tools" style="color:var(--primary)"></i> On-site Installation</div>
+      <div style="display:flex;align-items:center;gap:0.5rem;background:var(--accent);border:1px solid rgba(13,148,136,0.2);padding:0.5rem 1.1rem;border-radius:100px;font-size:0.82rem;font-weight:600;color:var(--primary-dark)"><i class="bi bi-reception-4" style="color:var(--primary)"></i> Wi-Fi 6 &amp; 6E Ready</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-pad" style="background:var(--accent)">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="text-center mb-5 reveal">
+          <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+          <p class="section-desc mx-auto">Everything you need to know about buying enterprise networking hardware through Microhub.</p>
+        </div>
+        <div class="accordion accordion-custom" id="net-faq">
+
+          <div class="accordion-item reveal">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-n1" aria-expanded="true">
+                <i class="bi bi-patch-check me-3" style="color:var(--primary);flex-shrink:0"></i>
+                Are you an authorized reseller for Cisco and Fortinet?
+              </button>
+            </h2>
+            <div id="faq-n1" class="accordion-collapse collapse show" data-bs-parent="#net-faq">
+              <div class="accordion-body">Yes. Microhub is an <strong>authorized partner</strong> for Cisco, Fortinet, Ubiquiti, Aruba, and TP-Link. Every device we sell is genuine, sourced through authorized Indian distribution, and covered by full OEM warranty. You receive a valid GST invoice for input tax credit.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item reveal reveal-delay-1">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-n2">
+                <i class="bi bi-sliders me-3" style="color:var(--primary);flex-shrink:0"></i>
+                Can devices be pre-configured before shipping?
+              </button>
+            </h2>
+            <div id="faq-n2" class="accordion-collapse collapse" data-bs-parent="#net-faq">
+              <div class="accordion-body">Yes — this is one of Microhub's core services. Our engineers configure VLANs, SSIDs, firewall policies, management IPs, and credentials in our lab before dispatch. Devices arrive <strong>ready to rack and power on</strong>, minimising on-site deployment time and risk.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item reveal reveal-delay-2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-n3">
+                <i class="bi bi-tools me-3" style="color:var(--primary);flex-shrink:0"></i>
+                Do you provide on-site installation and cabling?
+              </button>
+            </h2>
+            <div id="faq-n3" class="accordion-collapse collapse" data-bs-parent="#net-faq">
+              <div class="accordion-body">Yes. Microhub offers on-site rack installation, structured cabling, AP mounting, and end-to-end network commissioning across India. Our certified engineers handle the full physical and logical deployment — just raise a request when you enquire and we'll include it in your quote.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item reveal reveal-delay-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-n4">
+                <i class="bi bi-currency-rupee me-3" style="color:var(--primary);flex-shrink:0"></i>
+                Do you offer volume discounts for bulk orders?
+              </button>
+            </h2>
+            <div id="faq-n4" class="accordion-collapse collapse" data-bs-parent="#net-faq">
+              <div class="accordion-body">Yes. For orders of <strong>10+ units</strong> we unlock OEM partner pricing, which is consistently better than retail. For 25+ unit or multi-site projects, we assign a dedicated account manager, offer phased delivery scheduling, and provide standardized configuration templates across all locations.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item reveal reveal-delay-1">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-n5">
+                <i class="bi bi-headset me-3" style="color:var(--primary);flex-shrink:0"></i>
+                What post-deployment support do you provide?
+              </button>
+            </h2>
+            <div id="faq-n5" class="accordion-collapse collapse" data-bs-parent="#net-faq">
+              <div class="accordion-body">Microhub offers Annual Maintenance Contracts (AMC) covering remote monitoring, firmware management, fault resolution, and hardware replacement coordination with OEMs. Enterprise and Data Centre customers get access to our <strong>24/7 Network Operations Centre (NOC)</strong> for continuous visibility and rapid incident response.</div>
+            </div>
+          </div>
+
+        </div>
+        <div class="text-center mt-5 reveal">
+          <p class="text-muted mb-3">Still have questions? Our networking team is happy to help.</p>
+          <a href="../../get-started/signup.html" class="btn-primary-custom me-3">Talk to Sales <i class="bi bi-arrow-right"></i></a>
+          <a href="../../insights/blog.html" class="btn-outline-custom">Browse Knowledge Base</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="laptops-cta">
+  <div class="container">
+    <div class="reveal text-center" style="max-width:720px;margin:0 auto;">
+      <div class="cta-eyebrow">Ready to upgrade your network?</div>
+      <h2 class="cta-title">Build Your Enterprise Network Today</h2>
+      <p class="cta-text mx-auto">Get genuine OEM hardware delivered, pre-configured, and installation-ready — with a single GST invoice, full warranty, and one dedicated support relationship.</p>
+      <div class="cta-actions justify-content-center">
+        <a href="../../get-started/signup.html" class="btn-white-custom">Get a Quote <i class="bi bi-arrow-right"></i></a>
+        <a href="#products" class="btn-outline-custom home-cta-outline">Browse All Hardware</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div id="footer-root" data-include="components/footer.html"></div>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../../assets/js/component-loader.js"></script>
 <script src="../../assets/js/navigation.js"></script>
-<script src="../../assets/js/animations.js"></script>
 <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/enhancements.js"></script>
+<!-- Shared Microhub product script -->
+<script src="product.js"></script>
 </body>
 </html>

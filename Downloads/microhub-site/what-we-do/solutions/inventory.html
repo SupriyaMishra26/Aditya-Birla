@@ -1,86 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inventory Management ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â MicroHub</title>
+  <title>Inventory Management — Microhub</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/css/main.css">
   <link rel="stylesheet" href="../../assets/css/layout.css">
   <link rel="stylesheet" href="../../assets/css/components.css">
   <link rel="stylesheet" href="../../assets/css/animations.css">
   <link rel="stylesheet" href="../../assets/css/responsive.css">
+  <link rel="stylesheet" href="solutions.css">
+  <link rel="stylesheet" href="./css/financial.css">
+  <link rel="stylesheet" href="solution-overrides.css">
+  <style>
+    /* Ensure inventory-specific color accents inherit the same palette */
+    .page-finance1 .fin-chip, .page-finance1 .btn-primary-custom, .page-finance1 .stat-number {
+      transition: all 0.2s ease;
+    }
+    .page-finance1 .fin-stat-card strong {
+      font-size: 2rem;
+      font-weight: 800;
+    }
+    .page-finance1 .fin-process-card h3,
+    .page-finance1 .fin-feature-item h3,
+    .page-finance1 .fin-tool-card h3 {
+      font-weight: 600;
+    }
+    .fin-compliance-animation svg, .fin-reconcile-animation svg, .fin-report-animation svg {
+      width: 100%;
+      max-height: 200px;
+    }
+  </style>
 </head>
-<body data-site-root="../../">
-<div id="navbar-root" data-include="components/navbar.html"></div>
 
-<section class="page-hero">
-  <div class="container position-relative" style="z-index:1">
-    <div class="breadcrumb-custom"><a href="../../index.html">Home</a><span>/</span><span>Inventory</span></div>
-    <div class="col-lg-8 fade-in-up-1">
-      <div class="section-label" style="background:rgba(46,75,101,0.2);color:var(--primary-light)"><i class="bi bi-box-seam"></i> Operations</div>
-      <h1 style="color:var(--white)">Total Inventory Intelligence in Real Time</h1>
-      <p style="color:rgba(255,255,255,0.7);font-size:1.1rem;margin-top:1.25rem;max-width:600px">Know exactly what's in stock, where it is, and when to reorder across every location.</p>
-      <div class="d-flex gap-3 mt-4 flex-wrap">
-        <a href="../../get-started/signup.html" class="btn-primary-custom">Get Started <i class="bi bi-arrow-right"></i></a>
-        <a href="../../insights/pricing.html" class="btn-outline-custom" style="border-color:rgba(255,255,255,0.3);color:var(--white)">View Pricing</a>
-      </div>
-    </div>
+<body class="page-finance1" data-site-root="../../">
+  <div id="navbar-root" data-include="../../components/navbar.html"></div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../../index.html" class="mob-link">Home</a>
+    <a href="../../insights/blog.html" class="mob-link">Blog</a>
+    <a href="../../get-started/signup.html" class="mob-link" style="color:var(--primary-light)">Sign Up</a>
   </div>
-</section>
-<section class="section-pad" style="background:var(--white)">
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-lg-6 reveal">
-        <div class="section-label"><i class="bi bi-stars"></i> Key Capabilities</div>
-        <h2 class="section-title">What You <span>Get</span></h2>
-        <div class="divider"></div>
-        <ul class="feature-list">
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Enterprise-grade security and compliance built in</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Real-time dashboards and actionable analytics</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Seamless integrations with your existing tools</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Dedicated onboarding and customer success manager</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Mobile-first design for on-the-go access</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">99.9% uptime SLA with 24/7 technical support</span></li>
-        </ul>
-      </div>
-      <div class="col-lg-6 reveal reveal-delay-2">
-        <div class="row g-3">
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-lightning-charge"></i></div><h5>Fast Setup</h5><p class="text-muted small">Live in hours, not weeks</p></div></div>
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-shield-check"></i></div><h5>Secure</h5><p class="text-muted small">End-to-end encrypted</p></div></div>
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-graph-up"></i></div><h5>Analytics</h5><p class="text-muted small">Real-time insights</p></div></div>
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-headset"></i></div><h5>24/7 Support</h5><p class="text-muted small">Always there for you</p></div></div>
+
+  <!-- Hero Section with Parallax (Inventory Focus) -->
+  <section class="page-hero" id="hero">
+    <div class="hero-bg-image parallax-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container position-relative" style="z-index:2">
+      <div class="breadcrumb-custom" data-aos="fade-down" data-aos-duration="800"><a href="../../index.html">Home</a><span>/</span><span>Inventory Management</span></div>
+      <div class="col-lg-8">
+        <div class="section-label" style="background:rgba(53,81,106,0.2);color:#35516A" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100"><i class="bi bi-box-seam"></i> Inventory Core</div>
+        <h1 style="color:var(--white)" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">Smart Stock Control & Item Lifecycle</h1>
+        <p style="color:rgba(255,255,255,0.7);font-size:1.1rem;margin-top:1.25rem;max-width:600px" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">Track inventory, manage price lists, and perform adjustments — all in one place with complete visibility.</p>
+        <div class="d-flex gap-3 mt-4 flex-wrap" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+          <a href="../../get-started/signup.html" class="btn-primary-custom">Get Started <i class="bi bi-arrow-right"></i></a>
+          <a href="../../insights/pricing.html" class="btn-outline-custom" style="border-color:rgba(255,255,255,0.3);color:var(--white)">View Pricing</a>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<section class="stats-section">
-  <div class="container position-relative">
-    <div class="row g-4 text-center">
-      <div class="col-6 col-lg-3 reveal"><div class="stat-number"><span class="counter-num" data-target="500" data-suffix="+">500+</span></div><div class="stat-label">Businesses Served</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-1"><div class="stat-number"><span class="counter-num" data-target="99" data-suffix="%">99%</span></div><div class="stat-label">Uptime SLA</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-2"><div class="stat-number"><span class="counter-num" data-target="4" data-suffix="hr">4hr</span></div><div class="stat-label">Avg Setup Time</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-3"><div class="stat-number"><span class="counter-num" data-target="4.8" data-suffix="/5">4.8/5</span></div><div class="stat-label">Customer Rating</div></div>
+  </section>
+
+  <!-- Stats Section with Inventory KPIs -->
+  <div class="fin-stats-wrap">
+    <div class="container">
+      <div class="fin-stats-grid">
+        <div class="fin-stat-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0"><strong style="color: #cfe6ff;">Real‑time</strong><span>Stock visibility</span></div>
+        <div class="fin-stat-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"><strong style="color: #cfe6ff;">FIFO / WAC</strong><span>Valuation methods</span></div>
+        <div class="fin-stat-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200"><strong style="color: #cfe6ff;">Bulk import/export</strong><span>CSV, XLS, TSV</span></div>
+        <div class="fin-stat-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300"><strong style="color: #cfe6ff;">Price lists</strong><span>Sales & purchase rules</span></div>
+      </div>
     </div>
   </div>
-</section>
-<section class="cta-section">
-  <div class="container position-relative" style="z-index:1;text-align:center">
-    <h2 style="color:var(--white);margin-bottom:1rem">Ready to Get Started?</h2>
-    <p style="color:rgba(255,255,255,0.8);margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto">Join hundreds of businesses using MicroHub to grow faster and work smarter.</p>
-    <a href="../../get-started/signup.html" class="btn-white-custom">Start Free Trial <i class="bi bi-arrow-right"></i></a>
-  </div>
-</section>
-<div id="footer-root" data-include="components/footer.html"></div>
 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../../assets/js/component-loader.js"></script>
-<script src="../../assets/js/navigation.js"></script>
-<script src="../../assets/js/animations.js"></script>
-<script src="../../assets/js/main.js"></script>
+  <!-- Workflow Process Section (Items → Price Lists → Adjustments) -->
+  <section id="fin-process" class="fin-section fin-section-anchor">
+    <div class="container">
+      <div class="fin-head center">
+        <span class="fin-eyebrow" data-aos="fade-up" data-aos-duration="600"><i class="bi bi-diagram-3"></i> Complete Inventory Workflow</span>
+        <h2 data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">From item creation to stock adjustment — fully audited.</h2>
+        <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">Define products, set price books, track stock movements, and adjust inventory with full validation and history.</p>
+      </div>
+      <div class="fin-grid-3">
+        <article class="fin-process-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
+          <span class="fin-process-index">01</span>
+          <h3 style="color: #cfe6ff;">Items & Preferences</h3>
+          <p>Store basic identity, sales/purchase defaults, tax settings, SKU, image, and inventory tracking flags. Global inventory preferences control tracking behaviour.</p>
+          <div class="process-hover-line"></div>
+        </article>
+        <article class="fin-process-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+          <span class="fin-process-index">02</span>
+          <h3 style="color: #cfe6ff;">Price Lists</h3>
+          <p>Create sales or purchase price lists with percentage markup/markdown or individual rates. Apply at line-item level and associate directly with items.</p>
+          <div class="process-hover-line"></div>
+        </article>
+        <article class="fin-process-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+          <span class="fin-process-index">03</span>
+          <h3 style="color: #cfe6ff;">Inventory Adjustments</h3>
+          <p>Quantity or value adjustments with mandatory reason, account, and date. Save as draft or finalize as adjusted — fully traceable.</p>
+          <div class="process-hover-line"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Items Deep Dive (Item Master) -->
+  <section id="fin-accounting" class="fin-section fin-section-anchor">
+    <div class="container">
+      <div class="fin-grid-2-equal">
+        <div class="fin-visual-card-equal" data-aos="fade-right" data-aos-duration="800">
+          <span class="fin-visual-kicker"><i class="bi bi-archive"></i> Items – Complete Product Hub</span>
+          <div class="fin-media-container">
+            <img src="https://static.vecteezy.com/system/resources/previews/015/939/308/non_2x/financial-management-planning-and-control-financial-resources-to-maximize-profit-and-revenue-capital-credit-and-cash-management-concept-businessman-analyze-financial-resource-with-growth-profit-vector.jpg" alt="Item master dashboard" class="fin-media-image">
+          </div>
+          <div class="fin-chip-row">
+            <span class="fin-chip"><i class="bi bi-plus-circle"></i> New Item</span>
+            <span class="fin-chip"><i class="bi bi-file-spreadsheet"></i> Bulk Import</span>
+            <span class="fin-chip"><i class="bi bi-download"></i> Export Items</span>
+            <span class="fin-chip"><i class="bi bi-tags"></i> Price Lists</span>
+          </div>
+        </div>
+        <div class="fin-content-equal" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <span class="fin-eyebrow"><i class="bi bi-box"></i> Item Master Data</span>
+          <h2>Manage products, services & inventory items</h2>
+          <p>Every item stores basic identity, sales/purchase defaults, tax, inventory settings, tags, and associated price lists. Track stock, set reorder points, and handle opening stock easily.</p>
+          <div class="fin-feature-list">
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-card-list"></i></span><div><h3 style="color: #cfe6ff;">Basic & Sales/Purchase</h3><p>Name, SKU, unit, image, type (goods/service). Enable sales/purchase defaults with accounts, rates, descriptions, preferred vendors.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-calculator"></i></span><div><h3 style="color: #cfe6ff;">Tax + Inventory</h3><p>GST applicability, intra/interstate rates. Track inventory toggle, valuation method (FIFO/WAC), opening stock, reorder point, inventory account.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-eye"></i></span><div><h3 style="color: #cfe6ff;">Overview & actions</h3><p>View stock on hand, committed stock, available for sale. Edit, adjust stock, clone, mark active/inactive, delete.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-sliders2"></i></span><div><h3 style="color: #cfe6ff;">Item preferences</h3><p>Global inventory toggle, quantity precision, duplicate name policy, enhanced search, price list enable/disable.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Price Lists Deep Dive (reverse layout) -->
+  <section id="fin-validation" class="fin-section fin-section-anchor">
+    <div class="container">
+      <div class="fin-grid-2-equal reverse">
+        <div class="fin-content-equal" data-aos="fade-right" data-aos-duration="800">
+          <span class="fin-eyebrow"><i class="bi bi-tag"></i> Price Lists – Dynamic Pricing Rules</span>
+          <h2>Sales & purchase price books with flexible logic</h2>
+          <p>Create price lists with percentage markup/markdown or item-wise rates. Enable global price list preference and apply at line item level for precise control.</p>
+          <div class="fin-feature-list">
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-percent"></i></span><div><h3 style="color: #cfe6ff;">Percentage mode</h3><p>Markup / markdown with round-off options. Define percentage value and rounding preference.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-list-ul"></i></span><div><h3 style="color: #cfe6ff;">Individual mode</h3><p>Set custom rate per item independent of standard pricing.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-files"></i></span><div><h3 style="color: #cfe6ff;">Import / Export</h3><p>Bulk import sales/purchase price lists (CSV). Export templates for both types. (Import UI placeholder ready)</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-link-45deg"></i></span><div><h3 style="color: #cfe6ff;">Associate to items</h3><p>From item detail → “Associated Price Lists” section, link active price lists to individual items.</p></div></div>
+          </div>
+        </div>
+        <div class="fin-visual-card-equal" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <span class="fin-visual-kicker"><i class="bi bi-graph-up"></i> Price List Workflow</span>
+          <div class="fin-media-container">
+            <div class="fin-compliance-animation">
+              <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="30" y="60" width="70" height="40" rx="8" fill="rgba(53,81,106,0.2)" stroke="#35516A" stroke-width="1.5"/>
+                <text x="65" y="83" font-size="9" fill="#cfe6ff" text-anchor="middle">Price list</text>
+                <path d="M100 80 L130 80" stroke="#35516A" stroke-width="2" marker-end="url(#arrow)"/>
+                <rect x="130" y="60" width="70" height="40" rx="8" fill="rgba(53,81,106,0.3)" stroke="#35516A" stroke-width="1.5"/>
+                <text x="165" y="83" font-size="9" fill="#cfe6ff" text-anchor="middle">Item association</text>
+                <path d="M200 80 L230 80" stroke="#35516A" stroke-width="2"/>
+                <rect x="230" y="60" width="60" height="40" rx="8" fill="rgba(53,81,106,0.2)" stroke="#35516A" stroke-width="1.5"/>
+                <text x="260" y="83" font-size="9" fill="#cfe6ff" text-anchor="middle">Transaction</text>
+                <text x="160" y="170" font-size="10" fill="rgba(255,255,255,0.6)" text-anchor="middle">Line‑item price book application</text>
+                <rect x="60" y="185" width="200" height="4" rx="2" fill="rgba(53,81,106,0.2)"/>
+                <rect x="60" y="185" width="192" height="4" rx="2" fill="#35516A"/>
+              </svg>
+            </div>
+          </div>
+          <div class="fin-chip-row">
+            <span class="fin-chip"><i class="bi bi-arrow-up-short"></i> Markup/down</span>
+            <span class="fin-chip"><i class="bi bi-coin"></i> Individual rates</span>
+            <span class="fin-chip"><i class="bi bi-upload"></i> Bulk import</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Inventory Adjustments Deep Dive (Adjustments & Stock Movements) -->
+  <!-- <section id="fin-reconciliation" class="fin-section fin-section-anchor">
+    <div class="container">
+      <div class="fin-grid-2-equal">
+        <div class="fin-visual-card-equal" data-aos="fade-right" data-aos-duration="800">
+          <span class="fin-visual-kicker"><i class="bi bi-pencil-square"></i> Adjustments – Quantity & Value</span>
+          <div class="fin-media-container">
+            <div class="fin-reconcile-animation">
+              <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="30" y="50" width="80" height="90" rx="8" fill="rgba(53,81,106,0.15)" stroke="#35516A" stroke-width="1.5"/>
+                <text x="70" y="75" font-size="8" fill="#cfe6ff" text-anchor="middle">Draft</text>
+                <text x="70" y="95" font-size="8" fill="#cfe6ff" text-anchor="middle">Reason required</text>
+                <text x="70" y="115" font-size="8" fill="#cfe6ff" text-anchor="middle">Account + Date</text>
+                <rect x="220" y="50" width="80" height="90" rx="8" fill="rgba(53,81,106,0.15)" stroke="#35516A" stroke-width="1.5"/>
+                <text x="260" y="75" font-size="8" fill="#cfe6ff" text-anchor="middle">Adjusted</text>
+                <text x="260" y="95" font-size="8" fill="#cfe6ff" text-anchor="middle">Stock movement</text>
+                <text x="260" y="115" font-size="8" fill="#cfe6ff" text-anchor="middle">Audit trail</text>
+                <path d="M110 95 L220 95" stroke="#35516A" stroke-width="2" stroke-dasharray="4 2"/>
+                <circle cx="110" cy="95" r="4" fill="#35516A">
+                  <animate attributeName="cx" values="110;220;110" dur="2.5s" repeatCount="indefinite"/>
+                </circle>
+                <text x="160" y="170" font-size="10" fill="rgba(255,255,255,0.6)" text-anchor="middle">Draft → Adjusted + stock_movements entry</text>
+                <rect x="60" y="185" width="200" height="4" rx="2" fill="rgba(53,81,106,0.2)"/>
+                <rect x="60" y="185" width="192" height="4" rx="2" fill="#35516A"/>
+              </svg>
+            </div>
+          </div>
+          <div class="fin-chip-row">
+            <span class="fin-chip"><i class="bi bi-database-add"></i> Quantity adjust</span>
+            <span class="fin-chip"><i class="bi bi-calculator-fill"></i> Value adjust</span>
+            <span class="fin-chip"><i class="bi bi-file-pdf"></i> Draft → Adjusted</span>
+            <span class="fin-chip"><i class="bi bi-upload"></i> Import adjustments</span>
+          </div>
+        </div>
+        <div class="fin-content-equal" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <span class="fin-eyebrow"><i class="bi bi-arrow-left-right"></i> Stock movement & adjustments</span>
+          <h2>Audit‑ready inventory corrections</h2>
+          <p>Perform quantity or value adjustments, attach supporting documents, and define reason, account, and date. System validates zero quantity, blocks value adjustment when stock is zero, and logs applied movement ID.</p>
+          <div class="fin-feature-list">
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-check2-circle"></i></span><div><h3 style="color: #cfe6ff;">Validation rules</h3><p>Date, account, reason required. Quantity adjustment cannot be zero. Value adjustment only possible when stock on hand >0.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-save"></i></span><div><h3 style="color: #cfe6ff;">Draft workflow</h3><p>Save as draft for later review; convert to adjusted when final. Both statuses appear in adjustment list with filters.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-file-spreadsheet"></i></span><div><h3 style="color: #cfe6ff;">Import / Export</h3><p>3‑step import for quantity/value adjustments: configure, map fields, preview. Export templates available.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-link"></i></span><div><h3 style="color: #cfe6ff;">Stock movement link</h3><p>Each adjustment generates a stock_movements record for full traceability (source: inventory_adjustment).</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Section 4: Import/Export & Schema Sync (reverse layout) -->
+  <!-- <section id="fin-sync" class="fin-section fin-section-anchor">
+    <div class="container">
+      <div class="fin-grid-2-equal reverse">
+        <div class="fin-content-equal" data-aos="fade-right" data-aos-duration="800">
+          <span class="fin-eyebrow"><i class="bi bi-cloud-upload"></i> Bulk operations & data schema</span>
+          <h2>Import, export and database transparency</h2>
+          <p>3‑step import flow for items (CSV, TSV/XLS, up to 25MB). Duplicate handling, field mapping, preview before commit. Export current view or full item list with PII protection.</p>
+          <div class="fin-feature-list">
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-file-earmark-spreadsheet"></i></span><div><h3 style="color: #cfe6ff;">Item import (3 steps)</h3><p>Configure → Map fields → Preview. Supports skip/overwrite duplicates, mapping templates, sample download.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-database"></i></span><div><h3 style="color: #cfe6ff;">Schema relationships</h3><p>items, stock_movements, price_lists, price_list_items, inventory_adjustments. Foreign keys ensure data integrity.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-bar-chart-steps"></i></span><div><h3 style="color: #cfe6ff;">Conditional behavior matrix</h3><p>Global inventory OFF hides tracking fields; item with transactions locks Track Inventory toggle; reorder notifications require both item setting and global preference.</p></div></div>
+          </div>
+        </div>
+        <div class="fin-visual-card-equal" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <span class="fin-visual-kicker"><i class="bi bi-grid-3x3-gap-fill"></i> Data integrity & preview</span>
+          <div class="fin-media-container">
+            <div class="fin-report-animation">
+              <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="40" y="50" width="80" height="100" rx="8" fill="rgba(53,81,106,0.1)" stroke="rgba(53,81,106,0.4)" stroke-width="1"/>
+                <rect x="130" y="50" width="80" height="100" rx="8" fill="rgba(53,81,106,0.1)" stroke="rgba(53,81,106,0.4)" stroke-width="1"/>
+                <rect x="220" y="50" width="60" height="100" rx="8" fill="rgba(53,81,106,0.1)" stroke="rgba(53,81,106,0.4)" stroke-width="1"/>
+                <rect x="55" y="70" width="50" height="6" rx="3" fill="#35516A"/>
+                <rect x="55" y="85" width="40" height="6" rx="3" fill="rgba(53,81,106,0.5)"/>
+                <rect x="55" y="100" width="35" height="6" rx="3" fill="rgba(53,81,106,0.3)"/>
+                <rect x="145" y="70" width="50" height="6" rx="3" fill="#4a6d8a"/>
+                <rect x="145" y="85" width="45" height="6" rx="3" fill="rgba(74,109,138,0.5)"/>
+                <rect x="145" y="100" width="30" height="6" rx="3" fill="rgba(74,109,138,0.3)"/>
+                <rect x="235" y="70" width="30" height="40" rx="3" fill="#2a4054"/>
+                <text x="160" y="170" font-size="10" fill="rgba(255,255,255,0.6)" text-anchor="middle">Preview ready rows + skipped rows</text>
+                <rect x="80" y="185" width="160" height="4" rx="2" fill="rgba(53,81,106,0.2)"/>
+                <rect x="80" y="185" width="160" height="4" rx="2" fill="#35516A">
+                  <animate attributeName="width" values="0;160;160" dur="3s" repeatCount="indefinite"/>
+                </rect>
+              </svg>
+            </div>
+          </div>
+          <div class="fin-chip-row">
+            <span class="fin-chip"><i class="bi bi-upload"></i> Bulk import items</span>
+            <span class="fin-chip"><i class="bi bi-download"></i> Export current view</span>
+            <span class="fin-chip"><i class="bi bi-shield-lock"></i> PII protection</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Deployment Readiness Section (Inventory-specific) -->
+  <section class="fin-section">
+    <div class="container">
+      <div class="fin-head center">
+        <span class="fin-eyebrow" data-aos="fade-up" data-aos-duration="600"><i class="bi bi-boxes"></i> Inventory deployment readiness</span>
+        <h2 data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">Built for growing product businesses.</h2>
+        <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">From single‑warehouse to multi‑location, inventory module adapts with reorder points, landed cost tracking, and valuation methods.</p>
+      </div>
+      <div class="fin-tool-grid">
+        <article class="fin-tool-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0"><span class="fin-feature-icon mx-auto mb-3" style="width:48px; margin:0 auto 1rem auto;"><i class="bi bi-archive"></i></span><h3 style="color: #cfe6ff;">Multi‑warehouse ready</h3><p>Stock movements per warehouse, default warehouse assignment per item.</p><div class="tool-hover-effect"></div></article>
+        <article class="fin-tool-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"><span class="fin-feature-icon mx-auto mb-3" style="width:48px; margin:0 auto 1rem auto;"><i class="bi bi-bell"></i></span><h3 style="color: #cfe6ff;">Reorder notifications</h3><p>Email/user alerts when stock reaches reorder point (global toggle + item-level threshold).</p><div class="tool-hover-effect"></div></article>
+        <article class="fin-tool-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200"><span class="fin-feature-icon mx-auto mb-3" style="width:48px; margin:0 auto 1rem auto;"><i class="bi bi-calculator"></i></span><h3 style="color: #cfe6ff;">FIFO / WAC valuation</h3><p>Inventory valuation methods configurable per item for accurate COGS.</p><div class="tool-hover-effect"></div></article>
+        <article class="fin-tool-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300"><span class="fin-feature-icon mx-auto mb-3" style="width:48px; margin:0 auto 1rem auto;"><i class="bi bi-truck"></i></span><h3 style="color: #cfe6ff;">Landed cost tracking</h3><p>Include additional costs on items when global landed cost setting enabled.</p><div class="tool-hover-effect"></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rules and Policies Section (Inventory Validation & Constraints) -->
+  <section id="fin-rules" class="fin-section fin-rule-band" style="background-color: #35516A;">
+    <div class="container">
+      <div class="fin-head center">
+        <span class="fin-eyebrow" data-aos="fade-up" data-aos-duration="600"><i class="bi bi-sliders2"></i> Inventory rules & safeguards</span>
+        <h2 data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">Constraints that protect your stock data.</h2>
+        <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">Conditional behaviors, global inventory locks, transaction protection, and reorder logic — all designed to avoid data corruption.</p>
+      </div>
+      <div class="fin-rule-grid">
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"><span class="fin-rule-tag">Protection</span><h3 style="color: #cfe6ff;">Global inventory lock</h3><p>Cannot disable inventory if tracked items exist → “Inventory tracking cannot be disabled as inventory item(s) exist!”</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="50"><span class="fin-rule-tag">Transaction lock</span><h3 style="color: #cfe6ff;">Track inventory toggle locked</h3><p>Once item has transactions, you cannot enable/disable inventory tracking. Form rule enforced server-side.</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"><span class="fin-rule-tag">Adjustment validation</span><h3 style="color: #cfe6ff;">Zero quantity / zero stock</h3><p>Quantity adjustment cannot be zero; value adjustment blocked when stock on hand = 0.</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="150"><span class="fin-rule-tag">Price list prerequisite</span><h3 style="color: #cfe6ff;">Enable in preferences first</h3><p>Price Lists module only accessible if preference “Enable Price Lists” is ON, else redirected.</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"><span class="fin-rule-tag">Import mapping</span><h3 style="color: #cfe6ff;">Duplicate field mapping error</h3><p>Same source column cannot map to multiple system fields. Item Name, type, rate must be mapped.</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="250"><span class="fin-rule-tag">Reorder notify</span><h3 style="color: #cfe6ff;">Two-level trigger</h3><p>Requires both item reorder point AND global notify_on_reorder preference enabled.</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300"><span class="fin-rule-tag">Bulk actions</span><h3 style="color: #cfe6ff;">Selection bar</h3><p>Bulk update, status toggle, delete — only visible when one or more rows selected.</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="350"><span class="fin-rule-tag">Export row limit</span><h3 style="color: #cfe6ff;">25k rows</h3><p>Full export limited to 25,000 rows; current view export limited to 10,000 rows.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section (Inventory Impact) -->
+  <section class="stats-section">
+    <div class="container position-relative">
+      <div class="row g-4 text-center">
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0"><div class="stat-number"><span class="counter-num" style="color: #cfe6ff;" data-target="2000" data-suffix="+">2000+</span></div><div class="stat-label">Items managed</div></div>
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"><div class="stat-number"><span class="counter-num" style="color: #cfe6ff;" data-target="100" data-suffix="%">100%</span></div><div class="stat-label">Audit traceability</div></div>
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200"><div class="stat-number"><span class="counter-num" style="color: #cfe6ff;" data-target="60" data-suffix="%">60%</span></div><div class="stat-label">Faster stock reconciliation</div></div>
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300"><div class="stat-number"><span class="counter-num" style="color: #cfe6ff;" data-target="24" data-suffix="/7">24/7</span></div><div class="stat-label">Real-time stock visibility</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (Inventory-centric) -->
+  <section class="premium-single-faq" style="background: var(--white); padding: 60px 0;">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="premium-single-title" data-aos="fade-up" data-aos-duration="600">Everything about <span>Inventory Management</span>
+        <div class="premium-single-line" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="100"></div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="premium-single-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+            <div class="premium-single-card-inner">
+              <div class="card-deco-left"></div>
+              <div class="card-deco-right"></div>
+              <div class="card-glow-effect"></div>
+              <div class="premium-single-icon-box"><i class="bi bi-box-seam"></i><div class="icon-glow"></div><div class="icon-ring"></div></div>
+              <div class="premium-faq-grid">
+                <div class="premium-faq-col">
+                  <div class="premium-faq-item"><div class="premium-faq-header" onclick="toggleSingleFAQ(this)"><div class="premium-faq-title-group"><span class="premium-faq-number">01</span><h4>How to enable inventory tracking for an item?</h4></div><div class="premium-faq-toggle-box"><i class="bi bi-plus-lg"></i></div></div><div class="premium-faq-content"><p>In item form, check “Track Inventory”, then select Inventory Account and Valuation Method (FIFO/WAC). Opening stock and reorder point optional.</p></div></div>
+                  <div class="premium-faq-item"><div class="premium-faq-header" onclick="toggleSingleFAQ(this)"><div class="premium-faq-title-group"><span class="premium-faq-number">02</span><h4>Can I import existing items with stock?</h4></div><div class="premium-faq-toggle-box"><i class="bi bi-plus-lg"></i></div></div><div class="premium-faq-content"><p>Yes, the 3-step item import supports Initial Stock and Initial Stock Rate columns. Map them during step 2.</p></div></div>
+                  <div class="premium-faq-item"><div class="premium-faq-header" onclick="toggleSingleFAQ(this)"><div class="premium-faq-title-group"><span class="premium-faq-number">03</span><h4>What happens if I disable inventory after transactions?</h4></div><div class="premium-faq-toggle-box"><i class="bi bi-plus-lg"></i></div></div><div class="premium-faq-content"><p>System blocks it — “Inventory tracking cannot be disabled as inventory item(s) exist!” You must convert or remove tracked items first.</p></div></div>
+                </div>
+                <div class="premium-faq-col">
+                  <div class="premium-faq-item"><div class="premium-faq-header" onclick="toggleSingleFAQ(this)"><div class="premium-faq-title-group"><span class="premium-faq-number">04</span><h4>How are price lists applied in transactions?</h4></div><div class="premium-faq-toggle-box"><i class="bi bi-plus-lg"></i></div></div><div class="premium-faq-content"><p>Enable “Apply price list at line item level” in preferences, then associate price list to item. During invoice/bill, the list is applied automatically.</p></div></div>
+                  <div class="premium-faq-item"><div class="premium-faq-header" onclick="toggleSingleFAQ(this)"><div class="premium-faq-title-group"><span class="premium-faq-number">05</span><h4>Can I adjust stock value after purchase?</h4></div><div class="premium-faq-toggle-box"><i class="bi bi-plus-lg"></i></div></div><div class="premium-faq-content"><p>Yes, use “Value Adjustment” type in Inventory Adjustments. Requires reason, account, and existing stock on hand &gt;0.</p></div></div>
+                  <div class="premium-faq-item"><div class="premium-faq-header" onclick="toggleSingleFAQ(this)"><div class="premium-faq-title-group"><span class="premium-faq-number">06</span><h4>Is there an audit trail for stock changes?</h4></div><div class="premium-faq-toggle-box"><i class="bi bi-plus-lg"></i></div></div><div class="premium-faq-content"><p>Every movement creates stock_movements record. Adjustments link to applied_movement_id, fully traceable.</p></div></div>
+                </div>
+              </div>
+              <div class="premium-faq-decoration"><div class="deco-dot"></div><div class="deco-line"></div><div class="deco-dot"></div></div>
+            </div>
+            <div class="premium-single-footer text-center mt-5"><div class="premium-help-single"><i class="bi bi-kanban"></i><p>Still have questions? <a href="../../get-started/contact.html">Talk to our support team <i class="bi bi-arrow-right"></i></a></p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced CTA Section with Inventory focus -->
+  <section class="cta-section-enhanced">
+    <div class="cta-bg-image"></div>
+    <div class="cta-particles">
+      <div class="particle" style="width: 40px; height: 40px; top: 70%; left: 15%; --duration: 10s; --delay: 2s;"></div>
+      <div class="particle" style="width: 30px; height: 30px; top: 30%; left: 85%; --duration: 14s; --delay: 1s;"></div>
+      <div class="particle" style="width: 25px; height: 25px; top: 20%; left: 20%; --duration: 9s; --delay: 0.5s;"></div>
+      <div class="particle" style="width: 35px; height: 35px; top: 60%; left: 45%; --duration: 13s; --delay: 2.5s;"></div>
+      <div class="particle" style="width: 45px; height: 45px; top: 40%; left: 70%; --duration: 15s; --delay: 1.5s;"></div>
+      <div class="particle" style="width: 20px; height: 20px; top: 85%; left: 55%; --duration: 8s; --delay: 4s;"></div>
+    </div>
+    <div class="cta-glow-border"></div>
+    <div class="container position-relative" style="z-index: 2; text-align: center">
+      <div class="cta-content">
+        <div class="reveal">
+          <h2 class="cta-heading">Take Full Control of Your Inventory Today</h2>
+          <p class="cta-description">Track stock in real time, reduce losses, and automate reordering — all from one powerful system.</p>
+          <div class="d-flex gap-4 justify-content-center flex-wrap">
+            <a href="../../get-started/signup.html" class="cta-btn-primary hover-lift"><i class="bi bi-box-arrow-in-right"></i> Start Free Trial <i class="bi bi-arrow-right-short"></i></a>
+            <a href="../../insights/case-studies.html" class="cta-btn-secondary hover-lift"><i class="bi bi-bar-chart-line"></i> See How It Works <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-root" data-include="../../components/footer.html"></div>
+  <button id="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="../../assets/js/navigation.js"></script>
+  <script src="../../assets/js/animations.js"></script>
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/component-loader.js"></script>
+  <script src="solutions.js"></script>
+  <script src="./js/financial.js"></script>
+  <script>function toggleSingleFAQ(header){const item=header.closest('.premium-faq-item');const content=item.querySelector('.premium-faq-content');const icon=header.querySelector('.premium-faq-toggle-box i');if(item.classList.contains('active')){item.classList.remove('active');content.style.maxHeight=null;icon.classList.remove('bi-dash-lg');icon.classList.add('bi-plus-lg');}else{item.classList.add('active');content.style.maxHeight=content.scrollHeight+"px";icon.classList.remove('bi-plus-lg');icon.classList.add('bi-dash-lg');}}</script>
 </body>
+
 </html>

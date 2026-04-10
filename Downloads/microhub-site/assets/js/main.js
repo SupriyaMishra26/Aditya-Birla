@@ -4,6 +4,7 @@
 (function () {
   let revealObserver;
   let counterObserver;
+  let navigationInProgress = false;
 
   function ensureRevealObserver() {
     if (revealObserver) return revealObserver;
@@ -108,7 +109,7 @@
       item.classList.toggle('active', item.dataset.navSection === getCurrentSection(currentPath));
     });
 
-    document.querySelectorAll('.nav-link-custom, .mega-link, .footer-links a').forEach((link) => {
+    document.querySelectorAll('.nav-link-custom, .mega-link, .footer-links a, .footer-bottom-links a').forEach((link) => {
       const href = link.getAttribute('href');
       if (!href || href.startsWith('#')) return;
 
@@ -127,12 +128,30 @@
       link.addEventListener('click', (event) => {
         if (link.hostname !== window.location.hostname) return;
 
+        const targetUrl = new URL(link.href, window.location.href);
+        const currentUrl = new URL(window.location.href);
+        const currentPath = normalizePath(currentUrl.pathname);
+        const targetPath = normalizePath(targetUrl.pathname);
+
+        if (targetPath === currentPath && targetUrl.search === currentUrl.search) {
+          if (targetUrl.hash === currentUrl.hash) {
+            event.preventDefault();
+          }
+          return;
+        }
+
+        if (navigationInProgress) {
+          event.preventDefault();
+          return;
+        }
+
         event.preventDefault();
-        const target = link.href;
+        navigationInProgress = true;
+        document.body.dataset.navigationPending = 'true';
         document.body.style.opacity = '0';
         document.body.style.transition = 'opacity 0.25s ease';
         window.setTimeout(() => {
-          window.location.href = target;
+          window.location.href = targetUrl.href;
         }, 250);
       });
     });
@@ -165,6 +184,33 @@
       if (element.dataset.tooltipReady === 'true') return;
       element.dataset.tooltipReady = 'true';
       new bootstrap.Tooltip(element);
+    });
+  }
+
+  function initNewsletterForms() {
+    document.querySelectorAll('.newsletter-form').forEach((form) => {
+      if (form.dataset.formReady === 'true') return;
+
+      form.dataset.formReady = 'true';
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const button = form.querySelector('button[type="submit"]');
+        const input = form.querySelector('input[type="email"]');
+        const isValidEmail = input && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value);
+
+        if (!input) return;
+
+        if (isValidEmail) {
+          input.classList.remove('is-invalid');
+          if (button) {
+            button.textContent = 'Subscribed!';
+            button.disabled = true;
+          }
+        } else {
+          input.classList.add('is-invalid');
+        }
+      });
     });
   }
 
@@ -217,6 +263,7 @@
     initPageTransitions();
     initTabs();
     initTooltips();
+    initNewsletterForms();
     initTiltCards();
   }
 
@@ -225,6 +272,12 @@
   } else {
     initMain();
   }
+
+  window.addEventListener('pageshow', () => {
+    navigationInProgress = false;
+    delete document.body.dataset.navigationPending;
+    document.body.style.opacity = '1';
+  });
 
   document.addEventListener('microhub:fragments-loaded', initMain);
 })();

@@ -1,86 +1,560 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Business Desktops ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â MicroHub</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../assets/css/main.css">
-  <link rel="stylesheet" href="../../assets/css/layout.css">
-  <link rel="stylesheet" href="../../assets/css/components.css">
-  <link rel="stylesheet" href="../../assets/css/animations.css">
-  <link rel="stylesheet" href="../../assets/css/responsive.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desktop PCs &amp; Workstations — Microhub</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;1,14..32,400&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<link rel="stylesheet" href="../../assets/css/main.css">
+<!-- Shared Microhub product stylesheet -->
+<link rel="stylesheet" href="product.css">
+<link rel="stylesheet" href="../../assets/css/layout.css">
+
+<!-- Page-specific overrides -->
+<style>
+   :root {
+    --card-rgb: 99, 102, 241;
+    --spotlight-img: url('https://images.unsplash.com/photo-1623305615868-6c1134bb8f00?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaW5lbnR8fHx8fHx8fHx8fHx8fA%3D%3D');
+  }
+</style>
 </head>
 <body data-site-root="../../">
+
+<!-- NAVBAR -->
 <div id="navbar-root" data-include="components/navbar.html"></div>
 
-<section class="page-hero">
-  <div class="container position-relative" style="z-index:1">
-    <div class="breadcrumb-custom"><a href="../../index.html">Home</a><span>/</span><span>Desktops</span></div>
-    <div class="col-lg-8 fade-in-up-1">
-      <div class="section-label" style="background:rgba(46,75,101,0.2);color:var(--primary-light)"><i class="bi bi-pc-display-horizontal"></i> Hardware Procurement</div>
-      <h1 style="color:var(--white)">Powerful Desktops for Every Business Role</h1>
-      <p style="color:rgba(255,255,255,0.7);font-size:1.1rem;margin-top:1.25rem;max-width:600px">High-performance business desktops procured, imaged, and deployed by our certified team.</p>
-      <div class="d-flex gap-3 mt-4 flex-wrap">
-        <a href="../../get-started/signup.html" class="btn-primary-custom">Get Started <i class="bi bi-arrow-right"></i></a>
-        <a href="../../insights/pricing.html" class="btn-outline-custom" style="border-color:rgba(255,255,255,0.3);color:var(--white)">View Pricing</a>
+<!-- HERO -->
+<section class="hero-section">
+  <div class="hero-bg-orb hero-bg-orb--one"></div>
+  <div class="hero-bg-orb hero-bg-orb--two"></div>
+  <div class="hero-grid-lines" aria-hidden="true"></div>
+
+  <div class="container hero-content-shell">
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-6">
+        <h1 class="hero-title fade-in-up-2">
+          Desktop PCs &amp; Workstations for<br>
+          <span class="hero-title-accent">Business Teams</span>
+        </h1>
+        <p class="hero-lead fade-in-up-3">
+          HP, Dell, Lenovo &amp; custom workstations — business desktop PCs, all-in-ones, and GPU workstations configured and deployed across India for teams of any size.
+        </p>
+        <div class="d-flex gap-3 flex-wrap hero-btns fade-in-up-4">
+          <a href="#products" class="btn-primary-custom">Explore Desktop Range <i class="bi bi-arrow-right"></i></a>
+          <a href="#pricing" class="btn-outline-custom hero-secondary-btn">
+            <i class="bi bi-currency-rupee"></i> View Pricing
+          </a>
+        </div>
+        <div class="hero-proof-list fade-in-up-4">
+          <div class="hero-proof-item"><i class="bi bi-check-circle-fill"></i> Authorized HP, Dell &amp; Lenovo Reseller</div>
+          <div class="hero-proof-item"><i class="bi bi-check-circle-fill"></i> Windows 11 Pro pre-installed</div>
+          <div class="hero-proof-item"><i class="bi bi-check-circle-fill"></i> Domain join &amp; MDM enrolment included</div>
+        </div>
+        <div class="hero-mini-grid fade-in-up-4">
+          <div class="hero-mini-card"><strong>3+</strong><span>Top brands</span></div>
+          <div class="hero-mini-card"><strong>Intel 14th Gen</strong><span>Latest CPUs</span></div>
+          <div class="hero-mini-card"><strong>PAN India</strong><span>Delivery</span></div>
+        </div>
       </div>
+
+      <div class="col-lg-6">
+        <div class="hero-laptop-visual fade-in-up-4">
+          <div class="hero-main-img">
+            <img src="https://images.unsplash.com/photo-1547082299-de196ea013d6?q=80&w=900&auto=format&fit=crop" alt="Business Desktop PC">
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
-<section class="section-pad" style="background:var(--white)">
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span class="marquee-item"><i class="bi bi-pc-display"></i> HP EliteDesk 800</span>
+    <span class="marquee-item"><i class="bi bi-pc-display"></i> Dell OptiPlex 7010</span>
+    <span class="marquee-item"><i class="bi bi-pc-display"></i> Lenovo ThinkCentre M70</span>
+    <span class="marquee-item"><i class="bi bi-pc-display-horizontal"></i> HP Z4 Workstation</span>
+    <span class="marquee-item"><i class="bi bi-pc-display-horizontal"></i> Dell Precision 3660</span>
+    <span class="marquee-item"><i class="bi bi-shield-check"></i> Windows 11 Pro</span>
+    <span class="marquee-item"><i class="bi bi-hdd-network"></i> Domain Join Ready</span>
+    <span class="marquee-item"><i class="bi bi-patch-check"></i> Authorized Reseller</span>
+    <span class="marquee-item"><i class="bi bi-headset"></i> On-site Warranty</span>
+    <span class="marquee-item"><i class="bi bi-lightning-charge"></i> Same-Day Dispatch</span>
+    <!-- duplicate for seamless loop -->
+    <span class="marquee-item"><i class="bi bi-pc-display"></i> HP EliteDesk 800</span>
+    <span class="marquee-item"><i class="bi bi-pc-display"></i> Dell OptiPlex 7010</span>
+    <span class="marquee-item"><i class="bi bi-pc-display"></i> Lenovo ThinkCentre M70</span>
+    <span class="marquee-item"><i class="bi bi-pc-display-horizontal"></i> HP Z4 Workstation</span>
+    <span class="marquee-item"><i class="bi bi-pc-display-horizontal"></i> Dell Precision 3660</span>
+    <span class="marquee-item"><i class="bi bi-shield-check"></i> Windows 11 Pro</span>
+    <span class="marquee-item"><i class="bi bi-hdd-network"></i> Domain Join Ready</span>
+    <span class="marquee-item"><i class="bi bi-patch-check"></i> Authorized Reseller</span>
+    <span class="marquee-item"><i class="bi bi-headset"></i> On-site Warranty</span>
+    <span class="marquee-item"><i class="bi bi-lightning-charge"></i> Same-Day Dispatch</span>
+  </div>
+</div>
+
+<!-- PRODUCT SPOTLIGHT -->
+<section class="section-pad" id="products" style="background:linear-gradient(180deg,rgba(99,102,241,0.05) 0%,#f8fbff 44%,#ffffff 100%);">
   <div class="container">
-    <div class="row g-4">
-      <div class="col-lg-6 reveal">
-        <div class="section-label"><i class="bi bi-stars"></i> Key Capabilities</div>
-        <h2 class="section-title">What You <span>Get</span></h2>
-        <div class="divider"></div>
-        <ul class="feature-list">
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Enterprise-grade security and compliance built in</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Real-time dashboards and actionable analytics</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Seamless integrations with your existing tools</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Dedicated onboarding and customer success manager</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Mobile-first design for on-the-go access</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">99.9% uptime SLA with 24/7 technical support</span></li>
-        </ul>
+    <div class="laptops-spotlight reveal">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-5">
+          <h2 class="laptops-spotlight-title">Enterprise desktops. Windows-ready. Delivered and domain-joined.</h2>
+          <p class="laptops-spotlight-desc">Every desktop is sourced through authorized channels, pre-loaded with Windows 11 Pro, joined to your domain or MDM, and asset-tagged before shipping — so your team sits down and starts working.</p>
+          <div class="spotlight-points">
+            <span><i class="bi bi-check2-circle"></i> Domain join &amp; MDM enrolment included on every unit</span>
+            <span><i class="bi bi-check2-circle"></i> On-site next-business-day warranty available</span>
+            <span><i class="bi bi-check2-circle"></i> GST invoicing, asset tagging &amp; full documentation</span>
+          </div>
+          <div class="spotlight-metrics">
+            <div class="spotlight-metric"><strong>3+</strong><span>Top brands</span></div>
+            <div class="spotlight-metric"><strong>PAN India</strong><span>Delivery coverage</span></div>
+            <div class="spotlight-metric"><strong>NBD</strong><span>On-site warranty</span></div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="spotlight-visual reveal reveal-delay-2">
+            <div class="spotlight-visual-img"></div>
+            <div class="spotlight-float-chip"><i class="bi bi-hdd-network"></i> Domain joined &amp; MDM enrolled</div>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-6 reveal reveal-delay-2">
-        <div class="row g-3">
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-lightning-charge"></i></div><h5>Fast Setup</h5><p class="text-muted small">Live in hours, not weeks</p></div></div>
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-shield-check"></i></div><h5>Secure</h5><p class="text-muted small">End-to-end encrypted</p></div></div>
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-graph-up"></i></div><h5>Analytics</h5><p class="text-muted small">Real-time insights</p></div></div>
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-headset"></i></div><h5>24/7 Support</h5><p class="text-muted small">Always there for you</p></div></div>
+    </div>
+
+    <!-- PRODUCT CARDS -->
+    <div class="row g-4 mt-2" id="products-grid">
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-pc-display"></i></span>
+            <span class="product-highlight-pill">HP EliteDesk · Most Popular</span>
+          </div>
+          <h3>HP EliteDesk 800 G9 SFF</h3>
+          <p>The gold standard for enterprise desktops — compact small-form-factor chassis, enterprise manageability, and rock-solid reliability for office workstations.</p>
+          <div class="product-highlight-list">
+            <span>Intel Core i5-13500</span><span>16GB DDR5</span><span>512GB SSD</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹72,000</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-pc-display"></i></span>
+            <span class="product-highlight-pill">Dell OptiPlex</span>
+          </div>
+          <h3>Dell OptiPlex 7010 Tower</h3>
+          <p>Dell's most versatile business desktop — expandable tower with dual-display support, enterprise security features, and easy serviceability for IT teams.</p>
+          <div class="product-highlight-list">
+            <span>Intel Core i7-13700</span><span>16GB DDR5</span><span>512GB SSD</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹85,000</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-pc-display"></i></span>
+            <span class="product-highlight-pill">Lenovo ThinkCentre</span>
+          </div>
+          <h3>Lenovo ThinkCentre M70q Gen 4</h3>
+          <p>Tiny footprint, full performance — Lenovo's compact Q-series is perfect for space-constrained offices and multi-monitor reception or trading desks.</p>
+          <div class="product-highlight-list">
+            <span>Intel Core i5-13400T</span><span>16GB DDR5</span><span>256GB SSD</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹65,000</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-display"></i></span>
+            <span class="product-highlight-pill">All-in-One · Space Saving</span>
+          </div>
+          <h3>HP EliteOne 800 G9 AIO</h3>
+          <p>All-in-one enterprise PC — clean desk, no tower clutter, with a 27" display, pop-up camera, and full enterprise manageability built in.</p>
+          <div class="product-highlight-list">
+            <span>Intel Core i7</span><span>16GB RAM</span><span>27" Display</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹1,15,000</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-pc-display-horizontal"></i></span>
+            <span class="product-highlight-pill">Workstation · Engineering</span>
+          </div>
+          <h3>HP Z4 G5 Workstation</h3>
+          <p>Professional workstation for CAD, simulation, and data science — Xeon W CPU, ECC memory, and ISV-certified NVIDIA RTX GPU options.</p>
+          <div class="product-highlight-list">
+            <span>Intel Xeon W3-2423</span><span>32GB ECC</span><span>1TB NVMe</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹2,20,000</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-gpu-card"></i></span>
+            <span class="product-highlight-pill">GPU Workstation · AI &amp; Render</span>
+          </div>
+          <h3>Dell Precision 3660 Tower</h3>
+          <p>GPU-optimised tower workstation for AI/ML, 3D rendering, and video production — supports dual NVIDIA RTX 4000 Ada GPUs and up to 128GB RAM.</p>
+          <div class="product-highlight-list">
+            <span>Intel Core i9-13900K</span><span>64GB DDR5</span><span>RTX 4000 Ada</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹3,80,000</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+  <div class="container">
+    <h3 class="stats-heading reveal">Enterprise desktop ecosystem, delivered by Microhub.</h3>
+    <p class="stats-subtext reveal">From a single workstation to a 1000-seat desktop rollout — Microhub handles every step of business PC procurement in India.</p>
+    <div class="stats-grid reveal">
+      <div class="stat-item"><div class="stat-number">600+</div><div class="stat-label">Offices Equipped</div><div class="stat-note">Across startups, corporates, and PSUs.</div></div>
+      <div class="stat-item"><div class="stat-number">14th Gen</div><div class="stat-label">Latest Intel CPUs</div><div class="stat-note">All current-gen processors in stock.</div></div>
+      <div class="stat-item"><div class="stat-number">&lt;24h</div><div class="stat-label">Dispatch SLA</div><div class="stat-note">Pre-configured and shipped same day.</div></div>
+      <div class="stat-item"><div class="stat-number">NBD</div><div class="stat-label">On-site Warranty</div><div class="stat-note">Next-business-day engineer support.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY Microhub -->
+<section class="section-pad why-laptops-section">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <h2 class="section-title">The Smartest Way to <span>Buy Desktops for Business</span></h2>
+      <p class="section-desc mx-auto">Microhub is an authorized reseller for HP, Dell, and Lenovo — we handle procurement, imaging, domain join, and long-term support so your IT team stays focused on strategy, not logistics.</p>
+    </div>
+    <div class="row g-4 align-items-stretch">
+      <div class="col-lg-5 d-flex">
+        <figure class="why-story-media reveal reveal-delay-1" style="flex:1 1 auto;margin:0;">
+          <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=800&auto=format&fit=crop" alt="Enterprise desktop setup">
+        </figure>
+      </div>
+      <div class="col-lg-7 d-flex">
+        <div class="why-story-copy reveal reveal-delay-2">
+          <h3 class="why-story-title">From order to onboarding — we handle the entire desktop deployment.</h3>
+          <p class="why-story-lead">Deploying desktops at scale means OS imaging, domain join, asset tagging, and delivery coordination. Microhub bridges every step with authorised hardware, Windows 11 Pro licensing, and MDM pre-enrolment — all before the box leaves the warehouse.</p>
+          <div class="why-story-list">
+            <article class="why-story-item">
+              <span class="why-story-index">01</span>
+              <div class="why-story-body"><h4>OS imaging &amp; domain join</h4><p>Every PC arrives with your Windows 11 Pro image, domain-joined to your Active Directory or Azure AD, and policies applied via Intune or Group Policy — ready to log in from day one.</p></div>
+            </article>
+            <article class="why-story-item">
+              <span class="why-story-index">02</span>
+              <div class="why-story-body"><h4>Spec guidance for every role</h4><p>Compact mini PCs for reception, SFF desktops for office staff, towers for developers, and GPU workstations for design and AI teams — we match the right hardware to every function.</p></div>
+            </article>
+            <article class="why-story-item">
+              <span class="why-story-index">03</span>
+              <div class="why-story-body"><h4>Volume pricing &amp; on-site warranty</h4><p>Microhub unlocks HP, Dell, and Lenovo business pricing for bulk orders and bundles next-business-day on-site warranty to protect every device with fast engineer response.</p></div>
+            </article>
+            <article class="why-story-item">
+              <span class="why-story-index">04</span>
+              <div class="why-story-body"><h4>Asset management &amp; lifecycle support</h4><p>Asset tagging, inventory tracking, refresh planning, and end-of-life disposal — all managed through Microhub so your IT team has full visibility of every desktop in the fleet.</p></div>
+            </article>
+          </div>
+          <div class="why-story-meta">
+            <span>Authorized Reseller</span>
+            <span>PAN India delivery</span>
+            <span>NBD on-site warranty</span>
+          </div>
+          <div class="why-story-actions">
+            <a href="../../get-started/signup.html" class="btn-primary-custom">Get a Quote <i class="bi bi-arrow-right"></i></a>
+            <p>Trusted by Indian enterprises for end-to-end desktop procurement and deployment.</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<section class="stats-section">
-  <div class="container position-relative">
-    <div class="row g-4 text-center">
-      <div class="col-6 col-lg-3 reveal"><div class="stat-number"><span class="counter-num" data-target="500" data-suffix="+">500+</span></div><div class="stat-label">Businesses Served</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-1"><div class="stat-number"><span class="counter-num" data-target="99" data-suffix="%">99%</span></div><div class="stat-label">Uptime SLA</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-2"><div class="stat-number"><span class="counter-num" data-target="4" data-suffix="hr">4hr</span></div><div class="stat-label">Avg Setup Time</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-3"><div class="stat-number"><span class="counter-num" data-target="4.8" data-suffix="/5">4.8/5</span></div><div class="stat-label">Customer Rating</div></div>
+
+<!-- PRICING -->
+<section class="section-pad pricing-section" id="pricing">
+  <div class="container">
+    <div class="text-center mb-2 reveal">
+      <h2 class="section-title">Desktop Plans, <span>No Hidden Costs</span></h2>
+      <p class="section-desc mx-auto">All plans include GST invoicing, Windows 11 Pro licence, manufacturer warranty, and domain join. On-site NBD warranty available on every tier.</p>
+    </div>
+    <div class="pricing-grid reveal">
+
+      <div class="pricing-card">
+        <div class="pricing-tier">Essential</div>
+        <div class="pricing-price">₹65K</div>
+        <div class="pricing-sub">per device</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> Lenovo ThinkCentre Mini</li>
+          <li><i class="bi bi-check-circle-fill"></i> Intel Core i5, 16GB RAM</li>
+          <li><i class="bi bi-check-circle-fill"></i> 256GB SSD</li>
+          <li><i class="bi bi-check-circle-fill"></i> Windows 11 Pro</li>
+          <li><i class="bi bi-check-circle-fill"></i> 1-year warranty</li>
+          <li><i class="bi bi-check-circle-fill"></i> Domain join included</li>
+        </ul>
+        <a href="#" class="btn-outline-custom w-100 justify-content-center">Choose Essential</a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-tier">Office</div>
+        <div class="pricing-price">₹80K</div>
+        <div class="pricing-sub">per device</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> HP EliteDesk 800 SFF</li>
+          <li><i class="bi bi-check-circle-fill"></i> Intel Core i5-13500, 16GB DDR5</li>
+          <li><i class="bi bi-check-circle-fill"></i> 512GB NVMe SSD</li>
+          <li><i class="bi bi-check-circle-fill"></i> Windows 11 Pro</li>
+          <li><i class="bi bi-check-circle-fill"></i> 3-year on-site NBD warranty</li>
+          <li><i class="bi bi-check-circle-fill"></i> MDM + domain join</li>
+        </ul>
+        <a href="#" class="btn-outline-custom w-100 justify-content-center">Choose Office</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-tier">Pro</div>
+        <div class="pricing-price">₹90K</div>
+        <div class="pricing-sub">per device</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> Dell OptiPlex 7010 Tower</li>
+          <li><i class="bi bi-check-circle-fill"></i> Intel Core i7-13700, 16GB DDR5</li>
+          <li><i class="bi bi-check-circle-fill"></i> 512GB SSD</li>
+          <li><i class="bi bi-check-circle-fill"></i> 3-year ProSupport NBD</li>
+          <li><i class="bi bi-check-circle-fill"></i> MDM + domain join</li>
+          <li><i class="bi bi-check-circle-fill"></i> Priority support</li>
+        </ul>
+        <a href="#" class="btn-primary-custom w-100 justify-content-center">Choose Pro</a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-tier">Workstation</div>
+        <div class="pricing-price">₹2.2L+</div>
+        <div class="pricing-sub">per device</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> HP Z4 G5 / Dell Precision</li>
+          <li><i class="bi bi-check-circle-fill"></i> Xeon / Core i9, 32GB ECC RAM</li>
+          <li><i class="bi bi-check-circle-fill"></i> 1TB NVMe + RTX GPU</li>
+          <li><i class="bi bi-check-circle-fill"></i> ISV-certified GPU options</li>
+          <li><i class="bi bi-check-circle-fill"></i> 3-year on-site support</li>
+          <li><i class="bi bi-check-circle-fill"></i> 24/7 dedicated support</li>
+        </ul>
+        <a href="#" class="btn-outline-custom w-100 justify-content-center">Choose Workstation</a>
+      </div>
+
     </div>
   </div>
 </section>
-<section class="cta-section">
-  <div class="container position-relative" style="z-index:1;text-align:center">
-    <h2 style="color:var(--white);margin-bottom:1rem">Ready to Get Started?</h2>
-    <p style="color:rgba(255,255,255,0.8);margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto">Join hundreds of businesses using MicroHub to grow faster and work smarter.</p>
-    <a href="../../get-started/signup.html" class="btn-white-custom">Start Free Trial <i class="bi bi-arrow-right"></i></a>
+
+<!-- TESTIMONIALS -->
+<section class="section-pad testimonials-section">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <h2 class="section-title">Trusted by <span>India's Best Teams</span></h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Microhub imaged and deployed 200 HP EliteDesks across our offices in two weeks. Domain join, Intune enrolment, and asset tagging were all done before delivery. Our IT team just had to plug them in."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">VN</div>
+            <div><div class="testimonial-name">Vikram Nair</div><div class="testimonial-role">IT Director, Proaxis Systems</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"We spec'd Dell Precision workstations through Microhub for our AI team. The GPU configuration advice alone saved us from a costly mistake. Delivery was on time and the NBD warranty gives us confidence."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SA</div>
+            <div><div class="testimonial-name">Sneha Arora</div><div class="testimonial-role">CTO, DataLens AI</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"500 Lenovo ThinkCentres rolled out across 8 branches in a month. Single GST invoice, one support number. Microhub made what sounded like a nightmare completely straightforward."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">RG</div>
+            <div><div class="testimonial-name">Rahul Gupta</div><div class="testimonial-role">Head of IT, BancFirst India</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
-<div id="footer-root" data-include="components/footer.html"></div>
 
+<!-- BRAND PARTNER BADGE -->
+<section class="section-pad" style="background:var(--white)">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <h2 class="section-title">Official Authorized <span>Reseller</span></h2>
+      <p class="section-desc mx-auto">Every desktop sold by Microhub is genuine, covered by full manufacturer warranty, and sourced through authorized channels.</p>
+    </div>
+    <div class="partner-logos-row reveal reveal-delay-1">
+      <div class="partner-logo-item"><i class="bi bi-pc-display" style="font-size:1.8rem;color:#0066cc"></i><span style="font-weight:700;font-size:1.1rem;color:#1d1d1f;letter-spacing:-0.04em">HP</span></div>
+      <div class="partner-logo-sep"></div>
+      <div class="partner-logo-item"><i class="bi bi-pc-display" style="font-size:1.8rem;color:#007db8"></i><span style="font-weight:700;font-size:1.1rem;color:#1d1d1f;letter-spacing:-0.04em">Dell</span></div>
+      <div class="partner-logo-sep"></div>
+      <div class="partner-logo-item"><i class="bi bi-pc-display" style="font-size:1.8rem;color:#e2231a"></i><span style="font-weight:700;font-size:1.1rem;color:#1d1d1f;letter-spacing:-0.04em">Lenovo</span></div>
+      <div class="partner-logo-sep"></div>
+      <div class="partner-logo-item"><i class="bi bi-windows" style="font-size:1.8rem;color:#0078d4"></i><span style="font-weight:700;font-size:1.1rem;color:#1d1d1f;letter-spacing:-0.04em">Windows 11 Pro</span></div>
+      <div class="partner-logo-sep"></div>
+      <div class="partner-logo-item"><i class="bi bi-gpu-card" style="font-size:1.8rem;color:#76b900"></i><span style="font-weight:700;font-size:1.1rem;color:#1d1d1f;letter-spacing:-0.04em">NVIDIA RTX</span></div>
+    </div>
+    <div class="d-flex justify-content-center gap-3 flex-wrap mt-4 reveal reveal-delay-2">
+      <div style="display:flex;align-items:center;gap:0.5rem;background:var(--accent);border:1px solid rgba(13,148,136,0.2);padding:0.5rem 1.1rem;border-radius:100px;font-size:0.82rem;font-weight:600;color:var(--primary-dark)"><i class="bi bi-patch-check-fill" style="color:var(--primary)"></i> Authorized Reseller</div>
+      <div style="display:flex;align-items:center;gap:0.5rem;background:var(--accent);border:1px solid rgba(13,148,136,0.2);padding:0.5rem 1.1rem;border-radius:100px;font-size:0.82rem;font-weight:600;color:var(--primary-dark)"><i class="bi bi-shield-fill-check" style="color:var(--primary)"></i> Full Manufacturer Warranty</div>
+      <div style="display:flex;align-items:center;gap:0.5rem;background:var(--accent);border:1px solid rgba(13,148,136,0.2);padding:0.5rem 1.1rem;border-radius:100px;font-size:0.82rem;font-weight:600;color:var(--primary-dark)"><i class="bi bi-hdd-network" style="color:var(--primary)"></i> Domain Join &amp; MDM</div>
+      <div style="display:flex;align-items:center;gap:0.5rem;background:var(--accent);border:1px solid rgba(13,148,136,0.2);padding:0.5rem 1.1rem;border-radius:100px;font-size:0.82rem;font-weight:600;color:var(--primary-dark)"><i class="bi bi-tools" style="color:var(--primary)"></i> NBD On-site Warranty</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-pad" style="background:var(--accent)">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="text-center mb-5 reveal">
+          <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+          <p class="section-desc mx-auto">Everything you need to know about buying desktop PCs and workstations through Microhub for your business.</p>
+        </div>
+        <div class="accordion accordion-custom" id="desktop-faq">
+          <div class="accordion-item reveal">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-d1" aria-expanded="true">
+                <i class="bi bi-pc-display me-3" style="color:var(--primary);flex-shrink:0"></i>
+                Which desktop brands does Microhub supply?
+              </button>
+            </h2>
+            <div id="faq-d1" class="accordion-collapse collapse show" data-bs-parent="#desktop-faq">
+              <div class="accordion-body">Microhub is an authorized reseller for <strong>HP, Dell, and Lenovo</strong> business desktops and workstations. Every unit is genuine, sourced through the authorized channel, and comes with a valid GST invoice and full manufacturer warranty.</div>
+            </div>
+          </div>
+          <div class="accordion-item reveal reveal-delay-1">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-d2">
+                <i class="bi bi-hdd-network me-3" style="color:var(--primary);flex-shrink:0"></i>
+                Can Microhub pre-configure desktops with our domain and software?
+              </button>
+            </h2>
+            <div id="faq-d2" class="accordion-collapse collapse" data-bs-parent="#desktop-faq">
+              <div class="accordion-body">Yes. We offer OS imaging with your custom Windows 11 Pro image, domain join to your Active Directory or Azure AD, Intune MDM enrolment, and software pre-installation. Devices are fully configured before shipping — your team just connects the monitor and keyboard.</div>
+            </div>
+          </div>
+          <div class="accordion-item reveal reveal-delay-2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-d3">
+                <i class="bi bi-shield-check me-3" style="color:var(--primary);flex-shrink:0"></i>
+                What does next-business-day (NBD) on-site warranty mean?
+              </button>
+            </h2>
+            <div id="faq-d3" class="accordion-collapse collapse" data-bs-parent="#desktop-faq">
+              <div class="accordion-body">NBD on-site warranty means if your desktop develops a hardware fault, an engineer arrives at your office the next business day with parts to resolve it — no need to courier the unit or visit a service centre. Available on HP, Dell, and Lenovo business models for 1 or 3 years.</div>
+            </div>
+          </div>
+          <div class="accordion-item reveal reveal-delay-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-d4">
+                <i class="bi bi-currency-rupee me-3" style="color:var(--primary);flex-shrink:0"></i>
+                Do you offer volume discounts for large desktop orders?
+              </button>
+            </h2>
+            <div id="faq-d4" class="accordion-collapse collapse" data-bs-parent="#desktop-faq">
+              <div class="accordion-body">Yes. For orders of <strong>10+ units</strong> we unlock HP, Dell, and Lenovo business pricing. For 50+ units we offer a dedicated account manager, phased delivery and installation scheduling, and custom imaging support.</div>
+            </div>
+          </div>
+          <div class="accordion-item reveal reveal-delay-1">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-d5">
+                <i class="bi bi-gpu-card me-3" style="color:var(--primary);flex-shrink:0"></i>
+                Can I order workstations with specific GPU configurations for AI or rendering?
+              </button>
+            </h2>
+            <div id="faq-d5" class="accordion-collapse collapse" data-bs-parent="#desktop-faq">
+              <div class="accordion-body">Yes. Microhub configures HP Z-series and Dell Precision workstations with <strong>NVIDIA RTX 4000, 5000, and 6000 Ada</strong> professional GPUs, as well as consumer RTX cards for AI/ML workloads. We advise on ISV certification requirements and VRAM needs for your specific software stack.</div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5 reveal">
+          <p class="text-muted mb-3">Still have questions? Our desktop team is happy to help.</p>
+          <a href="../../get-started/signup.html" class="btn-primary-custom me-3">Talk to Sales <i class="bi bi-arrow-right"></i></a>
+          <a href="../../insights/blog.html" class="btn-outline-custom">Browse Knowledge Base</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="laptops-cta">
+  <div class="container">
+    <div class="reveal text-center" style="max-width:720px;margin:0 auto;">
+      <div class="cta-eyebrow">Ready to build your desktop fleet?</div>
+      <h2 class="cta-title">Equip Your Team with the Right Desktops Today</h2>
+      <p class="cta-text mx-auto">Get genuine hardware delivered, domain-joined, and MDM-enrolled — with a single GST invoice, NBD warranty option, and one dedicated support relationship.</p>
+      <div class="cta-actions justify-content-center">
+        <a href="../../get-started/signup.html" class="btn-white-custom">Get a Quote <i class="bi bi-arrow-right"></i></a>
+        <a href="#products" class="btn-outline-custom home-cta-outline">Browse All Desktops</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div id="footer-root" data-include="components/footer.html"></div>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../../assets/js/component-loader.js"></script>
 <script src="../../assets/js/navigation.js"></script>
-<script src="../../assets/js/animations.js"></script>
 <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/enhancements.js"></script>
+<script src="product.js"></script>
 </body>
 </html>

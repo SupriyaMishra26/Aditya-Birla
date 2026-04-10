@@ -1,86 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HR & Payroll ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â MicroHub</title>
+  <title>HR & Payroll Management — Microhub</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/css/main.css">
   <link rel="stylesheet" href="../../assets/css/layout.css">
   <link rel="stylesheet" href="../../assets/css/components.css">
   <link rel="stylesheet" href="../../assets/css/animations.css">
   <link rel="stylesheet" href="../../assets/css/responsive.css">
+  <link rel="stylesheet" href="solutions.css">
+  <link rel="stylesheet" href="./css/financial.css">
+  <link rel="stylesheet" href="solution-overrides.css">
 </head>
-<body data-site-root="../../">
-<div id="navbar-root" data-include="components/navbar.html"></div>
 
-<section class="page-hero">
-  <div class="container position-relative" style="z-index:1">
-    <div class="breadcrumb-custom"><a href="../../index.html">Home</a><span>/</span><span>HR / Payroll</span></div>
-    <div class="col-lg-8 fade-in-up-1">
-      <div class="section-label" style="background:rgba(46,75,101,0.2);color:var(--primary-light)"><i class="bi bi-person-badge"></i> Human Resources</div>
-      <h1 style="color:var(--white)">Automate HR & Payroll, End to End</h1>
-      <p style="color:rgba(255,255,255,0.7);font-size:1.1rem;margin-top:1.25rem;max-width:600px">Complete employee lifecycle management with full Indian labour law and GST compliance.</p>
-      <div class="d-flex gap-3 mt-4 flex-wrap">
-        <a href="../../get-started/signup.html" class="btn-primary-custom">Get Started <i class="bi bi-arrow-right"></i></a>
-        <a href="../../insights/pricing.html" class="btn-outline-custom" style="border-color:rgba(255,255,255,0.3);color:var(--white)">View Pricing</a>
+<body class="page-hr" data-site-root="../../">
+  <div id="navbar-root" data-include="../../components/navbar.html"></div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../../index.html" class="mob-link">Home</a>
+    <a href="../../insights/blog.html" class="mob-link">Blog</a>
+    <a href="../../get-started/signup.html" class="mob-link" style="color:var(--primary-light)">Sign Up</a>
+  </div>
+
+  <!-- Hero Section with Parallax -->
+  <section class="page-hero" id="hero">
+    <div class="hero-bg-image parallax-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container position-relative" style="z-index:2">
+      <div class="breadcrumb-custom" data-aos="fade-down" data-aos-duration="800"><a href="../../index.html">Home</a><span>/</span><span>HR & Payroll Management</span></div>
+      <div class="col-lg-8">
+        <div class="section-label" style="background:rgba(53,81,106,0.2);color:#35516A" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100"><i class="bi bi-people-fill"></i> HRMS + Payroll</div>
+        <h1 style="color:var(--white)" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">Complete HR & Payroll Operations in One Platform</h1>
+        <p style="color:rgba(255,255,255,0.7);font-size:1.1rem;margin-top:1.25rem;max-width:600px" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">Manage attendance, leave, statutory compliance, and payroll — all seamlessly integrated.</p>
+        <div class="d-flex gap-3 mt-4 flex-wrap" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+          <a href="../../get-started/signup.html" class="btn-primary-custom">Get Started <i class="bi bi-arrow-right"></i></a>
+          <a href="../../insights/pricing.html" class="btn-outline-custom" style="border-color:rgba(255,255,255,0.3);color:var(--white)">View Pricing</a>
+        </div>
+      </div>
+    </div>
+   
+  </section>
+
+  <!-- Stats Section with Counter Animation -->
+  <div class="fin-stats-wrap">
+    <div class="container">
+      <div class="fin-stats-grid">
+        <div class="fin-stat-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0"><strong style="color: #cfe6ff;">₹0</strong><span>No upfront setup cost</span></div>
+        <div class="fin-stat-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"><strong style="color: #cfe6ff;">&lt;2min</strong><span>Payroll generation</span></div>
+        <div class="fin-stat-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200"><strong style="color: #cfe6ff;">EPF/ESI/PT</strong><span>Built-in compliance</span></div>
+        <div class="fin-stat-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300"><strong style="color: #cfe6ff;">HRMS</strong><span>All workforce workflows</span></div>
       </div>
     </div>
   </div>
-</section>
-<section class="section-pad" style="background:var(--white)">
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-lg-6 reveal">
-        <div class="section-label"><i class="bi bi-stars"></i> Key Capabilities</div>
-        <h2 class="section-title">What You <span>Get</span></h2>
-        <div class="divider"></div>
-        <ul class="feature-list">
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Enterprise-grade security and compliance built in</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Real-time dashboards and actionable analytics</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Seamless integrations with your existing tools</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Dedicated onboarding and customer success manager</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Mobile-first design for on-the-go access</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">99.9% uptime SLA with 24/7 technical support</span></li>
-        </ul>
+
+  <!-- Workflow Process Section (Organisation, Team, Payroll) -->
+  <section id="fin-process" class="fin-section fin-section-anchor">
+    <div class="container">
+      <div class="fin-head center">
+        <span class="fin-eyebrow" data-aos="fade-up" data-aos-duration="600"><i class="bi bi-diagram-3"></i> End-to-End HR Operations — From Onboarding to Salary</span>
+        <h2 data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">From employee onboarding to automated payroll and compliance.</h2>
+        <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">Microhub manages your complete HR lifecycle — organisation setup, employee records, biometric attendance, and payroll processing with statutory compliance.</p>
       </div>
-      <div class="col-lg-6 reveal reveal-delay-2">
-        <div class="row g-3">
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-lightning-charge"></i></div><h5>Fast Setup</h5><p class="text-muted small">Live in hours, not weeks</p></div></div>
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-shield-check"></i></div><h5>Secure</h5><p class="text-muted small">End-to-end encrypted</p></div></div>
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-graph-up"></i></div><h5>Analytics</h5><p class="text-muted small">Real-time insights</p></div></div>
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-headset"></i></div><h5>24/7 Support</h5><p class="text-muted small">Always there for you</p></div></div>
+      <div class="fin-grid-3">
+        <article class="fin-process-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
+          <span class="fin-process-index">01</span>
+          <h3 style="color: #cfe6ff;">Organisation Settings</h3>
+          <p>Configure company policies, departments, designations, work locations, and statutory components (EPF, ESI, PT, LWF, Bonus) as per Indian labour laws.</p>
+          <div class="process-hover-line"></div>
+        </article>
+        <article class="fin-process-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+          <span class="fin-process-index">02</span>
+          <h3 style="color: #cfe6ff;">Team & Employee Management</h3>
+          <p>Centralized employee directory, onboarding checklists, role-based permissions, salary templates, and exit management with full & final settlement.</p>
+          <div class="process-hover-line"></div>
+        </article>
+        <article class="fin-process-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+          <span class="fin-process-index">03</span>
+          <h3 style="color: #cfe6ff;">Biometric + Payroll</h3>
+          <p>AI-powered face recognition attendance, leave management, shift scheduling, and automated salary processing with direct bank transfer.</p>
+          <div class="process-hover-line"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Organisation & Statutory Deep Dive -->
+  <section id="fin-accounting" class="fin-section fin-section-anchor">
+    <div class="container">
+      <div class="fin-grid-2-equal">
+        <div class="fin-visual-card-equal" data-aos="fade-right" data-aos-duration="800">
+          <span class="fin-visual-kicker"><i class="bi bi-building"></i> Organisation – Complete Company Setup</span>
+          <div class="fin-media-container">
+            <img src="https://static.vecteezy.com/system/resources/previews/015/939/308/non_2x/financial-management-planning-and-control-financial-resources-to-maximize-profit-and-revenue-capital-credit-and-cash-management-concept-businessman-analyze-financial-resource-with-growth-profit-vector.jpg" alt="Organisation Structure" class="fin-media-image">
+          </div>
+          <div class="fin-chip-row">
+            <span class="fin-chip"><i class="bi bi-bank2"></i> EPF/ESI Setup</span>
+            <span class="fin-chip"><i class="bi bi-receipt"></i> Professional Tax</span>
+            <span class="fin-chip"><i class="bi bi-calendar-week"></i> Pay Schedules</span>
+            <span class="fin-chip"><i class="bi bi-diagram-3"></i> Departments</span>
+          </div>
+        </div>
+        <div class="fin-content-equal" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <span class="fin-eyebrow"><i class="bi bi-journal-bookmark-fill"></i> Organisation Deep Dive</span>
+          <h2>Define Policies, Statutory Components & Work Locations</h2>
+          <p>Microhub gives you complete control over your organisation structure — from company details to statutory compliance rules that drive payroll calculations.</p>
+          <div class="fin-feature-list">
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-pen"></i></span><div><h3 style="color: #cfe6ff;">Company Profile & Locations</h3><p>Manage company details, logo, address, and multiple work locations. Assign employees to specific office branches.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-diagram-3"></i></span><div><h3 style="color: #cfe6ff;">Departments & Designations</h3><p>Create departments (IT, HR, Sales) and define designations (Manager, Developer) with hierarchy mapping.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-shield-check"></i></span><div><h3 style="color: #cfe6ff;">Statutory Components</h3><p>Configure EPF rates, ESI settings, state-wise Professional Tax slabs, LWF toggle, and Bonus rules as per labour laws.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-calculator-fill"></i></span><div><h3 style="color: #cfe6ff;">Salary Components & Pay Schedule</h3><p>Create earnings (Basic, HRA) and deductions (Tax, Loan). Set monthly/weekly pay cycles and payout dates.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Team & Employee Management (reverse layout) -->
+  <section id="fin-validation" class="fin-section fin-section-anchor">
+    <div class="container">
+      <div class="fin-grid-2-equal reverse">
+        <div class="fin-content-equal" data-aos="fade-right" data-aos-duration="800">
+          <span class="fin-eyebrow"><i class="bi bi-people-fill"></i> Team Management – Complete Employee Lifecycle</span>
+          <h2>From Onboarding to Exit — Centralized Employee Database</h2>
+          <p>Manage your entire workforce with role-based permissions, onboarding checklists, document management, and seamless exit processing with full & final settlement.</p>
+          <div class="fin-feature-list">
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-person-plus"></i></span><div><h3 style="color: #cfe6ff;">Onboarding Checklists</h3><p>Create task lists for new joiners, assign actions to departments, and track completion progress in real time.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-door-closed"></i></span><div><h3 style="color: #cfe6ff;">Exit Management</h3><p>Initiate resignation/termination, track asset recovery, process Full & Final settlement, and record exit interviews.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-shield-lock"></i></span><div><h3 style="color: #cfe6ff;">Role-Based Permissions</h3><p>Zoho-style 5-tier access control (Admin, HR, Manager, Employee, Auditor) for complete data security.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-files"></i></span><div><h3 style="color: #cfe6ff;">Digital Document Management</h3><p>Upload and store employee documents (IDs, contracts) with access permissions and version control.</p></div></div>
+          </div>
+        </div>
+        <div class="fin-visual-card-equal" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <span class="fin-visual-kicker"><i class="bi bi-person-badge"></i> Employee Self-Service Portal</span>
+          <div class="fin-media-container">
+            <div class="fin-compliance-animation">
+              <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="30" y="60" width="70" height="40" rx="8" fill="rgba(53,81,106,0.2)" stroke="#35516A" stroke-width="1.5"/>
+                <text x="65" y="83" font-size="9" fill="#cfe6ff" text-anchor="middle">Onboarding</text>
+                <path d="M100 80 L130 80" stroke="#35516A" stroke-width="2"/>
+                <rect x="130" y="60" width="70" height="40" rx="8" fill="rgba(53,81,106,0.3)" stroke="#35516A" stroke-width="1.5"/>
+                <text x="165" y="83" font-size="9" fill="#cfe6ff" text-anchor="middle">Active</text>
+                <path d="M200 80 L230 80" stroke="#35516A" stroke-width="2"/>
+                <rect x="230" y="60" width="60" height="40" rx="8" fill="rgba(53,81,106,0.2)" stroke="#35516A" stroke-width="1.5"/>
+                <text x="260" y="83" font-size="9" fill="#cfe6ff" text-anchor="middle">Exit</text>
+                <text x="160" y="170" font-size="10" fill="rgba(255,255,255,0.6)" text-anchor="middle">Full lifecycle management with FnF settlement</text>
+                <rect x="60" y="185" width="200" height="4" rx="2" fill="rgba(53,81,106,0.2)"/>
+                <rect x="60" y="185" width="192" height="4" rx="2" fill="#35516A"/>
+              </svg>
+            </div>
+          </div>
+          <div class="fin-chip-row">
+            <span class="fin-chip"><i class="bi bi-check-circle"></i> Onboarding Tasks</span>
+            <span class="fin-chip"><i class="bi bi-box-seam"></i> Asset Clearance</span>
+            <span class="fin-chip"><i class="bi bi-receipt"></i> FnF Settlement</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Biometric + Attendance + Payroll Deep Dive -->
+  <section id="fin-reconciliation" class="fin-section fin-section-anchor">
+    <div class="container">
+      <div class="fin-grid-2-equal">
+        <div class="fin-visual-card-equal" data-aos="fade-right" data-aos-duration="800">
+          <span class="fin-visual-kicker"><i class="bi bi-camera-video"></i> Biometric & Attendance – AI-Powered Tracking</span>
+          <div class="fin-media-container">
+            <div class="fin-reconcile-animation">
+              <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="30" y="50" width="80" height="90" rx="8" fill="rgba(53,81,106,0.15)" stroke="#35516A" stroke-width="1.5"/>
+                <text x="70" y="75" font-size="8" fill="#cfe6ff" text-anchor="middle">Check-in</text>
+                <text x="70" y="95" font-size="8" fill="#cfe6ff" text-anchor="middle">Break</text>
+                <text x="70" y="115" font-size="8" fill="#cfe6ff" text-anchor="middle">Check-out</text>
+                <rect x="220" y="50" width="80" height="90" rx="8" fill="rgba(53,81,106,0.15)" stroke="#35516A" stroke-width="1.5"/>
+                <text x="260" y="75" font-size="8" fill="#cfe6ff" text-anchor="middle">Leave</text>
+                <text x="260" y="95" font-size="8" fill="#cfe6ff" text-anchor="middle">Regularize</text>
+                <text x="260" y="115" font-size="8" fill="#cfe6ff" text-anchor="middle">OT</text>
+                <path d="M110 95 L220 95" stroke="#35516A" stroke-width="2" stroke-dasharray="4 2"/>
+                <circle cx="110" cy="95" r="4" fill="#35516A">
+                  <animate attributeName="cx" values="110;220;110" dur="2.5s" repeatCount="indefinite"/>
+                </circle>
+                <text x="160" y="170" font-size="10" fill="rgba(255,255,255,0.6)" text-anchor="middle">Auto sync to payroll + leave encashment</text>
+                <rect x="60" y="185" width="200" height="4" rx="2" fill="rgba(53,81,106,0.2)"/>
+                <rect x="60" y="185" width="192" height="4" rx="2" fill="#35516A"/>
+              </svg>
+            </div>
+          </div>
+          <div class="fin-chip-row">
+            <span class="fin-chip"><i class="bi bi-fingerprint"></i> Face Recognition</span>
+            <span class="fin-chip"><i class="bi bi-clock"></i> Web Check-in/out</span>
+            <span class="fin-chip"><i class="bi bi-calendar-check"></i> Leave & OT</span>
+          </div>
+        </div>
+        <div class="fin-content-equal" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <span class="fin-eyebrow"><i class="bi bi-cash-stack"></i> Payroll – Complete Salary Automation</span>
+          <h2>Attendance-Linked Payroll with Statutory Compliance</h2>
+          <p>Microhub automates salary processing based on attendance, leave, and overtime. Generate payslips, handle TDS, and create bank transfer files — all in one place.</p>
+          <div class="fin-feature-list">
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-plus-lg"></i></span><div><h3 style="color: #cfe6ff;">Payroll Generation</h3><p>Auto-calculate salaries based on attendance, salary components, and statutory deductions. One-click payroll approval.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-envelope-paper"></i></span><div><h3 style="color: #cfe6ff;">Payslips & Distribution</h3><p>Generate PDF payslips, email to employees, and provide self-service access via employee portal.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-bank"></i></span><div><h3 style="color: #cfe6ff;">Bank Transfer & Taxation</h3><p>Generate bank payment files for salary disbursal. Handle TDS, PT, EPF, ESI contributions automatically.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-graph-up"></i></span><div><h3 style="color: #cfe6ff;">Reports & Analytics</h3><p>Attendance reports, leave utilization, payroll cost analysis, headcount, and attrition trends.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Zoho Payroll + Books Sync (reverse layout) -->
+  <section id="fin-sync" class="fin-section fin-section-anchor">
+    <div class="container">
+      <div class="fin-grid-2-equal reverse">
+        <div class="fin-content-equal" data-aos="fade-right" data-aos-duration="800">
+          <span class="fin-eyebrow"><i class="bi bi-cloud-check"></i> Zoho Payroll + Zoho Books Integration</span>
+          <h2>Seamless Payroll to Accounting Sync</h2>
+          <p>Every payroll run automatically posts journal entries to Zoho Books. Salary expenses, statutory liabilities, and tax payments reflect instantly in your P&L and Balance Sheet.</p>
+          <div class="fin-feature-list">
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-journal"></i></span><div><h3 style="color: #cfe6ff;">Automated Journal Entries</h3><p>Payroll expenses recorded in respective Expense and Liability accounts. Accrual or cash basis support.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-credit-card"></i></span><div><h3 style="color: #cfe6ff;">Direct Deposit & Bank Sync</h3><p>ICICI Bank integration for direct salary deposit. Record payments individually or as group transactions.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-file-spreadsheet"></i></span><div><h3 style="color: #cfe6ff;">Statutory Returns Ready</h3><p>EPF, ESI, PT, TDS returns generated automatically. Compliant with Indian labour laws.</p></div></div>
+          </div>
+        </div>
+        <div class="fin-visual-card-equal" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <span class="fin-visual-kicker"><i class="bi bi-arrow-repeat"></i> Payroll → Accounting Flow</span>
+          <div class="fin-media-container">
+            <div class="fin-report-animation">
+              <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="30" y="70" width="70" height="40" rx="8" fill="rgba(53,81,106,0.2)" stroke="#35516A" stroke-width="1.5"/>
+                <text x="65" y="93" font-size="9" fill="#cfe6ff" text-anchor="middle">Pay Run</text>
+                <path d="M100 90 L130 90" stroke="#35516A" stroke-width="2"/>
+                <rect x="130" y="70" width="70" height="40" rx="8" fill="rgba(53,81,106,0.3)" stroke="#35516A" stroke-width="1.5"/>
+                <text x="165" y="93" font-size="9" fill="#cfe6ff" text-anchor="middle">Journal</text>
+                <path d="M200 90 L230 90" stroke="#35516A" stroke-width="2"/>
+                <rect x="230" y="70" width="60" height="40" rx="8" fill="rgba(53,81,106,0.2)" stroke="#35516A" stroke-width="1.5"/>
+                <text x="260" y="93" font-size="9" fill="#cfe6ff" text-anchor="middle">Books</text>
+                <text x="160" y="170" font-size="10" fill="rgba(255,255,255,0.6)" text-anchor="middle">Real-time P&L, Balance Sheet update</text>
+                <rect x="60" y="185" width="200" height="4" rx="2" fill="rgba(53,81,106,0.2)"/>
+                <rect x="60" y="185" width="192" height="4" rx="2" fill="#35516A"/>
+              </svg>
+            </div>
+          </div>
+          <div class="fin-chip-row">
+            <span class="fin-chip"><i class="bi bi-calculator"></i> Auto Salary Calc</span>
+            <span class="fin-chip"><i class="bi bi-file-pdf"></i> Payslip Gen</span>
+            <span class="fin-chip"><i class="bi bi-bank"></i> Bank Transfer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deployment Readiness Section (HR Focus) -->
+  <section class="fin-section">
+    <div class="container">
+      <div class="fin-head center">
+        <span class="fin-eyebrow" data-aos="fade-up" data-aos-duration="600"><i class="bi bi-boxes"></i> Deployment Readiness</span>
+        <h2 data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">Built for Indian businesses, ready for scale.</h2>
+        <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">From a single office to enterprise branches, the HRMS layer adapts to your workforce policies without costly customizations.</p>
+      </div>
+      <div class="fin-tool-grid">
+        <article class="fin-tool-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0"><span class="fin-feature-icon mx-auto mb-3" style="width:48px; margin:0 auto 1rem auto;"><i class="bi bi-phone"></i></span><h3 style="color: #cfe6ff;">Mobile Attendance</h3><p>Face recognition check-in/out, leave requests, and payslip access on the go.</p><div class="tool-hover-effect"></div></article>
+        <article class="fin-tool-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"><span class="fin-feature-icon mx-auto mb-3" style="width:48px; margin:0 auto 1rem auto;"><i class="bi bi-window-sidebar"></i></span><h3 style="color: #cfe6ff;">Web Dashboard + Reports</h3><p>Role-based access for HR, managers, finance, and auditors with real-time analytics.</p><div class="tool-hover-effect"></div></article>
+        <article class="fin-tool-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200"><span class="fin-feature-icon mx-auto mb-3" style="width:48px; margin:0 auto 1rem auto;"><i class="bi bi-braces"></i></span><h3 style="color: #cfe6ff;">API-first Architecture</h3><p>Connect with existing ERPs, biometric devices, or custom HR systems easily.</p><div class="tool-hover-effect"></div></article>
+        <article class="fin-tool-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300"><span class="fin-feature-icon mx-auto mb-3" style="width:48px; margin:0 auto 1rem auto;"><i class="bi bi-building"></i></span><h3 style="color: #cfe6ff;">Multi-branch Ready</h3><p>Consolidated HR and payroll across locations with inter-branch employee transfers.</p><div class="tool-hover-effect"></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rules and Policies Section (HR & Payroll Focus) -->
+  <section id="fin-rules" class="fin-section fin-rule-band" style="background-color: #35516A;">
+    <div class="container">
+      <div class="fin-head center">
+        <span class="fin-eyebrow" data-aos="fade-up" data-aos-duration="600"><i class="bi bi-sliders2"></i> HR Rules and Policies</span>
+        <h2 data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">Configuration points that keep HR operations compliant and efficient.</h2>
+        <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">Policy controls matter as much as the payroll itself. Define approval workflows, leave policies, statutory rules, and audit trails.</p>
+      </div>
+      <div class="fin-rule-grid">
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"><span class="fin-rule-tag">Leave Policy</span><h3 style="color: #cfe6ff;">Leave accrual & carry forward</h3><p>Define monthly leave credits, max carryover, encashment rules, and approval workflows.</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="50"><span class="fin-rule-tag">Attendance</span><h3 style="color: #cfe6ff;">Regularization & overtime</h3><p>Set max days for missed punch regularization, OT calculation rules, and manager approval levels.</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"><span class="fin-rule-tag">Payroll</span><h3 style="color: #cfe6ff;">Payrun approvals</h3><p>Multi-level approval before finalizing salary, generating payslips, and bank files.</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="150"><span class="fin-rule-tag">Statutory</span><h3 style="color: #cfe6ff;">EPF/ESI thresholds</h3><p>Auto-apply contribution limits based on employee salary, location, and eligibility.</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"><span class="fin-rule-tag">Reporting</span><h3 style="color: #cfe6ff;">Period closing lock</h3><p>Prevent edits after monthly payroll is closed; preserve audit integrity.</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="250"><span class="fin-rule-tag">Audit</span><h3 style="color: #cfe6ff;">Change log retention</h3><p>Immutable audit trail for all employee records, payroll edits, and approvals.</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300"><span class="fin-rule-tag">Security</span><h3 style="color: #cfe6ff;">Role-based permissions</h3><p>Read-only for auditors, edit for HR, approve for managers, self-service for employees.</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="350"><span class="fin-rule-tag">Budget</span><h3 style="color: #cfe6ff;">Real-time budget tracking</h3><p>Alerts when department payroll spending exceeds 80% of quarterly budget allocation.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section (HR KPIs) -->
+  <section class="stats-section">
+    <div class="container position-relative">
+      <div class="row g-4 text-center">
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0"><div class="stat-number"><span class="counter-num" style="color: #cfe6ff;" data-target="500" data-suffix="+">500+</span></div><div class="stat-label">Businesses Served</div></div>
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"><div class="stat-number"><span class="counter-num" style="color: #cfe6ff;" data-target="100" data-suffix="%">100%</span></div><div class="stat-label">Payroll Accuracy</div></div>
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200"><div class="stat-number"><span class="counter-num" style="color: #cfe6ff;" data-target="60" data-suffix="%">60%</span></div><div class="stat-label">Time Saved on HR Tasks</div></div>
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300"><div class="stat-number"><span class="counter-num" style="color: #cfe6ff;" data-target="24" data-suffix="/7">24/7</span></div><div class="stat-label">Employee Self-Service</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (HR & Payroll Focus) -->
+  <section class="premium-single-faq" style="background: var(--white); padding: 60px 0;">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="premium-single-title" data-aos="fade-up" data-aos-duration="600">Everything about <span>HR & Payroll Management</span>
+        <div class="premium-single-line" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="100"></div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="premium-single-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+            <div class="premium-single-card-inner">
+              <div class="card-deco-left"></div>
+              <div class="card-deco-right"></div>
+              <div class="card-glow-effect"></div>
+              <div class="premium-single-icon-box"><i class="bi bi-people-fill"></i><div class="icon-glow"></div><div class="icon-ring"></div></div>
+              <div class="premium-faq-grid">
+                <div class="premium-faq-col">
+                  <div class="premium-faq-item"><div class="premium-faq-header" onclick="toggleSingleFAQ(this)"><div class="premium-faq-title-group"><span class="premium-faq-number">01</span><h4>How does biometric sync work with payroll?</h4></div><div class="premium-faq-toggle-box"><i class="bi bi-plus-lg"></i></div></div><div class="premium-faq-content"><p>Face recognition attendance is automatically linked to payroll. Late comings, overtime, and leave balances are factored into salary calculations.</p></div></div>
+                  <div class="premium-faq-item"><div class="premium-faq-header" onclick="toggleSingleFAQ(this)"><div class="premium-faq-title-group"><span class="premium-faq-number">02</span><h4>Can I configure EPF/ESI rates as per my organisation?</h4></div><div class="premium-faq-toggle-box"><i class="bi bi-plus-lg"></i></div></div><div class="premium-faq-content"><p>Yes, under Statutory Components, set percentage, employer/employee contribution limits, and applicable ceilings.</p></div></div>
+                  <div class="premium-faq-item"><div class="premium-faq-header" onclick="toggleSingleFAQ(this)"><div class="premium-faq-title-group"><span class="premium-faq-number">03</span><h4>How are employee exits and full & final settlement handled?</h4></div><div class="premium-faq-toggle-box"><i class="bi bi-plus-lg"></i></div></div><div class="premium-faq-content"><p>Exit module handles resignation, asset clearance, leave encashment, and FnF settlement calculation with approval workflow.</p></div></div>
+                </div>
+                <div class="premium-faq-col">
+                  <div class="premium-faq-item"><div class="premium-faq-header" onclick="toggleSingleFAQ(this)"><div class="premium-faq-title-group"><span class="premium-faq-number">04</span><h4>Does it integrate with Zoho Books for accounting?</h4></div><div class="premium-faq-toggle-box"><i class="bi bi-plus-lg"></i></div></div><div class="premium-faq-content"><p>Absolutely. Zoho Payroll integration posts salary expenses and tax liabilities directly to Zoho Books, keeping P&L and balance sheet updated.</p></div></div>
+                  <div class="premium-faq-item"><div class="premium-faq-header" onclick="toggleSingleFAQ(this)"><div class="premium-faq-title-group"><span class="premium-faq-number">05</span><h4>Can employees access payslips and request leave online?</h4></div><div class="premium-faq-toggle-box"><i class="bi bi-plus-lg"></i></div></div><div class="premium-faq-content"><p>Yes, employee self-service portal provides payslips, leave balance, document access, and request submissions.</p></div></div>
+                  <div class="premium-faq-item"><div class="premium-faq-header" onclick="toggleSingleFAQ(this)"><div class="premium-faq-title-group"><span class="premium-faq-number">06</span><h4>Is multi-branch payroll supported?</h4></div><div class="premium-faq-toggle-box"><i class="bi bi-plus-lg"></i></div></div><div class="premium-faq-content"><p>Yes, manage employees across locations, different shift timings, and consolidated payroll reports.</p></div></div>
+                </div>
+              </div>
+              <div class="premium-faq-decoration"><div class="deco-dot"></div><div class="deco-line"></div><div class="deco-dot"></div></div>
+            </div>
+            <div class="premium-single-footer text-center mt-5"><div class="premium-help-single"><i class="bi bi-kanban"></i><p>Still have questions? <a href="../../get-started/contact.html">Talk to our support team <i class="bi bi-arrow-right"></i></a></p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- CTA Section with Enhanced Animation (HR Focus) -->
+<section class="cta-section-enhanced">
+  <div class="cta-bg-image"></div>
+  <div class="cta-particles">
+    <div class="particle" style="width: 40px; height: 40px; top: 70%; left: 15%; --duration: 10s; --delay: 2s;"></div>
+    <div class="particle" style="width: 30px; height: 30px; top: 30%; left: 85%; --duration: 14s; --delay: 1s;"></div>
+    <div class="particle" style="width: 25px; height: 25px; top: 20%; left: 20%; --duration: 9s; --delay: 0.5s;"></div>
+    <div class="particle" style="width: 35px; height: 35px; top: 60%; left: 45%; --duration: 13s; --delay: 2.5s;"></div>
+    <div class="particle" style="width: 45px; height: 45px; top: 40%; left: 70%; --duration: 15s; --delay: 1.5s;"></div>
+    <div class="particle" style="width: 20px; height: 20px; top: 85%; left: 55%; --duration: 8s; --delay: 4s;"></div>
+  </div>
+  <div class="cta-glow-border"></div>
+  <div class="container position-relative" style="z-index: 2; text-align: center">
+    <div class="cta-content">
+      <div class="reveal">
+        <h2 class="cta-heading">Take Full Control of Your HR & Payroll Today</h2>
+        <p class="cta-description">
+          Automate attendance, leave, compliance, and payroll — all from one powerful HRMS platform.
+        </p>
+        <div class="d-flex gap-4 justify-content-center flex-wrap">
+          <a href="../../get-started/signup.html" class="cta-btn-primary hover-lift">
+            <i class="bi bi-box-arrow-in-right"></i> Start Free Trial 
+            <i class="bi bi-arrow-right-short"></i>
+          </a>
+          <a href="../../insights/case-studies.html" class="cta-btn-secondary hover-lift">
+            <i class="bi bi-bar-chart-line"></i> See How It Works
+            <i class="bi bi-arrow-right"></i>
+          </a>
         </div>
       </div>
     </div>
   </div>
 </section>
-<section class="stats-section">
-  <div class="container position-relative">
-    <div class="row g-4 text-center">
-      <div class="col-6 col-lg-3 reveal"><div class="stat-number"><span class="counter-num" data-target="500" data-suffix="+">500+</span></div><div class="stat-label">Businesses Served</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-1"><div class="stat-number"><span class="counter-num" data-target="99" data-suffix="%">99%</span></div><div class="stat-label">Uptime SLA</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-2"><div class="stat-number"><span class="counter-num" data-target="4" data-suffix="hr">4hr</span></div><div class="stat-label">Avg Setup Time</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-3"><div class="stat-number"><span class="counter-num" data-target="4.8" data-suffix="/5">4.8/5</span></div><div class="stat-label">Customer Rating</div></div>
-    </div>
-  </div>
-</section>
-<section class="cta-section">
-  <div class="container position-relative" style="z-index:1;text-align:center">
-    <h2 style="color:var(--white);margin-bottom:1rem">Ready to Get Started?</h2>
-    <p style="color:rgba(255,255,255,0.8);margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto">Join hundreds of businesses using MicroHub to grow faster and work smarter.</p>
-    <a href="../../get-started/signup.html" class="btn-white-custom">Start Free Trial <i class="bi bi-arrow-right"></i></a>
-  </div>
-</section>
-<div id="footer-root" data-include="components/footer.html"></div>
 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../../assets/js/component-loader.js"></script>
-<script src="../../assets/js/navigation.js"></script>
-<script src="../../assets/js/animations.js"></script>
-<script src="../../assets/js/main.js"></script>
+  <div id="footer-root" data-include="../../components/footer.html"></div>
+  <button id="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="../../assets/js/navigation.js"></script>
+  <script src="../../assets/js/animations.js"></script>
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/component-loader.js"></script>
+  <script src="solutions.js"></script>
+  <script src="./js/financial.js"></script>
+  <script>function toggleSingleFAQ(header){const item=header.closest('.premium-faq-item');const content=item.querySelector('.premium-faq-content');const icon=header.querySelector('.premium-faq-toggle-box i');if(item.classList.contains('active')){item.classList.remove('active');content.style.maxHeight=null;icon.classList.remove('bi-dash-lg');icon.classList.add('bi-plus-lg');}else{item.classList.add('active');content.style.maxHeight=content.scrollHeight+"px";icon.classList.remove('bi-plus-lg');icon.classList.add('bi-dash-lg');}}</script>
 </body>
+
 </html>

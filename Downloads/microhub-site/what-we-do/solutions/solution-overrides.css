@@ -1,0 +1,999 @@
+/* Shared solution page overrides
+   Keeps software solution pages on the same brand system. */
+
+.page-crm,
+.page-finance,
+.page-finance1,
+.page-task,
+.page-ticketing,
+.page-hr {
+  --fin-primary: var(--primary);
+  --fin-primary-light: var(--primary-light);
+  --fin-primary-dark: var(--primary-dark);
+  --fin-primary-soft: #A5B4FC;
+  --fin-accent: var(--primary);
+  --fin-accent-light: var(--primary-light);
+  --fin-accent-dark: var(--primary-dark);
+}
+
+.page-crm .page-hero h1,
+.page-finance .page-hero h1,
+.page-finance1 .page-hero h1,
+.page-task .page-hero h1,
+.page-ticketing .page-hero h1,
+.page-hr .page-hero h1 {
+  font-size: clamp(2rem, 3vw, 2.95rem) !important;
+  line-height: 1.06 !important;
+  letter-spacing: -0.04em !important;
+  font-weight: 700 !important;
+}
+
+.page-crm .page-hero p,
+.page-finance .page-hero p,
+.page-finance1 .page-hero p,
+.page-task .page-hero p,
+.page-ticketing .page-hero p,
+.page-hr .page-hero p {
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
+}
+
+.page-crm .page-hero .section-label,
+.page-finance .page-hero .section-label,
+.page-finance1 .page-hero .section-label,
+.page-task .page-hero .section-label,
+.page-ticketing .page-hero .section-label,
+.page-hr .page-hero .section-label {
+  background: rgba(99, 102, 241, 0.16) !important;
+  color: var(--primary-light) !important;
+  border: 1px solid rgba(99, 102, 241, 0.18) !important;
+}
+
+.page-crm .page-hero .btn-outline-custom,
+.page-finance .page-hero .btn-outline-custom,
+.page-finance1 .page-hero .btn-outline-custom,
+.page-task .page-hero .btn-outline-custom,
+.page-ticketing .page-hero .btn-outline-custom,
+.page-hr .page-hero .btn-outline-custom {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border-color: rgba(255, 255, 255, 0.9) !important;
+  color: var(--primary) !important;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08) !important;
+}
+
+.page-crm .page-hero .btn-outline-custom:hover,
+.page-finance .page-hero .btn-outline-custom:hover,
+.page-finance1 .page-hero .btn-outline-custom:hover,
+.page-task .page-hero .btn-outline-custom:hover,
+.page-ticketing .page-hero .btn-outline-custom:hover,
+.page-hr .page-hero .btn-outline-custom:hover {
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: var(--white) !important;
+}
+
+.page-finance .fin-head h2,
+.page-finance1 .fin-head h2,
+.page-task .fin-head h2,
+.page-ticketing .fin-head h2,
+.page-hr .fin-head h2,
+.page-finance .fin-content-equal h2,
+.page-finance1 .fin-content-equal h2,
+.page-task .fin-content-equal h2,
+.page-ticketing .fin-content-equal h2,
+.page-hr .fin-content-equal h2 {
+  color: var(--white) !important;
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+.page-finance .fin-eyebrow,
+.page-finance1 .fin-eyebrow,
+.page-task .fin-eyebrow,
+.page-ticketing .fin-eyebrow,
+.page-hr .fin-eyebrow {
+  background: rgba(99, 102, 241, 0.16) !important;
+  border: 1px solid rgba(99, 102, 241, 0.18) !important;
+  color: var(--white) !important;
+}
+
+.page-finance .fin-stat-card,
+.page-finance1 .fin-stat-card,
+.page-task .fin-stat-card,
+.page-ticketing .fin-stat-card,
+.page-hr .fin-stat-card {
+  background: rgba(30, 27, 75, 0.9) !important;
+}
+
+.page-finance .fin-stat-card:hover,
+.page-finance1 .fin-stat-card:hover,
+.page-task .fin-stat-card:hover,
+.page-ticketing .fin-stat-card:hover,
+.page-hr .fin-stat-card:hover {
+  background: rgba(79, 70, 229, 0.16) !important;
+}
+
+.page-finance .fin-stat-card strong,
+.page-finance1 .fin-stat-card strong,
+.page-task .fin-stat-card strong,
+.page-ticketing .fin-stat-card strong,
+.page-hr .fin-stat-card strong,
+.page-finance .counter-num,
+.page-finance1 .counter-num,
+.page-task .counter-num,
+.page-ticketing .counter-num,
+.page-hr .counter-num {
+  color: var(--white) !important;
+}
+
+.page-finance .fin-process-card h3,
+.page-finance1 .fin-process-card h3,
+.page-task .fin-process-card h3,
+.page-ticketing .fin-process-card h3,
+.page-hr .fin-process-card h3,
+.page-finance .fin-feature-item h3,
+.page-finance1 .fin-feature-item h3,
+.page-task .fin-feature-item h3,
+.page-ticketing .fin-feature-item h3,
+.page-hr .fin-feature-item h3,
+.page-finance .fin-tool-card h3,
+.page-finance1 .fin-tool-card h3,
+.page-task .fin-tool-card h3,
+.page-ticketing .fin-tool-card h3,
+.page-hr .fin-tool-card h3,
+.page-finance .fin-rule-card h3,
+.page-finance1 .fin-rule-card h3,
+.page-task .fin-rule-card h3,
+.page-ticketing .fin-rule-card h3,
+.page-hr .fin-rule-card h3 {
+  color: var(--white) !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  line-height: 1.35 !important;
+}
+
+.page-finance .fin-feature-icon,
+.page-finance1 .fin-feature-icon,
+.page-task .fin-feature-icon,
+.page-ticketing .fin-feature-icon,
+.page-hr .fin-feature-icon {
+  background: rgba(99, 102, 241, 0.16) !important;
+  color: var(--white) !important;
+}
+
+.page-finance .fin-feature-item:hover,
+.page-finance1 .fin-feature-item:hover,
+.page-task .fin-feature-item:hover,
+.page-ticketing .fin-feature-item:hover,
+.page-hr .fin-feature-item:hover {
+  background: rgba(99, 102, 241, 0.08) !important;
+  border-color: rgba(99, 102, 241, 0.3) !important;
+}
+
+.page-finance .fin-rule-band,
+.page-finance1 .fin-rule-band,
+.page-task .fin-rule-band,
+.page-ticketing .fin-rule-band,
+.page-hr .fin-rule-band {
+  background: rgba(79, 70, 229, 0.16) !important;
+}
+
+.page-finance .fin-rule-tag,
+.page-finance1 .fin-rule-tag,
+.page-task .fin-rule-tag,
+.page-ticketing .fin-rule-tag,
+.page-hr .fin-rule-tag {
+  background: rgba(99, 102, 241, 0.14) !important;
+  color: var(--primary-light) !important;
+}
+
+.page-finance .fin-chip,
+.page-finance1 .fin-chip,
+.page-task .fin-chip,
+.page-ticketing .fin-chip,
+.page-hr .fin-chip {
+  background: rgba(99, 102, 241, 0.08) !important;
+  border-color: rgba(99, 102, 241, 0.16) !important;
+  color: #EEF2FF !important;
+}
+
+.page-finance .fin-chip:hover,
+.page-finance1 .fin-chip:hover,
+.page-task .fin-chip:hover,
+.page-ticketing .fin-chip:hover,
+.page-hr .fin-chip:hover {
+  background: rgba(99, 102, 241, 0.16) !important;
+  border-color: rgba(99, 102, 241, 0.28) !important;
+}
+
+.page-finance .fin-media-container,
+.page-finance1 .fin-media-container,
+.page-task .fin-media-container,
+.page-ticketing .fin-media-container,
+.page-hr .fin-media-container {
+  flex: 0 0 auto !important;
+  min-height: 170px !important;
+  max-height: 220px !important;
+}
+
+.page-finance .fin-media-container img,
+.page-finance1 .fin-media-container img,
+.page-task .fin-media-container img,
+.page-ticketing .fin-media-container img,
+.page-hr .fin-media-container img,
+.page-finance .fin-media-container svg,
+.page-finance1 .fin-media-container svg,
+.page-task .fin-media-container svg,
+.page-ticketing .fin-media-container svg,
+.page-hr .fin-media-container svg {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 220px !important;
+  object-fit: cover !important;
+}
+
+.page-crm .page-hero::before {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(99, 102, 241, 0.16) 0%, transparent 22%),
+    radial-gradient(circle at 82% 24%, rgba(129, 140, 248, 0.14) 0%, transparent 28%),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.045) 0 1px, transparent 1px 96px),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 96px),
+    linear-gradient(180deg, rgba(18, 26, 36, 0.08) 0%, rgba(18, 26, 36, 0.36) 100%) !important;
+}
+
+.page-crm .page-hero::after {
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.14) 0%, transparent 72%) !important;
+}
+
+.page-crm .dark-overlay {
+  background: linear-gradient(135deg, rgba(31, 20, 91, 0.86) 0%, rgba(79, 70, 229, 0.82) 50%, rgba(31, 20, 91, 0.86) 100%) !important;
+}
+
+.page-crm .dashboard-preview,
+.page-crm .feature-card-enhanced,
+.page-crm .pricing-card-enhanced {
+  border-color: rgba(99, 102, 241, 0.16) !important;
+}
+
+.page-crm .dashboard-preview:hover {
+  border-color: rgba(99, 102, 241, 0.42) !important;
+  box-shadow: 0 20px 40px rgba(79, 70, 229, 0.22) !important;
+}
+
+.page-crm .badge-custom,
+.page-crm .dashboard-preview .badge-custom,
+.page-crm .pricing-badge {
+  background: rgba(99, 102, 241, 0.18) !important;
+  color: var(--primary-light) !important;
+}
+
+.page-crm .feature-card-enhanced::after {
+  background: linear-gradient(90deg, var(--primary), var(--primary-light), var(--primary)) !important;
+}
+
+.page-crm .card-icon {
+  background: rgba(99, 102, 241, 0.12) !important;
+}
+
+.page-crm .card-custom:hover .card-icon {
+  background: var(--primary) !important;
+}
+
+.page-crm .card-custom:hover .card-icon i {
+  color: var(--white) !important;
+}
+
+.page-crm .pricing-card-enhanced.featured {
+  box-shadow: 0 25px 40px -15px rgba(99, 102, 241, 0.24) !important;
+}
+
+/* ------------------------------------------------
+   Home-style neutral theme for software solution pages
+   ------------------------------------------------ */
+.page-crm,
+.page-finance,
+.page-finance1,
+.page-task,
+.page-ticketing,
+.page-hr {
+  font-family: var(--font) !important;
+  color: var(--dark) !important;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+  --fin-primary: var(--primary);
+  --fin-primary-light: var(--primary-light);
+  --fin-primary-dark: var(--primary-dark);
+  --fin-primary-soft: rgba(99, 102, 241, 0.24);
+  --fin-accent: var(--primary);
+  --fin-accent-light: var(--primary-light);
+  --fin-accent-dark: var(--primary-dark);
+  --fin-text: var(--dark);
+  --fin-muted: var(--text-light);
+  --fin-border: var(--border);
+  --fin-surface: #ffffff;
+  --fin-surface-2: #f8fafc;
+  --fin-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+  --fin-shadow-soft: 0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+.page-crm .page-hero,
+.page-finance .page-hero,
+.page-finance1 .page-hero,
+.page-task .page-hero,
+.page-ticketing .page-hero,
+.page-hr .page-hero,
+.page-finance1 .inventory-hero {
+  background: linear-gradient(135deg, #121A24 0%, #0f172a 48%, #2D3D4F 100%) !important;
+}
+
+.page-crm .page-hero::before,
+.page-finance .page-hero::before,
+.page-finance1 .page-hero::before,
+.page-task .page-hero::before,
+.page-ticketing .page-hero::before,
+.page-hr .page-hero::before,
+.page-finance1 .inventory-hero::before {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(99, 102, 241, 0.16) 0%, transparent 24%),
+    radial-gradient(circle at 82% 24%, rgba(99, 102, 241, 0.14) 0%, transparent 28%),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px 90px),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 90px),
+    linear-gradient(180deg, rgba(18, 26, 36, 0.06) 0%, rgba(18, 26, 36, 0.32) 100%) !important;
+}
+
+.page-crm .page-hero::after,
+.page-finance .page-hero::after,
+.page-finance1 .page-hero::after,
+.page-task .page-hero::after,
+.page-ticketing .page-hero::after,
+.page-hr .page-hero::after,
+.page-finance1 .inventory-hero::after {
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 70%) !important;
+}
+
+.page-crm .hero-bg-image,
+.page-finance .hero-bg-image,
+.page-finance1 .hero-bg-image,
+.page-task .hero-bg-image,
+.page-ticketing .hero-bg-image,
+.page-hr .hero-bg-image {
+  opacity: 0.16 !important;
+  filter: grayscale(100%) brightness(0.48) contrast(1.02) !important;
+}
+
+.page-crm .dark-overlay,
+.page-crm .hero-overlay,
+.page-finance .hero-overlay,
+.page-finance1 .hero-overlay,
+.page-task .hero-overlay,
+.page-ticketing .hero-overlay,
+.page-hr .hero-overlay,
+.page-finance1 .inventory-hero .hero-overlay {
+  background: linear-gradient(135deg, rgba(18, 26, 36, 0.84) 0%, rgba(15, 23, 42, 0.84) 50%, rgba(45, 61, 79, 0.84) 100%) !important;
+}
+
+.page-crm .page-hero h1,
+.page-finance .page-hero h1,
+.page-finance1 .page-hero h1,
+.page-task .page-hero h1,
+.page-ticketing .page-hero h1,
+.page-hr .page-hero h1 {
+  color: var(--white) !important;
+  font-size: clamp(1.95rem, 3vw, 2.95rem) !important;
+  line-height: 1.04 !important;
+  letter-spacing: -0.04em !important;
+  font-weight: 700 !important;
+}
+
+.page-crm .page-hero p,
+.page-finance .page-hero p,
+.page-finance1 .page-hero p,
+.page-task .page-hero p,
+.page-ticketing .page-hero p,
+.page-hr .page-hero p {
+  color: rgba(255, 255, 255, 0.72) !important;
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
+}
+
+.page-crm .page-hero .section-label,
+.page-finance .page-hero .section-label,
+.page-finance1 .page-hero .section-label,
+.page-task .page-hero .section-label,
+.page-ticketing .page-hero .section-label,
+.page-hr .page-hero .section-label,
+.page-finance1 .inventory-hero .section-label {
+  background: rgba(99, 102, 241, 0.16) !important;
+  color: var(--primary-light) !important;
+  border: 1px solid rgba(99, 102, 241, 0.18) !important;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08) !important;
+}
+
+.page-crm .page-hero .btn-primary-custom,
+.page-finance .page-hero .btn-primary-custom,
+.page-finance1 .page-hero .btn-primary-custom,
+.page-task .page-hero .btn-primary-custom,
+.page-ticketing .page-hero .btn-primary-custom,
+.page-hr .page-hero .btn-primary-custom,
+.page-finance1 .inventory-hero .btn-primary-custom {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
+  border-color: var(--primary) !important;
+  color: var(--white) !important;
+  box-shadow: 0 10px 24px rgba(99, 102, 241, 0.24) !important;
+}
+
+.page-crm .page-hero .btn-primary-custom:hover,
+.page-finance .page-hero .btn-primary-custom:hover,
+.page-finance1 .page-hero .btn-primary-custom:hover,
+.page-task .page-hero .btn-primary-custom:hover,
+.page-ticketing .page-hero .btn-primary-custom:hover,
+.page-hr .page-hero .btn-primary-custom:hover,
+.page-finance1 .inventory-hero .btn-primary-custom:hover {
+  background: var(--primary-dark) !important;
+  border-color: var(--primary-dark) !important;
+  color: var(--white) !important;
+}
+
+.page-crm .page-hero .btn-outline-custom,
+.page-finance .page-hero .btn-outline-custom,
+.page-finance1 .page-hero .btn-outline-custom,
+.page-task .page-hero .btn-outline-custom,
+.page-ticketing .page-hero .btn-outline-custom,
+.page-hr .page-hero .btn-outline-custom,
+.page-finance1 .inventory-hero .btn-outline-custom {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border-color: rgba(255, 255, 255, 0.92) !important;
+  color: var(--primary) !important;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08) !important;
+}
+
+.page-crm .page-hero .btn-outline-custom:hover,
+.page-finance .page-hero .btn-outline-custom:hover,
+.page-finance1 .page-hero .btn-outline-custom:hover,
+.page-task .page-hero .btn-outline-custom:hover,
+.page-ticketing .page-hero .btn-outline-custom:hover,
+.page-hr .page-hero .btn-outline-custom:hover,
+.page-finance1 .inventory-hero .btn-outline-custom:hover {
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: var(--white) !important;
+}
+
+.page-crm .fin-stats-wrap,
+.page-finance .fin-stats-wrap,
+.page-finance1 .fin-stats-wrap,
+.page-task .fin-stats-wrap,
+.page-ticketing .fin-stats-wrap,
+.page-hr .fin-stats-wrap {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+  padding: 34px 0 18px !important;
+}
+
+.page-crm .fin-section,
+.page-finance .fin-section,
+.page-finance1 .fin-section,
+.page-task .fin-section,
+.page-ticketing .fin-section,
+.page-hr .fin-section {
+  background: #ffffff !important;
+  border-top: 1px solid var(--border) !important;
+}
+
+.page-crm .fin-section:nth-of-type(even),
+.page-finance .fin-section:nth-of-type(even),
+.page-finance1 .fin-section:nth-of-type(even),
+.page-task .fin-section:nth-of-type(even),
+.page-ticketing .fin-section:nth-of-type(even),
+.page-hr .fin-section:nth-of-type(even) {
+  background: #f8fafc !important;
+}
+
+.page-crm .fin-rule-band,
+.page-finance .fin-rule-band,
+.page-finance1 .fin-rule-band,
+.page-task .fin-rule-band,
+.page-ticketing .fin-rule-band,
+.page-hr .fin-rule-band {
+  background: #f8fafc !important;
+  border-top: 1px solid var(--border) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+.page-crm .fin-head h2,
+.page-finance .fin-head h2,
+.page-finance1 .fin-head h2,
+.page-task .fin-head h2,
+.page-ticketing .fin-head h2,
+.page-hr .fin-head h2,
+.page-crm .fin-content-equal h2,
+.page-finance .fin-content-equal h2,
+.page-finance1 .fin-content-equal h2,
+.page-task .fin-content-equal h2,
+.page-ticketing .fin-content-equal h2,
+.page-hr .fin-content-equal h2 {
+  color: var(--dark) !important;
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+.page-crm .fin-head p,
+.page-finance .fin-head p,
+.page-finance1 .fin-head p,
+.page-task .fin-head p,
+.page-ticketing .fin-head p,
+.page-hr .fin-head p,
+.page-crm .fin-content-equal > p,
+.page-finance .fin-content-equal > p,
+.page-finance1 .fin-content-equal > p,
+.page-task .fin-content-equal > p,
+.page-ticketing .fin-content-equal > p,
+.page-hr .fin-content-equal > p,
+.page-crm .fin-process-card p,
+.page-finance .fin-process-card p,
+.page-finance1 .fin-process-card p,
+.page-task .fin-process-card p,
+.page-ticketing .fin-process-card p,
+.page-hr .fin-process-card p,
+.page-crm .fin-feature-item p,
+.page-finance .fin-feature-item p,
+.page-finance1 .fin-feature-item p,
+.page-task .fin-feature-item p,
+.page-ticketing .fin-feature-item p,
+.page-hr .fin-feature-item p,
+.page-crm .fin-tool-card p,
+.page-finance .fin-tool-card p,
+.page-finance1 .fin-tool-card p,
+.page-task .fin-tool-card p,
+.page-ticketing .fin-tool-card p,
+.page-hr .fin-tool-card p,
+.page-crm .fin-rule-card p,
+.page-finance .fin-rule-card p,
+.page-finance1 .fin-rule-card p,
+.page-task .fin-rule-card p,
+.page-ticketing .fin-rule-card p,
+.page-hr .fin-rule-card p {
+  color: var(--text-light) !important;
+}
+
+.page-crm .fin-eyebrow,
+.page-finance .fin-eyebrow,
+.page-finance1 .fin-eyebrow,
+.page-task .fin-eyebrow,
+.page-ticketing .fin-eyebrow,
+.page-hr .fin-eyebrow,
+.page-crm .fin-rule-tag,
+.page-finance .fin-rule-tag,
+.page-finance1 .fin-rule-tag,
+.page-task .fin-rule-tag,
+.page-ticketing .fin-rule-tag,
+.page-hr .fin-rule-tag {
+  background: rgba(99, 102, 241, 0.08) !important;
+  border: 1px solid rgba(99, 102, 241, 0.14) !important;
+  color: var(--primary) !important;
+  animation: none !important;
+}
+
+.page-crm .fin-stat-card,
+.page-finance .fin-stat-card,
+.page-finance1 .fin-stat-card,
+.page-task .fin-stat-card,
+.page-ticketing .fin-stat-card,
+.page-hr .fin-stat-card,
+.page-crm .fin-process-card,
+.page-finance .fin-process-card,
+.page-finance1 .fin-process-card,
+.page-task .fin-process-card,
+.page-ticketing .fin-process-card,
+.page-hr .fin-process-card,
+.page-crm .fin-visual-card-equal,
+.page-finance .fin-visual-card-equal,
+.page-finance1 .fin-visual-card-equal,
+.page-task .fin-visual-card-equal,
+.page-ticketing .fin-visual-card-equal,
+.page-hr .fin-visual-card-equal,
+.page-crm .fin-feature-item,
+.page-finance .fin-feature-item,
+.page-finance1 .fin-feature-item,
+.page-task .fin-feature-item,
+.page-ticketing .fin-feature-item,
+.page-hr .fin-feature-item,
+.page-crm .fin-tool-card,
+.page-finance .fin-tool-card,
+.page-finance1 .fin-tool-card,
+.page-task .fin-tool-card,
+.page-ticketing .fin-tool-card,
+.page-hr .fin-tool-card,
+.page-crm .fin-rule-card,
+.page-finance .fin-rule-card,
+.page-finance1 .fin-rule-card,
+.page-task .fin-rule-card,
+.page-ticketing .fin-rule-card,
+.page-hr .fin-rule-card,
+.page-crm .card-custom,
+.page-finance .card-custom,
+.page-finance1 .card-custom,
+.page-task .card-custom,
+.page-ticketing .card-custom,
+.page-hr .card-custom,
+.page-crm .feature-card-enhanced,
+.page-finance .feature-card-enhanced,
+.page-finance1 .feature-card-enhanced,
+.page-task .feature-card-enhanced,
+.page-ticketing .feature-card-enhanced,
+.page-hr .feature-card-enhanced,
+.page-crm .dashboard-preview,
+.page-finance .dashboard-preview,
+.page-finance1 .dashboard-preview,
+.page-task .dashboard-preview,
+.page-ticketing .dashboard-preview,
+.page-hr .dashboard-preview,
+.page-crm .pricing-card-enhanced,
+.page-finance .pricing-card-enhanced,
+.page-finance1 .pricing-card-enhanced,
+.page-task .pricing-card-enhanced,
+.page-ticketing .pricing-card-enhanced,
+.page-hr .pricing-card-enhanced {
+  background: var(--white) !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08) !important;
+}
+
+.page-crm .fin-stat-card:hover,
+.page-finance .fin-stat-card:hover,
+.page-finance1 .fin-stat-card:hover,
+.page-task .fin-stat-card:hover,
+.page-ticketing .fin-stat-card:hover,
+.page-hr .fin-stat-card:hover,
+.page-crm .fin-process-card:hover,
+.page-finance .fin-process-card:hover,
+.page-finance1 .fin-process-card:hover,
+.page-task .fin-process-card:hover,
+.page-ticketing .fin-process-card:hover,
+.page-hr .fin-process-card:hover,
+.page-crm .fin-visual-card-equal:hover,
+.page-finance .fin-visual-card-equal:hover,
+.page-finance1 .fin-visual-card-equal:hover,
+.page-task .fin-visual-card-equal:hover,
+.page-ticketing .fin-visual-card-equal:hover,
+.page-hr .fin-visual-card-equal:hover,
+.page-crm .fin-feature-item:hover,
+.page-finance .fin-feature-item:hover,
+.page-finance1 .fin-feature-item:hover,
+.page-task .fin-feature-item:hover,
+.page-ticketing .fin-feature-item:hover,
+.page-hr .fin-feature-item:hover,
+.page-crm .fin-tool-card:hover,
+.page-finance .fin-tool-card:hover,
+.page-finance1 .fin-tool-card:hover,
+.page-task .fin-tool-card:hover,
+.page-ticketing .fin-tool-card:hover,
+.page-hr .fin-tool-card:hover,
+.page-crm .fin-rule-card:hover,
+.page-finance .fin-rule-card:hover,
+.page-finance1 .fin-rule-card:hover,
+.page-task .fin-rule-card:hover,
+.page-ticketing .fin-rule-card:hover,
+.page-hr .fin-rule-card:hover,
+.page-crm .card-custom:hover,
+.page-finance .card-custom:hover,
+.page-finance1 .card-custom:hover,
+.page-task .card-custom:hover,
+.page-ticketing .card-custom:hover,
+.page-hr .card-custom:hover,
+.page-crm .feature-card-enhanced:hover,
+.page-finance .feature-card-enhanced:hover,
+.page-finance1 .feature-card-enhanced:hover,
+.page-task .feature-card-enhanced:hover,
+.page-ticketing .feature-card-enhanced:hover,
+.page-hr .feature-card-enhanced:hover,
+.page-crm .dashboard-preview:hover,
+.page-finance .dashboard-preview:hover,
+.page-finance1 .dashboard-preview:hover,
+.page-task .dashboard-preview:hover,
+.page-ticketing .dashboard-preview:hover,
+.page-hr .dashboard-preview:hover,
+.page-crm .pricing-card-enhanced:hover,
+.page-finance .pricing-card-enhanced:hover,
+.page-finance1 .pricing-card-enhanced:hover,
+.page-task .pricing-card-enhanced:hover,
+.page-ticketing .pricing-card-enhanced:hover,
+.page-hr .pricing-card-enhanced:hover {
+  transform: translateY(-4px) !important;
+  border-color: rgba(99, 102, 241, 0.24) !important;
+  box-shadow: 0 20px 38px rgba(15, 23, 42, 0.12) !important;
+  background: var(--white) !important;
+}
+
+.page-crm .fin-stat-card strong,
+.page-finance .fin-stat-card strong,
+.page-finance1 .fin-stat-card strong,
+.page-task .fin-stat-card strong,
+.page-ticketing .fin-stat-card strong,
+.page-hr .fin-stat-card strong,
+.page-crm .counter-num,
+.page-finance .counter-num,
+.page-finance1 .counter-num,
+.page-task .counter-num,
+.page-ticketing .counter-num,
+.page-hr .counter-num,
+.page-crm .stat-number,
+.page-finance .stat-number,
+.page-finance1 .stat-number,
+.page-task .stat-number,
+.page-ticketing .stat-number,
+.page-hr .stat-number,
+.page-crm .card-custom h4,
+.page-finance .card-custom h4,
+.page-finance1 .card-custom h4,
+.page-task .card-custom h4,
+.page-ticketing .card-custom h4,
+.page-hr .card-custom h4,
+.page-crm .feature-card-enhanced h4,
+.page-finance .feature-card-enhanced h4,
+.page-finance1 .feature-card-enhanced h4,
+.page-task .feature-card-enhanced h4,
+.page-ticketing .feature-card-enhanced h4,
+.page-hr .feature-card-enhanced h4,
+.page-crm .fin-process-card h3,
+.page-finance .fin-process-card h3,
+.page-finance1 .fin-process-card h3,
+.page-task .fin-process-card h3,
+.page-ticketing .fin-process-card h3,
+.page-hr .fin-process-card h3,
+.page-crm .fin-feature-item h3,
+.page-finance .fin-feature-item h3,
+.page-finance1 .fin-feature-item h3,
+.page-task .fin-feature-item h3,
+.page-ticketing .fin-feature-item h3,
+.page-hr .fin-feature-item h3,
+.page-crm .fin-tool-card h3,
+.page-finance .fin-tool-card h3,
+.page-finance1 .fin-tool-card h3,
+.page-task .fin-tool-card h3,
+.page-ticketing .fin-tool-card h3,
+.page-hr .fin-tool-card h3,
+.page-crm .fin-rule-card h3,
+.page-finance .fin-rule-card h3,
+.page-finance1 .fin-rule-card h3,
+.page-task .fin-rule-card h3,
+.page-ticketing .fin-rule-card h3,
+.page-hr .fin-rule-card h3,
+.page-crm .dashboard-preview strong,
+.page-finance .dashboard-preview strong,
+.page-finance1 .dashboard-preview strong,
+.page-task .dashboard-preview strong,
+.page-ticketing .dashboard-preview strong,
+.page-hr .dashboard-preview strong {
+  color: var(--dark) !important;
+}
+
+.page-crm .fin-stat-card span,
+.page-finance .fin-stat-card span,
+.page-finance1 .fin-stat-card span,
+.page-task .fin-stat-card span,
+.page-ticketing .fin-stat-card span,
+.page-hr .fin-stat-card span,
+.page-crm .card-custom p,
+.page-finance .card-custom p,
+.page-finance1 .card-custom p,
+.page-task .card-custom p,
+.page-ticketing .card-custom p,
+.page-hr .card-custom p,
+.page-crm .feature-card-enhanced p,
+.page-finance .feature-card-enhanced p,
+.page-finance1 .feature-card-enhanced p,
+.page-task .feature-card-enhanced p,
+.page-ticketing .feature-card-enhanced p,
+.page-hr .feature-card-enhanced p,
+.page-crm .dashboard-preview span,
+.page-finance .dashboard-preview span,
+.page-finance1 .dashboard-preview span,
+.page-task .dashboard-preview span,
+.page-ticketing .dashboard-preview span,
+.page-hr .dashboard-preview span {
+  color: var(--text-light) !important;
+}
+
+.page-crm .badge-custom,
+.page-finance .badge-custom,
+.page-finance1 .badge-custom,
+.page-task .badge-custom,
+.page-ticketing .badge-custom,
+.page-hr .badge-custom,
+.page-crm .fin-chip,
+.page-finance .fin-chip,
+.page-finance1 .fin-chip,
+.page-task .fin-chip,
+.page-ticketing .fin-chip,
+.page-hr .fin-chip,
+.page-crm .fin-rule-tag,
+.page-finance .fin-rule-tag,
+.page-finance1 .fin-rule-tag,
+.page-task .fin-rule-tag,
+.page-ticketing .fin-rule-tag,
+.page-hr .fin-rule-tag {
+  background: rgba(99, 102, 241, 0.08) !important;
+  border: 1px solid rgba(99, 102, 241, 0.14) !important;
+  color: var(--primary) !important;
+}
+
+.page-crm .badge-custom:hover,
+.page-finance .badge-custom:hover,
+.page-finance1 .badge-custom:hover,
+.page-task .badge-custom:hover,
+.page-ticketing .badge-custom:hover,
+.page-hr .badge-custom:hover,
+.page-crm .fin-chip:hover,
+.page-finance .fin-chip:hover,
+.page-finance1 .fin-chip:hover,
+.page-task .fin-chip:hover,
+.page-ticketing .fin-chip:hover,
+.page-hr .fin-chip:hover,
+.page-crm .fin-rule-tag:hover,
+.page-finance .fin-rule-tag:hover,
+.page-finance1 .fin-rule-tag:hover,
+.page-task .fin-rule-tag:hover,
+.page-ticketing .fin-rule-tag:hover,
+.page-hr .fin-rule-tag:hover {
+  background: rgba(99, 102, 241, 0.12) !important;
+  border-color: rgba(99, 102, 241, 0.24) !important;
+  color: var(--primary-dark) !important;
+}
+
+.page-crm .fin-feature-icon,
+.page-finance .fin-feature-icon,
+.page-finance1 .fin-feature-icon,
+.page-task .fin-feature-icon,
+.page-ticketing .fin-feature-icon,
+.page-hr .fin-feature-icon,
+.page-crm .card-icon,
+.page-finance .card-icon,
+.page-finance1 .card-icon,
+.page-task .card-icon,
+.page-ticketing .card-icon,
+.page-hr .card-icon {
+  background: rgba(99, 102, 241, 0.12) !important;
+  color: var(--primary) !important;
+}
+
+.page-crm .fin-feature-item:hover .fin-feature-icon,
+.page-finance .fin-feature-item:hover .fin-feature-icon,
+.page-finance1 .fin-feature-item:hover .fin-feature-icon,
+.page-task .fin-feature-item:hover .fin-feature-icon,
+.page-ticketing .fin-feature-item:hover .fin-feature-icon,
+.page-hr .fin-feature-item:hover .fin-feature-icon,
+.page-crm .card-custom:hover .card-icon,
+.page-finance .card-custom:hover .card-icon,
+.page-finance1 .card-custom:hover .card-icon,
+.page-task .card-custom:hover .card-icon,
+.page-ticketing .card-custom:hover .card-icon,
+.page-hr .card-custom:hover .card-icon {
+  background: var(--primary) !important;
+}
+
+.page-crm .card-custom:hover .card-icon i,
+.page-finance .card-custom:hover .card-icon i,
+.page-finance1 .card-custom:hover .card-icon i,
+.page-task .card-custom:hover .card-icon i,
+.page-ticketing .card-custom:hover .card-icon i,
+.page-hr .card-custom:hover .card-icon i {
+  color: var(--white) !important;
+}
+
+.page-crm .fin-media-container,
+.page-finance .fin-media-container,
+.page-finance1 .fin-media-container,
+.page-task .fin-media-container,
+.page-ticketing .fin-media-container,
+.page-hr .fin-media-container {
+  background: #f8fafc !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+}
+
+.page-crm .fin-media-container svg text,
+.page-finance .fin-media-container svg text,
+.page-finance1 .fin-media-container svg text,
+.page-task .fin-media-container svg text,
+.page-ticketing .fin-media-container svg text,
+.page-hr .fin-media-container svg text {
+  fill: var(--dark) !important;
+}
+
+.page-crm .fin-media-container svg [stroke],
+.page-finance .fin-media-container svg [stroke],
+.page-finance1 .fin-media-container svg [stroke],
+.page-task .fin-media-container svg [stroke],
+.page-ticketing .fin-media-container svg [stroke],
+.page-hr .fin-media-container svg [stroke] {
+  stroke: rgba(99, 102, 241, 0.72) !important;
+}
+
+.page-crm .fin-media-container svg rect,
+.page-crm .fin-media-container svg circle,
+.page-crm .fin-media-container svg ellipse,
+.page-crm .fin-media-container svg polygon,
+.page-finance .fin-media-container svg rect,
+.page-finance .fin-media-container svg circle,
+.page-finance .fin-media-container svg ellipse,
+.page-finance .fin-media-container svg polygon,
+.page-finance1 .fin-media-container svg rect,
+.page-finance1 .fin-media-container svg circle,
+.page-finance1 .fin-media-container svg ellipse,
+.page-finance1 .fin-media-container svg polygon,
+.page-task .fin-media-container svg rect,
+.page-task .fin-media-container svg circle,
+.page-task .fin-media-container svg ellipse,
+.page-task .fin-media-container svg polygon,
+.page-ticketing .fin-media-container svg rect,
+.page-ticketing .fin-media-container svg circle,
+.page-ticketing .fin-media-container svg ellipse,
+.page-ticketing .fin-media-container svg polygon,
+.page-hr .fin-media-container svg rect,
+.page-hr .fin-media-container svg circle,
+.page-hr .fin-media-container svg ellipse,
+.page-hr .fin-media-container svg polygon {
+  fill: rgba(99, 102, 241, 0.08) !important;
+}
+
+.page-crm .dashboard-preview {
+  color: var(--dark) !important;
+}
+
+.page-crm .dashboard-preview * {
+  color: inherit !important;
+}
+
+.page-crm .dashboard-preview .badge-custom,
+.page-crm .dashboard-preview .progress-value,
+.page-crm .dashboard-preview .pipeline-value,
+.page-crm .dashboard-preview .deals-count,
+.page-crm .dashboard-preview i {
+  color: var(--primary) !important;
+}
+
+.page-crm .dashboard-preview .progress-bar-animated {
+  background: var(--primary) !important;
+}
+
+.page-crm .floating-shape,
+.page-crm .shape-1,
+.page-crm .shape-2 {
+  background: none !important;
+}
+
+.page-crm .shape-1 {
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.12), transparent) !important;
+}
+
+.page-crm .shape-2 {
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.08), transparent) !important;
+}
+
+.page-crm .cta-section-enhanced {
+  background: linear-gradient(115deg, #121A24 0%, #0f172a 50%, #2D3D4F 100%) !important;
+}
+
+.page-crm .cta-bg-image::before {
+  background: linear-gradient(115deg, rgba(18, 26, 36, 0.84) 0%, rgba(15, 23, 42, 0.88) 100%) !important;
+}
+
+.page-crm .btn-white-custom::before,
+.page-finance .btn-white-custom::before,
+.page-finance1 .btn-white-custom::before,
+.page-task .btn-white-custom::before,
+.page-ticketing .btn-white-custom::before,
+.page-hr .btn-white-custom::before {
+  background: rgba(99, 102, 241, 0.18) !important;
+}
+
+@keyframes iconPulse {
+  0%,
+  100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.2); }
+  50% { box-shadow: 0 0 0 12px rgba(99, 102, 241, 0); }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% { box-shadow: 0 14px 30px rgba(99, 102, 241, 0.18); }
+  50% { box-shadow: 0 18px 38px rgba(99, 102, 241, 0.3); }
+}

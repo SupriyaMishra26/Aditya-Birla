@@ -504,13 +504,62 @@
       document.fonts.addEventListener('loadingdone', syncInfrastructurePanelHeights);
     }
   }
+function initProductTabs() {
+  var INTERVAL = 4500;
+  var timer, currentIndex = 0;
 
+  var nav = document.getElementById('ptab-nav');
+  var panels = document.getElementById('ptab-panels');
+
+  if (!nav || !panels) return;
+
+  var btns = nav.querySelectorAll('.ptab-btn');
+  var panes = panels.querySelectorAll('.ptab-panel');
+  var total = btns.length;
+
+  function activate(idx) {
+    btns[currentIndex].classList.remove('active');
+    btns[currentIndex].setAttribute('aria-selected', 'false');
+    panes[currentIndex].classList.remove('active');
+
+    currentIndex = (idx + total) % total;
+
+    btns[currentIndex].classList.add('active');
+    btns[currentIndex].setAttribute('aria-selected', 'true');
+    panes[currentIndex].classList.add('active');
+  }
+
+  function startTimer() {
+    stopTimer();
+    timer = setInterval(function () {
+      activate(currentIndex + 1);
+    }, INTERVAL);
+  }
+
+  function stopTimer() {
+    clearInterval(timer);
+  }
+
+  btns.forEach(function (btn, i) {
+    btn.addEventListener('click', function () {
+      activate(i);
+      stopTimer();
+      startTimer();
+    });
+  });
+
+  nav.addEventListener('mouseenter', stopTimer);
+  nav.addEventListener('mouseleave', startTimer);
+
+  startTimer();
+}
   function boot() {
     initHomeScene();
     initHeroOrbit();
     initHomeScrollMotion();
     initHardwareSliders();
     initInfrastructureHeightSync();
+    initProductTabs(); 
   }
 
   if (document.readyState === 'loading') {
@@ -521,3 +570,4 @@
 
   document.addEventListener('microhub:fragments-loaded', boot);
 })();
+

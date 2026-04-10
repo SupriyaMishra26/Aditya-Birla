@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CRM System ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â MicroHub Software Solutions</title>
-  <meta name="description" content="MicroHub CRM: Intelligent customer relationship management software built for Indian enterprises. Manage leads, deals, and customer journeys from one powerful platform.">
+  <title>CRM System Microhub Software Solutions</title>
+  <meta name="description" content="Microhub CRM: Intelligent customer relationship management software built for Indian enterprises. Manage leads, deals, and customer journeys from one powerful platform.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -13,185 +13,376 @@
   <link rel="stylesheet" href="../../assets/css/components.css">
   <link rel="stylesheet" href="../../assets/css/animations.css">
   <link rel="stylesheet" href="../../assets/css/responsive.css">
+  <link rel="stylesheet" href="solutions.css">
+  <link rel="stylesheet" href="./css/financial.css">
+  <link rel="stylesheet" href="solution-overrides.css">
 </head>
-<body data-site-root="../../">
-
-<div id="navbar-root" data-include="components/navbar.html"></div>
-
+<body class="page-crm" data-site-root="../../">
+  <div id="navbar-root" data-include="../../components/navbar.html"></div>
+  <!-- Page Hero with Enhanced Animations and Subtle Background Image -->
 <section class="page-hero">
-  <div class="container position-relative" style="z-index:1">
-    <div class="breadcrumb-custom">
+  <div class="floating-shape shape-1"></div>
+  <div class="floating-shape shape-2"></div>
+  <!-- Subtle Background Image -->
+  <div class="hero-bg-image"></div>
+  <!-- Dark Overlay - Now semi-transparent -->
+  <div class="dark-overlay"></div>
+  <div class="container position-relative" style="z-index:2">
+    <div class="breadcrumb-custom fade-in-up-1">
       <a href="../../index.html">Home</a><span>/</span><a href="../../index.html#solutions">What We Do</a><span>/</span><span>CRM System</span>
     </div>
     <div class="row align-items-center g-5">
-      <div class="col-lg-7 fade-in-up-1">
-        <div class="section-label" style="background:rgba(46,75,101,0.2);color:var(--primary-light)"><i class="bi bi-people"></i> Software Solutions</div>
-        <h1 style="color:var(--white)">CRM System ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Smarter Selling, Deeper Relationships</h1>
-        <p style="color:rgba(255,255,255,0.7);font-size:1.1rem;margin-top:1.25rem;max-width:560px">A unified CRM platform that helps your sales team close faster, your support team resolve quicker, and your leadership decide smarter ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â all from one powerful dashboard.</p>
-        <div class="d-flex gap-3 mt-4 flex-wrap">
-          <a href="../../get-started/signup.html" class="btn-primary-custom">Start Free Trial <i class="bi bi-arrow-right"></i></a>
-          <a href="../../insights/roi-calculator.html" class="btn-outline-custom" style="border-color:rgba(255,255,255,0.3);color:var(--white)"><i class="bi bi-calculator"></i> Calculate ROI</a>
+      <div class="col-lg-7 fade-in-up-2">
+        
+        <h1 style="color:var(--white);font-size:clamp(2rem, 4vw, 3rem);margin-top:0.75rem">Understand Your Microhub CRM Account <span class="gradient-text"></span></h1>
+        <p style="color:rgba(255,255,255,0.7);font-size:1rem;margin-top:1rem;max-width:560px;line-height:1.6">Get familiar with essential CRM concepts: Leads, Accounts, Deals, Forecasts, Campaigns, and more. Master your sales process from a single powerful dashboard.</p>
+        <div class="d-flex gap-3 mt-3 flex-wrap">
+          <a href="../../get-started/signup.html" class="btn-primary-custom hover-lift">Start Free Trial <i class="bi bi-arrow-right"></i></a>
+          <!-- <a href="../../insights/roi-calculator.html" class="btn-outline-custom hover-lift" style="border-color:rgba(255,255,255,0.3);color:var(--white)"><i class="bi bi-calculator"></i> Calculate ROI</a> -->
         </div>
-      </div>
-      <div class="col-lg-5 fade-in-up-2">
-        <!-- CRM dashboard preview card -->
-        <div style="background:rgba(255,255,255,0.07);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:1.75rem">
-          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem">
-            <div style="color:var(--white);font-weight:700">Pipeline Overview</div>
-            <span class="badge-custom" style="background:rgba(46,75,101,0.25);color:var(--primary-light)">Live</span>
+        <!-- <div class="d-flex gap-4 mt-3 flex-wrap">
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-star-fill" style="color:#FFD700;font-size:0.85rem"></i>
+            <span style="color:rgba(255,255,255,0.6);font-size:0.8rem">4.8/5 Rating</span>
           </div>
-          <div style="display:flex;flex-direction:column;gap:0.85rem">
-            <div style="display:flex;align-items:center;gap:1rem">
-              <div style="width:100%;background:rgba(255,255,255,0.1);border-radius:100px;height:8px;overflow:hidden"><div style="width:75%;background:var(--primary-light);height:100%;border-radius:100px"></div></div>
-              <span style="color:rgba(255,255,255,0.6);font-size:0.8rem;white-space:nowrap">Prospecting 75%</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:1rem">
-              <div style="width:100%;background:rgba(255,255,255,0.1);border-radius:100px;height:8px;overflow:hidden"><div style="width:52%;background:var(--primary);height:100%;border-radius:100px"></div></div>
-              <span style="color:rgba(255,255,255,0.6);font-size:0.8rem;white-space:nowrap">Proposal 52%</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:1rem">
-              <div style="width:100%;background:rgba(255,255,255,0.1);border-radius:100px;height:8px;overflow:hidden"><div style="width:38%;background:#22d3ee;height:100%;border-radius:100px"></div></div>
-              <span style="color:rgba(255,255,255,0.6);font-size:0.8rem;white-space:nowrap">Negotiation 38%</span>
-            </div>
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-people-fill" style="color:var(--primary-light);font-size:0.85rem"></i>
+            <span style="color:rgba(255,255,255,0.6);font-size:0.8rem">280+ Businesses</span>
           </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem">
-            <div style="background:rgba(255,255,255,0.05);border-radius:10px;padding:1rem;text-align:center">
-              <div style="font-size:1.8rem;font-weight:800;color:var(--primary-light)">ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¹2.4Cr</div>
-              <div style="color:rgba(255,255,255,0.5);font-size:0.78rem">Pipeline Value</div>
-            </div>
-            <div style="background:rgba(255,255,255,0.05);border-radius:10px;padding:1rem;text-align:center">
-              <div style="font-size:1.8rem;font-weight:800;color:var(--primary-light)">142</div>
-              <div style="color:rgba(255,255,255,0.5);font-size:0.78rem">Active Deals</div>
-            </div>
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-clock-history" style="color:var(--primary-light);font-size:0.85rem"></i>
+            <span style="color:rgba(255,255,255,0.6);font-size:0.8rem">14-Day Free Trial</span>
           </div>
         </div>
-      </div>
+      </div> -->
+      <!--  -->
     </div>
   </div>
 </section>
 
-<!-- Key Features -->
+<!-- Key CRM Terminologies Section - Fixed Layout (All 6 Cards Displaying) -->
 <section class="section-pad" style="background:var(--white)">
   <div class="container">
-    <div class="text-center mb-5 reveal">
-      <div class="section-label mx-auto"><i class="bi bi-stars"></i> Core Features</div>
-      <h2 class="section-title">Everything You Need to <span>Win More Deals</span></h2>
+    <div class="text-center mb-4 reveal">
+      <h2 class="section-title">Key CRM <span>Terminologies</span></h2>
+      <p class="section-desc mx-auto" style="font-size:0.95rem">Understand the building blocks of your Microhub CRM account from Leads to Invoices.</p>
     </div>
     <div class="row g-4">
+      <!-- Card 1: Leads -->
       <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
-        <div class="card-custom">
-          <div class="card-icon"><i class="bi bi-funnel"></i></div>
-          <h4>Visual Sales Pipeline</h4>
-          <p class="text-muted small">Drag-and-drop Kanban pipeline with stage-wise probability scoring and deal forecasting.</p>
+        <div class="card-custom feature-card-enhanced">
+          <div class="card-icon card-icon-pulse"><i class="bi bi-person-badge"></i></div>
+          <h4>Leads</h4>
+          <p class="text-muted small">Unqualified contacts or sales opportunities gathered from trade shows, seminars, ads, and campaigns. Qualified leads convert into Accounts, Contacts, and Deals.</p>
+          <div class="mt-2"><span class="badge-custom" style="font-size:0.7rem"><i class="bi bi-arrow-repeat me-1"></i> Conversion Ready</span></div>
         </div>
       </div>
+      <!-- Card 2: Accounts -->
       <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
-        <div class="card-custom">
-          <div class="card-icon"><i class="bi bi-robot"></i></div>
-          <h4>AI Lead Scoring</h4>
-          <p class="text-muted small">Machine learning models rank and score leads based on engagement, behavior, and profile fit.</p>
+        <div class="card-custom feature-card-enhanced">
+          <div class="card-icon card-icon-pulse"><i class="bi bi-building"></i></div>
+          <h4>Accounts</h4>
+          <p class="text-muted small">Companies or departments you deal with. In B2B scenarios, accounts track critical company information; multiple contacts can be linked to a single account.</p>
+          <div class="mt-2"><span class="badge-custom" style="font-size:0.7rem"><i class="bi bi-diagram-3 me-1"></i> B2B Focus</span></div>
         </div>
       </div>
+      <!-- Card 3: Contacts -->
       <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
-        <div class="card-custom">
-          <div class="card-icon"><i class="bi bi-envelope-at"></i></div>
-          <h4>Email & WhatsApp Integration</h4>
-          <p class="text-muted small">Send, track, and automate outreach directly from CRM. Two-way sync with Gmail, Outlook, and WhatsApp Business.</p>
+        <div class="card-custom feature-card-enhanced">
+          <div class="card-icon card-icon-pulse"><i class="bi bi-person-lines-fill"></i></div>
+          <h4>Contacts</h4>
+          <p class="text-muted small">People within organizations your team communicates with. Converted from leads, imported, or added manually. Key to nurturing business relationships.</p>
+          <div class="mt-2"><span class="badge-custom" style="font-size:0.7rem"><i class="bi bi-chat-dots me-1"></i> 360Â° View</span></div>
         </div>
       </div>
+      <!-- Card 4: Deals -->
       <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
-        <div class="card-custom">
-          <div class="card-icon"><i class="bi bi-graph-up"></i></div>
-          <h4>Revenue Analytics</h4>
-          <p class="text-muted small">Real-time revenue dashboards, cohort analysis, and rep performance leaderboards.</p>
+        <div class="card-custom feature-card-enhanced">
+          <div class="card-icon card-icon-pulse"><i class="bi bi-trophy"></i></div>
+          <h4>Deals</h4>
+          <p class="text-muted small">Revenue-generating opportunities evolving through sales stages. Convert leads to track potential revenue through your pipeline.</p>
+          <div class="mt-2"><span class="badge-custom" style="font-size:0.7rem"><i class="bi bi-graph-up me-1"></i> Stage Tracking</span></div>
         </div>
       </div>
+      <!-- Card 5: Forecasts -->
       <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
-        <div class="card-custom">
-          <div class="card-icon"><i class="bi bi-lightning-charge"></i></div>
-          <h4>Workflow Automation</h4>
-          <p class="text-muted small">Automate follow-ups, task assignments, and approval flows with a no-code rule builder.</p>
+        <div class="card-custom feature-card-enhanced">
+          <div class="card-icon card-icon-pulse"><i class="bi bi-eye"></i></div>
+          <h4>Forecasts</h4>
+          <p class="text-muted small">Factual insights for smart business decisions. Personalized real-time tracking to fine-tune sales processes and anticipate future revenue.</p>
+          <div class="mt-2"><span class="badge-custom" style="font-size:0.7rem"><i class="bi bi-calculator-fill me-1"></i> Predictive Analytics</span></div>
         </div>
       </div>
+      <!-- Card 6: Campaigns -->
       <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
-        <div class="card-custom">
-          <div class="card-icon"><i class="bi bi-phone"></i></div>
-          <h4>Mobile CRM App</h4>
-          <p class="text-muted small">Full-featured iOS and Android app for field sales teams with offline data sync and GPS check-in.</p>
+        <div class="card-custom feature-card-enhanced">
+          <div class="card-icon card-icon-pulse"><i class="bi bi-megaphone"></i></div>
+          <h4>Campaigns</h4>
+          <p class="text-muted small">Organize marketing efforts, track costs, stages, and ROI. Import targeted contacts and associate tasks, events, and calls to each campaign.</p>
+          <div class="mt-2"><span class="badge-custom" style="font-size:0.7rem"><i class="bi bi-envelope-paper me-1"></i> Multi-channel</span></div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- Quick Screen Tour Section (Home Tab, Module View, Record View, Setup) -->
+
+<!-- Section 1: Leads & Accounts Deep Dive -->
+<section id="fin-accounting" class="fin-section fin-section-anchor">
+  <div class="container">
+    <div class="fin-grid-2-equal">
+      <div class="fin-visual-card-equal" data-aos="fade-right" data-aos-duration="800">
+        <span class="fin-visual-kicker"><i class="bi bi-person-plus"></i> Lead to Account Pipeline</span>
+        <div class="fin-media-container">
+          <img src="https://static.vecteezy.com/system/resources/previews/015/939/308/non_2x/financial-management-planning-and-control-financial-resources-to-maximize-profit-and-revenue-capital-credit-and-cash-management-concept-businessman-analyze-financial-resource-with-growth-profit-vector.jpg" alt="CRM Lead Conversion" class="fin-media-image">
+        </div>
+        <div class="fin-chip-row">
+          <span class="fin-chip"><i class="bi bi-arrow-repeat"></i> Convert Lead</span>
+          <span class="fin-chip"><i class="bi bi-building"></i> Create Account</span>
+          <span class="fin-chip"><i class="bi bi-person-check"></i> Add Contact</span>
+          <span class="fin-chip"><i class="bi bi-trophy"></i> Create Deal</span>
+        </div>
+      </div>
+      <div class="fin-content-equal" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+        <span class="fin-eyebrow"><i class="bi bi-diagram-3"></i> Leads & Accounts</span>
+        <h2>Raw Opportunities  Qualified Business Entities</h2>
+        <p>Leads are unqualified contacts from trade shows, seminars, or campaigns. When qualified, they convert into Accounts (companies) and Contacts (people). In B2B scenarios, Accounts track critical company information.</p>
+        <div class="fin-feature-list">
+          <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-funnel"></i></span><div><h3 style="color: #cfe6ff;">Lead Follow-up</h3><p>Sales reps follow up, qualify, and convert leads seamlessly.</p></div></div>
+          <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-people"></i></span><div><h3 style="color: #cfe6ff;">Multiple Contacts</h3><p>Associate many contacts to a single Account for complete view.</p></div></div>
+          <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-bar-chart"></i></span><div><h3 style="color: #cfe6ff;">B2B Readiness</h3><p>Track important company hierarchies and decision-makers.</p></div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Stats -->
+<!-- Section 2: Deals & Forecasts (reverse layout) -->
+<section id="fin-validation" class="fin-section fin-section-anchor">
+  <div class="container">
+    <div class="fin-grid-2-equal reverse">
+      <div class="fin-content-equal" data-aos="fade-right" data-aos-duration="800">
+        <span class="fin-eyebrow"><i class="bi bi-graph-up"></i> Deals & Forecasts</span>
+        <h2>Revenue Opportunities & Predictive Intelligence</h2>
+        <p>Deals evolve through sales stages like Prospecting, Needs Analysis, Value Proposition before being Won/Lost. Forecasts provide real-time insights to anticipate future sales and fine-tune your process.</p>
+        <div class="fin-feature-list">
+          <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-arrow-right-circle"></i></span><div><h3 style="color: #cfe6ff;">Sales Stages</h3><p>Prospecting  Qualification  Needs Analysis  Value Proposition  Won/Lost.</p></div></div>
+          <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-eye-fill"></i></span><div><h3 style="color: #cfe6ff;">Personalized Forecasts</h3><p>Real-time business tracking for smarter decisions.</p></div></div>
+          <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-cash-stack"></i></span><div><h3 style="color: #cfe6ff;">Revenue Generation</h3><p>Direct conversion from qualified leads to Deals.</p></div></div>
+        </div>
+      </div>
+      <div class="fin-visual-card-equal" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+        <span class="fin-visual-kicker"><i class="bi bi-trophy"></i> Deal Pipeline</span>
+        <div class="fin-media-container">
+          <div class="fin-compliance-animation">
+            <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="30" y="60" width="70" height="40" rx="8" fill="rgba(53,81,106,0.2)" stroke="#35516A" stroke-width="1.5"/>
+              <text x="65" y="83" font-size="9" fill="#cfe6ff" text-anchor="middle">Lead</text>
+              <path d="M100 80 L130 80" stroke="#35516A" stroke-width="2" marker-end="url(#arrow)"/>
+              <rect x="130" y="60" width="70" height="40" rx="8" fill="rgba(53,81,106,0.3)" stroke="#35516A" stroke-width="1.5"/>
+              <text x="165" y="83" font-size="9" fill="#cfe6ff" text-anchor="middle">Qualified</text>
+              <path d="M200 80 L230 80" stroke="#35516A" stroke-width="2"/>
+              <rect x="230" y="60" width="60" height="40" rx="8" fill="rgba(53,81,106,0.2)" stroke="#35516A" stroke-width="1.5"/>
+              <text x="260" y="83" font-size="9" fill="#cfe6ff" text-anchor="middle">Deal</text>
+              <text x="160" y="170" font-size="10" fill="rgba(255,255,255,0.6)" text-anchor="middle">Stages: Prospecting  Won/Lost</text>
+              <rect x="60" y="185" width="200" height="4" rx="2" fill="rgba(53,81,106,0.2)"/>
+              <rect x="60" y="185" width="192" height="4" rx="2" fill="#35516A"/>
+            </svg>
+          </div>
+        </div>
+        <div class="fin-chip-row">
+          <span class="fin-chip"><i class="bi bi-arrow-up"></i> Forecasting</span>
+          <span class="fin-chip"><i class="bi bi-bar-chart"></i> Pipeline View</span>
+          <span class="fin-chip"><i class="bi bi-check2-circle"></i> Win/Loss</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: Quotes, Sales Orders, Invoices, Purchase Orders -->
+<!-- <section id="fin-reconciliation" class="fin-section fin-section-anchor">
+  <div class="container">
+    <div class="fin-grid-2-equal">
+      <div class="fin-visual-card-equal" data-aos="fade-right" data-aos-duration="800">
+        <span class="fin-visual-kicker"><i class="bi bi-file-earmark-text"></i> Quotes  Orders  Invoices</span>
+        <div class="fin-media-container">
+          <div class="fin-reconcile-animation">
+            <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="30" y="50" width="70" height="90" rx="8" fill="rgba(53,81,106,0.15)" stroke="#35516A" stroke-width="1.5"/>
+              <text x="65" y="75" font-size="8" fill="#cfe6ff" text-anchor="middle">Quote</text>
+              <text x="65" y="95" font-size="8" fill="#cfe6ff" text-anchor="middle"> Sales Order</text>
+              <text x="65" y="115" font-size="8" fill="#cfe6ff" text-anchor="middle"> Invoice</text>
+              <rect x="220" y="50" width="80" height="90" rx="8" fill="rgba(53,81,106,0.15)" stroke="#35516A" stroke-width="1.5"/>
+              <text x="260" y="75" font-size="8" fill="#cfe6ff" text-anchor="middle">Purchase</text>
+              <text x="260" y="95" font-size="8" fill="#cfe6ff" text-anchor="middle">Order</text>
+              <text x="260" y="115" font-size="8" fill="#cfe6ff" text-anchor="middle">(Vendor)</text>
+              <path d="M100 95 L220 95" stroke="#35516A" stroke-width="2" stroke-dasharray="4 2"/>
+              <circle cx="110" cy="95" r="4" fill="#35516A">
+                <animate attributeName="cx" values="110;220;110" dur="2.5s" repeatCount="indefinite"/>
+              </circle>
+              <text x="160" y="170" font-size="10" fill="rgba(255,255,255,0.6)" text-anchor="middle">One-click conversion & templates</text>
+              <rect x="60" y="185" width="200" height="4" rx="2" fill="rgba(53,81,106,0.2)"/>
+              <rect x="60" y="185" width="192" height="4" rx="2" fill="#35516A"/>
+            </svg>
+          </div>
+        </div>
+        <div class="fin-chip-row">
+          <span class="fin-chip"><i class="bi bi-file-check"></i> Quote  SO</span>
+          <span class="fin-chip"><i class="bi bi-receipt"></i> Invoice</span>
+          <span class="fin-chip"><i class="bi bi-cart"></i> Purchase Order</span>
+        </div>
+      </div>
+      <div class="fin-content-equal" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+        <span class="fin-eyebrow"><i class="bi bi-arrow-left-right"></i> Quotes, Orders & Invoices</span>
+        <h2>Legal Agreements, Sales Orders, and Procurement</h2>
+        <p>Quotes are binding agreements that convert to Sales Orders or Invoices with one click. Purchase Orders are legally bound documents for procuring products from vendors each product can have reorder levels to trigger new POs.</p>
+        <div class="fin-feature-list">
+          <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-file-spreadsheet"></i></span><div><h3 style="color: #cfe6ff;">Quotes  Sales Orders</h3><p>Convert quotes directly; send templates and track acceptance.</p></div></div>
+          <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-receipt"></i></span><div><h3 style="color: #cfe6ff;">Invoices & Payment</h3><p>Generate bills for goods/services; track payments and overdue status.</p></div></div>
+          <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-archive"></i></span><div><h3 style="color: #cfe6ff;">Vendor Procurement</h3><p>Create Purchase Orders based on reorder levels and vendor terms.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- Section 4: Campaigns, Price Books, Modules/Records -->
+<!-- <section id="fin-sync" class="fin-section fin-section-anchor">
+  <div class="container">
+    <div class="fin-grid-2-equal reverse">
+      <div class="fin-content-equal" data-aos="fade-right" data-aos-duration="800">
+        <span class="fin-eyebrow"><i class="bi bi-megaphone"></i> Campaigns, Price Books & Custom Modules</span>
+        <h2>Organize, Price, and Structure Your Data</h2>
+        <p>Campaigns track marketing costs, stages, and ROI. Price Books define customer-specific pricing. Modules group similar data (Leads, Contacts) and Records are individual entries plus you can create custom modules.</p>
+        <div class="fin-feature-list">
+          <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-bar-chart-line"></i></span><div><h3 style="color: #cfe6ff;">Campaign ROI</h3><p>Import contacts, associate tasks/events, and measure effectiveness.</p></div></div>
+          <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-tag"></i></span><div><h3 style="color: #cfe6ff;">Price Books</h3><p>Unit price vs list price; discount ranges per customer.</p></div></div>
+          <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-database"></i></span><div><h3 style="color: #cfe6ff;">Modules & Records</h3><p>Default + custom modules. Each entry (lead, contact) is a record.</p></div></div>
+        </div>
+      </div>
+      <div class="fin-visual-card-equal" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+        <span class="fin-visual-kicker"><i class="bi bi-layers"></i> Modules Overview</span>
+        <div class="fin-media-container">
+          <div class="fin-report-animation">
+            <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="40" y="50" width="80" height="100" rx="8" fill="rgba(53,81,106,0.1)" stroke="rgba(53,81,106,0.4)" stroke-width="1"/>
+              <text x="80" y="80" font-size="9" fill="#cfe6ff" text-anchor="middle">Leads</text>
+              <rect x="130" y="50" width="80" height="100" rx="8" fill="rgba(53,81,106,0.1)" stroke="rgba(53,81,106,0.4)" stroke-width="1"/>
+              <text x="170" y="80" font-size="9" fill="#cfe6ff" text-anchor="middle">Deals</text>
+              <rect x="220" y="50" width="60" height="100" rx="8" fill="rgba(53,81,106,0.1)" stroke="rgba(53,81,106,0.4)" stroke-width="1"/>
+              <text x="250" y="80" font-size="9" fill="#cfe6ff" text-anchor="middle">Contacts</text>
+              <text x="160" y="170" font-size="10" fill="rgba(255,255,255,0.6)" text-anchor="middle">Each module contains records</text>
+              <rect x="80" y="185" width="160" height="4" rx="2" fill="rgba(53,81,106,0.2)"/>
+              <rect x="80" y="185" width="160" height="4" rx="2" fill="#35516A">
+                <animate attributeName="width" values="0;160;160" dur="3s" repeatCount="indefinite"/>
+              </rect>
+            </svg>
+          </div>
+        </div>
+        <div class="fin-chip-row">
+          <span class="fin-chip"><i class="bi bi-folder"></i> Default Modules</span>
+          <span class="fin-chip"><i class="bi bi-puzzle"></i> Custom Modules</span>
+          <span class="fin-chip"><i class="bi bi-record-circle"></i> Records</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- Stats Section with Enhanced Animation -->
 <section class="stats-section">
   <div class="container position-relative">
     <div class="row g-4 text-center">
-      <div class="col-6 col-lg-3 reveal"><div class="stat-number"><span class="counter-num" data-target="35" data-suffix="%">35%</span></div><div class="stat-label">Avg. Revenue Increase</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-1"><div class="stat-number"><span class="counter-num" data-target="60" data-suffix="%">60%</span></div><div class="stat-label">Faster Lead Conversion</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-2"><div class="stat-number"><span class="counter-num" data-target="280" data-suffix="+">280+</span></div><div class="stat-label">Businesses Using CRM</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-3"><div class="stat-number"><span class="counter-num" data-target="4.8" data-suffix="/5">4.8/5</span></div><div class="stat-label">Average Rating</div></div>
+      <div class="col-6 col-lg-3 reveal">
+        <div class="stat-number"><span class="counter-num" data-target="35" data-suffix="%">0%</span></div>
+        <div class="stat-label">Avg. Revenue Increase</div>
+        <div class="stat-note" style="font-size:0.65rem;margin-top:0.2rem">Based on 280+ clients</div>
+      </div>
+      <div class="col-6 col-lg-3 reveal reveal-delay-1">
+        <div class="stat-number"><span class="counter-num" data-target="60" data-suffix="%">0%</span></div>
+        <div class="stat-label">Faster Lead Conversion</div>
+        <div class="stat-note" style="font-size:0.65rem;margin-top:0.2rem">Average across industries</div>
+      </div>
+      <div class="col-6 col-lg-3 reveal reveal-delay-2">
+        <div class="stat-number"><span class="counter-num" data-target="280" data-suffix="+">0+</span></div>
+        <div class="stat-label">Businesses Using CRM</div>
+        <div class="stat-note" style="font-size:0.65rem;margin-top:0.2rem">And growing daily</div>
+      </div>
+      <div class="col-6 col-lg-3 reveal reveal-delay-3">
+        <div class="stat-number"><span class="counter-num" data-target="4.8" data-suffix="/5">0/5</span></div>
+        <div class="stat-label">Average Rating</div>
+        <div class="stat-note" style="font-size:0.65rem;margin-top:0.2rem">From verified reviews</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Pricing preview -->
-<section class="section-pad" style="background:var(--accent)">
+<!-- Pricing Preview with pricing aligned to the main pricing page -->
+<section class="section-pad pricing-four-cards" style="background:var(--accent)">
   <div class="container">
     <div class="text-center mb-5 reveal">
       <div class="section-label mx-auto"><i class="bi bi-tag"></i> CRM Pricing</div>
       <h2 class="section-title">Simple, Transparent <span>Pricing</span></h2>
-      <p class="section-desc mx-auto">Start free, scale as you grow. No contracts, no surprises.</p>
+      <p class="section-desc mx-auto" style="font-size:0.95rem; max-width: 620px">The same plan structure and rates shown on the pricing page, with a 30-day free trial on paid plans.</p>
     </div>
+
     <div class="row g-4 justify-content-center">
       <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
-        <div class="pricing-card">
+        <div class="pricing-card pricing-card-enhanced" style="padding:1.75rem 1.5rem; height: 100%;">
           <div class="pricing-name">Starter</div>
-          <div class="pricing-price"><sup>ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¹</sup>2,999<sub>/mo</sub></div>
-          <div class="pricing-desc">Perfect for small sales teams getting started.</div>
-          <div class="pricing-features">
-            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> Up to 5 users</div>
-            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> 10,000 contacts</div>
-            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> Email integration</div>
-            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> Basic reporting</div>
-            <div class="pricing-feature disabled"><i class="bi bi-x-circle-fill"></i> AI Lead Scoring</div>
-            <div class="pricing-feature disabled"><i class="bi bi-x-circle-fill"></i> WhatsApp Integration</div>
+          <div class="pricing-price"><sup>&#8377;</sup>999<sub>/month</sub></div>
+          <div class="pricing-desc" style="font-size:0.85rem">Good for smaller teams getting started.</div>
+          <div class="pricing-features" style="gap:0.6rem;margin-bottom:1.5rem">
+            <div class="pricing-feature" style="font-size:0.85rem"><i class="bi bi-check-circle-fill"></i> Up to 10 users</div>
+            <div class="pricing-feature" style="font-size:0.85rem"><i class="bi bi-check-circle-fill"></i> CRM basic pipeline</div>
+            <div class="pricing-feature" style="font-size:0.85rem"><i class="bi bi-check-circle-fill"></i> HRMS attendance & leave</div>
+            <div class="pricing-feature" style="font-size:0.85rem"><i class="bi bi-check-circle-fill"></i> Ticketing email intake</div>
+            <div class="pricing-feature" style="font-size:0.85rem"><i class="bi bi-check-circle-fill"></i> 5 GB cloud storage</div>
+            <div class="pricing-feature" style="font-size:0.85rem"><i class="bi bi-check-circle-fill"></i> Email support</div>
           </div>
-          <a href="../../get-started/signup.html" class="btn-outline-custom w-100 justify-content-center">Start Free Trial</a>
+          <a href="../../get-started/signup.html" class="btn-outline-custom w-100 justify-content-center hover-lift" style="padding:0.6rem">Start Free Trial</a>
         </div>
       </div>
+
       <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
-        <div class="pricing-card featured" style="margin-top:-16px">
+        <div class="pricing-card pricing-card-enhanced featured" style="margin-top:-16px;padding:1.75rem 1.5rem; height: calc(100% + 16px);">
           <div class="pricing-badge">Most Popular</div>
-          <div class="pricing-name">Growth</div>
-          <div class="pricing-price"><sup>ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¹</sup>7,999<sub>/mo</sub></div>
-          <div class="pricing-desc">For growing teams ready to scale revenue operations.</div>
-          <div class="pricing-features">
-            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> Up to 25 users</div>
-            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> Unlimited contacts</div>
-            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> Email + WhatsApp</div>
-            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> AI Lead Scoring</div>
-            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> Advanced Analytics</div>
-            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> Workflow Automation</div>
+          <div class="pricing-name">Professional</div>
+          <div class="pricing-price"><sup>&#8377;</sup>2,499<sub>/month</sub></div>
+          <div class="pricing-desc" style="font-size:0.85rem">For growing teams that need more automation.</div>
+          <div class="pricing-features" style="gap:0.6rem;margin-bottom:1.5rem">
+            <div class="pricing-feature" style="font-size:0.85rem"><i class="bi bi-check-circle-fill"></i> Up to 50 users</div>
+            <div class="pricing-feature" style="font-size:0.85rem"><i class="bi bi-check-circle-fill"></i> CRM full pipeline + WhatsApp</div>
+            <div class="pricing-feature" style="font-size:0.85rem"><i class="bi bi-check-circle-fill"></i> HRMS payroll + performance</div>
+            <div class="pricing-feature" style="font-size:0.85rem"><i class="bi bi-check-circle-fill"></i> Face Recognition - 1 device</div>
+            <div class="pricing-feature" style="font-size:0.85rem"><i class="bi bi-check-circle-fill"></i> Ticketing omnichannel</div>
+            <div class="pricing-feature" style="font-size:0.85rem"><i class="bi bi-check-circle-fill"></i> AI analytics dashboard</div>
+            <div class="pricing-feature" style="font-size:0.85rem"><i class="bi bi-check-circle-fill"></i> 50 GB cloud storage</div>
+            <div class="pricing-feature" style="font-size:0.85rem"><i class="bi bi-check-circle-fill"></i> Priority phone & chat support</div>
           </div>
-          <a href="../../get-started/signup.html" class="btn-primary-custom w-100 justify-content-center">Start Free Trial</a>
+          <a href="../../get-started/signup.html" class="btn-primary-custom w-100 justify-content-center hover-lift" style="padding:0.6rem">Start Free Trial</a>
         </div>
       </div>
+
       <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
-        <div class="pricing-card">
+        <div class="pricing-card pricing-card-enhanced" style="padding:1.75rem 1.5rem; height: 100%;">
           <div class="pricing-name">Enterprise</div>
           <div class="pricing-price" style="font-size:2rem">Custom</div>
-          <div class="pricing-desc">For large organizations requiring custom configuration and dedicated support.</div>
-          <div class="pricing-features">
-            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> Unlimited users</div>
-            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> Custom integrations</div>
-            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> Dedicated CSM</div>
-            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> SLA guarantee</div>
-            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> On-prem option</div>
-            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> White-label</div>
+          <div class="pricing-desc" style="font-size:0.85rem">For large organizations with advanced needs.</div>
+          <div class="pricing-features" style="gap:0.6rem;margin-bottom:1.5rem">
+            <div class="pricing-feature" style="font-size:0.85rem"><i class="bi bi-check-circle-fill"></i> Unlimited users</div>
+            <div class="pricing-feature" style="font-size:0.85rem"><i class="bi bi-check-circle-fill"></i> All modules - full feature set</div>
+            <div class="pricing-feature" style="font-size:0.85rem"><i class="bi bi-check-circle-fill"></i> Face Recognition - unlimited devices</div>
+            <div class="pricing-feature" style="font-size:0.85rem"><i class="bi bi-check-circle-fill"></i> Dedicated account manager</div>
+            <div class="pricing-feature" style="font-size:0.85rem"><i class="bi bi-check-circle-fill"></i> Custom integrations (API access)</div>
+            <div class="pricing-feature" style="font-size:0.85rem"><i class="bi bi-check-circle-fill"></i> On-premise deployment option</div>
+            <div class="pricing-feature" style="font-size:0.85rem"><i class="bi bi-check-circle-fill"></i> 99.9% SLA guarantee</div>
+            <div class="pricing-feature" style="font-size:0.85rem"><i class="bi bi-check-circle-fill"></i> Unlimited storage</div>
           </div>
-          <a href="../../get-started/signup.html" class="btn-outline-custom w-100 justify-content-center">Contact Sales</a>
+          <a href="https://repair.microhub.in/contact" class="btn-outline-custom w-100 justify-content-center hover-lift" style="padding:0.6rem">Talk to Sales</a>
         </div>
       </div>
     </div>
@@ -201,22 +392,19 @@
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-section">
-  <div class="container position-relative" style="z-index:1;text-align:center">
-    <h2 style="color:var(--white);margin-bottom:1rem">Start Closing Deals Faster Today</h2>
-            <p style="color:rgba(255,255,255,0.8);margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto">30-day free trial. No credit card required. Full feature access from day one.</p>
-    <a href="../../get-started/signup.html" class="btn-white-custom">Get Started Free <i class="bi bi-arrow-right"></i></a>
-  </div>
-</section>
+<!-- CTA Section with Enhanced Animation -->
 
-<div id="footer-root" data-include="components/footer.html"></div>
+<div id="footer-root" data-include="../../components/footer.html"></div>
+<button id="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../../assets/js/component-loader.js"></script>
 <script src="../../assets/js/navigation.js"></script>
 <script src="../../assets/js/animations.js"></script>
 <script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/component-loader.js"></script>
+<script src="solutions.js"></script>
+<script src="./js/financial.js"></script>
+<script src="./js/crm.js"></script>
 </body>
 </html>

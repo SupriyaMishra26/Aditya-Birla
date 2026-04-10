@@ -1,86 +1,410 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Financial Management ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â MicroHub</title>
+  <title>Financial Management — Microhub</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/css/main.css">
   <link rel="stylesheet" href="../../assets/css/layout.css">
   <link rel="stylesheet" href="../../assets/css/components.css">
   <link rel="stylesheet" href="../../assets/css/animations.css">
   <link rel="stylesheet" href="../../assets/css/responsive.css">
+  <link rel="stylesheet" href="solutions.css">
+  <link rel="stylesheet" href="./css/financial.css">
+  <link rel="stylesheet" href="solution-overrides.css">
 </head>
-<body data-site-root="../../">
-<div id="navbar-root" data-include="components/navbar.html"></div>
 
-<section class="page-hero">
-  <div class="container position-relative" style="z-index:1">
-    <div class="breadcrumb-custom"><a href="../../index.html">Home</a><span>/</span><span>Financial Management</span></div>
-    <div class="col-lg-8 fade-in-up-1">
-      <div class="section-label" style="background:rgba(46,75,101,0.2);color:var(--primary-light)"><i class="bi bi-currency-rupee"></i> Finance</div>
-      <h1 style="color:var(--white)">Complete Financial Control for Indian Businesses</h1>
-      <p style="color:rgba(255,255,255,0.7);font-size:1.1rem;margin-top:1.25rem;max-width:600px">GST invoicing, P&L statements, and full financial visibility in real time.</p>
-      <div class="d-flex gap-3 mt-4 flex-wrap">
-        <a href="../../get-started/signup.html" class="btn-primary-custom">Get Started <i class="bi bi-arrow-right"></i></a>
-        <a href="../../insights/pricing.html" class="btn-outline-custom" style="border-color:rgba(255,255,255,0.3);color:var(--white)">View Pricing</a>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="section-pad" style="background:var(--white)">
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-lg-6 reveal">
-        <div class="section-label"><i class="bi bi-stars"></i> Key Capabilities</div>
-        <h2 class="section-title">What You <span>Get</span></h2>
-        <div class="divider"></div>
-        <ul class="feature-list">
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Enterprise-grade security and compliance built in</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Real-time dashboards and actionable analytics</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Seamless integrations with your existing tools</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Dedicated onboarding and customer success manager</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">Mobile-first design for on-the-go access</span></li>
-          <li class="feature-item"><div class="feature-icon"><i class="bi bi-check"></i></div><span class="feature-text">99.9% uptime SLA with 24/7 technical support</span></li>
-        </ul>
-      </div>
-      <div class="col-lg-6 reveal reveal-delay-2">
-        <div class="row g-3">
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-lightning-charge"></i></div><h5>Fast Setup</h5><p class="text-muted small">Live in hours, not weeks</p></div></div>
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-shield-check"></i></div><h5>Secure</h5><p class="text-muted small">End-to-end encrypted</p></div></div>
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-graph-up"></i></div><h5>Analytics</h5><p class="text-muted small">Real-time insights</p></div></div>
-          <div class="col-6"><div class="card-custom text-center"><div class="card-icon mx-auto"><i class="bi bi-headset"></i></div><h5>24/7 Support</h5><p class="text-muted small">Always there for you</p></div></div>
+<body class="page-finance" data-site-root="../../">
+  <div id="navbar-root" data-include="../../components/navbar.html"></div>
+  
+  <!-- Hero Section with Parallax -->
+  <section class="page-hero" id="hero">
+    <div class="hero-bg-image parallax-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container position-relative" style="z-index:2">
+      <div class="breadcrumb-custom" data-aos="fade-down" data-aos-duration="800"><a href="../../index.html">Home</a><span>/</span><span>Financial Management</span></div>
+      <div class="col-lg-8">
+        <div class="section-label" style="background:rgba(53,81,106,0.2);color:#35516A" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100"><i class="bi bi-currency-rupee"></i> Finance</div>
+        <h1 style="color:var(--white)" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">Complete Control Over Your Financial Operations</h1>
+        <p style="color:rgba(255,255,255,0.7);font-size:1.1rem;margin-top:1.25rem;max-width:600px" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">Manage bills, sales orders, and invoices — all in one place.</p>
+        <div class="d-flex gap-3 mt-4 flex-wrap" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+          <a href="../../get-started/signup.html" class="btn-primary-custom">Get Started <i class="bi bi-arrow-right"></i></a>
+          <a href="../../insights/pricing.html" class="btn-outline-custom" style="border-color:rgba(255,255,255,0.3);color:var(--white)">View Pricing</a>
         </div>
       </div>
     </div>
+   
+  </section>
+
+  <!-- Stats Section with Counter Animation -->
+  <div class="fin-stats-wrap">
+    <div class="container">
+      <div class="fin-stats-grid">
+        <div class="fin-stat-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0"><strong style="color: #cfe6ff;">₹0</strong><span>No upfront setup cost</span></div>
+        <div class="fin-stat-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"><strong style="color: #cfe6ff;">&lt;2s</strong><span>Instant transaction updates</span></div>
+        <div class="fin-stat-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200"><strong style="color: #cfe6ff;">GST / TDS</strong><span>Built-in compliance support</span></div>
+        <div class="fin-stat-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300"><strong style="color: #cfe6ff;">ERP</strong><span>All financial workflows in one system</span></div>
+      </div>
+    </div>
   </div>
-</section>
-<section class="stats-section">
-  <div class="container position-relative">
-    <div class="row g-4 text-center">
-      <div class="col-6 col-lg-3 reveal"><div class="stat-number"><span class="counter-num" data-target="500" data-suffix="+">500+</span></div><div class="stat-label">Businesses Served</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-1"><div class="stat-number"><span class="counter-num" data-target="99" data-suffix="%">99%</span></div><div class="stat-label">Uptime SLA</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-2"><div class="stat-number"><span class="counter-num" data-target="4" data-suffix="hr">4hr</span></div><div class="stat-label">Avg Setup Time</div></div>
-      <div class="col-6 col-lg-3 reveal reveal-delay-3"><div class="stat-number"><span class="counter-num" data-target="4.8" data-suffix="/5">4.8/5</span></div><div class="stat-label">Customer Rating</div></div>
+
+  <!-- Workflow Process Section (Bills, Sales Orders, Invoices) -->
+  <section id="fin-process" class="fin-section fin-section-anchor">
+    <div class="container">
+      <div class="fin-head center">
+        <span class="fin-eyebrow" data-aos="fade-up" data-aos-duration="600"><i class="bi bi-graph-up"></i> End-to-End Financial Operations — From Purchase to Payment</span>
+        <h2 data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">From transaction entry to audit-ready financial statements.</h2>
+        <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">Microhub manages your financial flow from vendor bills to customer orders and final invoicing — ensuring every transaction is tracked and updated in real time.</p>
+      </div>
+      <div class="fin-grid-3">
+        <article class="fin-process-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
+          <span class="fin-process-index">01</span>
+          <h3 style="color: #cfe6ff;">Bills (Payables)</h3>
+          <p>Create, track, and manage vendor bills while monitoring due amounts and payments. Includes vendor credits, landed costs, bill of entry, and custom templates.</p>
+          <div class="process-hover-line"></div>
+        </article>
+        <article class="fin-process-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+          <span class="fin-process-index">02</span>
+          <h3 style="color: #cfe6ff;">Sales Orders</h3>
+          <p>Capture customer orders, manage status (Draft → Open → Closed), convert to invoices or purchase orders, and handle partial invoicing seamlessly.</p>
+          <div class="process-hover-line"></div>
+        </article>
+        <article class="fin-process-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+          <span class="fin-process-index">03</span>
+          <h3 style="color: #cfe6ff;">Invoices</h3>
+          <p>Generate one-time, recurring, or retainer invoices. Track overdue status, record payments, send reminders, and maintain full audit trail.</p>
+          <div class="process-hover-line"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Bills Deep Dive (Accounting Hub) -->
+  <section id="fin-accounting" class="fin-section fin-section-anchor">
+    <div class="container">
+      <div class="fin-grid-2-equal">
+        <div class="fin-visual-card-equal" data-aos="fade-right" data-aos-duration="800">
+          <span class="fin-visual-kicker"><i class="bi bi-receipt"></i> Bills – Complete Payables Management</span>
+          <div class="fin-media-container">
+            <img src="https://static.vecteezy.com/system/resources/previews/015/939/308/non_2x/financial-management-planning-and-control-financial-resources-to-maximize-profit-and-revenue-capital-credit-and-cash-management-concept-businessman-analyze-financial-resource-with-growth-profit-vector.jpg" alt="Financial Dashboard" class="fin-media-image">
+          </div>
+          <div class="fin-chip-row">
+            <span class="fin-chip"><i class="bi bi-plus-circle"></i> Create Bill</span>
+            <span class="fin-chip"><i class="bi bi-journal-bookmark-fill"></i> View Journal</span>
+            <span class="fin-chip"><i class="bi bi-cash-stack"></i> Record Payment</span>
+            <span class="fin-chip"><i class="bi bi-file-spreadsheet"></i> Import Bills</span>
+          </div>
+        </div>
+        <div class="fin-content-equal" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <span class="fin-eyebrow"><i class="bi bi-journal-bookmark-fill"></i> Bills Deep Dive</span>
+          <h2>Manage Vendor Bills, Credits & Landed Costs</h2>
+          <p>Microhub gives you complete control over your payables — from creating bills to applying credits, setting expected payment dates, and handling landed costs.</p>
+          <div class="fin-feature-list">
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-pen"></i></span><div><h3 style="color: #cfe6ff;">Create & Customize</h3><p>Create bills, attach files, customize templates, and clone recurring bills. Support for Bill of Entry & Landed Costs.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-credit-card"></i></span><div><h3 style="color: #cfe6ff;">Payments & Credits</h3><p>Record payments, view payment history, apply vendor credits, and set expected payment dates.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-funnel"></i></span><div><h3 style="color: #cfe6ff;">Manage & Organize</h3><p>Filter by status (Draft, Open, Paid, Void), custom views, sort columns, calendar view, and export current view.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-download"></i></span><div><h3 style="color: #cfe6ff;">Export & Actions</h3><p>Download as PDF, print, attach files, clone, make recurring, void, delete, or export bills in bulk.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Sales Orders Deep Dive (reverse layout) -->
+  <section id="fin-validation" class="fin-section fin-section-anchor">
+    <div class="container">
+      <div class="fin-grid-2-equal reverse">
+        <div class="fin-content-equal" data-aos="fade-right" data-aos-duration="800">
+          <span class="fin-eyebrow"><i class="bi bi-cart-check"></i> Sales Orders – From Quote to Cash</span>
+          <h2>Streamline Customer Orders & Fulfillment</h2>
+          <p>Create sales orders from quotes, import in bulk, convert to invoices or purchase orders, and manage partial invoicing — all while tracking stock levels.</p>
+          <div class="fin-feature-list">
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-file-plus"></i></span><div><h3 style="color: #cfe6ff;">Create Sales Orders</h3><p>Manual entry, bulk import (CSV/TSV/XLS), or convert from accepted quotes. Set shipment dates and item details.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-arrow-repeat"></i></span><div><h3 style="color: #cfe6ff;">Status Workflow</h3><p>Draft → Open → Closed. Convert to Invoice directly or to Purchase Order if stock is low. Partial invoicing support.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-binoculars"></i></span><div><h3 style="color: #cfe6ff;">View & Manage</h3><p>View linked invoices, filter by status, rearrange columns, and take actions: edit, clone, delete, or mark as recurring.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-envelope-paper"></i></span><div><h3 style="color: #cfe6ff;">Customer Communication</h3><p>Send sales orders via email, share as link, or print. Keep customers informed at every stage.</p></div></div>
+          </div>
+        </div>
+        <div class="fin-visual-card-equal" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <span class="fin-visual-kicker"><i class="bi bi-diagram-3"></i> Sales Order Workflow</span>
+          <div class="fin-media-container">
+            <div class="fin-compliance-animation">
+              <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="30" y="60" width="70" height="40" rx="8" fill="rgba(53,81,106,0.2)" stroke="#35516A" stroke-width="1.5"/>
+                <text x="65" y="83" font-size="9" fill="#cfe6ff" text-anchor="middle">Quote</text>
+                <path d="M100 80 L130 80" stroke="#35516A" stroke-width="2" marker-end="url(#arrow)"/>
+                <rect x="130" y="60" width="70" height="40" rx="8" fill="rgba(53,81,106,0.3)" stroke="#35516A" stroke-width="1.5"/>
+                <text x="165" y="83" font-size="9" fill="#cfe6ff" text-anchor="middle">Sales Order</text>
+                <path d="M200 80 L230 80" stroke="#35516A" stroke-width="2"/>
+                <rect x="230" y="60" width="60" height="40" rx="8" fill="rgba(53,81,106,0.2)" stroke="#35516A" stroke-width="1.5"/>
+                <text x="260" y="83" font-size="9" fill="#cfe6ff" text-anchor="middle">Invoice</text>
+                <text x="160" y="170" font-size="10" fill="rgba(255,255,255,0.6)" text-anchor="middle">Partial invoicing & PO conversion</text>
+                <rect x="60" y="185" width="200" height="4" rx="2" fill="rgba(53,81,106,0.2)"/>
+                <rect x="60" y="185" width="192" height="4" rx="2" fill="#35516A"/>
+              </svg>
+            </div>
+          </div>
+          <div class="fin-chip-row">
+            <span class="fin-chip"><i class="bi bi-check-circle"></i> Quote → Sales Order</span>
+            <span class="fin-chip"><i class="bi bi-box-seam"></i> Convert to PO</span>
+            <span class="fin-chip"><i class="bi bi-receipt"></i> Partial invoicing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Invoices Deep Dive (Reconciliation style) -->
+  <!-- <section id="fin-reconciliation" class="fin-section fin-section-anchor">
+    <div class="container">
+      <div class="fin-grid-2-equal">
+        <div class="fin-visual-card-equal" data-aos="fade-right" data-aos-duration="800">
+          <span class="fin-visual-kicker"><i class="bi bi-file-earmark-text"></i> Invoices – Revenue & Collections</span>
+          <div class="fin-media-container">
+            <div class="fin-reconcile-animation">
+              <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="30" y="50" width="80" height="90" rx="8" fill="rgba(53,81,106,0.15)" stroke="#35516A" stroke-width="1.5"/>
+                <text x="70" y="75" font-size="8" fill="#cfe6ff" text-anchor="middle">Draft</text>
+                <text x="70" y="95" font-size="8" fill="#cfe6ff" text-anchor="middle">Sent</text>
+                <text x="70" y="115" font-size="8" fill="#cfe6ff" text-anchor="middle">Overdue</text>
+                <rect x="220" y="50" width="80" height="90" rx="8" fill="rgba(53,81,106,0.15)" stroke="#35516A" stroke-width="1.5"/>
+                <text x="260" y="75" font-size="8" fill="#cfe6ff" text-anchor="middle">Paid</text>
+                <text x="260" y="95" font-size="8" fill="#cfe6ff" text-anchor="middle">Partial</text>
+                <text x="260" y="115" font-size="8" fill="#cfe6ff" text-anchor="middle">Void</text>
+                <path d="M110 95 L220 95" stroke="#35516A" stroke-width="2" stroke-dasharray="4 2"/>
+                <circle cx="110" cy="95" r="4" fill="#35516A">
+                  <animate attributeName="cx" values="110;220;110" dur="2.5s" repeatCount="indefinite"/>
+                </circle>
+                <text x="160" y="170" font-size="10" fill="rgba(255,255,255,0.6)" text-anchor="middle">Auto status updates + payment reminders</text>
+                <rect x="60" y="185" width="200" height="4" rx="2" fill="rgba(53,81,106,0.2)"/>
+                <rect x="60" y="185" width="192" height="4" rx="2" fill="#35516A"/>
+              </svg>
+            </div>
+          </div>
+          <div class="fin-chip-row">
+            <span class="fin-chip"><i class="bi bi-clock-history"></i> Recurring</span>
+            <span class="fin-chip"><i class="bi bi-cash"></i> Retainer</span>
+            <span class="fin-chip"><i class="bi bi-envelope"></i> Email & Link</span>
+            <span class="fin-chip"><i class="bi bi-printer"></i> Print/PDF</span>
+          </div>
+        </div>
+        <div class="fin-content-equal" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <span class="fin-eyebrow"><i class="bi bi-receipt"></i> Invoices – Complete Billing Suite</span>
+          <h2>One-time, Recurring & Retainer Invoices</h2>
+          <p>Microhub supports all invoice types: regular, recurring (weekly/monthly/custom), and retainer invoices for advance payments. Automate billing, send reminders, and track overdue.</p>
+          <div class="fin-feature-list">
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-plus-lg"></i></span><div><h3 style="color: #cfe6ff;">Create & Customize</h3><p>Add line items, taxes, discounts, shipping charges, customer notes, T&C, and attachments. Schedule email delivery.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-credit-card-2-front"></i></span><div><h3 style="color: #cfe6ff;">Record Payments</h3><p>Mark as paid instantly, record split payments (multiple methods), or add later. Automatic overdue status updates.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-files"></i></span><div><h3 style="color: #cfe6ff;">Manage & Act</h3><p>Clone, make recurring, create credit notes, view journal, share link, download PDF, print, void, or delete.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-cloud-upload"></i></span><div><h3 style="color: #cfe6ff;">Bulk Import</h3><p>Import existing invoices via CSV/TSV/XLS (max 10MB). Auto-generate invoice numbers or link to sales orders.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Section 4: Sync & Reporting (reverse layout) -->
+  <!-- <section id="fin-sync" class="fin-section fin-section-anchor">
+    <div class="container">
+      <div class="fin-grid-2-equal reverse">
+        <div class="fin-content-equal" data-aos="fade-right" data-aos-duration="800">
+          <span class="fin-eyebrow"><i class="bi bi-hdd-stack-fill"></i> ERP & Reporting Sync</span>
+          <h2>From transaction to board report — fully automated.</h2>
+          <p>Every financial entry flows into real-time dashboards, P&L statements, and tax filings. No more exporting CSVs or manual consolidation.</p>
+          <div class="fin-feature-list">
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-pie-chart"></i></span><div><h3 style="color: #cfe6ff;">Live P&L & Balance Sheet</h3><p>Profitability by department, project, or region — updated with each transaction.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-file-earmark-spreadsheet"></i></span><div><h3 style="color: #cfe6ff;">GST returns ready</h3><p>GSTR-1, GSTR-3B, and reconciliation statements generated in one click.</p></div></div>
+            <div class="fin-feature-item"><span class="fin-feature-icon"><i class="bi bi-archive"></i></span><div><h3 style="color: #cfe6ff;">Audit trail by default</h3><p>Every edit, approval, and transaction logged for auditors and compliance.</p></div></div>
+          </div>
+        </div>
+        <div class="fin-visual-card-equal" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <span class="fin-visual-kicker"><i class="bi bi-journal-richtext"></i> Live reporting dashboard</span>
+          <div class="fin-media-container">
+            <div class="fin-report-animation">
+              <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="40" y="50" width="80" height="100" rx="8" fill="rgba(53,81,106,0.1)" stroke="rgba(53,81,106,0.4)" stroke-width="1"/>
+                <rect x="130" y="50" width="80" height="100" rx="8" fill="rgba(53,81,106,0.1)" stroke="rgba(53,81,106,0.4)" stroke-width="1"/>
+                <rect x="220" y="50" width="60" height="100" rx="8" fill="rgba(53,81,106,0.1)" stroke="rgba(53,81,106,0.4)" stroke-width="1"/>
+                <rect x="55" y="70" width="50" height="6" rx="3" fill="#35516A"/>
+                <rect x="55" y="85" width="40" height="6" rx="3" fill="rgba(53,81,106,0.5)"/>
+                <rect x="55" y="100" width="35" height="6" rx="3" fill="rgba(53,81,106,0.3)"/>
+                <rect x="145" y="70" width="50" height="6" rx="3" fill="#4a6d8a"/>
+                <rect x="145" y="85" width="45" height="6" rx="3" fill="rgba(74,109,138,0.5)"/>
+                <rect x="145" y="100" width="30" height="6" rx="3" fill="rgba(74,109,138,0.3)"/>
+                <rect x="235" y="70" width="30" height="40" rx="3" fill="#2a4054"/>
+                <text x="160" y="170" font-size="10" fill="rgba(255,255,255,0.6)" text-anchor="middle">Real-time analytics</text>
+                <rect x="80" y="185" width="160" height="4" rx="2" fill="rgba(53,81,106,0.2)"/>
+                <rect x="80" y="185" width="160" height="4" rx="2" fill="#35516A">
+                  <animate attributeName="width" values="0;160;160" dur="3s" repeatCount="indefinite"/>
+                </rect>
+              </svg>
+            </div>
+          </div>
+          <div class="fin-chip-row">
+            <span class="fin-chip"><i class="bi bi-graph-up"></i> Real-time P&L</span>
+            <span class="fin-chip"><i class="bi bi-file-spreadsheet"></i> GST returns</span>
+            <span class="fin-chip"><i class="bi bi-download"></i> Export ready</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Deployment Readiness Section -->
+  <section class="fin-section">
+    <div class="container">
+      <div class="fin-head center">
+        <span class="fin-eyebrow" data-aos="fade-up" data-aos-duration="600"><i class="bi bi-boxes"></i> Deployment Readiness</span>
+        <h2 data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">Built for Indian businesses, ready for scale.</h2>
+        <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">From a single shop to enterprise branches, the financial management layer adapts to your workflows without costly customizations.</p>
+      </div>
+      <div class="fin-tool-grid">
+        <article class="fin-tool-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0"><span class="fin-feature-icon mx-auto mb-3" style="width:48px; margin:0 auto 1rem auto;"><i class="bi bi-phone"></i></span><h3 style="color: #cfe6ff;">Mobile expense capture</h3><p>Scan receipts, log mileage, and submit expenses on the go.</p><div class="tool-hover-effect"></div></article>
+        <article class="fin-tool-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"><span class="fin-feature-icon mx-auto mb-3" style="width:48px; margin:0 auto 1rem auto;"><i class="bi bi-window-sidebar"></i></span><h3 style="color: #cfe6ff;">Web dashboard + reports</h3><p>Role-based access for finance controllers, auditors, and management.</p><div class="tool-hover-effect"></div></article>
+        <article class="fin-tool-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200"><span class="fin-feature-icon mx-auto mb-3" style="width:48px; margin:0 auto 1rem auto;"><i class="bi bi-braces"></i></span><h3 style="color: #cfe6ff;">API-first architecture</h3><p>Connect with existing ERPs, banks, or custom billing systems easily.</p><div class="tool-hover-effect"></div></article>
+        <article class="fin-tool-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300"><span class="fin-feature-icon mx-auto mb-3" style="width:48px; margin:0 auto 1rem auto;"><i class="bi bi-building"></i></span><h3 style="color: #cfe6ff;">Multi-branch ready</h3><p>Consolidated financials across locations with inter-branch reconciliation.</p><div class="tool-hover-effect"></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rules and Policies Section (unchanged but kept for completeness) -->
+  <section id="fin-rules" class="fin-section fin-rule-band">
+    <div class="container">
+      <div class="fin-head center">
+        <span class="fin-eyebrow" data-aos="fade-up" data-aos-duration="600"><i class="bi bi-sliders2"></i> Rules and Policies</span>
+        <h2 data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">Configuration points that keep financial decisions understandable.</h2>
+        <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">Policy controls matter as much as the numbers themselves. These are the kinds of rules teams can shape around approvals, tax logic, reconciliation, and audit trails.</p>
+      </div>
+      <div class="fin-rule-grid">
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"><span class="fin-rule-tag">Approvals</span><h3 style="color: #cfe6ff;">Purchase order limits</h3><p>Define thresholds for manager vs. finance director approval before PO issuance.</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="50"><span class="fin-rule-tag">Taxation</span><h3 style="color: #cfe6ff;">GST / TDS templates</h3><p>Preconfigured tax slabs based on product/service type and location of supply.</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"><span class="fin-rule-tag">Expense</span><h3 style="color: #cfe6ff;">Policy violation flagging</h3><p>Block out-of-policy expenses before submission or flag for review.</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="150"><span class="fin-rule-tag">Matching</span><h3 style="color: #cfe6ff;">Auto-reconciliation rules</h3><p>Define match logic: amount + reference or date + vendor name similarity.</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"><span class="fin-rule-tag">Reporting</span><h3 style="color: #cfe6ff;">Period closing lock</h3><p>Prevent edits after monthly books are closed; preserve audit integrity.</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="250"><span class="fin-rule-tag">Audit</span><h3 style="color: #cfe6ff;">Change log retention</h3><p>Immutable audit trail for all financial entries, edits, and approvals.</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300"><span class="fin-rule-tag">Security</span><h3 style="color: #cfe6ff;">Role-based permissions</h3><p>Read-only for auditors, edit for accountants, approve for managers.</p></article>
+        <article class="fin-rule-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="350"><span class="fin-rule-tag">Budget</span><h3 style="color: #cfe6ff;">Real-time budget tracking</h3><p>Alerts when department spending exceeds 80% of quarterly budget allocation.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container position-relative">
+      <div class="row g-4 text-center">
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0"><div class="stat-number"><span class="counter-num" style="color: #cfe6ff;" data-target="500" data-suffix="+">500+</span></div><div class="stat-label">Business Served</div></div>
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100"><div class="stat-number"><span class="counter-num" style="color: #cfe6ff;" data-target="100" data-suffix="%">100%</span></div><div class="stat-label">Payroll Accuracy</div></div>
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200"><div class="stat-number"><span class="counter-num" style="color: #cfe6ff;" data-target="60" data-suffix="%">60%</span></div><div class="stat-label">Time Saved on HR Tasks</div></div>
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300"><div class="stat-number"><span class="counter-num" style="color: #cfe6ff;" data-target="24" data-suffix="/7">24/7</span></div><div class="stat-label">Access & Monitoring</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (unchanged) -->
+  <section class="premium-single-faq" style="background: var(--white); padding: 60px 0;">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="premium-single-title" data-aos="fade-up" data-aos-duration="600">Everything about <span>Financial Management</span>
+        <div class="premium-single-line" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="100"></div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="premium-single-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+            <div class="premium-single-card-inner">
+              <div class="card-deco-left"></div>
+              <div class="card-deco-right"></div>
+              <div class="card-glow-effect"></div>
+              <div class="premium-single-icon-box"><i class="bi bi-cash-stack"></i><div class="icon-glow"></div><div class="icon-ring"></div></div>
+              <div class="premium-faq-grid">
+                <div class="premium-faq-col">
+                  <div class="premium-faq-item"><div class="premium-faq-header" onclick="toggleSingleFAQ(this)"><div class="premium-faq-title-group"><span class="premium-faq-number">01</span><h4>How does bill management work?</h4></div><div class="premium-faq-toggle-box"><i class="bi bi-plus-lg"></i></div></div><div class="premium-faq-content"><p>Create, import, track payments, apply credits, and manage vendor bills with full lifecycle support.</p></div></div>
+                  <div class="premium-faq-item"><div class="premium-faq-header" onclick="toggleSingleFAQ(this)"><div class="premium-faq-title-group"><span class="premium-faq-number">02</span><h4>Can sales orders be converted to invoices?</h4></div><div class="premium-faq-toggle-box"><i class="bi bi-plus-lg"></i></div></div><div class="premium-faq-content"><p>Yes, convert open sales orders to invoices directly, with support for partial invoicing and purchase order conversion.</p></div></div>
+                  <div class="premium-faq-item"><div class="premium-faq-header" onclick="toggleSingleFAQ(this)"><div class="premium-faq-title-group"><span class="premium-faq-number">03</span><h4>How are recurring invoices handled?</h4></div><div class="premium-faq-toggle-box"><i class="bi bi-plus-lg"></i></div></div><div class="premium-faq-content"><p>Set weekly, monthly, or custom intervals. Automated billing and reminders, with retainer invoice support.</p></div></div>
+                </div>
+                <div class="premium-faq-col">
+                  <div class="premium-faq-item"><div class="premium-faq-header" onclick="toggleSingleFAQ(this)"><div class="premium-faq-title-group"><span class="premium-faq-number">04</span><h4>Is bulk import available for bills/orders/invoices?</h4></div><div class="premium-faq-toggle-box"><i class="bi bi-plus-lg"></i></div></div><div class="premium-faq-content"><p>Yes, import CSV, TSV, or XLS files for bills, sales orders, and invoices — auto-map fields and generate numbers.</p></div></div>
+                  <div class="premium-faq-item"><div class="premium-faq-header" onclick="toggleSingleFAQ(this)"><div class="premium-faq-title-group"><span class="premium-faq-number">05</span><h4>Does it provide financial reports?</h4></div><div class="premium-faq-toggle-box"><i class="bi bi-plus-lg"></i></div></div><div class="premium-faq-content"><p>Yes! Generate profit & loss, balance sheets, GST returns, and audit trails in real time.</p></div></div>
+                  <div class="premium-faq-item"><div class="premium-faq-header" onclick="toggleSingleFAQ(this)"><div class="premium-faq-title-group"><span class="premium-faq-number">06</span><h4>Is the system secure and compliant?</h4></div><div class="premium-faq-toggle-box"><i class="bi bi-plus-lg"></i></div></div><div class="premium-faq-content"><p>Ensures secure data handling, role-based access, and compliance with GST/TDS and audit standards.</p></div></div>
+                </div>
+              </div>
+              <div class="premium-faq-decoration"><div class="deco-dot"></div><div class="deco-line"></div><div class="deco-dot"></div></div>
+            </div>
+            <div class="premium-single-footer text-center mt-5"><div class="premium-help-single"><i class="bi bi-kanban"></i><p>Still have questions? <a href="../../get-started/contact.html">Talk to our support team <i class="bi bi-arrow-right"></i></a></p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- CTA Section with Enhanced Animation -->
+<!-- Enhanced CTA Section with Advanced Animations -->
+<!-- Enhanced CTA Section with Background Image -->
+<section class="cta-section-enhanced">
+  <!-- Background Image with Overlay -->
+  <div class="cta-bg-image"></div>
+  
+  <!-- Animated Particles -->
+  <div class="cta-particles">
+    <div class="particle" style="width: 40px; height: 40px; top: 70%; left: 15%; --duration: 10s; --delay: 2s;"></div>
+    <div class="particle" style="width: 30px; height: 30px; top: 30%; left: 85%; --duration: 14s; --delay: 1s;"></div>
+    <div class="particle" style="width: 25px; height: 25px; top: 20%; left: 20%; --duration: 9s; --delay: 0.5s;"></div>
+    <div class="particle" style="width: 35px; height: 35px; top: 60%; left: 45%; --duration: 13s; --delay: 2.5s;"></div>
+    <div class="particle" style="width: 45px; height: 45px; top: 40%; left: 70%; --duration: 15s; --delay: 1.5s;"></div>
+    <div class="particle" style="width: 20px; height: 20px; top: 85%; left: 55%; --duration: 8s; --delay: 4s;"></div>
+  </div>
+  
+  <!-- Glowing Border Effect -->
+  <div class="cta-glow-border"></div>
+  
+  <div class="container position-relative" style="z-index: 2; text-align: center">
+    <div class="cta-content">
+      <div class="reveal">
+       
+        
+        <!-- Animated Heading -->
+        <h2 class="cta-heading">Take Full Control of Your Inventory Today</h2>
+        
+        <!-- Description with animated underline -->
+        <p class="cta-description">
+          Track stock in real time, reduce losses, and automate reordering — all from one powerful system.
+        </p>
+        
+        <!-- Buttons Row -->
+        <div class="d-flex gap-4 justify-content-center flex-wrap">
+          <a href="../../get-started/signup.html" class="cta-btn-primary hover-lift">
+            <i class="bi bi-box-arrow-in-right"></i> Start Free Trial 
+            <i class="bi bi-arrow-right-short"></i>
+          </a>
+          <a href="../../insights/case-studies.html" class="cta-btn-secondary hover-lift">
+            <i class="bi bi-bar-chart-line"></i> See How It Works
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+        
+      
+      </div>
     </div>
   </div>
 </section>
-<section class="cta-section">
-  <div class="container position-relative" style="z-index:1;text-align:center">
-    <h2 style="color:var(--white);margin-bottom:1rem">Ready to Get Started?</h2>
-    <p style="color:rgba(255,255,255,0.8);margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto">Join hundreds of businesses using MicroHub to grow faster and work smarter.</p>
-    <a href="../../get-started/signup.html" class="btn-white-custom">Start Free Trial <i class="bi bi-arrow-right"></i></a>
-  </div>
-</section>
-<div id="footer-root" data-include="components/footer.html"></div>
 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../../assets/js/component-loader.js"></script>
-<script src="../../assets/js/navigation.js"></script>
-<script src="../../assets/js/animations.js"></script>
-<script src="../../assets/js/main.js"></script>
+  <div id="footer-root" data-include="../../components/footer.html"></div>
+  <button id="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="../../assets/js/navigation.js"></script>
+  <script src="../../assets/js/animations.js"></script>
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/component-loader.js"></script>
+  <script src="solutions.js"></script>
+  <script src="./js/financial.js"></script>
+  <script>function toggleSingleFAQ(header){const item=header.closest('.premium-faq-item');const content=item.querySelector('.premium-faq-content');const icon=header.querySelector('.premium-faq-toggle-box i');if(item.classList.contains('active')){item.classList.remove('active');content.style.maxHeight=null;icon.classList.remove('bi-dash-lg');icon.classList.add('bi-plus-lg');}else{item.classList.add('active');content.style.maxHeight=content.scrollHeight+"px";icon.classList.remove('bi-plus-lg');icon.classList.add('bi-dash-lg');}}</script>
 </body>
+
 </html>
