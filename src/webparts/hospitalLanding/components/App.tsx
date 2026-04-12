@@ -20,9 +20,10 @@ const App: React.FC = () => {
           <Banner onPrimaryAction={() => setCurrentPage('specialities')} />
           <About />
           <Specialities />
-          <FacilityTour />
+         
           <CaseOfMonth />
           <LatestNews />
+           <FacilityTour />
         </main>
 
         <HospitalFooter />
