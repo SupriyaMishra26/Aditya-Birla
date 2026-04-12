@@ -62,6 +62,13 @@
   transition: transform $transition-emphasis, color $transition-emphasis;
 }
 
+.icon svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+  flex: 0 0 auto;
+}
+
 .iconLeading {
   order: -1;
 }

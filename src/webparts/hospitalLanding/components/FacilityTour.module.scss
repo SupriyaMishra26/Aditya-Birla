@@ -131,7 +131,18 @@
 
 @media (max-width: 1024px) {
   .facilityTourHeader {
-    gap: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .facilityTourHeaderCopy {
+    max-width: 100%;
+  }
+
+  .facilityTourReadMore {
+    align-self: flex-start;
+    width: fit-content;
   }
 }
 

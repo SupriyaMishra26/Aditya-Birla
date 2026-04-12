@@ -58,29 +58,8 @@ const DEFAULT_ARTICLES: INewsArticle[] = [
   }
 ];
 
-const ArrowUpRightIcon: React.FC = () => (
-  <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path
-      d="M3 13L13 3M13 3H6M13 3V10"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
-
-const ArrowRightIcon: React.FC = () => (
-  <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path
-      d="M2 7H12M12 7L7.5 2.5M12 7L7.5 11.5"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
+const diagonalArrow = String.fromCharCode(8599);
+const rightArrow = String.fromCharCode(8594);
 
 const LatestNews: React.FC<ILatestNewsProps> = ({
   heading = 'Latest News',
@@ -106,7 +85,7 @@ const LatestNews: React.FC<ILatestNewsProps> = ({
             tone="deep"
             size="md"
             className={styles.viewAllBtn}
-            icon={<ArrowUpRightIcon />}
+            icon={<span aria-hidden="true">{diagonalArrow}</span>}
             iconPosition="trailing"
             onClick={onViewAll}
             aria-label="View all news articles"
@@ -141,7 +120,7 @@ const LatestNews: React.FC<ILatestNewsProps> = ({
                   tone="deep"
                   size="sm"
                   className={styles.readMoreBtn}
-                  icon={<ArrowRightIcon />}
+                  icon={<span aria-hidden="true">{rightArrow}</span>}
                   iconPosition="trailing"
                   onClick={() => onReadMore?.(article)}
                   aria-label={`Read more about ${article.title}`}

@@ -2,7 +2,7 @@
 import { Icon } from '@fluentui/react/lib/Icon';
 import bgPattern from '../assets/bg-case-of-month.png';
 import circleImage from '../assets/circle.png';
-import footerShield from '../assets/final.png';
+
 import logo from '../assets/logo.jpg';
 import propertyOneImage from '../assets/Property 1.png';
 import propertyTwoImage from '../assets/Property 2.png';
@@ -78,7 +78,7 @@ const HospitalFooter: React.FC = () => {
       <div className={styles.footerCanvas}>
         <div className={styles.footerOrnament} aria-hidden="true">
           <span className={styles.footerOrnamentGlow} />
-          <img src={footerShield} alt="" className={styles.footerOrnamentShield} />
+        
           <img src={circleImage} alt="" className={styles.footerOrnamentRing} />
 
           <div className={styles.footerOrnamentFrame}>
