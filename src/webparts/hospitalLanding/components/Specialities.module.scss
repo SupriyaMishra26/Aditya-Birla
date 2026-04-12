@@ -3,7 +3,7 @@
 .specialitiesSection {
   position: relative;
   width: 100%;
-  margin-top: clamp(16px, 1.8vw, 28px);
+  margin-top: clamp(28px, 3vw, 40px);
   overflow: hidden;
   background: #ffffff;
   isolation: isolate;
@@ -12,7 +12,7 @@
 
 .keySection {
   position: relative;
-  padding-top: clamp(10px, 1.2vw, 20px);
+  padding-top: clamp(18px, 2vw, 28px);
   overflow: hidden;
   background: linear-gradient(180deg, #ffffff 0%, #fffaf2 100%);
   isolation: isolate;
@@ -43,7 +43,7 @@
   z-index: 1;
   width: min(100%, 1920px);
   margin: 0 auto;
-  padding: clamp(36px, 3.6vw, 76px) clamp(24px, 4.2vw, 88px) clamp(44px, 4.4vw, 88px);
+  padding: clamp(44px, 4.2vw, 84px) clamp(24px, 4.2vw, 88px) clamp(44px, 4.4vw, 88px);
   box-sizing: border-box;
 }
 
@@ -52,7 +52,7 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: clamp(20px, 2vw, 44px);
-  margin-bottom: clamp(28px, 3vw, 50px);
+  margin-bottom: clamp(32px, 3.2vw, 52px);
   flex-wrap: wrap;
 }
 

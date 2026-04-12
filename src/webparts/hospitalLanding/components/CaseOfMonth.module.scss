@@ -1,28 +1,28 @@
 @import '../ui/tokens';
 
-.tourSection {
+.section {
   position: relative;
   width: 100%;
   overflow: hidden;
   isolation: isolate;
   container-type: inline-size;
   background:
-    radial-gradient(circle at 84% 12%, rgba(239, 109, 38, 0.12) 0%, rgba(239, 109, 38, 0.04) 24%, transparent 48%),
-    linear-gradient(180deg, #ffffff 0%, #fff8f2 100%);
+    radial-gradient(circle at 82% 14%, rgba(239, 109, 38, 0.1) 0%, rgba(239, 109, 38, 0.04) 24%, transparent 48%),
+    linear-gradient(180deg, #fffaf4 0%, #ffffff 100%);
 }
 
-.tourSection::before {
+.section::before {
   content: '';
   position: absolute;
   inset: 0;
+  z-index: 0;
   pointer-events: none;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 18%),
     linear-gradient(90deg, rgba(255, 248, 241, 0.86) 0%, rgba(255, 244, 233, 0.58) 55%, rgba(255, 231, 214, 0.32) 100%);
-  z-index: 0;
 }
 
-.tourBackdrop {
+.backdrop {
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -30,396 +30,270 @@
   background-repeat: no-repeat;
   background-position: right top;
   background-size: min(980px, 74vw);
-  opacity: 0.9;
+  opacity: 0.82;
   mix-blend-mode: multiply;
 }
 
-.tourHeaderWrap {
+.canvas {
   position: relative;
   z-index: 1;
   width: min(100%, 1760px);
   margin: 0 auto;
-  padding: clamp(56px, 5vw, 92px) clamp(20px, 4vw, 72px) clamp(24px, 2.4vw, 32px);
+  padding: clamp(56px, 5vw, 92px) clamp(20px, 4vw, 72px) clamp(64px, 5vw, 96px);
   box-sizing: border-box;
 }
 
-.tourHeader {
+.header {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1080px;
+  margin: 0 auto clamp(28px, 3vw, 42px);
+  text-align: center;
 }
 
-.tourHeaderCopy {
-  max-width: 980px;
-  min-width: 0;
-}
-
-.tourTitle {
+.title {
   @include section-title;
   color: #b3211e;
+  font-size: clamp(34px, 3.8vw, 58px);
+  white-space: nowrap;
 }
 
-.tourDescription {
+.description {
   @include section-copy;
-  max-width: 1020px;
+  max-width: 980px;
   margin-top: 16px;
   color: #241916;
 }
 
-.tourReadMore {
-  flex: 0 0 auto;
-  align-self: flex-end;
-  min-width: clamp(170px, 18vw, 246px);
+.grid {
+  width: min(100%, 1280px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(18px, 1.6vw, 24px);
+  align-items: stretch;
 }
 
-.tourSliderShell {
+.card {
   position: relative;
-  z-index: 1;
-  width: 100%;
-  overflow: visible;
-}
-
-.tourViewport {
-  width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  touch-action: pan-x;
-}
-
-.tourViewport::-webkit-scrollbar {
-  display: none;
-}
-
-.tourTrack {
-  display: flex;
-  gap: var(--tour-gap, 20px);
-  width: max-content;
-  min-width: 100%;
-}
-
-.tourSlide {
-  position: relative;
-  flex: 0 0 var(--tour-slide-width, 100%);
-  max-width: var(--tour-slide-width, 100%);
-  min-width: 0;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-}
-
-.tourMediaWrap {
-  position: relative;
+  display: grid;
+  grid-template-columns: minmax(180px, 32%) minmax(0, 1fr);
+  min-height: clamp(300px, 27vw, 360px);
   overflow: hidden;
-  height: 100%;
-  aspect-ratio: 4 / 3;
-  border: 1px solid rgba(179, 33, 30, 0.12);
-  border-radius: 0;
-  background: linear-gradient(180deg, rgba(244, 236, 228, 0.96) 0%, rgba(255, 252, 249, 0.98) 100%);
-  box-shadow: 0 16px 30px rgba(78, 44, 16, 0.08);
+  border: 1px solid rgba(179, 33, 30, 0.16);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 18px 34px rgba(129, 49, 34, 0.12);
+  isolation: isolate;
 }
 
-.tourMediaWrap::after {
+.card::after {
   content: '';
   position: absolute;
-  inset: 0;
+  inset: auto 0 0 auto;
+  width: 58%;
+  height: 68%;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(0, 0, 0, 0.06) 100%);
-  z-index: 1;
+  opacity: 0.16;
+  background-image:
+    linear-gradient(90deg, rgba(239, 109, 38, 0.14) 0 2px, transparent 2px 116px),
+    linear-gradient(rgba(239, 109, 38, 0.14) 0 2px, transparent 2px 116px);
+  background-size: 116px 116px;
+  transform: translate(12px, 18px);
 }
 
-.tourMedia {
+.mediaPane {
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+  background: linear-gradient(180deg, #eef7fb 0%, #f7fbfd 100%);
+}
+
+.image {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.tourSlidePortrait .tourMedia {
-  object-fit: contain;
-  padding: clamp(10px, 1.2vw, 18px);
-  box-sizing: border-box;
-  background: linear-gradient(180deg, rgba(252, 248, 244, 0.96) 0%, rgba(248, 242, 235, 0.98) 100%);
-}
-
-.tourMediaShade {
+.cross {
   position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(0, 0, 0, 0.04) 100%);
-}
-
-.tourTypeChip {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  z-index: 3;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 32px;
-  padding: 0 12px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.94);
-  color: #b3211e;
-  box-shadow: 0 10px 20px rgba(32, 15, 9, 0.12);
+  top: 0;
+  left: 18px;
+  z-index: 2;
+  color: #ef6d26;
   font-family: $font-family-base;
-  font-size: 12px;
-  font-weight: $font-weight-semibold;
+  font-size: 48px;
+  font-weight: $font-weight-bold;
   line-height: 1;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+  text-shadow: 0 6px 16px rgba(239, 109, 38, 0.18);
+  transform: translateY(-48%);
 }
 
-.tourPlayBadge {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 3;
-  display: grid;
-  place-items: center;
-  width: 78px;
-  height: 78px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.96);
-  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.16);
-  transform: translate(-50%, -50%);
+.body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: clamp(24px, 2.5vw, 32px) clamp(28px, 2.8vw, 36px) clamp(22px, 2.2vw, 30px);
+  background: #ffffff;
+  overflow: hidden;
 }
 
-.tourPlayGlyph {
-  width: 0;
-  height: 0;
-  margin-left: 4px;
-  border-top: 11px solid transparent;
-  border-bottom: 11px solid transparent;
-  border-left: 16px solid #ef7f33;
-}
-
-.tourSlideCopy {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 3;
-  padding: 18px 18px 16px;
-  background: linear-gradient(180deg, rgba(18, 12, 8, 0) 0%, rgba(18, 12, 8, 0.72) 100%);
-}
-
-.tourSlideTitle {
+.cardTitle {
   margin: 0;
-  color: #ffffff;
+  color: #111111;
   font-family: $font-family-base;
-  font-size: clamp(18px, 1.45vw, 24px);
-  font-weight: $font-weight-semibold;
-  line-height: 1.16;
-  letter-spacing: -0.02em;
+  font-size: clamp(20px, 1.6vw, 28px);
+  font-weight: $font-weight-bold;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
 }
 
-.tourNav {
+.excerpt {
+  margin: 10px 0 0;
+  color: #1d1d1d;
+  font-family: $font-family-base;
+  font-size: clamp(14px, 1.05vw, 17px);
+  font-weight: $font-weight-medium;
+  line-height: 1.6;
+}
+
+.meta {
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+.author {
+  margin: 0;
+  color: #b3211e;
+  font-family: $font-family-base;
+  font-size: clamp(16px, 1.15vw, 20px);
+  font-weight: $font-weight-semibold;
+  line-height: 1.2;
+}
+
+.role {
+  margin: 4px 0 0;
+  color: #ef6d26;
+  font-family: $font-family-base;
+  font-size: clamp(13px, 0.95vw, 15px);
+  font-weight: $font-weight-medium;
+  line-height: 1.1;
+}
+
+.ribbon {
   position: absolute;
   top: 50%;
-  z-index: 4;
+  right: 0;
+  z-index: 3;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
-  border: 1px solid rgba(179, 33, 30, 0.14);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.95);
-  color: #b3211e;
-  box-shadow: 0 16px 28px rgba(25, 15, 8, 0.12);
-  cursor: pointer;
+  min-width: 44px;
+  height: 170px;
+  padding: 0 14px;
+  border-radius: 12px 0 0 12px;
+  background: #f6cf47;
+  color: #171717;
+  font-family: $font-family-base;
+  font-size: 14px;
+  font-weight: $font-weight-semibold;
+  letter-spacing: 0.02em;
   transform: translateY(-50%);
-  transition:
-    background-color $transition-emphasis,
-    border-color $transition-emphasis,
-    color $transition-emphasis,
-    opacity $transition-emphasis;
-}
-
-.tourNav:hover:not(:disabled) {
-  background: #b3211e;
-  border-color: #b3211e;
-  color: #ffffff;
-}
-
-.tourNav:focus-visible {
-  outline: 3px solid rgba(179, 33, 30, 0.25);
-  outline-offset: 4px;
-}
-
-.tourNav:disabled,
-.tourNavDisabled {
-  opacity: 0.38;
-  cursor: not-allowed;
-}
-
-.tourNavPrev {
-  left: 12px;
-}
-
-.tourNavNext {
-  right: 12px;
-}
-
-.tourNavGlyph {
-  display: block;
-  width: 18px;
-  height: 18px;
-}
-
-.tourPagination {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  padding: 18px 0 0;
-}
-
-.tourDot {
-  width: 12px;
-  height: 12px;
-  border: none;
-  border-radius: 999px;
-  background: rgba(179, 33, 30, 0.2);
-  cursor: pointer;
-  transition:
-    width $transition-standard,
-    background-color $transition-standard;
-}
-
-.tourDot:hover {
-  background: rgba(179, 33, 30, 0.32);
-}
-
-.tourDotActive {
-  width: 40px;
-  background: #b3211e;
-}
-
-.tourDotSmall {
-  background: rgba(179, 33, 30, 0.16);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  box-shadow: -8px 0 18px rgba(239, 109, 38, 0.14);
 }
 
 @media (max-width: 1024px) {
-  .tourHeader {
-    align-items: flex-start;
-    flex-direction: column;
+  .card {
+    grid-template-columns: minmax(170px, 38%) minmax(0, 1fr);
+    min-height: 320px;
   }
 
-  .tourReadMore {
-    align-self: flex-start;
+  .body {
+    padding: 22px 24px 20px;
+  }
+
+  .ribbon {
+    height: 148px;
   }
 }
 
-@media (max-width: 767px) {
-  .tourHeaderWrap {
-    padding: 22px 16px 16px;
-    gap: 12px;
+@media (max-width: 720px) {
+  .canvas {
+    padding: 32px 16px 56px;
   }
 
-  .tourTitle {
+  .header {
+    margin-bottom: 22px;
+  }
+
+  .title {
     font-size: clamp(28px, 8vw, 40px);
+    white-space: normal;
   }
 
-  .tourDescription {
+  .description {
     margin-top: 12px;
     font-size: 14px;
     line-height: 1.65;
   }
 
-  .tourReadMore {
-    min-width: 0;
-    width: 100%;
-    justify-content: center;
+  .card {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    border-radius: 16px;
   }
 
-  .tourTrack {
-    gap: var(--tour-gap, 16px);
+  .mediaPane {
+    aspect-ratio: 16 / 10;
   }
 
-  .tourNav {
-    width: 44px;
-    height: 44px;
+  .cross {
+    left: 14px;
+    font-size: 40px;
   }
 
-  .tourNavPrev {
-    left: 8px;
+  .body {
+    padding: 18px 18px 20px;
   }
 
-  .tourNavNext {
-    right: 8px;
+  .cardTitle {
+    font-size: 22px;
   }
 
-  .tourNavGlyph {
-    width: 15px;
-    height: 15px;
-  }
-
-  .tourTypeChip {
-    top: 12px;
-    left: 12px;
-    min-height: 28px;
-    padding: 0 10px;
-    font-size: 11px;
-  }
-
-  .tourPlayBadge {
-    width: 64px;
-    height: 64px;
-  }
-
-  .tourPlayGlyph {
-    margin-left: 3px;
-    border-top-width: 9px;
-    border-bottom-width: 9px;
-    border-left-width: 13px;
-  }
-
-  .tourSlideCopy {
-    padding: 14px 14px 12px;
-  }
-
-  .tourSlideTitle {
-    font-size: 16px;
-  }
-
-  .tourPagination {
-    gap: 8px;
-    padding-top: 14px;
-  }
-
-  .tourDotActive {
-    width: 32px;
-  }
-}
-
-@media (max-width: 560px) {
-  .tourTitle {
-    font-size: 28px;
-  }
-
-  .tourDescription {
+  .excerpt {
     font-size: 13px;
+    line-height: 1.58;
   }
 
-  .tourReadMore {
+  .author {
+    font-size: 17px;
+  }
+
+  .role {
+    font-size: 12px;
+  }
+
+  .ribbon {
+    top: 14px;
+    right: 12px;
+    height: auto;
     min-width: 0;
+    padding: 8px 12px;
+    border-radius: 999px;
+    transform: none;
+    writing-mode: horizontal-tb;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .tourViewport {
-    scroll-behavior: auto;
-  }
-
-  .tourNav,
-  .tourDot {
+  .card,
+  .ribbon {
     transition: none;
   }
 }

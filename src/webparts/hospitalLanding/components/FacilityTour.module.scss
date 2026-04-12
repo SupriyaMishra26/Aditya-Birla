@@ -3,7 +3,7 @@
 .facilityTourSection {
   position: relative;
   width: 100%;
-  margin-top: clamp(18px, 2vw, 28px);
+  margin-top: clamp(4px, 0.8vw, 12px);
   overflow: hidden;
   background: #ffffff;
   isolation: isolate;
@@ -15,36 +15,39 @@
 
 .facilityTourHeader {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 24px;
+  gap: clamp(16px, 1.8vw, 28px);
   width: min(100%, 1760px);
   margin: 0 auto;
-  padding: clamp(56px, 5vw, 92px) clamp(20px, 4vw, 72px) clamp(24px, 2.4vw, 32px);
+  padding: clamp(28px, 2.8vw, 48px) clamp(20px, 4vw, 72px) clamp(16px, 1.8vw, 24px);
   box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 .facilityTourHeaderCopy {
-  max-width: 980px;
+  flex: 1 1 0;
+  max-width: 1120px;
   min-width: 0;
 }
 
 .facilityTourTitle {
   @include section-title;
   color: #b3211e;
+  white-space: nowrap;
 }
 
 .facilityTourDescription {
   @include section-copy;
-  max-width: 1020px;
-  margin-top: 16px;
+  max-width: 100%;
+  margin-top: 12px;
   color: #241916;
 }
 
 .facilityTourReadMore {
   flex: 0 0 auto;
   align-self: flex-end;
-  min-width: clamp(170px, 18vw, 246px);
+  min-width: clamp(160px, 17vw, 240px);
 }
 
 .facilityTourSwiper {
@@ -128,39 +131,34 @@
 
 @media (max-width: 1024px) {
   .facilityTourHeader {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .facilityTourReadMore {
-    align-self: flex-start;
-    width: 100%;
-    min-width: 0;
+    gap: 16px;
   }
 }
 
 @media (max-width: 767px) {
   .facilityTourSection {
-    margin-top: 16px;
+    margin-top: 12px;
   }
 
   .facilityTourHeader {
-    padding: 22px 16px 16px;
+    padding: 20px 16px 14px;
     gap: 12px;
   }
 
   .facilityTourTitle {
-    font-size: clamp(28px, 8vw, 40px);
+    font-size: clamp(24px, 7vw, 34px);
+    line-height: 1.02;
+    white-space: nowrap;
   }
 
   .facilityTourDescription {
-    margin-top: 12px;
+    margin-top: 10px;
     font-size: 14px;
     line-height: 1.65;
   }
 
   .facilityTourReadMore {
-    min-width: 0;
+    min-width: clamp(146px, 32vw, 220px);
   }
 
   .facilityTourCard {
