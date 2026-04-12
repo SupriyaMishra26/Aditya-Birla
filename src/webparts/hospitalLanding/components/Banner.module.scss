@@ -119,17 +119,22 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.14);
   color: $color-surface;
   cursor: pointer;
   transform: translateY(-50%);
   transition:
-    background-color $transition-standard,
-    transform $transition-standard;
+    background-color $transition-emphasis,
+    border-color $transition-emphasis,
+    color $transition-emphasis,
+    box-shadow $transition-emphasis;
   backdrop-filter: blur(3px);
 
   &:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: #b3211e;
+    border-color: #b3211e;
+    color: #ffffff;
+    box-shadow: 0 16px 30px rgba(165, 27, 23, 0.22);
   }
 
   &:focus-visible {
@@ -279,20 +284,17 @@
   }
 
   .control {
-    top: auto;
-    bottom: 28px;
     width: 48px;
     height: 48px;
-    transform: none;
     background: rgba(36, 38, 41, 0.38);
   }
 
   .prevControl {
-    left: 20px;
+    left: 18px;
   }
 
   .nextControl {
-    right: 20px;
+    right: 18px;
   }
 
   .controlGlyph {
@@ -303,7 +305,7 @@
   }
 
   .pagination {
-    bottom: 42px;
+    bottom: 24px;
   }
 }
 

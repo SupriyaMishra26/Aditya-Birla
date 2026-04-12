@@ -6,6 +6,10 @@ import propertyOneImage from '../assets/Property 1.png';
 import propertyTwoImage from '../assets/Property 2.png';
 import propertyThreeImage from '../assets/Property 3.png';
 import propertyFourImage from '../assets/Property 4.png';
+import bedIcon from '../assets/bed-icon.png';
+import doctorIcon from '../assets/Doctor-icon.png';
+import experienceIcon from '../assets/exp-icon.png';
+import patientIcon from '../assets/patient icon.png';
 import Button from '../ui/Button';
 import styles from './About.module.scss';
 
@@ -37,25 +41,25 @@ const quickActions = [
 const statsItems = [
   {
     id: 'patients',
-    iconName: 'People',
+    iconSrc: patientIcon,
     value: '50,000+',
     label: 'Patients Treated Successfully'
   },
   {
     id: 'doctors',
-    iconName: 'Contact',
+    iconSrc: doctorIcon,
     value: '75+',
     label: 'Expert Doctors'
   },
   {
     id: 'experience',
-    iconName: 'Ribbon',
+    iconSrc: experienceIcon,
     value: '25+',
     label: 'Years of experience'
   },
   {
     id: 'beds',
-    iconName: 'Hospital',
+    iconSrc: bedIcon,
     value: '150+',
     label: 'Beds/ Infrastructure'
   }
@@ -178,7 +182,7 @@ const About: React.FC = () => {
           {statsItems.map(stat => (
             <article className={styles.statItem} key={stat.id}>
               <span className={styles.statIcon} aria-hidden="true">
-                <Icon iconName={stat.iconName} className={styles.statGlyph} />
+                <img src={stat.iconSrc} alt="" className={styles.statGlyph} />
               </span>
               <span className={styles.statValue}>{stat.value}</span>
               <span className={styles.statLabel}>{stat.label}</span>

@@ -2,8 +2,13 @@ import * as React from 'react';
 import '../ui/global.scss';
 import About from './About';
 import Banner from './Banner';
+import CaseOfMonth from './CaseOfMonth';
+import FacilityTour from './FacilityTour';
+import HospitalFooter from './HospitalFooter';
 import Navbar from './Navbar';
+import LatestNews from './LatestNews';
 import Specialities from './Specialities';
+
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = React.useState('home');
 
@@ -14,9 +19,13 @@ const App: React.FC = () => {
         <main className="hospitalLandingMain">
           <Banner onPrimaryAction={() => setCurrentPage('specialities')} />
           <About />
-
           <Specialities />
+          <FacilityTour />
+          <CaseOfMonth />
+          <LatestNews />
         </main>
+
+        <HospitalFooter />
       </div>
 
       <div className="hospitalLandingStickyRail" aria-hidden="true">

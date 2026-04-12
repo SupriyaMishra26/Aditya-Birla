@@ -1,12 +1,47 @@
 import * as React from 'react';
 import consultHeroImage from '../assets/consult-hero.avif';
 import doctorPortrait from '../assets/doctor.png';
+import onlineConsultationPoster from '../assets/vedio.jpg';
 import Button from '../ui/Button';
 import styles from './Specialities.module.scss';
 
 const diagonalArrow = String.fromCharCode(8599);
-const prevArrow = String.fromCharCode(8249);
-const nextArrow = String.fromCharCode(8250);
+
+const ArrowLeftIcon: React.FC<React.SVGProps<SVGSVGElement>> = props => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    aria-hidden="true"
+    focusable="false"
+    {...props}
+  >
+    <path
+      d="M14.5 6.5L9 12l5.5 5.5"
+      stroke="currentColor"
+      strokeWidth="2.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const ArrowRightIcon: React.FC<React.SVGProps<SVGSVGElement>> = props => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    aria-hidden="true"
+    focusable="false"
+    {...props}
+  >
+    <path
+      d="M9.5 6.5L15 12l-5.5 5.5"
+      stroke="currentColor"
+      strokeWidth="2.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
 
 interface IKeySpeciality {
   id: string;
@@ -15,7 +50,6 @@ interface IKeySpeciality {
   icon: React.ReactNode;
   bgImage: string;
   bgPosition?: string;
-  featured?: boolean;
 }
 
 interface ISpecialistCard {
@@ -33,6 +67,59 @@ interface IFilterChip {
   id: string;
   label: string;
 }
+
+const getViewportWidth = (): number => {
+  if (typeof window === 'undefined') {
+    return 1440;
+  }
+
+  return window.innerWidth;
+};
+
+const createIndexRange = (count: number): number[] => {
+  const indices: number[] = [];
+
+  for (let index = 0; index < count; index += 1) {
+    indices.push(index);
+  }
+
+  return indices;
+};
+
+const useElementWidth = <T extends HTMLElement>(elementRef: React.RefObject<T>): number => {
+  const [width, setWidth] = React.useState(0);
+
+  React.useEffect(() => {
+    const element = elementRef.current;
+
+    if (!element || typeof window === 'undefined') {
+      return undefined;
+    }
+
+    const updateWidth = (): void => {
+      setWidth(element.getBoundingClientRect().width);
+    };
+
+    updateWidth();
+
+    if (typeof ResizeObserver === 'undefined') {
+      window.addEventListener('resize', updateWidth);
+
+      return () => window.removeEventListener('resize', updateWidth);
+    }
+
+    const observer = new ResizeObserver(entries => {
+      const entry = entries[0];
+      setWidth(entry?.contentRect.width ?? element.getBoundingClientRect().width);
+    });
+
+    observer.observe(element);
+
+    return () => observer.disconnect();
+  }, [elementRef]);
+
+  return width;
+};
 
 const CardiologyIcon: React.FC<React.SVGProps<SVGSVGElement>> = props => (
   <svg
@@ -139,6 +226,30 @@ const GynecologyIcon: React.FC<React.SVGProps<SVGSVGElement>> = props => (
   </svg>
 );
 
+const MedicalCrossIcon: React.FC<React.SVGProps<SVGSVGElement>> = props => (
+  <svg
+    viewBox="0 0 64 64"
+    fill="none"
+    aria-hidden="true"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <rect
+      x="14"
+      y="14"
+      width="36"
+      height="36"
+      rx="12"
+      stroke="currentColor"
+      strokeWidth="2.2"
+    />
+    <path d="M32 21v22M21 32h22" stroke="currentColor" strokeWidth="2.8" />
+    <circle cx="24" cy="24" r="1.8" fill="currentColor" />
+    <circle cx="40" cy="40" r="1.8" fill="currentColor" opacity="0.78" />
+  </svg>
+);
+
 const KEY_SPECIALITIES: IKeySpeciality[] = [
   {
     id: 'cardiology',
@@ -162,8 +273,7 @@ const KEY_SPECIALITIES: IKeySpeciality[] = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     icon: <DentalIcon className={styles.keyIconGlyph} />,
     bgImage: consultHeroImage,
-    bgPosition: 'center 38%',
-    featured: true
+    bgPosition: 'center 38%'
   },
   {
     id: 'gynaecology',
@@ -172,6 +282,38 @@ const KEY_SPECIALITIES: IKeySpeciality[] = [
     icon: <GynecologyIcon className={styles.keyIconGlyph} />,
     bgImage: consultHeroImage,
     bgPosition: 'center 34%'
+  },
+  {
+    id: 'orthopedics',
+    title: 'Orthopedics',
+    description: 'Bones, joints, and mobility care for active lives.',
+    icon: <MedicalCrossIcon className={styles.keyIconGlyph} />,
+    bgImage: consultHeroImage,
+    bgPosition: 'center 46%'
+  },
+  {
+    id: 'pediatrics',
+    title: 'Pediatrics',
+    description: 'Friendly, complete care for children and newborns.',
+    icon: <MedicalCrossIcon className={styles.keyIconGlyph} />,
+    bgImage: consultHeroImage,
+    bgPosition: 'center 22%'
+  },
+  {
+    id: 'surgery',
+    title: 'General Surgery',
+    description: 'Advanced surgical support with careful recovery plans.',
+    icon: <MedicalCrossIcon className={styles.keyIconGlyph} />,
+    bgImage: consultHeroImage,
+    bgPosition: 'center 52%'
+  },
+  {
+    id: 'ent',
+    title: 'ENT',
+    description: 'Specialized ear, nose, and throat treatment.',
+    icon: <MedicalCrossIcon className={styles.keyIconGlyph} />,
+    bgImage: consultHeroImage,
+    bgPosition: 'center 18%'
   }
 ];
 
@@ -199,9 +341,8 @@ const SPECIALIST_CARDS: ISpecialistCard[] = [
     ],
     opdTime: 'Mon to Sat - 9.00 AM to 5.30 PM.',
     portraitStyle: {
-      right: '-6px',
-      bottom: '74px',
-      width: '48%',
+      right: '0',
+      width: '54%',
       transform: 'translateX(6px)'
     }
   },
@@ -219,9 +360,8 @@ const SPECIALIST_CARDS: ISpecialistCard[] = [
     ],
     opdTime: 'Mon to Sat - 10:00 AM - 03:00 PM',
     portraitStyle: {
-      right: '-12px',
-      bottom: '70px',
-      width: '47%',
+      right: '-2px',
+      width: '52%',
       transform: 'translateX(8px)'
     }
   },
@@ -239,21 +379,263 @@ const SPECIALIST_CARDS: ISpecialistCard[] = [
     ],
     opdTime: 'Mon to Sat - 09:00 AM - 05:30 PM',
     portraitStyle: {
-      right: '-8px',
-      bottom: '68px',
-      width: '48%',
-      transform: 'translateX(10px)'
+      right: '0',
+      width: '53%',
+      transform: 'translateX(8px)'
     }
   }
 ];
 
-const KEY_DOTS = [0, 1, 2, 3];
-const SPECIALIST_DOTS = [0, 1, 2, 3];
+const OnlineConsultationVideo: React.FC = () => {
+  const videoRef = React.useRef<HTMLVideoElement | null>(null);
+  const animationFrameRef = React.useRef<number | null>(null);
+  const streamRef = React.useRef<MediaStream | null>(null);
+  const [isPlaying, setIsPlaying] = React.useState(false);
+
+  React.useEffect(() => {
+    const video = videoRef.current;
+
+    if (!isPlaying || !video || typeof window === 'undefined') {
+      return undefined;
+    }
+
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+
+    if (!context || typeof canvas.captureStream !== 'function') {
+      return undefined;
+    }
+
+    const poster = new Image();
+    poster.src = onlineConsultationPoster;
+    let cancelled = false;
+    let pixelRatio = 1;
+
+    const stopStream = (): void => {
+      if (animationFrameRef.current !== null) {
+        window.cancelAnimationFrame(animationFrameRef.current);
+        animationFrameRef.current = null;
+      }
+
+      streamRef.current?.getTracks().forEach(track => track.stop());
+      streamRef.current = null;
+      video.pause();
+      video.srcObject = null;
+    };
+
+    const render = (time: number): void => {
+      if (cancelled) {
+        return;
+      }
+
+      const frameWidth = canvas.width;
+      const frameHeight = canvas.height;
+      const imageWidth = poster.naturalWidth || 1;
+      const imageHeight = poster.naturalHeight || 1;
+      const imageRatio = imageWidth / imageHeight;
+      const frameRatio = frameWidth / frameHeight;
+      const elapsed = time / 1000;
+      const zoom = 1.04 + Math.sin(elapsed * 0.3) * 0.01;
+
+      let drawWidth = frameWidth;
+      let drawHeight = frameHeight;
+
+      if (imageRatio > frameRatio) {
+        drawHeight = frameHeight * zoom;
+        drawWidth = drawHeight * imageRatio;
+      } else {
+        drawWidth = frameWidth * zoom;
+        drawHeight = drawWidth / imageRatio;
+      }
+
+      const driftX = Math.sin(elapsed * 0.28) * 14 * pixelRatio;
+      const driftY = Math.cos(elapsed * 0.24) * 10 * pixelRatio;
+
+      context.clearRect(0, 0, frameWidth, frameHeight);
+      context.drawImage(
+        poster,
+        (frameWidth - drawWidth) / 2 + driftX,
+        (frameHeight - drawHeight) / 2 + driftY,
+        drawWidth,
+        drawHeight
+      );
+
+      const overlay = context.createLinearGradient(0, 0, frameWidth, frameHeight);
+      overlay.addColorStop(0, 'rgba(255, 255, 255, 0.06)');
+      overlay.addColorStop(1, 'rgba(12, 16, 20, 0.18)');
+      context.fillStyle = overlay;
+      context.fillRect(0, 0, frameWidth, frameHeight);
+
+      animationFrameRef.current = window.requestAnimationFrame(render);
+    };
+
+    const startStream = (): void => {
+      if (cancelled || !videoRef.current) {
+        return;
+      }
+
+      const rect = videoRef.current.getBoundingClientRect();
+      const width = Math.max(Math.round(rect.width), 1);
+      const height = Math.max(Math.round(rect.height), 1);
+      pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+
+      canvas.width = Math.max(1, Math.round(width * pixelRatio));
+      canvas.height = Math.max(1, Math.round(height * pixelRatio));
+
+      const stream = canvas.captureStream(30);
+      streamRef.current = stream;
+      video.srcObject = stream;
+      video.muted = true;
+      video.playsInline = true;
+      video.loop = true;
+      video.play().catch(() => {
+        /* Ignore autoplay failures on browsers that require a user gesture. */
+      });
+
+      animationFrameRef.current = window.requestAnimationFrame(render);
+    };
+
+    const bootId = window.requestAnimationFrame(() => {
+      if (cancelled) {
+        return;
+      }
+
+      if (poster.complete && poster.naturalWidth > 0) {
+        startStream();
+        return;
+      }
+
+      poster.onload = () => {
+        if (!cancelled) {
+          startStream();
+        }
+      };
+    });
+
+    return () => {
+      cancelled = true;
+      window.cancelAnimationFrame(bootId);
+      poster.onload = null;
+      stopStream();
+    };
+  }, [isPlaying]);
+
+  const handlePlay = (): void => {
+    setIsPlaying(true);
+  };
+
+  return (
+    <div className={styles.consultationSection}>
+      <div className={styles.consultationFrame}>
+        {!isPlaying ? (
+          <img
+            src={onlineConsultationPoster}
+            alt="Online consultation preview"
+            className={styles.consultationPoster}
+          />
+        ) : (
+          <video
+            ref={videoRef}
+            className={styles.consultationVideo}
+            muted
+            playsInline
+            preload="auto"
+            poster={onlineConsultationPoster}
+            aria-label="Online consultation video"
+          />
+        )}
+
+        <div className={styles.consultationOverlay} aria-hidden="true" />
+
+        {!isPlaying ? (
+          <button
+            type="button"
+            className={styles.consultationPlayButton}
+            aria-label="Play online consultation video"
+            onClick={handlePlay}
+          >
+            <span className={styles.consultationPlayGlyph} aria-hidden="true" />
+          </button>
+        ) : null}
+
+        <span className={styles.consultationLabel}>Online Consultation</span>
+      </div>
+    </div>
+  );
+};
 
 const Specialities: React.FC = () => {
   const [activeKeyDot, setActiveKeyDot] = React.useState(0);
   const [activeFilter, setActiveFilter] = React.useState('all');
   const [activeSpecialistDot, setActiveSpecialistDot] = React.useState(0);
+  const keyGridRef = React.useRef<HTMLDivElement | null>(null);
+  const specialistGridRef = React.useRef<HTMLDivElement | null>(null);
+  const keyCardRefs = React.useRef<Array<HTMLElement | null>>([]);
+  const specialistCardRefs = React.useRef<Array<HTMLElement | null>>([]);
+  const keyGridWidth = useElementWidth(keyGridRef);
+  const specialistGridWidth = useElementWidth(specialistGridRef);
+
+  const resolvedKeyWidth = keyGridWidth > 0 ? keyGridWidth : getViewportWidth();
+  const resolvedSpecialistWidth = specialistGridWidth > 0 ? specialistGridWidth : getViewportWidth();
+
+  const keyVisibleCount =
+    resolvedKeyWidth >= 1280 ? 4 : resolvedKeyWidth >= 1024 ? 3 : resolvedKeyWidth >= 768 ? 2 : 1;
+  const specialistVisibleCount =
+    resolvedSpecialistWidth >= 1280 ? 3 : resolvedSpecialistWidth >= 768 ? 2 : 1;
+  const keyPageCount = Math.max(1, Math.ceil(KEY_SPECIALITIES.length / keyVisibleCount));
+  const specialistPageCount = Math.max(1, Math.ceil(SPECIALIST_CARDS.length / specialistVisibleCount));
+  const showKeyNav = keyPageCount > 1;
+  const showSpecialistNav = specialistPageCount > 1;
+
+  React.useEffect(() => {
+    setActiveKeyDot(current => Math.min(current, keyPageCount - 1));
+  }, [keyPageCount]);
+
+  React.useEffect(() => {
+    setActiveSpecialistDot(current => Math.min(current, specialistPageCount - 1));
+  }, [specialistPageCount]);
+
+  React.useEffect(() => {
+    if (typeof window === 'undefined' || !showKeyNav) {
+      return undefined;
+    }
+
+    const targetIndex = Math.min(activeKeyDot * keyVisibleCount, KEY_SPECIALITIES.length - 1);
+    const targetCard = keyCardRefs.current[targetIndex];
+
+    if (!targetCard) {
+      return undefined;
+    }
+
+    targetCard.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'start'
+    });
+
+    return undefined;
+  }, [activeKeyDot, keyVisibleCount, showKeyNav]);
+
+  React.useEffect(() => {
+    if (typeof window === 'undefined' || !showSpecialistNav) {
+      return undefined;
+    }
+
+    const targetIndex = Math.min(activeSpecialistDot * specialistVisibleCount, SPECIALIST_CARDS.length - 1);
+    const targetCard = specialistCardRefs.current[targetIndex];
+
+    if (!targetCard) {
+      return undefined;
+    }
+
+    targetCard.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'start'
+    });
+
+    return undefined;
+  }, [activeSpecialistDot, specialistVisibleCount, showSpecialistNav]);
 
   return (
     <section className={styles.specialitiesSection} aria-label="Hospital specialties">
@@ -278,42 +660,48 @@ const Specialities: React.FC = () => {
                 size="lg"
                 icon={<span aria-hidden="true">{diagonalArrow}</span>}
                 iconPosition="trailing"
-                style={{ minWidth: '246px' }}
               >
                 View All
               </Button>
             </div>
           </div>
 
-          <div className={styles.keyCardsStage}>
-            <button
-              type="button"
-              className={[styles.navArrow, styles.navPrev].join(' ')}
-              aria-label="Previous key specialities"
-              onClick={() => setActiveKeyDot(d => Math.max(0, d - 1))}
-            >
-              {prevArrow}
-            </button>
+              <div className={styles.keyCardsStage}>
+              {showKeyNav ? (
+                <button
+                  type="button"
+                  className={[styles.navArrow, styles.navPrev].join(' ')}
+                  aria-label="Previous key specialities"
+                  onClick={() => setActiveKeyDot(d => Math.max(0, d - 1))}
+              >
+                <ArrowLeftIcon className={styles.navArrowGlyph} />
+              </button>
+            ) : null}
 
-            <button
-              type="button"
-              className={[styles.navArrow, styles.navNext].join(' ')}
-              aria-label="Next key specialities"
-              onClick={() => setActiveKeyDot(d => Math.min(KEY_DOTS.length - 1, d + 1))}
-            >
-              {nextArrow}
-            </button>
+            {showKeyNav ? (
+                <button
+                  type="button"
+                  className={[styles.navArrow, styles.navNext].join(' ')}
+                  aria-label="Next key specialities"
+                  onClick={() => setActiveKeyDot(d => Math.min(keyPageCount - 1, d + 1))}
+                >
+                  <ArrowRightIcon className={styles.navArrowGlyph} />
+                </button>
+              ) : null}
 
-            <div className={styles.keyGrid} role="list" aria-label="Key specialities cards">
-              {KEY_SPECIALITIES.map(speciality => (
-                <article
-                  key={speciality.id}
-                  className={[
-                    styles.keyCard,
-                    speciality.featured ? styles.keyCardFeatured : ''
-                  ]
-                    .filter(Boolean)
-                    .join(' ')}
+              <div
+                ref={keyGridRef}
+                className={styles.keyGrid}
+                role="list"
+                aria-label="Key specialities cards"
+              >
+                {KEY_SPECIALITIES.map((speciality, index) => (
+                  <article
+                    key={speciality.id}
+                    className={styles.keyCard}
+                  ref={element => {
+                    keyCardRefs.current[index] = element;
+                  }}
                   role="listitem"
                 >
                   <div
@@ -336,12 +724,11 @@ const Specialities: React.FC = () => {
                     <Button
                       variant="outline"
                       tone="brand"
-                      size="md"
+                      size="sm"
                       noLift
                       className={styles.keyLearnMoreBtn}
                       icon={<span aria-hidden="true">{diagonalArrow}</span>}
                       iconPosition="trailing"
-                      style={{ minHeight: '42px', padding: '0 18px' }}
                     >
                       Learn More
                     </Button>
@@ -351,23 +738,25 @@ const Specialities: React.FC = () => {
             </div>
           </div>
 
-          <div className={styles.keyDots} aria-label="Key specialities pages">
-            {KEY_DOTS.map(index => (
-              <button
-                key={index}
-                type="button"
-                aria-pressed={activeKeyDot === index}
-                aria-label={`Page ${index + 1}`}
-                className={[
-                  styles.keyDot,
-                  activeKeyDot === index ? styles.keyDotActive : styles.keyDotSmall
-                ]
-                  .filter(Boolean)
-                  .join(' ')}
-                onClick={() => setActiveKeyDot(index)}
-              />
-            ))}
-          </div>
+          {keyPageCount > 1 ? (
+            <div className={styles.keyDots} aria-label="Key specialities pages">
+              {createIndexRange(keyPageCount).map(index => (
+                <button
+                  key={index}
+                  type="button"
+                  aria-pressed={activeKeyDot === index}
+                  aria-label={`Page ${index + 1}`}
+                  className={[
+                    styles.keyDot,
+                    activeKeyDot === index ? styles.keyDotActive : styles.keyDotSmall
+                  ]
+                    .filter(Boolean)
+                    .join(' ')}
+                  onClick={() => setActiveKeyDot(index)}
+                />
+              ))}
+            </div>
+          ) : null}
         </div>
       </div>
 
@@ -404,27 +793,43 @@ const Specialities: React.FC = () => {
           </div>
 
           <div className={styles.specialistsCardsStage}>
-            <button
-              type="button"
-              className={[styles.navArrow, styles.navPrev].join(' ')}
-              aria-label="Previous specialists"
-              onClick={() => setActiveSpecialistDot(d => Math.max(0, d - 1))}
-            >
-              {prevArrow}
-            </button>
+            {showSpecialistNav ? (
+              <button
+                type="button"
+                className={[styles.navArrow, styles.navPrev].join(' ')}
+                aria-label="Previous specialists"
+                onClick={() => setActiveSpecialistDot(d => Math.max(0, d - 1))}
+              >
+                <ArrowLeftIcon className={styles.navArrowGlyph} />
+              </button>
+            ) : null}
 
-            <button
-              type="button"
-              className={[styles.navArrow, styles.navNext].join(' ')}
-              aria-label="Next specialists"
-              onClick={() => setActiveSpecialistDot(d => Math.min(SPECIALIST_DOTS.length - 1, d + 1))}
-            >
-              {nextArrow}
-            </button>
+            {showSpecialistNav ? (
+              <button
+                type="button"
+                className={[styles.navArrow, styles.navNext].join(' ')}
+                aria-label="Next specialists"
+                onClick={() => setActiveSpecialistDot(d => Math.min(specialistPageCount - 1, d + 1))}
+              >
+                <ArrowRightIcon className={styles.navArrowGlyph} />
+              </button>
+            ) : null}
 
-            <div className={styles.specialistsCardsGrid} role="list" aria-label="Featured specialists">
-              {SPECIALIST_CARDS.map(card => (
-                <article key={card.id} className={styles.specialistCard} role="listitem">
+            <div
+              ref={specialistGridRef}
+              className={styles.specialistsCardsGrid}
+              role="list"
+              aria-label="Featured specialists"
+            >
+              {SPECIALIST_CARDS.map((card, index) => (
+                <article
+                  key={card.id}
+                  className={styles.specialistCard}
+                  ref={element => {
+                    specialistCardRefs.current[index] = element;
+                  }}
+                  role="listitem"
+                >
                   <div className={styles.specialistCardTop}>
                     <h3 className={styles.specialistName}>{card.name}</h3>
                     <p className={styles.specialistRole}>{card.specialty}</p>
@@ -433,14 +838,6 @@ const Specialities: React.FC = () => {
                     <p className={styles.specialistExperience}>
                       <strong>{card.experience}</strong> Years of Experience
                     </p>
-
-                    <img
-                      src={doctorPortrait}
-                      alt=""
-                      aria-hidden="true"
-                      className={styles.specialistPortrait}
-                      style={card.portraitStyle}
-                    />
                   </div>
 
                   <div className={styles.specialistCardBody}>
@@ -458,30 +855,42 @@ const Specialities: React.FC = () => {
                     <span className={styles.opdTag}>OPD Timing:</span>
                     <p className={styles.opdTime}>{card.opdTime}</p>
                   </div>
+
+                  <img
+                    src={doctorPortrait}
+                    alt=""
+                    aria-hidden="true"
+                    className={styles.specialistPortrait}
+                    style={card.portraitStyle}
+                  />
                 </article>
               ))}
             </div>
           </div>
 
-          <div className={styles.specialistDots} aria-label="Specialists pages">
-            {SPECIALIST_DOTS.map(index => (
-              <button
-                key={index}
-                type="button"
-                aria-pressed={activeSpecialistDot === index}
-                aria-label={`Page ${index + 1}`}
-                className={[
-                  styles.specialistDot,
-                  activeSpecialistDot === index ? styles.specialistDotActive : styles.specialistDotSmall
-                ]
-                  .filter(Boolean)
-                  .join(' ')}
-                onClick={() => setActiveSpecialistDot(index)}
-              />
-            ))}
-          </div>
+          {specialistPageCount > 1 ? (
+            <div className={styles.specialistDots} aria-label="Specialists pages">
+              {createIndexRange(specialistPageCount).map(index => (
+                <button
+                  key={index}
+                  type="button"
+                  aria-pressed={activeSpecialistDot === index}
+                  aria-label={`Page ${index + 1}`}
+                  className={[
+                    styles.specialistDot,
+                    activeSpecialistDot === index ? styles.specialistDotActive : styles.specialistDotSmall
+                  ]
+                    .filter(Boolean)
+                    .join(' ')}
+                  onClick={() => setActiveSpecialistDot(index)}
+                />
+              ))}
+            </div>
+          ) : null}
         </div>
       </div>
+
+      <OnlineConsultationVideo />
     </section>
   );
 };

@@ -17,6 +17,7 @@ $font-weight-bold: 700;
 $font-weight-heavy: 800;
 
 $transition-standard: 0.18s ease;
+$transition-emphasis: 0.3s ease;
 
 @mixin button-label {
   font-family: $font-family-base;
@@ -40,4 +41,23 @@ $transition-standard: 0.18s ease;
   line-height: 1.02;
   letter-spacing: -0.03em;
   text-transform: uppercase;
+}
+
+@mixin section-title {
+  margin: 0;
+  font-family: $font-family-base;
+  font-size: clamp(34px, 3.8vw, 58px);
+  font-weight: $font-weight-bold;
+  line-height: 1.04;
+  letter-spacing: -0.036em;
+  text-transform: none;
+}
+
+@mixin section-copy {
+  margin: 0;
+  font-family: $font-family-base;
+  font-size: clamp(15px, 1.15vw, 19px);
+  font-weight: $font-weight-medium;
+  line-height: 1.58;
+  letter-spacing: -0.014em;
 }

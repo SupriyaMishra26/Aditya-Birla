@@ -57,7 +57,7 @@ const Button: React.FC<IButtonProps> = ({
 
   const iconClassName = [
     styles.icon,
-    iconPosition === 'leading' ? styles.iconLeading : ''
+    iconPosition === 'leading' ? styles.iconLeading : styles.iconTrailing
   ].filter(Boolean).join(' ');
 
   return (

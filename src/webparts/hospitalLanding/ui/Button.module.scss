@@ -7,6 +7,7 @@
   --button-outline-bg: rgba($color-brand-red, 0.06);
   --button-ghost-bg: rgba($color-brand-red, 0.1);
   --button-border-width: 1.5px;
+  --button-icon-shift: 4px;
 
   display: inline-flex;
   align-items: center;
@@ -23,15 +24,10 @@
   cursor: pointer;
   text-decoration: none;
   transition:
-    transform $transition-standard,
-    background-color $transition-standard,
-    border-color $transition-standard,
-    color $transition-standard,
-    box-shadow $transition-standard;
-
-  &:hover:not(:disabled) {
-    transform: translateY(-1px);
-  }
+    background-color $transition-emphasis,
+    border-color $transition-emphasis,
+    color $transition-emphasis,
+    box-shadow $transition-emphasis;
 
   &:focus-visible {
     outline: 3px solid rgba($color-brand-gold, 0.55);
@@ -41,7 +37,6 @@
   &:disabled {
     opacity: 0.6;
     cursor: not-allowed;
-    transform: none;
     box-shadow: none;
   }
 }
@@ -55,6 +50,7 @@
 .label {
   @include button-label;
   white-space: nowrap;
+  transition: color $transition-emphasis;
 }
 
 .icon {
@@ -63,10 +59,23 @@
   justify-content: center;
   font-size: 1rem;
   line-height: 1;
+  transition: transform $transition-emphasis, color $transition-emphasis;
 }
 
 .iconLeading {
   order: -1;
+}
+
+.iconTrailing {
+  will-change: transform;
+}
+
+.button:hover:not(:disabled) .iconTrailing {
+  transform: translateX(var(--button-icon-shift));
+}
+
+.button:hover:not(:disabled) .iconLeading {
+  transform: translateX(calc(var(--button-icon-shift) * -0.45));
 }
 
 .solid {
@@ -90,9 +99,10 @@
   box-shadow: none;
 
   &:hover:not(:disabled) {
-    background: var(--button-outline-bg);
-    border-color: var(--button-fill-hover);
-    color: var(--button-fill-hover);
+    background: var(--button-fill);
+    border-color: var(--button-fill);
+    color: var(--button-contrast);
+    box-shadow: 0 16px 28px rgba($color-brand-deep-red, 0.16);
   }
 }
 
@@ -103,8 +113,9 @@
   box-shadow: none;
 
   &:hover:not(:disabled) {
-    background: var(--button-ghost-bg);
-    color: var(--button-fill-hover);
+    background: var(--button-fill);
+    color: var(--button-contrast);
+    box-shadow: 0 16px 28px rgba($color-brand-deep-red, 0.16);
   }
 }
 

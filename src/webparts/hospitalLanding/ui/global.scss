@@ -55,15 +55,18 @@
 
 @media (max-width: 900px) {
   .hospitalLandingStickyRail {
-    top: 132px;
-    right: 16px;
+    top: auto;
+    right: 12px;
+    bottom: 18px;
     transform: none;
   }
 
   .hospitalLandingStickyRailLabel {
-    min-height: auto;
-    padding: 14px 18px;
-    font-size: 18px;
+    min-height: 44px;
+    padding: 0 18px;
+    border-radius: 999px;
+    font-size: 14px;
+    line-height: 1.1;
     writing-mode: horizontal-tb;
     transform: none;
   }
@@ -71,12 +74,12 @@
 
 @media (max-width: 640px) {
   .hospitalLandingStickyRail {
-    top: 118px;
-    right: 12px;
+    right: 10px;
+    bottom: 12px;
   }
 
   .hospitalLandingStickyRailLabel {
-    padding: 12px 16px;
-    font-size: 16px;
+    padding: 0 14px;
+    font-size: 13px;
   }
 }
