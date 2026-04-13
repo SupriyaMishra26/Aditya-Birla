@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://microhub.in/seo/sitemap.xml
+
+Disallow: /get-started/
+Disallow: /assets/

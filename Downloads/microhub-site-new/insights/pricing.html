@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing – MicroHub</title>
+  <meta name="description" content="Transparent, flexible pricing for all MicroHub software solutions. Start free, scale as you grow.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body data-site-root="../">
+<div id="navbar-root" data-include="components/navbar.html"></div>
+
+<section class="page-hero" style="padding:120px 0 70px">
+  <div class="container position-relative" style="z-index:1">
+    <div class="breadcrumb-custom"><a href="../index.html">Home</a><span>/</span><span>Pricing</span></div>
+    <div class="text-center fade-in-up-1">
+      <div class="section-label mx-auto" style="background:rgba(46,75,101,0.2);color:var(--primary-light)"><i class="bi bi-tag"></i> Simple Pricing</div>
+      <h1 style="color:var(--white)">Pricing for Every Team</h1>
+      <p style="color:rgba(255,255,255,0.7);font-size:1.1rem;margin-top:1.25rem;max-width:620px;margin-left:auto;margin-right:auto">Choose a plan that fits your team. 30 days free trial included on all paid plans. Toggle between monthly and annual (20% savings).</p>
+      <div class="d-flex align-items-center justify-content-center gap-3 mt-4">
+        <span style="color:rgba(255,255,255,0.8);font-size:0.9rem">Monthly</span>
+        <div class="form-check form-switch mb-0" style="transform:scale(1.2)">
+          <input class="form-check-input" type="checkbox" id="billing-toggle" style="cursor:pointer;background-color:var(--primary);border-color:var(--primary)">
+        </div>
+        <span style="color:rgba(255,255,255,0.8);font-size:0.9rem">Annual <span style="background:var(--primary);color:var(--white);padding:0.15rem 0.5rem;border-radius:100px;font-size:0.72rem;font-weight:700;margin-left:0.3rem">Save 20%</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Cards -->
+<section class="section-pad" style="background:var(--accent)">
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+        <div class="pricing-card">
+          <div class="pricing-name">STARTER</div>
+          <div class="pricing-price"><sup>&#8377;</sup>999<sub>/month</sub></div>
+          <div class="pricing-desc">Perfect for small teams getting started with AI business tools.</div>
+          <div class="pricing-features">
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> Up to 10 users</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> CRM &mdash; basic pipeline</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> HRMS &mdash; attendance &amp; leave</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> Ticketing &mdash; email intake</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> 5 GB cloud storage</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> Email support</div>
+          </div>
+          <a href="../get-started/signup.html" class="btn-outline-custom w-100 justify-content-center">Start Free Trial</a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+        <div class="pricing-card featured" style="margin-top:-20px">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-name">PROFESSIONAL</div>
+          <div class="pricing-price"><sup>&#8377;</sup>2,499<sub>/month</sub></div>
+          <div class="pricing-desc">For growing teams that need AI automation and integrations.</div>
+          <div class="pricing-features">
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> Up to 50 users</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> CRM &mdash; full pipeline + WhatsApp</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> HRMS &mdash; payroll + performance</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> Face Recognition &mdash; 1 device</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> Ticketing &mdash; omnichannel</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> AI analytics dashboard</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> 50 GB cloud storage</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> Priority phone &amp; chat support</div>
+          </div>
+          <a href="../get-started/signup.html" class="btn-primary-custom w-100 justify-content-center">Start Free Trial</a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
+        <div class="pricing-card">
+          <div class="pricing-name">ENTERPRISE</div>
+          <div class="pricing-price" style="font-size:2.2rem">Custom</div>
+          <div class="pricing-desc">For large organizations with advanced security, compliance, and SLA needs.</div>
+          <div class="pricing-features">
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> Unlimited users</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> All modules &mdash; full feature set</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> Face Recognition &mdash; unlimited devices</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> Dedicated account manager</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> Custom integrations (API access)</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> On-premise deployment option</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> 99.9% SLA guarantee</div>
+            <div class="pricing-feature"><i class="bi bi-check-circle-fill"></i> Unlimited storage</div>
+          </div>
+          <a href="https://repair.microhub.in/contact" class="btn-outline-custom w-100 justify-content-center">Talk to Sales</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-pad" style="background:var(--accent)">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="text-center mb-5 reveal">
+          <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+        </div>
+        <div class="accordion accordion-custom" id="pricing-faq">
+          <div class="accordion-item reveal">
+            <h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">Is there really a 30-day free trial with no credit card required?</button></h2>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#pricing-faq"><div class="accordion-body">Yes, absolutely. You get full access to all features of your chosen plan for 30 days. No credit card, no commitment. Just sign up and start building.</div></div>
+          </div>
+          <div class="accordion-item reveal reveal-delay-1">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">Can I change plans later?</button></h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#pricing-faq"><div class="accordion-body">Yes. You can upgrade or downgrade your plan at any time. Upgrades take effect immediately. Downgrades apply at the start of your next billing cycle.</div></div>
+          </div>
+          <div class="accordion-item reveal reveal-delay-2">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq3">Do prices include GST?</button></h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#pricing-faq"><div class="accordion-body">All displayed prices are exclusive of GST. 18% GST will be applied at checkout. GST invoices are issued for all transactions for easy business accounting.</div></div>
+          </div>
+          <div class="accordion-item reveal reveal-delay-3">
+            <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq4">What payment methods are accepted?</button></h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#pricing-faq"><div class="accordion-body">We accept all major credit/debit cards, UPI, net banking, and bank transfers. Enterprise customers can also opt for annual invoice-based billing.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container position-relative" style="z-index:1;text-align:center">
+    <h2 style="color:var(--white);margin-bottom:1rem">Ready to Get Started?</h2>
+    <p style="color:rgba(255,255,255,0.8);margin-bottom:2rem">Start your 30-day free trial today. No credit card required.</p>
+    <div class="d-flex gap-3 justify-content-center flex-wrap">
+      <a href="../get-started/signup.html" class="btn-white-custom">Start Free Trial <i class="bi bi-arrow-right"></i></a>
+      <a href="https://repair.microhub.in/contact" class="btn-outline-custom" style="border-color:rgba(255,255,255,0.4);color:var(--white)"><i class="bi bi-telephone"></i> Talk to Sales</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-root" data-include="components/footer.html"></div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/component-loader.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/animations.js"></script>
+<script src="../assets/js/main.js"></script>
+  <script src="../assets/js/enhancements.js"></script>
+<script>
+  const billingToggle = document.getElementById('billing-toggle');
+  const monthly = ['999', '2499'];
+  const annual = ['799', '1999'];
+
+  if (billingToggle) {
+    billingToggle.addEventListener('change', () => {
+      const isAnnual = billingToggle.checked;
+      const priceEls = document.querySelectorAll('.pricing-card .pricing-price');
+      priceEls.forEach((el, idx) => {
+        if (idx === 0) {
+          el.innerHTML = `<sup>&#8377;</sup>${isAnnual ? annual[0] : monthly[0]}<sub>/month</sub>`;
+        } else if (idx === 1) {
+          el.innerHTML = `<sup>&#8377;</sup>${isAnnual ? annual[1] : monthly[1]}<sub>/month</sub>`;
+        } else {
+          el.innerHTML = 'Custom';
+          el.style.fontSize = '2.2rem';
+        }
+      });
+    });
+  }
+</script>
+</body>
+</html>

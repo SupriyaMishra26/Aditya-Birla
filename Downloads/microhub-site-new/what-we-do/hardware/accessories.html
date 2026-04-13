@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accessories — MicroHub</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/main.css">
+<!-- Shared Microhub product stylesheet -->
+<link rel="stylesheet" href="product.css">
+<link rel="stylesheet" href="../../assets/css/layout.css">
+
+<!-- Page-specific overrides -->
+<style>
+  :root {
+    --card-rgb: 99, 102, 241;
+    --spotlight-img: url('https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=900&auto=format&fit=crop');
+  }
+</style>
+</head>
+<body data-site-root="../../">
+
+<!-- NAVBAR -->
+<div id="navbar-root" data-include="components/navbar.html"></div>
+<!-- HERO -->
+<section class="hero-section">
+  <div class="hero-bg-orb hero-bg-orb--one"></div>
+  <div class="hero-bg-orb hero-bg-orb--two"></div>
+  <div class="hero-grid-lines" aria-hidden="true"></div>
+
+  <div class="container hero-content-shell">
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-6">
+        <h1 class="hero-title fade-in-up-2">
+          Business Accessories<br>
+          <span class="hero-title-accent">Built to Perform</span>
+        </h1>
+        <p class="hero-lead fade-in-up-3">
+          Monitors, keyboards, mice, hubs, headsets &amp; cables — everything your team needs to work at full speed, sourced from top brands and delivered across India.
+        </p>
+        <div class="d-flex gap-3 flex-wrap hero-btns fade-in-up-4">
+          <a href="#products" class="btn-primary-custom">Explore Accessories <i class="bi bi-arrow-right"></i></a>
+          <a href="#pricing" class="btn-outline-custom hero-secondary-btn">
+            <i class="bi bi-currency-rupee"></i> View Pricing
+          </a>
+        </div>
+        <div class="hero-proof-list fade-in-up-4">
+          <div class="hero-proof-item"><i class="bi bi-check-circle-fill"></i> Authorized Brand Reseller</div>
+          <div class="hero-proof-item"><i class="bi bi-check-circle-fill"></i> GST invoicing included</div>
+          <div class="hero-proof-item"><i class="bi bi-check-circle-fill"></i> Bulk order discounts</div>
+        </div>
+        <div class="hero-mini-grid fade-in-up-4">
+          <div class="hero-mini-card"><strong>50+</strong><span>Accessory SKUs</span></div>
+          <div class="hero-mini-card"><strong>Top Brands</strong><span>Logitech, Dell &amp; more</span></div>
+          <div class="hero-mini-card"><strong>PAN India</strong><span>Delivery</span></div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="hero-laptop-visual fade-in-up-4">
+          <div class="hero-main-img">
+            <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?q=80&w=900&auto=format&fit=crop" alt="Business Accessories">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span class="marquee-item"><i class="bi bi-display"></i> Monitors</span>
+    <span class="marquee-item"><i class="bi bi-keyboard"></i> Keyboards</span>
+    <span class="marquee-item"><i class="bi bi-mouse"></i> Mice</span>
+    <span class="marquee-item"><i class="bi bi-headset"></i> Headsets</span>
+    <span class="marquee-item"><i class="bi bi-usb-plug"></i> USB Hubs</span>
+    <span class="marquee-item"><i class="bi bi-camera-video"></i> Webcams</span>
+    <span class="marquee-item"><i class="bi bi-plug"></i> Docking Stations</span>
+    <span class="marquee-item"><i class="bi bi-battery-charging"></i> Chargers &amp; Cables</span>
+    <span class="marquee-item"><i class="bi bi-patch-check"></i> Logitech MX Series</span>
+    <span class="marquee-item"><i class="bi bi-lightning-charge"></i> Same-Day Dispatch</span>
+    <!-- duplicate for seamless loop -->
+    <span class="marquee-item"><i class="bi bi-display"></i> Monitors</span>
+    <span class="marquee-item"><i class="bi bi-keyboard"></i> Keyboards</span>
+    <span class="marquee-item"><i class="bi bi-mouse"></i> Mice</span>
+    <span class="marquee-item"><i class="bi bi-headset"></i> Headsets</span>
+    <span class="marquee-item"><i class="bi bi-usb-plug"></i> USB Hubs</span>
+    <span class="marquee-item"><i class="bi bi-camera-video"></i> Webcams</span>
+    <span class="marquee-item"><i class="bi bi-plug"></i> Docking Stations</span>
+    <span class="marquee-item"><i class="bi bi-battery-charging"></i> Chargers &amp; Cables</span>
+    <span class="marquee-item"><i class="bi bi-patch-check"></i> Logitech MX Series</span>
+    <span class="marquee-item"><i class="bi bi-lightning-charge"></i> Same-Day Dispatch</span>
+  </div>
+</div>
+
+<!-- PRODUCT SPOTLIGHT -->
+<section class="section-pad" id="products" style="background:linear-gradient(180deg,rgba(99,102,241,0.05) 0%,#f8fbff 44%,#ffffff 100%);">
+  <div class="container">
+    <div class="laptops-spotlight reveal">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-5">
+          <h2 class="laptops-spotlight-title">The right tools. The right brands. Delivered ready to use.</h2>
+          <p class="laptops-spotlight-desc">Every accessory Microhub supplies is sourced through authorized channels, backed by OEM warranty, and bundled with a valid GST invoice — so your procurement team stays hassle-free.</p>
+          <div class="spotlight-points">
+            <span><i class="bi bi-check2-circle"></i> Brand authorized supply chain for all SKUs</span>
+            <span><i class="bi bi-check2-circle"></i> OEM warranty &amp; after-sales support included</span>
+            <span><i class="bi bi-check2-circle"></i> GST invoicing and bulk pricing from 5+ units</span>
+          </div>
+          <div class="spotlight-metrics">
+            <div class="spotlight-metric"><strong>50+</strong><span>Accessory SKUs</span></div>
+            <div class="spotlight-metric"><strong>PAN India</strong><span>Delivery coverage</span></div>
+            <div class="spotlight-metric"><strong>2–3yr</strong><span>Warranty options</span></div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="spotlight-visual reveal reveal-delay-2">
+            <div class="spotlight-visual-img" style="background-image:url('https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=900&auto=format&fit=crop');background-size:cover;background-position:center;"></div>
+            <div class="spotlight-float-chip"><i class="bi bi-shield-lock"></i> OEM warranted &amp; GST invoiced</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCT CARDS -->
+    <div class="row g-4 mt-2" id="products-grid">
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-display"></i></span>
+            <span class="product-highlight-pill">Monitor · Most Popular</span>
+          </div>
+          <h3>Dell 27" 4K USB-C Monitor</h3>
+          <p>IPS panel with 4K resolution, 100% sRGB, and single-cable USB-C connectivity — the go-to productivity display for desk setups.</p>
+          <div class="product-highlight-list">
+            <span>27" 4K IPS</span><span>USB-C 90W</span><span>Height Adjust</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹38,900</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-keyboard"></i></span>
+            <span class="product-highlight-pill">Keyboard · Best Seller</span>
+          </div>
+          <h3>Logitech MX Keys for Business</h3>
+          <p>Backlit, multi-device keyboard with smart illumination and comfortable low-profile keys — built for professionals who type all day.</p>
+          <div class="product-highlight-list">
+            <span>Bluetooth &amp; USB</span><span>Multi-OS</span><span>10-day battery</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹9,495</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-mouse"></i></span>
+            <span class="product-highlight-pill">Mouse · Top Rated</span>
+          </div>
+          <h3>Logitech MX Master 3S</h3>
+          <p>The ultimate business mouse — MagSpeed scroll wheel, ergonomic design, and app-specific customization that speeds up every workflow.</p>
+          <div class="product-highlight-list">
+            <span>8K DPI</span><span>Bluetooth &amp; USB</span><span>70-day battery</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹8,995</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-plug"></i></span>
+            <span class="product-highlight-pill">Docking Station</span>
+          </div>
+          <h3>Dell WD19S USB-C Dock</h3>
+          <p>Single-cable docking for laptops — delivers data, video, and 90W power through one USB-C connection. Supports dual 4K displays.</p>
+          <div class="product-highlight-list">
+            <span>USB-C 90W</span><span>Dual 4K</span><span>Ethernet + Audio</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹14,500</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-headset"></i></span>
+            <span class="product-highlight-pill">Headset · Hybrid Work</span>
+          </div>
+          <h3>Jabra Evolve2 55 UC Stereo</h3>
+          <p>Professional ANC headset engineered for calls and deep focus — 3-mic call technology and up to 36 hours of battery life.</p>
+          <div class="product-highlight-list">
+            <span>Active ANC</span><span>36hr Battery</span><span>USB-A &amp; BT</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹22,990</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
+        <a href="#" class="product-highlight-card">
+          <div class="product-highlight-top">
+            <span class="product-highlight-icon"><i class="bi bi-camera-video"></i></span>
+            <span class="product-highlight-pill">Webcam · 4K</span>
+          </div>
+          <h3>Logitech Brio 4K Pro Webcam</h3>
+          <p>4K Ultra HD streaming with HDR, 5× digital zoom, and Windows Hello facial recognition — the webcam for serious video meetings.</p>
+          <div class="product-highlight-list">
+            <span>4K 30fps</span><span>HDR</span><span>Windows Hello</span>
+          </div>
+          <div class="product-highlight-footer">
+            <span class="product-highlight-note">from ₹18,995</span>
+            <span class="product-highlight-link">Enquire <i class="bi bi-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+  <div class="container">
+    <h3 class="stats-heading reveal">Complete accessory supply, managed by MicroHub.</h3>
+    <p class="stats-subtext reveal">From a single mouse to a 500-seat desk kit — Microhub handles every step of business accessory procurement in India.</p>
+    <div class="stats-grid reveal">
+      <div class="stat-item"><div class="stat-number">50+</div><div class="stat-label">SKUs Available</div><div class="stat-note">Monitors, peripherals, cables, and more.</div></div>
+      <div class="stat-item"><div class="stat-number">Top Brands</div><div class="stat-label">Authorized Supply</div><div class="stat-note">Logitech, Dell, Jabra, Anker &amp; more.</div></div>
+      <div class="stat-item"><div class="stat-number">&lt;24h</div><div class="stat-label">Dispatch SLA</div><div class="stat-note">Stocked and shipped same day.</div></div>
+      <div class="stat-item"><div class="stat-number">3yr</div><div class="stat-label">Warranty Options</div><div class="stat-note">OEM cover on every device.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY Microhub FOR ACCESSORIES -->
+<section class="section-pad why-laptops-section">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <h2 class="section-title">The Smartest Way to <span>Equip Every Desk</span></h2>
+      <p class="section-desc mx-auto">Microhub is an authorized reseller for leading accessory brands — we handle procurement, delivery, and long-term support so your team gets the right tools without the procurement headache.</p>
+    </div>
+    <div class="row g-4 align-items-stretch">
+      <div class="col-lg-5 d-flex">
+        <figure class="why-story-media reveal reveal-delay-1" style="flex:1 1 auto;margin:0;">
+          <img src="https://images.unsplash.com/photo-1689236673934-66f8e9d9279b?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Business desk accessories setup">
+        </figure>
+      </div>
+      <div class="col-lg-7 d-flex">
+        <div class="why-story-copy reveal reveal-delay-2">
+          <h3 class="why-story-title">From order to desk — we handle the entire accessory experience.</h3>
+          <p class="why-story-lead">Buying accessories at scale means managing dozens of SKUs, brands, and warranties. Microhub simplifies it to a single purchase order, single invoice, and single support relationship.</p>
+          <div class="why-story-list">
+            <article class="why-story-item">
+              <span class="why-story-index">01</span>
+              <div class="why-story-body"><h4>Curated brand portfolio</h4><p>We stock only business-grade accessories from brands like Logitech, Dell, Jabra, Anker, and Kensington — vetted for durability, compatibility, and enterprise support.</p></div>
+            </article>
+            <article class="why-story-item">
+              <span class="why-story-index">02</span>
+              <div class="why-story-body"><h4>Role-based kit recommendations</h4><p>Developers, designers, managers, and remote workers each have different needs. Our team recommends the right monitor, keyboard, and headset per role so you don't over-spec or under-equip.</p></div>
+            </article>
+            <article class="why-story-item">
+              <span class="why-story-index">03</span>
+              <div class="why-story-body"><h4>Volume pricing &amp; bundle deals</h4><p>Microhub unlocks distributor-level pricing for bulk orders and creates pre-configured desk kits — monitor + keyboard + mouse + hub — at a bundled price that beats buying separately.</p></div>
+            </article>
+            <article class="why-story-item">
+              <span class="why-story-index">04</span>
+              <div class="why-story-body"><h4>Warranty &amp; replacement support</h4><p>Defective unit? We handle OEM warranty claims and expedited replacements through our partner network — your team never needs to chase a manufacturer's helpline.</p></div>
+            </article>
+          </div>
+          <div class="why-story-meta">
+            <span>Authorized Reseller</span>
+            <span>PAN India delivery</span>
+            <span>OEM warranty included</span>
+          </div>
+          <div class="why-story-actions">
+            <a href="../../get-started/signup.html" class="btn-primary-custom">Get a Quote <i class="bi bi-arrow-right"></i></a>
+            <p>Trusted by Indian product, design, and engineering teams for end-to-end accessory procurement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section-pad pricing-section" id="pricing">
+  <div class="container">
+    <div class="text-center mb-2 reveal">
+      <h2 class="section-title">Desk Kits, <span>No Hidden Costs</span></h2>
+      <p class="section-desc mx-auto">All kits include GST invoicing and OEM warranty. Mix and match accessories or choose a pre-configured bundle for your team.</p>
+    </div>
+    <div class="pricing-grid reveal">
+
+      <div class="pricing-card">
+        <div class="pricing-tier">Starter Kit</div>
+        <div class="pricing-price">₹8K</div>
+        <div class="pricing-sub">per desk</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> Logitech MK295 Combo</li>
+          <li><i class="bi bi-check-circle-fill"></i> Silent keyboard &amp; mouse</li>
+          <li><i class="bi bi-check-circle-fill"></i> USB receiver included</li>
+          <li><i class="bi bi-check-circle-fill"></i> 3-year limited warranty</li>
+          <li><i class="bi bi-check-circle-fill"></i> GST invoice</li>
+          <li><i class="bi bi-check-circle-fill"></i> Bulk pricing available</li>
+        </ul>
+        <a href="#" class="btn-outline-custom w-100 justify-content-center">Choose Starter</a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-tier">Professional Kit</div>
+        <div class="pricing-price">₹22K</div>
+        <div class="pricing-sub">per desk</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> Logitech MX Keys + MX Master 3S</li>
+          <li><i class="bi bi-check-circle-fill"></i> Bluetooth &amp; USB-C connectivity</li>
+          <li><i class="bi bi-check-circle-fill"></i> Multi-device pairing</li>
+          <li><i class="bi bi-check-circle-fill"></i> 1-year warranty</li>
+          <li><i class="bi bi-check-circle-fill"></i> GST invoice</li>
+          <li><i class="bi bi-check-circle-fill"></i> Priority support</li>
+        </ul>
+        <a href="#" class="btn-outline-custom w-100 justify-content-center">Choose Professional</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-tier">Full Desk Kit</div>
+        <div class="pricing-price">₹65K</div>
+        <div class="pricing-sub">per desk</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> Dell 27" 4K USB-C Monitor</li>
+          <li><i class="bi bi-check-circle-fill"></i> Logitech MX Keys + MX Master 3S</li>
+          <li><i class="bi bi-check-circle-fill"></i> Jabra Evolve2 headset</li>
+          <li><i class="bi bi-check-circle-fill"></i> Dell USB-C Dock</li>
+          <li><i class="bi bi-check-circle-fill"></i> GST invoice &amp; OEM warranty</li>
+          <li><i class="bi bi-check-circle-fill"></i> Dedicated account manager</li>
+        </ul>
+        <a href="#" class="btn-primary-custom w-100 justify-content-center">Choose Full Desk</a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-tier">Studio Kit</div>
+        <div class="pricing-price">₹1.2L+</div>
+        <div class="pricing-sub">per desk</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><i class="bi bi-check-circle-fill"></i> Dual 32" 4K Monitors</li>
+          <li><i class="bi bi-check-circle-fill"></i> MX Keys + MX Master 3S</li>
+          <li><i class="bi bi-check-circle-fill"></i> Logitech Brio 4K Webcam</li>
+          <li><i class="bi bi-check-circle-fill"></i> Jabra Evolve2 ANC Headset</li>
+          <li><i class="bi bi-check-circle-fill"></i> Thunderbolt dock + cables</li>
+          <li><i class="bi bi-check-circle-fill"></i> 24/7 dedicated support</li>
+        </ul>
+        <a href="#" class="btn-outline-custom w-100 justify-content-center">Choose Studio</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section-pad testimonials-section">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <h2 class="section-title">Trusted by <span>India's Best Teams</span></h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Microhub kitted out 150 desks in two weeks — monitors, keyboards, mice, and docks, all delivered in one shipment with a single GST invoice. Saved our procurement team weeks of work."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AK</div>
+            <div><div class="testimonial-name">Ananya Krishnan</div><div class="testimonial-role">Head of IT, Zephyr Health</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"We needed 80 full desk kits for our new office. Microhub recommended the right specs per role and delivered everything pre-labelled and warranty-registered. Flawless execution."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">VN</div>
+            <div><div class="testimonial-name">Vikram Nair</div><div class="testimonial-role">Operations Lead, Buildfast</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The Jabra headsets and Logitech MX combos Microhub supplied cut our remote team's meeting complaints to zero. The bundle pricing was significantly better than retail."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">DS</div>
+            <div><div class="testimonial-name">Deepika Sharma</div><div class="testimonial-role">VP People, Syncloop</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRAND PARTNER BADGE -->
+<section class="section-pad" style="background:var(--white)">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <h2 class="section-title">Authorized <span>Brand Reseller</span></h2>
+      <p class="section-desc mx-auto">Every accessory sold by Microhub is genuine, covered by full OEM warranty, and sourced directly through authorized distributor channels.</p>
+    </div>
+    <div class="partner-logos-row reveal reveal-delay-1">
+      <div class="partner-logo-item"><i class="bi bi-mouse" style="font-size:1.8rem;color:#00b4d8"></i><span style="font-weight:700;font-size:1.1rem;color:#1d1d1f;letter-spacing:-0.04em">Logitech</span></div>
+      <div class="partner-logo-sep"></div>
+      <div class="partner-logo-item"><i class="bi bi-display" style="font-size:1.8rem;color:#007db8"></i><span style="font-weight:700;font-size:1.1rem;color:#1d1d1f;letter-spacing:-0.04em">Dell</span></div>
+      <div class="partner-logo-sep"></div>
+      <div class="partner-logo-item"><i class="bi bi-headset" style="font-size:1.8rem;color:#b5121b"></i><span style="font-weight:700;font-size:1.1rem;color:#1d1d1f;letter-spacing:-0.04em">Jabra</span></div>
+      <div class="partner-logo-sep"></div>
+      <div class="partner-logo-item"><i class="bi bi-plug" style="font-size:1.8rem;color:#ff6900"></i><span style="font-weight:700;font-size:1.1rem;color:#1d1d1f;letter-spacing:-0.04em">Anker</span></div>
+      <div class="partner-logo-sep"></div>
+      <div class="partner-logo-item"><i class="bi bi-shield-lock" style="font-size:1.8rem;color:#0d6efd"></i><span style="font-weight:700;font-size:1.1rem;color:#1d1d1f;letter-spacing:-0.04em">Kensington</span></div>
+    </div>
+    <div class="d-flex justify-content-center gap-3 flex-wrap mt-4 reveal reveal-delay-2">
+      <div style="display:flex;align-items:center;gap:0.5rem;background:var(--accent);border:1px solid rgba(13,148,136,0.2);padding:0.5rem 1.1rem;border-radius:100px;font-size:0.82rem;font-weight:600;color:var(--primary-dark)"><i class="bi bi-patch-check-fill" style="color:var(--primary)"></i> Authorized Reseller</div>
+      <div style="display:flex;align-items:center;gap:0.5rem;background:var(--accent);border:1px solid rgba(13,148,136,0.2);padding:0.5rem 1.1rem;border-radius:100px;font-size:0.82rem;font-weight:600;color:var(--primary-dark)"><i class="bi bi-shield-fill-check" style="color:var(--primary)"></i> Full OEM Warranty</div>
+      <div style="display:flex;align-items:center;gap:0.5rem;background:var(--accent);border:1px solid rgba(13,148,136,0.2);padding:0.5rem 1.1rem;border-radius:100px;font-size:0.82rem;font-weight:600;color:var(--primary-dark)"><i class="bi bi-award-fill" style="color:var(--primary)"></i> GST Invoice Included</div>
+      <div style="display:flex;align-items:center;gap:0.5rem;background:var(--accent);border:1px solid rgba(13,148,136,0.2);padding:0.5rem 1.1rem;border-radius:100px;font-size:0.82rem;font-weight:600;color:var(--primary-dark)"><i class="bi bi-box-seam" style="color:var(--primary)"></i> Bulk Order Discounts</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-pad" style="background:var(--accent)">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="text-center mb-5 reveal">
+          <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+          <p class="section-desc mx-auto">Everything you need to know about buying business accessories through MicroHub.</p>
+        </div>
+        <div class="accordion accordion-custom" id="acc-faq">
+          <div class="accordion-item reveal">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-a1" aria-expanded="true">
+                <i class="bi bi-patch-check me-3" style="color:var(--primary);flex-shrink:0"></i>
+                Are the accessories from authorized channels?
+              </button>
+            </h2>
+            <div id="faq-a1" class="accordion-collapse collapse show" data-bs-parent="#acc-faq">
+              <div class="accordion-body">Yes. Microhub is an <strong>authorized reseller</strong> for all brands we carry. Every accessory is genuine, sourced through official distributor channels, and covered by full OEM warranty. You receive a valid GST invoice for every purchase.</div>
+            </div>
+          </div>
+          <div class="accordion-item reveal reveal-delay-1">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-a2">
+                <i class="bi bi-box-seam me-3" style="color:var(--primary);flex-shrink:0"></i>
+                Can I order pre-configured desk kits in bulk?
+              </button>
+            </h2>
+            <div id="faq-a2" class="accordion-collapse collapse" data-bs-parent="#acc-faq">
+              <div class="accordion-body">Absolutely. Microhub offers pre-configured desk kits — monitor, keyboard, mouse, hub, and headset — bundled as a single SKU with a single line item on your invoice. For orders of <strong>10+ desks</strong>, we offer bundle pricing that is significantly better than buying individual products separately.</div>
+            </div>
+          </div>
+          <div class="accordion-item reveal reveal-delay-2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-a3">
+                <i class="bi bi-shield-check me-3" style="color:var(--primary);flex-shrink:0"></i>
+                How does warranty and support work?
+              </button>
+            </h2>
+            <div id="faq-a3" class="accordion-collapse collapse" data-bs-parent="#acc-faq">
+              <div class="accordion-body">All products come with full OEM warranty registered to your company at the point of purchase. For any defective unit, Microhub acts as your single point of contact — we manage the warranty claim and expedite a replacement so your team isn't left without a device.</div>
+            </div>
+          </div>
+          <div class="accordion-item reveal reveal-delay-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-a4">
+                <i class="bi bi-currency-rupee me-3" style="color:var(--primary);flex-shrink:0"></i>
+                Do you offer volume discounts for large orders?
+              </button>
+            </h2>
+            <div id="faq-a4" class="accordion-collapse collapse" data-bs-parent="#acc-faq">
+              <div class="accordion-body">Yes. For orders of <strong>10+ units</strong> of any single SKU, we apply distributor-level pricing. For 25+ desks we assign a dedicated account manager, offer phased delivery scheduling, and can pre-label devices with your asset tags before shipment.</div>
+            </div>
+          </div>
+          <div class="accordion-item reveal reveal-delay-1">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-a5">
+                <i class="bi bi-truck me-3" style="color:var(--primary);flex-shrink:0"></i>
+                What is the delivery timeline across India?
+              </button>
+            </h2>
+            <div id="faq-a5" class="accordion-collapse collapse" data-bs-parent="#acc-faq">
+              <div class="accordion-body">Microhub ships PAN India with a <strong>same-day dispatch SLA</strong> for all in-stock items. Metro cities typically receive next-day delivery; Tier 2 and Tier 3 cities are delivered within 2–3 business days. For large fleet orders we coordinate with your facilities team to schedule phased deliveries.</div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5 reveal">
+          <p class="text-muted mb-3">Still have questions? Our accessories team is happy to help.</p>
+          <a href="../../get-started/signup.html" class="btn-primary-custom me-3">Talk to Sales <i class="bi bi-arrow-right"></i></a>
+          <a href="../../insights/blog.html" class="btn-outline-custom">Browse Knowledge Base</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="laptops-cta">
+  <div class="container">
+    <div class="reveal text-center" style="max-width:720px;margin:0 auto;">
+      <div class="cta-eyebrow">Ready to equip your team?</div>
+      <h2 class="cta-title">Kit Out Every Desk Today</h2>
+      <p class="cta-text mx-auto">Get genuine, brand-authorized accessories delivered with a single GST invoice, full OEM warranty, and one dedicated support relationship — from a single desk to a 500-seat office.</p>
+      <div class="cta-actions justify-content-center">
+        <a href="../../get-started/signup.html" class="btn-white-custom">Get a Quote <i class="bi bi-arrow-right"></i></a>
+        <a href="#products" class="btn-outline-custom home-cta-outline">Browse All Accessories</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<div id="footer-root" data-include="components/footer.html"></div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/component-loader.js"></script>
+<script src="../../assets/js/navigation.js"></script>
+<script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/enhancements.js"></script>
+<!-- Shared Microhub product script -->
+<script src="product.js"></script>
+</body>
+</html>

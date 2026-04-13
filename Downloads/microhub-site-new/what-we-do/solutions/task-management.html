@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Management — Microhub Work Module</title>
+  <meta name="description" content="Microhub Task Management: Board, List, Gantt, and Calendar views for complete team collaboration and project tracking in one work hub.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+  <link rel="stylesheet" href="product-page.css">
+</head>
+<body class="sp-page" data-site-root="../../">
+
+<div id="sp-loader"><div class="sp-loader-ring"></div></div>
+<div id="navbar-root" data-include="components/navbar.html"></div>
+
+<!-- HERO -->
+<section class="sp-hero">
+  <div class="sp-hero-grid"></div>
+  <div class="container sp-hero-inner">
+    <span class="sp-kicker sp-load" style="--d:0.06s"><i class="bi bi-kanban"></i> Software Product / Task Management</span>
+    <h1 class="sp-title sp-load" style="--d:0.16s">
+      <span>Board, List, Gantt &</span>
+      <span>Calendar — One Hub</span>
+    </h1>
+    <p class="sp-desc sp-load" style="--d:0.26s">Visualize your workflow across Board, List, My Tasks, Gantt, and Calendar views. Plan, track, and collaborate seamlessly — without switching tools.</p>
+    <div class="sp-hero-actions sp-load" style="--d:0.36s">
+      <a href="../../get-started/signup.html" class="btn-primary-custom">Start Organizing <i class="bi bi-arrow-right"></i></a>
+      <a href="../../insights/pricing.html" class="btn-outline-custom">View Plans</a>
+    </div>
+    <div class="sp-jump-links sp-load" style="--d:0.46s">
+      <a href="#tm-board" class="sp-link-pill"><i class="bi bi-kanban"></i> Board View</a>
+      <a href="#tm-gantt" class="sp-link-pill"><i class="bi bi-bar-chart-steps"></i> Gantt</a>
+      <a href="#tm-collab" class="sp-link-pill"><i class="bi bi-people"></i> Collaboration</a>
+      <a href="#tm-pricing" class="sp-link-pill"><i class="bi bi-tag"></i> Pricing</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="sp-stats">
+  <div class="container">
+    <div class="sp-stats-grid">
+      <div class="sp-stat sp-reveal"><strong>5+ Views</strong><span>Board, List, Gantt, Calendar</span></div>
+      <div class="sp-stat sp-reveal sp-reveal-d1"><strong>Real‑time</strong><span>Drag-drop & instant sync</span></div>
+      <div class="sp-stat sp-reveal sp-reveal-d2"><strong>Smart</strong><span>Priority & deadline tracking</span></div>
+      <div class="sp-stat sp-reveal sp-reveal-d3"><strong>Cross‑team</strong><span>Collaboration & comments</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="sp-section">
+  <div class="container">
+    <div class="sp-head sp-reveal">
+      <span class="sp-eyebrow"><i class="bi bi-kanban"></i> Your Complete Work Hub</span>
+      <h2>Every View Your Team Needs to Stay on Track</h2>
+      <p>Microhub Task Management gives you every visual and organizational tool you need — from quick-glance boards to detailed Gantt timelines for complex projects.</p>
+    </div>
+    <div class="sp-process-grid">
+      <article class="sp-process-card sp-reveal sp-reveal-d1">
+        <div class="sp-process-num">01</div>
+        <h3>Create & Assign Tasks</h3>
+        <p>Create tasks with titles, descriptions, priority levels, due dates, and attachments. Assign to team members and set dependencies between related tasks.</p>
+      </article>
+      <article class="sp-process-card sp-reveal sp-reveal-d2">
+        <div class="sp-process-num">02</div>
+        <h3>Track in Your Preferred View</h3>
+        <p>Switch between Board (Kanban), List, My Tasks, Gantt chart, and Calendar without losing context. Every view shows the same live data.</p>
+      </article>
+      <article class="sp-process-card sp-reveal sp-reveal-d3">
+        <div class="sp-process-num">03</div>
+        <h3>Collaborate & Complete</h3>
+        <p>Comment, attach files, @mention teammates, and track task completion in real time. Get automatic deadline reminders and progress notifications.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 1: Board & List Views (img left, content right) -->
+<section id="tm-board" class="sp-feature sp-feature-alt sp-section-anchor">
+  <div class="container">
+    <div class="sp-feature-grid">
+      <div class="sp-visual sp-reveal">
+        <div class="sp-visual-mock">
+          <i class="bi bi-kanban sp-visual-icon"></i>
+          <div class="sp-visual-badge"><i class="bi bi-check2-square"></i> 14 Tasks Completed Today</div>
+        </div>
+      </div>
+      <div class="sp-content sp-reveal sp-reveal-d1">
+        <span class="sp-content-eyebrow"><i class="bi bi-kanban"></i> Board & List Views</span>
+        <h2>Drag-and-Drop Boards for Visual Task Management</h2>
+        <p>See your entire workload on a visual Kanban board. Drag cards between columns to update status instantly. Switch to List view for a detailed, sortable task inventory.</p>
+        <div class="sp-feature-list">
+          <div class="sp-feature-item">
+            <div class="sp-feature-icon"><i class="bi bi-grip-vertical"></i></div>
+            <div>
+              <h4>Drag-Drop Kanban Board</h4>
+              <p>Customize columns to match your workflow. Drag tasks between stages with real-time updates for all collaborators.</p>
+            </div>
+          </div>
+          <div class="sp-feature-item">
+            <div class="sp-feature-icon"><i class="bi bi-list-task"></i></div>
+            <div>
+              <h4>List View with Filters</h4>
+              <p>Detailed list of all tasks with sort, filter, and group options. Filter by assignee, priority, due date, or status.</p>
+            </div>
+          </div>
+          <div class="sp-feature-item">
+            <div class="sp-feature-icon"><i class="bi bi-person-check"></i></div>
+            <div>
+              <h4>My Tasks Dashboard</h4>
+              <p>Each team member sees a personal view of their assigned tasks, deadlines, and priorities — everything they need to focus on.</p>
+            </div>
+          </div>
+        </div>
+        <div class="sp-chips mt-3">
+          <span class="sp-chip"><i class="bi bi-kanban"></i> Kanban Board</span>
+          <span class="sp-chip"><i class="bi bi-list-task"></i> List View</span>
+          <span class="sp-chip"><i class="bi bi-person-check"></i> My Tasks</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: Gantt & Calendar (content left, img right) -->
+<section id="tm-gantt" class="sp-feature sp-section-anchor">
+  <div class="container">
+    <div class="sp-feature-grid reversed">
+      <div class="sp-content sp-reveal">
+        <span class="sp-content-eyebrow"><i class="bi bi-bar-chart-steps"></i> Gantt & Calendar Views</span>
+        <h2>Plan Timelines and Spot Conflicts Before They Happen</h2>
+        <p>Gantt charts show task dependencies, milestones, and critical paths visually. Calendar view gives you a date-based overview of everything due — across the team or per person.</p>
+        <div class="sp-feature-list">
+          <div class="sp-feature-item">
+            <div class="sp-feature-icon"><i class="bi bi-bar-chart-steps"></i></div>
+            <div>
+              <h4>Gantt Chart with Dependencies</h4>
+              <p>Set task dependencies with drag-to-extend timelines. See the critical path instantly and adjust scheduling to avoid bottlenecks.</p>
+            </div>
+          </div>
+          <div class="sp-feature-item">
+            <div class="sp-feature-icon"><i class="bi bi-calendar-week"></i></div>
+            <div>
+              <h4>Calendar View</h4>
+              <p>Month, week, and day calendar views showing all task due dates. Color-coded by project or assignee for instant clarity.</p>
+            </div>
+          </div>
+          <div class="sp-feature-item">
+            <div class="sp-feature-icon"><i class="bi bi-clock-history"></i></div>
+            <div>
+              <h4>Deadline Tracking & Alerts</h4>
+              <p>Automatic deadline reminders via email and in-app notifications. Overdue tasks highlighted with escalation to managers.</p>
+            </div>
+          </div>
+        </div>
+        <div class="sp-chips mt-3">
+          <span class="sp-chip"><i class="bi bi-bar-chart-steps"></i> Gantt Timeline</span>
+          <span class="sp-chip"><i class="bi bi-calendar-week"></i> Calendar View</span>
+          <span class="sp-chip"><i class="bi bi-clock-history"></i> Deadline Alerts</span>
+        </div>
+      </div>
+      <div class="sp-visual sp-reveal sp-reveal-d1">
+        <div class="sp-visual-mock">
+          <i class="bi bi-bar-chart-steps sp-visual-icon"></i>
+          <div class="sp-visual-badge"><i class="bi bi-diagram-2"></i> 3 Dependencies Tracked</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: Collaboration & Automation (img left, content right) -->
+<section id="tm-collab" class="sp-feature sp-feature-alt sp-section-anchor">
+  <div class="container">
+    <div class="sp-feature-grid">
+      <div class="sp-visual sp-reveal">
+        <div class="sp-visual-mock">
+          <i class="bi bi-people sp-visual-icon"></i>
+          <div class="sp-visual-badge"><i class="bi bi-chat-dots-fill"></i> 8 Comments Today</div>
+        </div>
+      </div>
+      <div class="sp-content sp-reveal sp-reveal-d1">
+        <span class="sp-content-eyebrow"><i class="bi bi-people"></i> Collaboration & Reporting</span>
+        <h2>Keep Every Teammate Aligned and Informed</h2>
+        <p>Comment on tasks, attach files, and @mention teammates to bring them into the conversation. Managers get progress reports and workload analysis at a glance.</p>
+        <div class="sp-feature-list">
+          <div class="sp-feature-item">
+            <div class="sp-feature-icon"><i class="bi bi-chat-dots"></i></div>
+            <div>
+              <h4>Task Comments & @Mentions</h4>
+              <p>Thread conversations within tasks. @mention team members to notify them instantly. File attachments and link sharing supported.</p>
+            </div>
+          </div>
+          <div class="sp-feature-item">
+            <div class="sp-feature-icon"><i class="bi bi-activity"></i></div>
+            <div>
+              <h4>Activity Feed & Audit Trail</h4>
+              <p>Full history of every task change — status updates, reassignments, and comment edits — in a chronological audit trail.</p>
+            </div>
+          </div>
+          <div class="sp-feature-item">
+            <div class="sp-feature-icon"><i class="bi bi-bar-chart-line"></i></div>
+            <div>
+              <h4>Progress Reports & Workload View</h4>
+              <p>Track completion rates per project, team, and individual. Workload view prevents overloading specific team members.</p>
+            </div>
+          </div>
+        </div>
+        <div class="sp-chips mt-3">
+          <span class="sp-chip"><i class="bi bi-chat-dots"></i> Threaded Comments</span>
+          <span class="sp-chip"><i class="bi bi-activity"></i> Audit Trail</span>
+          <span class="sp-chip"><i class="bi bi-bar-chart-line"></i> Progress Reports</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="tm-pricing" class="sp-pricing sp-section-anchor">
+  <div class="container">
+    <div class="sp-head sp-reveal">
+      <span class="sp-eyebrow"><i class="bi bi-tag"></i> Simple, Transparent Pricing</span>
+      <h2>Plans for Every Team Size</h2>
+      <p>Start free with core task management features. Upgrade for advanced Gantt, automation, and team analytics.</p>
+    </div>
+    <div class="sp-pricing-grid">
+      <div class="sp-plan sp-reveal sp-reveal-d1">
+        <div class="sp-plan-name">Starter</div>
+        <div class="sp-plan-price">₹999<span>/mo</span></div>
+        <div class="sp-plan-desc">For small teams getting organized.</div>
+        <div class="sp-plan-divider"></div>
+        <ul class="sp-plan-features">
+          <li><i class="bi bi-check-circle-fill"></i> Up to 10 users</li>
+          <li><i class="bi bi-check-circle-fill"></i> Board & list views</li>
+          <li><i class="bi bi-check-circle-fill"></i> Task assignments & due dates</li>
+          <li><i class="bi bi-check-circle-fill"></i> File attachments</li>
+          <li><i class="bi bi-check-circle-fill"></i> 5 active projects</li>
+          <li><i class="bi bi-check-circle-fill"></i> Email support</li>
+        </ul>
+        <a href="../../get-started/signup.html" class="btn-outline-custom">Start Free Trial</a>
+      </div>
+      <div class="sp-plan sp-reveal sp-reveal-d2">
+        <div class="sp-plan-name">Growth</div>
+        <div class="sp-plan-price">₹2,499<span>/mo</span></div>
+        <div class="sp-plan-desc">For growing teams needing full project views.</div>
+        <div class="sp-plan-divider"></div>
+        <ul class="sp-plan-features">
+          <li><i class="bi bi-check-circle-fill"></i> Up to 30 users</li>
+          <li><i class="bi bi-check-circle-fill"></i> All views including Calendar</li>
+          <li><i class="bi bi-check-circle-fill"></i> Task dependencies</li>
+          <li><i class="bi bi-check-circle-fill"></i> Basic Gantt chart</li>
+          <li><i class="bi bi-check-circle-fill"></i> Unlimited projects</li>
+          <li><i class="bi bi-check-circle-fill"></i> Progress tracking</li>
+        </ul>
+        <a href="../../get-started/signup.html" class="btn-outline-custom">Start Free Trial</a>
+      </div>
+      <div class="sp-plan sp-plan-featured sp-reveal sp-reveal-d3">
+        <div class="sp-plan-name">Professional</div>
+        <div class="sp-plan-price">₹4,999<span>/mo</span></div>
+        <div class="sp-plan-desc">Full work hub for high-performance teams.</div>
+        <div class="sp-plan-divider"></div>
+        <ul class="sp-plan-features">
+          <li><i class="bi bi-check-circle-fill"></i> Up to 100 users</li>
+          <li><i class="bi bi-check-circle-fill"></i> Advanced Gantt with milestones</li>
+          <li><i class="bi bi-check-circle-fill"></i> Workload & capacity planning</li>
+          <li><i class="bi bi-check-circle-fill"></i> Custom automations</li>
+          <li><i class="bi bi-check-circle-fill"></i> Team analytics dashboard</li>
+          <li><i class="bi bi-check-circle-fill"></i> Priority support</li>
+        </ul>
+        <a href="../../get-started/signup.html" class="btn-primary-custom">Start Free Trial</a>
+      </div>
+      <div class="sp-plan sp-reveal sp-reveal-d4">
+        <div class="sp-plan-name">Enterprise</div>
+        <div class="sp-plan-price">Custom</div>
+        <div class="sp-plan-desc">For large organizations with complex projects.</div>
+        <div class="sp-plan-divider"></div>
+        <ul class="sp-plan-features">
+          <li><i class="bi bi-check-circle-fill"></i> Unlimited users</li>
+          <li><i class="bi bi-check-circle-fill"></i> All modules — full feature set</li>
+          <li><i class="bi bi-check-circle-fill"></i> Custom integrations (API)</li>
+          <li><i class="bi bi-check-circle-fill"></i> Dedicated account manager</li>
+          <li><i class="bi bi-check-circle-fill"></i> SSO & advanced security</li>
+          <li><i class="bi bi-check-circle-fill"></i> 99.9% SLA guarantee</li>
+        </ul>
+        <a href="https://repair.microhub.in/contact" class="btn-outline-custom">Talk to Sales</a>
+      </div>
+    </div>
+    <p class="sp-pricing-note sp-reveal">All plans include a 14-day free trial. No credit card required. <a href="../../insights/pricing.html">View full pricing comparison →</a></p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sp-cta">
+  <div class="container sp-cta-inner">
+    <h2 class="sp-reveal">Visualize, Track, and Complete Tasks Faster</h2>
+    <p class="sp-reveal sp-reveal-d1">Join thousands of teams using Board, Gantt, and Calendar to stay ahead of deadlines and deliver projects on time.</p>
+    <div class="sp-cta-actions sp-reveal sp-reveal-d2">
+      <a href="../../get-started/signup.html" class="btn-primary-custom"><i class="bi bi-kanban"></i> Start Free Trial</a>
+      <a href="../../insights/case-studies.html" class="btn-outline-custom"><i class="bi bi-bar-chart-line"></i> See Workflows</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-root" data-include="components/footer.html"></div>
+<button id="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="product-page.js"></script>
+</body>
+</html>
